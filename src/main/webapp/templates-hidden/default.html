@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<!-- Set the viewport width to device width for mobile -->
+<meta name="viewport" content="width=device-width" />
+
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="description" content="" />
+<meta name="keywords" content="" />
+
+<!-- Included CSS Files -->
+<link rel="stylesheet" type='text/css' href="/classpath/fobo/css/fobo-0.1.css"/>
+<!-- Included your own app specific CSS File here -->
+
+<!--[if lt IE 9]>
+		<link rel="stylesheet" href="/resources/css/ie.css">
+	<![endif]-->
+
+
+<!-- IE Fix for HTML5 Tags -->
+<!--[if lt IE 9]>
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+
+<!-- Including some font from Google's Font Directory -->
+<link rel="stylesheet" type="text/css"
+	href="http://fonts.googleapis.com/css?family=Crushed|Gruppo|Orbitron:bold" />
+<link rel="stylesheet" type="text/css"
+	href="http://fonts.googleapis.com/css?family=Lobster" />
+
+<!-- Included JS Files -->
+<script type='text/javascript' src='/classpath/fobo/js/jquery-1.6.4.js'></script>
+
+<title class="lift:Menu.title">FoBo-Lift Template demo %*%</title>
+
+		<script type="text/javascript">
+			addLoadEvent(function() {
+				$('#fobo-topbar').dropdown()
+			});
+
+			function addLoadEvent(func) {
+				var oldonload = window.onload;
+				if (typeof window.onload != 'function') {
+					window.onload = func;
+				} else {
+					window.onload = function() {
+						if (oldonload) {
+							oldonload();
+						}
+						func();
+					}
+				}
+			}
+		</script> 
+
+</head>
+<body>
+
+	<div id="content"></div>
+    <script type="text/javascript" src="/classpath/fobo/js/bootstrap-scrollspy-1.4.0.js"></script>
+    <script type="text/javascript" src="/classpath/fobo/js/bootstrap-dropdown-1.4.0.js"></script>
+</body>
+</html>

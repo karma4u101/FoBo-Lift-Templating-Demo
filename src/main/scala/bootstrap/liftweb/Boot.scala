@@ -35,7 +35,8 @@ class Boot extends Loggable {
     // Build SiteMap
     val entries = List(
       Menu.i("Home") / "index",
-      Menu(Loc("Static", Link(List("static"), true, "/static/index"), "Static Content")))      
+      Menu(Loc("Foundation", Link(List("static"), true, "/static/foundation/2.1.5/index"),
+        "Foundation")))   
       
     // set the sitemap.  Note if you don't want access control for
     // each page, just comment this line out.

@@ -3,7 +3,7 @@ organization := "nu.m4u"
 
 name := "FoBo-Lift-Template"
 
-version := "1.2-SNAPSHOT"
+version := "1.3-SNAPSHOT"
 
 scalaVersion := "2.9.1"
 
@@ -39,7 +39,7 @@ libraryDependencies ++= {
     "net.liftweb" %% "lift-squeryl-record" % liftVersion % "compile->default" withSources(),
     "net.liftweb" %% "lift-wizard" % liftVersion % "compile->default",
     "net.liftweb" %% "lift-testkit" % liftVersion % "compile->default",
-    "net.liftmodules" %% "fobo" % (liftVersion+"-0.2.0-SNAPSHOT")
+    "net.liftmodules" %% "fobo" % (liftVersion+"-0.2.4-SNAPSHOT")
     )
 }
 

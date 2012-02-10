@@ -14,6 +14,7 @@ import java.sql.DriverManager
 import _root_.net.liftweb.util.{ Props }
 import _root_.net.liftweb.http.provider.HTTPRequest
 import _root_.net.liftweb.http.auth.{ HttpBasicAuthentication, AuthRole, userRoles }
+import net.liftmodules.FoBo._
 
 //import nu.m4u.snippet._
 
@@ -29,13 +30,14 @@ class Boot extends Loggable {
     // where to search snippet
     LiftRules.addToPackages("code")
 
-    //Include the front-end toolkit module
-    net.liftmodules.FoBo.FoBo.init()
+    FoBoInitParams.JQuery=JQuery171  
+    FoBoInitParams.ToolKit=FoBo010    
+    FoBo.init()   
  
     // Build SiteMap
     val entries = List(
       Menu.i("Home") / "index",
-      Menu(Loc("Foundation", Link(List("static"), true, "/static/foundation/2.1.5/index"),
+      Menu(Loc("Foundation", Link(List("static"), true, "/static/foundation/index"),
         "Foundation")))   
       
     // set the sitemap.  Note if you don't want access control for

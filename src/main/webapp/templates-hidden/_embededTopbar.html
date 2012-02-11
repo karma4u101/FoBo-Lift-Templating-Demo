@@ -9,9 +9,11 @@
 <!-- This is a embedable piece of html -->
 <body class="lift:content_id=fobo-topbar">
 
-  <!--  search google "google h1 tag span inside" it's ok and no problem-->
-  <!-- Topbar bootstrap 1.4.0 -->
+  <!--  search google "google h1 tag span inside" its okey google will not search discriminate this h1 tag -->
   
+  <!-- Topbar bootstrap 1.4.0 -->
+  <!-- demonstrating a five different ways to use lift sitemap and internationalization -->
+  <!-- and adding a dummy class to the generated links-->
 			<div class="topbar" data-scrollspy="scrollspy" id="fobo-topbar">
 				<div class="topbar-inner">
 				  <div class="bo-container">
@@ -30,7 +32,7 @@
 <!-- 										<li><a href="/index#about">About</a></li> -->
                                         <li>
                                           <span data-lift="Menu.item?name=Home;?linkToSelf=true;a:class=showofdummy">
-                                            <span data-lift="Loc?locid=Home">Home</span>
+                                            <span data-lift="Loc.i">Home</span>
                                           </span>
                                         </li>
                                         <li >
@@ -45,7 +47,7 @@
 										</li>							            
 							            <li>
 							              <span data-lift="Menu.item?name=Foundation;lift:Loc.i;a:class=addclassshowofdummy">
-							                <span data-lift="Loc?locid=Foundation">Foundation</span>
+							                <span data-lift="Loc.i">Foundation</span>
 							              </span>
 							            </li>							            						             
 									</ul>

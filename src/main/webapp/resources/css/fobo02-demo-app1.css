@@ -148,12 +148,16 @@ li {
 /*end frontheader brand*/
 
 
-#about {
+#spyhome {
 	position:relative;top:-40px;
 }
-#ref {
+#spypuff {
 	position:relative;top:-40px;
 }
+#spyref {
+	position:relative;top:-40px;
+}
+
 
 .demo-foundation {
 	background: none repeat scroll 0 0 #EEE; /*#2C4150;*/

@@ -15,32 +15,7 @@
   <!-- demonstrating a five different ways to use lift sitemap and internationalization -->
   <!-- and adding a dummy class to the generated links-->
 <!-- fobo 0.2 / bootstrap 2.0.0 -->
-
-<!--     <div class="navbar navbar-fixed-top" data-scrollspy="scrollspy" > -->
-<!--       <div class="navbar-inner"> -->
-<!--         <div class="bo-container"> -->
-<!--           <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"> -->
-<!--             <span class="icon-bar"></span> -->
-<!--             <span class="icon-bar"></span> -->
-<!--             <span class="icon-bar"></span> -->
-<!--           </a> -->
-<!--           <a class="brand" href="#">Project name</a> -->
-<!--           <div class="nav-collapse"> -->
-<!--             <ul class="nav"> -->
-<!--               <li class="active"><a href="#">Home</a></li> -->
-<!--               <li> -->
-<!--                 <a  href="/index#about"> -->
-<!--                   <span data-lift="Loc?locid=about.link.text">About</span> -->
-<!--                 </a> -->
-<!--               </li>   -->
-<!--               <li><a href="#ref">Reference</a></li> -->
-<!--             </ul> -->
-<!--            </div>  -->
-<!--         </div> -->
-<!--       </div> -->
-<!--     </div> -->
-    
-    
+ 
   <div class="navbar navbar-fixed-top" id="fobo-navbar">
     <div class="navbar-inner">
 
@@ -51,21 +26,20 @@
           <span class="icon-bar"></span>
         </a>
         <a href="#" class="brand">FoBo</a>
-        <div class="nav-collapse">
-
+        <div class="nav-collapse"> 
           <ul class="nav">
-            <li class="active">
-              <span data-lift="Menu.item?name=Home;?linkToSelf=true;a:class=addclassshowofdummy">
+            <li> 
+              <a href="#spyhome">
                 <span data-lift="Loc.i">Home</span>
-              </span>
+              </a>             
             </li>
             <li>
-              <a  href="#about">
+              <a href="#spypuff">
                 <span data-lift="Loc?locid=about.link.text">About</span>
               </a>           
             </li>
             <li>
-              <a href="#ref">
+              <a href="#spyref">
 			    <span data-lift="Loc?locid=ref.link.text">References</span>
 			  </a>   
             </li>
@@ -83,18 +57,15 @@
                    </span>
                  </li>
                  <li>
-                   <a  href="/index#about">
+                   <a  href="index#spyabout">
                      <span data-lift="Loc?locid=about.link.text">About</span>
                    </a>           
                 </li>
                 <li>
-                  <a href="/index#ref">
+                  <a href="index#spyref">
 			        <span data-lift="Loc?locid=ref.link.text">References</span>
 			      </a>   
                 </li>              
-<!--                 <li><a href="#">Action</a></li> -->
-<!--                 <li><a href="#">Another action</a></li> -->
-<!--                 <li><a href="#">Something else here</a></li> -->
                 <li class="divider"></li>
                 <li>
 			      <span data-lift="Menu.item?name=Foundation;lift:Loc.i;a:class=addclassshowofdummy">
@@ -111,6 +82,7 @@
 
             </li>
           </ul>
+          
           <form action="" class="navbar-search pull-left">
             <input placeholder="Search" class="search-query span2" type="text">
           </form>
@@ -136,53 +108,6 @@
   </div>
     
 			
-<!-- 			<div class="navbar navbar-fixed-top" data-scrollspy="scrollspy" id="fobo-topbar"> -->
-<!-- 				<div class="navbar-inner"> -->
-<!-- 				 <div class="bo-container"> -->
-<!-- 					<div class="row"> -->
-<!-- 						<div class="twelve columns"> -->
 
-<!-- 							<a class="brand" href="/index.html">  -->
-<!-- 								<h1 class="capital"> -->
-<!-- 									F<span>o</span>B<span>o</span><span class="smal"> lift module</span> -->
-<!-- 								</h1> -->
-<!-- 								<h6 class="brand-sub">Demo - Lift/Template with the FoBo Front-End ToolKit</h6>  -->
-<!-- 							</a> -->
-							
-<!-- 							<ul class="nav"> -->
-<!-- 								<li class="menu"> -->
-<!-- 								<a href="#" class="dropdown-toggle" data-toggle="dropdown"> -->
-<!-- 								<span data-lift="Loc?locid=content.dropdown.text">Content</span> -->
-<!-- 								<b class="caret"></b> -->
-<!-- 								</a> -->
-<!-- 									<ul class="dropdown-menu"> -->
-<!--                                         <li> -->
-<!--                                           <span data-lift="Menu.item?name=Home;?linkToSelf=true;a:class=showofdummy"> -->
-<!--                                             <span data-lift="Loc.i">Home</span> -->
-<!--                                           </span> -->
-<!--                                         </li> -->
-<!--                                         <li > -->
-<!--                                           <a  href="/index#about"> -->
-<!--                                             <span data-lift="Loc?locid=about.link.text">About</span> -->
-<!--                                           </a> -->
-<!--                                         </li>           -->
-<!-- 										<li> -->
-<!-- 										  <a href="/index#ref"> -->
-<!-- 										    <span data-lift="Loc?locid=ref.link.text">References</span> -->
-<!-- 										  </a> -->
-<!-- 										</li>							             -->
-<!-- 							            <li> -->
-<!-- 							              <span data-lift="Menu.item?name=Foundation;lift:Loc.i;a:class=addclassshowofdummy"> -->
-<!-- 							                <span data-lift="Loc.i">Foundation</span> -->
-<!-- 							              </span> -->
-<!-- 							            </li>							            						              -->
-<!-- 									</ul> -->
-<!-- 								</li> -->
-<!-- 							</ul> -->
-
-<!-- 						</div> -->
-<!-- 					</div> -->
-<!-- 				</div> -->
-<!-- 			</div>			 -->
 
 </body>

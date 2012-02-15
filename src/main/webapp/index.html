@@ -12,15 +12,24 @@
             <head_merge> 
             <!-- Included your own app specific CSS File here -->
             <!-- This demo page will get its demo specific css file merged into the head of this page -->
-            <link rel="stylesheet" type='text/css' href="/resources/css/fobo-demo-app1.css">            
+            <link rel="stylesheet" type='text/css' href="/resources/css/fobo02-demo-app1.css">            
             </head_merge>
 
-            <span data-lift='embed?what=_embededTopbar'> Embedding the topbar here</span>           
+            <span data-lift='embed?what=_embededTopbar-FoBo02'> Embedding the topbar here</span>           
             
-		<section class="header">
+		<section class="frontheader">
 			<div class="row">
 				<div class="twelve columns">
-<!--                    <p>twelve columns</p> -->
+				  <div class="row">
+				    <div class="seven columns centered">
+					  <a class="fhbrand" href="/index.html"> 
+					    <h1 class="fhcapital">
+					  	  F<span>o</span>B<span>o</span><span class="smal"> lift module</span>
+					    </h1>
+					    <h6 class="fhbrand-sub">Demo - Lift/Template with the FoBo Front-End ToolKit</h6> 
+					  </a>
+					</div>
+				  </div>		
 				</div>
 			</div>
 		</section>
@@ -55,10 +64,12 @@
 									and the fobo mix</span>
 							</h2>
 							
-							This page uses the <strong>fobo.css</strong> from the fobo module, it also make heavy use  
-							of a application specific css styling using the <strong>fobo-demo-app1.css</strong> file (external to the module).
+							This page uses the <strong>FoBo02 option</strong> of the fobo module which make use of the <strong>fobo.css</strong>, 
+							there is also separate BootstrapXX, FoundationXX options and more. This demo also make heavy use of 
+							a application specific css styling using the <strong>fobo02-demo-app1.css</strong> file (external to the module).
 							<br/>
-							The fobo.css setup option in the FoBo module is a love, peace and harmony mix of the <a href="http://foundation.zurb.com/">ZURB/Foundation</a> 
+							The fobo.css setup option in the FoBo module is a love, peace and harmony mix of the 
+							<a href="http://foundation.zurb.com/">ZURB/Foundation</a> 
 							and the <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap</a> front-end toolkit.
 							  							
 							<hr/>	
@@ -84,7 +95,11 @@
 							</h2>
 							The <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap</a> toolkit is a great toolkit with 
 							lots candy. Apart from giving you easy access and integration of the fobo mix the FoBo module also 
-							gives you the setup option to use the foundation toolkit separately.
+							gives you the setup option to use the bootstrap toolkit separately.
+							The included bootstrap documentation pages is <b>modified</b> to use the FoBo option 
+							<span data-lift="Menu.item?name=Bootstrap;lift:Loc.i;a:class=addclassshowofdummy">
+							<span data-lift="Loc?locid=Bootstrap">Bootstrap demo</span></span>. 
+							
 							<hr/>	
 						</div>
 					</div>										
@@ -150,6 +165,6 @@
 		</section>
 
 	</div>
-	<script type="text/javascript" src="/classpath/fobo/js/bootstrap-scrollspy-1.4.0.js"></script>
+	
 </body>
 </html>

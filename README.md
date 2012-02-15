@@ -29,7 +29,7 @@ There is also a sbt.bat for windows users.
 
 3) Launch Your Browser
 	
-	http://localhost:8080/
+	http://localhost:8080
 
 Scala IDE for Eclipse
 ---------------------

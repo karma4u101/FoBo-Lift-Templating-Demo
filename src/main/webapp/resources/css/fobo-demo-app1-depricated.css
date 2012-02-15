@@ -123,7 +123,7 @@ body {
     max-width:980px;
 }
 
-  .navbar{height:90px;left:0;right:0;z-index:10000;overflow:visible;}
+  .navbar{height:90px;left:0;right:0;z-index:10000;overflow:visible;margin-bottom:0px}
   .navbar a{color:#777777;text-shadow:1px -1px 0 rgba(0, 0, 0, 0.5);} 
   .navbar h3 a:hover,.navbar .brand:hover,.navbar ul a:hover{background-color:#333;background-color:rgba(255, 255, 255, 0.05);color:#ffffff;text-decoration:none;}
   .navbar h3{position:relative;}
@@ -135,7 +135,11 @@ body {
   .navbar input:-moz-placeholder{color:#e6e6e6;}
   .navbar input::-webkit-input-placeholder{color:#e6e6e6;}
   .navbar input:hover{background-color:#bfbfbf;background-color:rgba(255, 255, 255, 0.5);color:#ffffff;}
-  .navbar input:focus,.navbar input.focused{outline:0;background-color:#ffffff;color:#404040;text-shadow:0 1px 0 #ffffff;border:0;padding:5px 10px;-webkit-box-shadow:0 0 3px rgba(0, 0, 0, 0.15);-moz-box-shadow:0 0 3px rgba(0, 0, 0, 0.15);box-shadow:0 0 3px rgba(0, 0, 0, 0.15);}
+  .navbar input:focus,.navbar input.focused{
+       outline:0;background-color:#ffffff;color:#404040;text-shadow:0 1px 0 #ffffff;
+       border:0;padding:5px 10px;-webkit-box-shadow:0 0 3px rgba(0, 0, 0, 0.15);
+       -moz-box-shadow:0 0 3px rgba(0, 0, 0, 0.15);box-shadow:0 0 3px rgba(0, 0, 0, 0.15);
+   }
   .navbar-inner,.navbar .fill{
 	background-color:#222;
 	background-color:#222222;
@@ -165,6 +169,16 @@ body {
   .navbar div>ul .menu-dropdown .active a,.nav .menu-dropdown .active a,.navbar div>ul .dropdown-menu .active a,.nav .dropdown-menu .active a{color:#ffffff;}
   .navbar div>ul .menu-dropdown .divider,.nav .menu-dropdown .divider,.navbar div>ul .dropdown-menu .divider,.nav .dropdown-menu .divider{background-color:#222;border-color:#444;}
   .navbar ul .menu-dropdown li a,.navbar ul .dropdown-menu li a{padding:4px 15px;}
+
+/*2.0.0*/
+.navbar .nav > li > a {
+  float: none;
+  padding: 10px 10px 11px;
+  line-height: 19px;
+  color: #999999;
+  text-decoration: none;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+}
 
    /*h1/h6 Logotype/branding styling */
 .navbar h1 a:hover,.navbar .brand:hover,.navbar ul a:hover{

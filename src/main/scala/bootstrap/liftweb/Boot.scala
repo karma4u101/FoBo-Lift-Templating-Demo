@@ -31,14 +31,17 @@ class Boot extends Loggable {
     LiftRules.addToPackages("code")
 
     FoBoInitParams.JQuery=JQuery171  
-    FoBoInitParams.ToolKit=FoBo010    
+    FoBoInitParams.ToolKit=FoBo020 //FoBo010    
     FoBo.init()   
  
     // Build SiteMap
     val entries = List(
       Menu.i("Home") / "index",
-      Menu(Loc("Foundation", Link(List("static"), true, "/static/foundation/index"),
-        "Foundation")))   
+      Menu(Loc("Foundation", Link(List("foundation"), true, "/foundation/index"),
+        "Foundation")),
+      Menu(Loc("Bootstrap", Link(List("bootstrap"), true, "/bootstrap/index"),
+        "Bootstrap"))
+    )   
       
     // set the sitemap.  Note if you don't want access control for
     // each page, just comment this line out.

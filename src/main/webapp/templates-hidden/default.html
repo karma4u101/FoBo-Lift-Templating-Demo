@@ -10,8 +10,15 @@
 <meta name="keywords" content="" />
 
 <!-- Included CSS Files -->
-<!-- <link rel="stylesheet" type='text/css' href="/classpath/fobo/css/fobo-0.1.css"/> -->
+
 <link rel="stylesheet" type='text/css' href="/classpath/fobo/fobo.css"/>
+
+<!-- test setup -->
+
+<!-- <link rel="stylesheet" type='text/css' href="/resources/test/css/bootstrap-2.0.0.css">  -->
+<!-- <link rel="stylesheet" type='text/css' href="/resources/test/css/foundation-2.1.5.css">  -->
+
+<!-- end  test setup -->
 <!-- Included your own app specific CSS here -->
 <link rel="stylesheet" type='text/css' href="/resources/css/app.css"> 
 
@@ -34,13 +41,15 @@
 <script type='text/javascript' src='/classpath/fobo/jquery.js'></script>
 
 
-
 <title class="lift:Menu.title">FoBo-Lift Template demo %*%</title>
 
 		<script type="text/javascript">
 			addLoadEvent(function() {
-				$('#fobo-topbar').dropdown()
+				$('.dropdown-toggle').dropdown()
 			});
+// 			addLoadEvent(function() {
+// 				$('#fobo-navbar').scrollspy()
+// 			});			
 
 			function addLoadEvent(func) {
 				var oldonload = window.onload;
@@ -60,10 +69,11 @@
 
 
 </head>
-<body>
+<body data-offset="40" data-target="#fobo-navbar" data-spy="scroll">
 
 	<div id="content"></div>
     <script type="text/javascript" src="/classpath/fobo/bootstrap-scrollspy.js"></script>
-    <script type="text/javascript" src="/classpath/fobo/bootstrap-dropdown.js"></script>    
+    <script type="text/javascript" src="/classpath/fobo/bootstrap-dropdown.js"></script> 
+    <script type="text/javascript" src="/classpath/fobo/bootstrap-collapse.js"></script>    
 </body>
 </html>

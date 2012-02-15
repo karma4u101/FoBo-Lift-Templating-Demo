@@ -3,12 +3,15 @@ organization := "se.media4u101"
 
 name := "FoBo-Lift-Template"
 
-version := "1.5-SNAPSHOT"
+version := "2.0-SNAPSHOT"
 
 scalaVersion := "2.9.1"
 
 seq(webSettings :_*)
 
+//run with ~container:start using a context path localhost:8080/test to make sure noting breaks 
+//env in Compile :=  Some(file(".") / "jetty-env.xml" asFile) 
+ 
 // If using JRebel
 //jettyScanDirs := Nil
 scanDirectories in Compile := Nil
@@ -30,13 +33,14 @@ libraryDependencies ++= {
     "net.liftweb" %% "lift-squeryl-record" % liftVersion % "compile->default" withSources(),
     "net.liftweb" %% "lift-wizard" % liftVersion % "compile->default",
     "net.liftweb" %% "lift-testkit" % liftVersion % "compile->default",
-    "net.liftmodules" %% "fobo" % (liftVersion+"-0.2.7-SNAPSHOT")
+    "net.liftmodules" %% "fobo" % (liftVersion+"-0.2.8-SNAPSHOT")
     )
 }
 
 // Customize any further dependencies as desired
 libraryDependencies ++= Seq(
   "org.eclipse.jetty" % "jetty-webapp" % "8.0.3.v20111011" % "container",
+  "org.eclipse.jetty" % "jetty-plus" % "8.0.3.v20111011" % "container", 
   "javax.servlet" % "servlet-api" % "2.5" % "provided->default",
   "org.slf4j" % "slf4j-log4j12" % "1.6.1" % "compile->default", // Logging
   "junit" % "junit" % "4.8" % "test->default", // For JUnit 4 testing

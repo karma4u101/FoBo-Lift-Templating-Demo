@@ -66,7 +66,8 @@ li {
 
 .navbar .nav > li > a:hover {background-color:#333;background-color:rgba(255, 255, 255, 0.05);color:#ffffff;text-decoration:none;}
 .navbar a:hover,.navbar .brand:hover,.navbar ul a:hover{background-color:#333;background-color:rgba(255, 255, 255, 0.05);color:#222;text-decoration:none;}
-	
+.navbar .nav > li > a:hover, .navbar .dropdown-menu a:hover {background-color:rgba(255, 255, 255, 0.05);color:#ffffff;text-decoration:none;}
+
 /*end bootstrap 2.0.0 topbar replacement navbar*/
 
 /*Sections - header*/    

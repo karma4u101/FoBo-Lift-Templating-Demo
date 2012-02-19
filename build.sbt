@@ -3,7 +3,7 @@ organization := "se.media4u101"
 
 name := "FoBo-Lift-Template"
 
-version := "2.0-SNAPSHOT"
+version := "2.1-SNAPSHOT"
 
 scalaVersion := "2.9.1"
 

@@ -1,8 +1,12 @@
 body {
 	padding-top:40px;
 	background-color: #8d8d8d;
+	width: auto;
 }
 
+/* #fobo-main { */
+/*    width:auto;	 */
+/* } */
 /*Foundation overrides */
 li {
     margin-bottom: 0px;
@@ -10,9 +14,10 @@ li {
 	
 /*bootstrap 2.0.0 topbar replacement navbar*/
 .navbar .bo-container {
+	width:auto;
     margin-left: auto;
     margin-right: auto;
-    min-width: 415px;
+    min-width: 100px;
     max-width:980px;
 }
 
@@ -36,7 +41,7 @@ li {
     float: left;
     font-size: 20px;
     line-height: 1;
-    margin-left: -20px;
+/*     margin-left: -20px; */
     padding: 12px 20px 8px;
 }
 
@@ -77,12 +82,13 @@ li {
 /*frontheader brand*/
 .header {
 	min-height:120px;
-    padding-left:5px;
-    padding-right:5px;
+/*     padding-left:5px; */
+/*     padding-right:5px; */
 	color: #ffffff;
 	text-shadow: 0 1px 2px rgba(0,0,0,.5);
 	background:url('/resources/images/bg.jpg') no-repeat top center #a6e5ec;
-	padding-top:15px;padding-bottom:15px;
+	padding-top:15px;
+	padding-bottom:15px;
 	-webkit-box-shadow: inset 0 10px 60px rgba(0,0,0,.5);
 	-moz-box-shadow: inset 0 10px 60px rgba(0,0,0,.5);
 }
@@ -94,8 +100,9 @@ li {
     font-size: 22px;
     font-weight: 200;
     line-height: 1;
-    margin-left: -20px;
-    padding: 8px 20px 12px;
+/*     margin-left: -20px; */
+/*     padding: 8px 20px 12px; */
+    padding:20px 10px 0px 12px;
 }
 
 .header h1 a:hover,.header .fhbrand:hover {
@@ -127,28 +134,7 @@ li {
     text-shadow: 1px 1px 3px rgba(180, 180, 180, 0.5);
     }
   
-@media handheld, only screen and (max-width: 979px) {
-        body {
-	      padding-top:0px;
-        }	
-}    
-@media handheld, only screen and (max-width: 767px) {
-        body {
-	      padding-top:0px;
-        }	
-		.header h1.fhcapital { 
- 		font-size: 236%;  
-		line-height: 1.3; 
-		}
-		.header h6.fhbrand-sub { 
-		font-size: 46%;  
-		line-height: 1.2; 
-		margin-top:-28px;
-		}
-		.header h1 a,.header .fhbrand{
-           padding:20px 10px 0px 12px;
-        }
-}    
+
 /*end frontheader brand*/
 
 
@@ -167,7 +153,7 @@ li {
 	background: none repeat scroll 0 0 #EEE; /*#2C4150;*/
 	min-height:60px;
     padding-left:5px;
-    padding-right:5px;
+    padding-right:2px;
 	padding-bottom:10px;
 	padding-top:40px;    
 /*     background-color:#EEE; */
@@ -397,3 +383,40 @@ hr {
     background:      -o-linear-gradient(left, hsla(0,0%,0%,0) 0%, hsla(0,0%,0%,.75) 50%, hsla(0,0%,0%,0) 100%);
     background:         linear-gradient(left, hsla(0,0%,0%,0) 0%, hsla(0,0%,0%,.75) 50%, hsla(0,0%,0%,0) 100%);
 }
+
+@media handheld, only screen and (max-width: 979px) {
+        body {
+	      padding-top:0px;
+	      width: 100%;
+        }	
+		.header h1.fhcapital { 
+ 		font-size: 230%;  
+		line-height: 1.3; 
+		}
+		.header h6.fhbrand-sub { 
+		font-size: 45%;  
+		line-height: 1.2; 
+		margin-top:-28px;
+		}
+		.header h1 a,.header .fhbrand{
+           padding:20px 10px 0px 12px;
+        }        
+}    
+@media handheld, only screen and (max-width: 767px) {
+        body {
+	      padding-top:0px;
+	      width: 100%;
+        }	
+		.header h1.fhcapital { 
+ 		font-size: 200%;  
+		line-height: 1.3; 
+		}
+		.header h6.fhbrand-sub { 
+		font-size: 38%;  
+		line-height: 1.2; 
+		margin-top:-22px;
+		}
+		.header h1 a,.header .fhbrand{
+           padding:20px 2px 0px 12px;
+        }
+}    

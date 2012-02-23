@@ -31,7 +31,8 @@ class Boot extends Loggable {
     LiftRules.addToPackages("code")
 
     FoBoInitParams.JQuery=JQuery171  
-    FoBoInitParams.ToolKit=FoBo020 //FoBo010    
+    FoBoInitParams.ToolKit=FoBo020 
+    FoBoInitParams.MobileToolKit=JQueryMobile101
     FoBo.init()   
  
     // Build SiteMap
@@ -40,7 +41,9 @@ class Boot extends Loggable {
       Menu(Loc("Foundation", Link(List("foundation"), true, "/foundation/index"),
         "Foundation")),
       Menu(Loc("Bootstrap", Link(List("bootstrap"), true, "/bootstrap/index"),
-        "Bootstrap"))
+        "Bootstrap")),
+      Menu(Loc("JQuery-mobile", Link(List("jquery-mobile"), true, "/jquery-mobile/1.0.1/demos/index"),
+        "JQuery-mobile"))        
     )   
       
     // set the sitemap.  Note if you don't want access control for

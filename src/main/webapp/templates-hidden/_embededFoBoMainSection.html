@@ -17,6 +17,7 @@
 						<h2 class="capital">
 							A<span>bout</span> T<span>his</span> D<span>emo</span>
 						</h2>
+						<div style="float:right;vertical-align:text-top;padding-top:0px;"><img src="/resources/images/fobo_demo_bcode.png"/></div>
 						This demo demonstrates a optional <a href="http://liftweb.net/">Lift</a>, 
 						 generic front-end toolkit <a
 							href="http://www.assembla.com/spaces/liftweb/wiki/Modules">module</a>
@@ -37,7 +38,6 @@
 							F<span>o</span>B<span class="smal">o</span><span> and the
 								fobo mix</span>
 						</h2>
-
 						This page uses the <strong>FoBo02 ToolKit init param. option</strong> of the fobo
 						module which make use of the <strong>fobo.css</strong>, there is
 						also separate BootstrapXX, FoundationXX options and more. This
@@ -48,7 +48,52 @@
 							href="http://foundation.zurb.com/">ZURB/Foundation</a> and the <a
 							href="http://twitter.github.com/bootstrap/">Twitter Bootstrap</a>
 						front-end toolkit.
+						<p/>
+						<p>To initiate the module chose the toolkit option you like to use and call FoBo.init(). 
+						This demo uses the following module setup in lift Boot:</p>
+						<pre class="prettyprint linenums lang-scala">
 
+                           import net.liftmodules.FoBo._
+
+                           /**
+                            * A class that's instantiated early and run.  It allows the application
+                            * to modify lift's environment
+                            **/
+                            class Boot extends Loggable {
+                              def boot {
+
+                                //If using defaults FoBo init params can be omitted
+                                FoBoInitParams.JQuery=JQuery171  
+                                FoBoInitParams.ToolKit=FoBo020 
+                                FoBoInitParams.ToolKit=PrettifyJun2011
+                                FoBoInitParams.ToolKit=JQueryMobile101
+                                FoBo.init()
+                                  :      
+						</pre>
+						<p>In Lift's html5 template:s add (depending on your setup) something like this:</p>
+						<pre class="prettyprint linenums lang-html">
+                        &lt;!DOCTYPE html&gt;
+                        &lt;html&gt;
+                          &lt;head&gt;
+                             :
+                             &lt;!--Main css for the FoBo020 module option--&gt;
+                             &lt;link href="/classpath/fobo/fobo.css" type="text/css" rel="stylesheet"&gt;
+                             &lt;!--app specific tweeks and overrides external to module goes here--&gt;
+                             &lt;link href="[path to your projects app css]" type="text/css" rel="stylesheet"&gt;  
+                             :                        
+                          &lt;/head&gt;
+                          &lt;!--Demo page setup for prettyprint and bootstrap scrollspy--&gt;
+                          &lt;body data-spy="scroll" data-target="#fobo-navbar" data-offset="40" onload="prettyPrint()"&gt;
+                             :
+                             &lt;!--In end of page (for fast pageload) add the scripts you need--&gt; 
+                             &lt;script src="/classpath/fobo/prettify.js" type="text/javascript"&gt;&lt;/script&gt;
+                             &lt;script src="/classpath/fobo/lang-scala.js" type="text/javascript"&gt;&lt;/script&gt;
+                             &lt;script src="/classpath/fobo/bootstrap-scrollspy.js" type="text/javascript"&gt;&lt;/script&gt;
+                             :
+                          &lt;/body&gt;        
+                        &lt;/html&gt;    
+						</pre>						
+						For a more information see the <a href="https://github.com/karma4u101/FoBo">FoBo modules Github</a>.
 						<hr />
 					</div>
 				</div>

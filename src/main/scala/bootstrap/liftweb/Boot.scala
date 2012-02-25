@@ -16,8 +16,6 @@ import _root_.net.liftweb.http.provider.HTTPRequest
 import _root_.net.liftweb.http.auth.{ HttpBasicAuthentication, AuthRole, userRoles }
 import net.liftmodules.FoBo._
 
-//import nu.m4u.snippet._
-
 object localeOverride extends SessionVar[Box[Locale]](Empty)
 
 /**
@@ -27,14 +25,16 @@ object localeOverride extends SessionVar[Box[Locale]](Empty)
 class Boot extends Loggable {
   def boot {
 
+   //If using defaults FoBo init params can be omitted
+    FoBoInitParams.JQuery=JQuery171  
+    FoBoInitParams.ToolKit=FoBo020
+    FoBoInitParams.ToolKit=PrettifyJun2011
+    FoBoInitParams.ToolKit=JQueryMobile101
+    FoBo.init()   
+
     // where to search snippet
     LiftRules.addToPackages("code")
-
-    FoBoInitParams.JQuery=JQuery171  
-    FoBoInitParams.ToolKit=FoBo020 
-    FoBoInitParams.MobileToolKit=JQueryMobile101
-    FoBo.init()   
- 
+    
     // Build SiteMap
     val entries = List(
       Menu.i("Home") / "index",
@@ -43,7 +43,8 @@ class Boot extends Loggable {
       Menu(Loc("Bootstrap", Link(List("bootstrap"), true, "/bootstrap/index"),
         "Bootstrap")),
       Menu(Loc("JQuery-mobile", Link(List("jquery-mobile"), true, "/jquery-mobile/1.0.1/demos/index"),
-        "JQuery-mobile"))        
+        "JQuery-mobile"))
+        
     )   
       
     // set the sitemap.  Note if you don't want access control for

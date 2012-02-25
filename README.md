@@ -1,11 +1,19 @@
-FoBo - Lift Template
---------------------
+FoBo module demo
+----------------
 
-This is a stipped down Lift template / FoBo demo for use with/of the FoBo Lift module. 
+This is a Lift FoBo module demo that demonstrates the use of the FoBo Lift module. 
 See the [FoBo - Lift Front-End Toolkit Module](https://github.com/karma4u101/FoBo).
 
-Live demo of this lift template with the [FoBo](https://github.com/karma4u101/FoBo) module is available 
-[here](http://www.media4u101.se/fobo-lift-template-demo/).
+Demonstration of this module demo is set up and live [here](http://www.media4u101.se/fobo-lift-template-demo/). 
+The corresponding FoBo module is available [here](https://github.com/karma4u101/FoBo). .
+
+Note: This was initially intended to be a basic/starter lift template with the FoBo module initiated 
+but it has turned out more of a separate demo. There are lots of basic lift templats out there, fork 
+the demo, run it and look at the code and its examples. It's really simple to integrate the FoBo module 
+in any lift project but if you are looking for a good basic lift starter template try out 
+[this one](https://github.com/heiflo/lift-basic-2.4-sbt-0.11.2) or maybe my 
+[Templating-With-Twitter-Bootstrap](https://github.com/karma4u101/Templating-With-Twitter-Bootstrap) 
+suits your needs, be sure to correct the module version in build.sbt as it may lag behind.  
 
 Improvements, contributions and suggestions are welcome!
 

@@ -2,8 +2,13 @@ body {
 	padding-top:40px;
 	background-color: #8d8d8d;
 	width: auto;
+    font-family: "Helvetica Neue","HelveticaNeue",Helvetica,Arial,"Lucida Grande",sans-serif;
+/*     font-size: 14px;	 */
 }
 
+p {
+	font-size:15px;
+}
 /* #fobo-main { */
 /*    width:auto;	 */
 /* } */

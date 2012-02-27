@@ -43,7 +43,9 @@ class Boot extends Loggable {
       Menu(Loc("Bootstrap", Link(List("bootstrap"), true, "/bootstrap/index"),
         "Bootstrap")),
       Menu(Loc("JQuery-mobile", Link(List("jquery-mobile"), true, "/jquery-mobile/1.0.1/demos/index"),
-        "JQuery-mobile"))
+        "JQuery-mobile")),
+      Menu(Loc("DataTables", Link(List("datatables"), true, "/datatables/1.9.0/index"),
+        "DataTables"))  
         
     )   
       

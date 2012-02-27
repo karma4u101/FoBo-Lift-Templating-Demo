@@ -5,7 +5,7 @@ This is a Lift FoBo module demo that demonstrates the use of the FoBo Lift modul
 See the [FoBo - Lift Front-End Toolkit Module](https://github.com/karma4u101/FoBo).
 
 Demonstration of this module demo is set up and live [here](http://www.media4u101.se/fobo-lift-template-demo/). 
-The corresponding FoBo module is available [here](https://github.com/karma4u101/FoBo). .
+The corresponding FoBo module is available [here](https://github.com/karma4u101/FoBo). 
 
 Note: This was initially intended to be a basic/starter lift template with the FoBo module initiated 
 but it has turned out more of a separate demo. There are lots of basic lift templats out there, fork 

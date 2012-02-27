@@ -17,13 +17,13 @@ seq(webSettings :_*)
 scanDirectories in Compile := Nil
 
 logLevel := Level.Info
-//Level.Debug
+//Level.Info.Debug
 
 resolvers += "Java.net Maven2 Repository" at "http://download.java.net/maven/2/"
 
 EclipseKeys.withSource := true
 
-transitiveClassifiers := Seq("sources")
+transitiveClassifiers := Seq("sources")//,"javadocs")
 
 libraryDependencies ++= {
   val liftVersion = "2.4" // Put the current/latest lift version here
@@ -33,7 +33,7 @@ libraryDependencies ++= {
     "net.liftweb" %% "lift-squeryl-record" % liftVersion % "compile->default" withSources(),
     "net.liftweb" %% "lift-wizard" % liftVersion % "compile->default",
     "net.liftweb" %% "lift-testkit" % liftVersion % "compile->default",
-    "net.liftmodules" %% "fobo" % (liftVersion+"-0.3.1-SNAPSHOT")
+    "net.liftmodules" %% "fobo" % (liftVersion+"-0.3.2-SNAPSHOT") withJavadoc() withSources() 
     )
 }
 
@@ -48,9 +48,3 @@ libraryDependencies ++= Seq(
   "org.specs2" %% "specs2" % "1.6.1" % "test",
   "commons-lang" % "commons-lang" % "2.0" % "compile->default"
 )
-
-// "org.mindrot" % "jbcrypt" % "0.3m" % "compile->default",  
-//  "com.h2database" % "h2" % "1.2.138", // In-process database, useful for development systems
-//  "mysql" % "mysql-connector-java" % "5.1.17", //Used in dev-test-jetty-run i.e for development systems outside of jni context
-//  "postgresql" % "postgresql" % "9.0-801.jdbc4", //Used in dev-test-jetty-run i.e for development systems outside of jni context
-//  "com.jolbox" % "bonecp" % "0.7.1.RELEASE" % "compile->default",

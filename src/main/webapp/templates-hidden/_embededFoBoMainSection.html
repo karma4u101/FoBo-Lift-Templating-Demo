@@ -15,19 +15,32 @@
 				<div class="row">
 					<div class="twelv columns">
 						<h2 class="capital">
-							A<span>bout</span> T<span>his</span> D<span>emo</span>
+							A<span>bout</span> T<span>his</span> D<span>emo and the</span> F<span>o</span>B<span>o module</span>
 						</h2>
-						<div style="float:right;vertical-align:text-top;padding-top:0px;"><img src="/resources/images/fobo_demo_bcode.png"/></div>
+						<div style="display:block;float:right;vertical-align:text-top;padding-top:0px;">
+						<i style="float:right;margin-left:-10px;margin-top:5px;" class="icon-question-sign"></i>
+						<a id="bcode-popover" data-content="Use your favorite barcode reader to quick and easy load this page in your media-device." title="View in Media-device!" rel="popover" href="#">
+						<img src="/resources/images/fobo_demo_bcode.png"/></a>
+						</div>
+						<!-- For convinience (not requered), using the FoBo modules FoBoHelper in Demo snippet to generate and invoce -->
+						<!-- bootstrap popover component scripts instead of handwrite them here -->
+						<script data-lift="FoBo.Bootstrap.popover?id=#bcode-popover&options=placement:'left'"></script>						
+						<script data-lift="FoBo.Bootstrap.popoverPreventDefault?on=#bcode-popover"></script>
+
+						<p>
 						This demo demonstrates a optional <a href="http://liftweb.net/">Lift</a>, 
 						 generic front-end toolkit <a
 							href="http://www.assembla.com/spaces/liftweb/wiki/Modules">module</a>
 						FoBo that quick and easy will integrate some great front-end
 						toolkit(s) into your Lift application, giving you the flexibility
-						and choice of setting up and use the toolkit (and version) of your
-						liking. For more information about the FoBo module take a look at
-						the readme at <a href="https://github.com/karma4u101/FoBo">Github</a>.
-						<br /> Check out the integrated toolkit documentation for a comprehensive 
-						list of the, in this demo included, toolkits features.
+						and choice of setting up and use the toolkit:s (and version:s) of your
+						liking, that is, if you like you can even setup and potentially use 
+						several toolkits simultaneously. 
+						For more information about the FoBo module take a look at the readme on 
+						<a href="https://github.com/karma4u101/FoBo">Github</a>.</p>
+						 
+						<p>Also check out the integrated toolkit documentation for a comprehensive 
+						list of the, in this demo included, toolkits features.</p>
 						<hr />
 					</div>
 				</div>
@@ -35,22 +48,116 @@
 					<div class="twelv columns">
 
 						<h2 class="capital">
-							F<span>o</span>B<span class="smal">o</span><span> and the
-								fobo mix</span>
+						<img id="mobile-popover" data-content="Use your favorite barcode reader to quick and easy load this page in your mobile." title="View in Mobile!" rel="popover" style="max-height:40px;width:auto;" src="/resources/images/mobile_device_128x128.png" />M<span>obile</span> S<span>calability with</span> F<span>o</span>B<span class="smal">o</span>	 
+						</h2>  
+						<!-- using the FoBoHelper in Demo Snippet, not requered but handy ;) -->
+						<script data-lift="FoBo.Bootstrap.popover?id=#mobile-popover"></script>						
+						<p><b>The FoBo mix -</b> One of the convenience options the FoBo Lift module comes 
+						with is the FoBoInitParams.ToolKit=FoBoXX setup option. 
+						The FoBoXX setup option is a love, peace and harmony mix of the 
+						<a href="http://foundation.zurb.com/">ZURB/Foundation</a> and the 
+						<a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap</a>
+						front-end toolkit. This concert mix will give you the awesomeness of foundation 
+						with its rock & roll solid reactive, mobile scalability and the brilliance of 
+						bootstrap, it's components and interactions.</p>
+						
+						<p>This page uses (among others) the <strong>FoBoInitParams.ToolKit=FoBo02 option</strong> 
+						of the FoBo module which make use of the <strong>fobo.css</strong>, there is also separate 
+						BootstrapXX, FoundationXX, JQueryMobileXXX options and more. 
+						This demo also make heavy use of a application specific css styling using the 
+						<strong>fobo02-demo-app1.css</strong> file (external to the module).</p>
+						
+												
+						<hr />
+					</div>
+				</div>
+				<div class="row">
+					<div class="twelv columns">
+						<h2 class="capital">
+							T<span>he</span> ZURB/F</span><span>oundation toolkit</span>
 						</h2>
-						This page uses the <strong>FoBo02 ToolKit init param. option</strong> of the fobo
-						module which make use of the <strong>fobo.css</strong>, there is
-						also separate BootstrapXX, FoundationXX options and more. This
-						demo also make heavy use of a application specific css styling
-						using the <strong>fobo02-demo-app1.css</strong> file (external to
-						the module). <br /> The fobo.css setup option in the FoBo module
-						is a love, peace and harmony mix of the <a
-							href="http://foundation.zurb.com/">ZURB/Foundation</a> and the <a
-							href="http://twitter.github.com/bootstrap/">Twitter Bootstrap</a>
-						front-end toolkit.
-						<p/>
-						<p>To initiate the module chose the toolkit option you like to use and call FoBo.init(). 
-						This demo uses the following module setup in lift Boot:</p>
+						<p>The <a href="http://foundation.zurb.com/">ZURB/Foundation</a>
+						toolkit is a great reactive and mobile scalable toolkit.</p> 
+						
+						<p>The FoBo module also gives you the (separate) setup option FoBoInitParams.ToolKit=FoundationXXX 
+						for using the foundation toolkit. For a demonstration take a look at the included <span
+							data-lift="Menu.item?name=Foundation;lift:Loc.i;a:class=addclassshowofdummy">
+							<span data-lift="Loc?locid=Foundation">Foundation demo</span>
+						</span>.</p>
+						<p>
+							<span
+								data-lift="Menu.item?name=Foundation;lift:Loc.i;a:class=nice radius large blue button">
+								<span data-lift="Loc.i">Foundation</span>
+						</p>
+						<hr />
+					</div>
+				</div>
+				<div class="row">
+					<div class="twelv columns">
+
+						<h2 class="capital">
+							T<span>he</span> T<span>witter</span> B<span>ootstrap
+								toolkit</span>
+						</h2>
+						<p>The <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap</a> toolkit is a great 
+						toolkit with lots of candy. It's simple and flexible and have popular user interface 
+						components and interactions.</p> 
+						
+						<p>Apart from giving you the easy access and integration of the FoBoXX mix the FoBo module also 
+						gives you the (separate) setup option FoBoInitParams.ToolKit=BootstrapXXX to use the bootstrap toolkit. 
+						The included bootstrap documentation pages is <b>modified</b> to use the FoBoXX option <span
+							data-lift="Menu.item?name=Bootstrap;lift:Loc.i;a:class=addclassshowofdummy">
+							<span data-lift="Loc?locid=Bootstrap">Bootstrap demo</span>
+						</span> but can as easily (or even more so) be set up and used with the BootstrapXXX option.</p> 
+						<p>
+							<span
+								data-lift="Menu.item?name=Bootstrap;lift:Loc.i;a:class=nice radius large blue button">
+								<span data-lift="Loc.i">Bootstrap</span>
+						</p>
+						<hr />
+					</div>
+				</div>
+				<div class="row">
+					<div class="twelv columns">
+
+						<h2 class="capital">
+							T<span>he</span> JQ<span>uery</span> M<span>obile 
+								toolkit</span>
+						</h2>
+						    <p>The <a href="http://jquerymobile.com/">JQuery Mobile</a> toolkit is a Touch-Optimized 
+						    Web Framework for Smartphones & Tablets.</p>
+						     
+				            <p>To use this mobile centric toolkit set FoBoInitParams.ToolKit=JQueryMobileXXX and go mobile.</p>
+							
+							<p>To demonstrate usage of this mobile centric toolkit the (in this demo) included JQuery Mobile documentation 
+							pages is <b>modified</b> to use the Fobo modules FoBoInitParams.ToolKit=JQueryMobile101 option <span 
+							data-lift="Menu.item?name=JQuery-mobile;lift:Loc.i;a:class=addclassshowofdummy">
+							<span data-lift="Loc?locid=JQuery-mobile">JQuery-mobile demo</span>
+						</span>. </p>
+						<p>
+							<span
+								data-lift="Menu.item?name=JQuery-mobile;lift:Loc.i;a:class=nice radius large blue button">
+								<span data-lift="Loc.i">JQuery-mobile</span>
+						</p>
+						<hr />
+					</div>
+				</div>		
+				<a id="spysetup"></a>		
+				<div class="row">
+					<div class="twelv columns">
+						<h2 class="capital">
+							S<span>etup and</span> U<span>sage</span> 
+						</h2>
+						<p>For now you have to clone and build the module yourself but thats easy and straight forward 
+						so, if you have not done it already, go ahead and do it now, you will find all information you 
+						need to prepare the module for usage on <a href="https://github.com/karma4u101/FoBo">Github FoBo module</a>, 
+						then come back here for integration and usage. 
+						</p>
+						
+						<p>To initiate and release the powers of the FoBo module chose the Toolkit option(s) you 
+						prefer and then call FoBo.init() from your lift projects Boot.</p> 
+						
+						<p>This demo uses the following module setup in lift Boot:</p>
 						<pre class="prettyprint linenums lang-scala">
 
                            import net.liftmodules.FoBo._
@@ -92,84 +199,63 @@
                              :
                           &lt;/body&gt;        
                         &lt;/html&gt;    
+						</pre>
+						<p>Note the uniform setup without any version references in the html templates, making way for a smooth(er) toolkit upgrade. 
+						For more information see the <a href="https://github.com/karma4u101/FoBo">FoBo modules Github</a>.</p>
+						
+						<p>The FoBo module comes with some convinience functions (snippets, optional to use) that will generate some commonly used 
+						bootstrap scripts for you. For instansce instead of doing this (a common bootstrap component init use case) </p>
+						<pre class="prettyprint linenums lang-html">
+                        &lt;!DOCTYPE html&gt;
+                        &lt;html&gt;
+                          &lt;head&gt;
+                             :                      
+                          &lt;/head&gt;
+                          &lt;body"&gt;
+                             :
+                              &lt;!-- Set a boostrap popover element --&gt;   
+	                      &lt;a href="#" rel="popover" title="The Title" data-content="The content ..." id="theId"&gt;...&lt;/a&gt;
+                              &lt;!-- Initiate the popover and place it on the left --&gt;
+	                      &lt;script&gt;
+                                $(function () { 
+                                  $("#theId").popover({placement:'left'});
+                                }); 
+                              &lt;/script&gt; 
+                              &lt;!-- Prevent the default action for click on the popover --&gt;
+                              &lt;script&gt; 
+                                $(function(){
+                                  $("a[rel=popover]")
+                                    .popover()
+                                    .click(function(e) {
+                                      e.preventDefault()
+                                  });
+                                });
+                              &lt;/script&gt; 
+                               : 
+                          &lt;/body&gt;        
+                        &lt;/html&gt;    
+						</pre>
+						<p>You can do this using a FoBo:s snippet containing some bootstrap convinience functions: </p>
+						<pre class="prettyprint linenums lang-html">
+                        &lt;!DOCTYPE html&gt;
+                        &lt;html&gt;
+                          &lt;head&gt;
+                               :                      
+                          &lt;/head&gt;
+                          &lt;body"&gt;
+                               :
+	                      &lt;a href="#" rel="popover" title="The Title" data-content="The content ..." id="theId"&gt;...&lt;/a&gt;
+                              &lt;script data-lift="FoBo.Bootstrap.popover?id=#theId&options=placement:'left'"&gt;&lt;/script&gt;
+                              &lt;script data-lift="FoBo.Bootstrap.popoverPreventDefault">&lt;/script&gt;
+                               : 
+                          &lt;/body&gt;        
+                        &lt;/html&gt;    
 						</pre>						
-						For a more information see the <a href="https://github.com/karma4u101/FoBo">FoBo modules Github</a>.
+						<p>At this writing the available snippet helpers are few but I expect the numbers to grow and you are 
+						wellcome to contribute code and/or ideas.</p>	
 						<hr />
 					</div>
 				</div>
-				<div class="row">
-					<div class="twelv columns">
-						<h2 class="capital">
-							T<span>he</span> ZURB/F</span><span>oundation toolkit</span>
-						</h2>
-						The <a href="http://foundation.zurb.com/">ZURB/Foundation</a>
-						toolkit is a great mobile scalable toolkit. Apart from giving you
-						easy access and integration of the fobo mix the FoBo module also
-						gives you the setup option to use the foundation toolkit
-						separately take a look at the <span
-							data-lift="Menu.item?name=Foundation;lift:Loc.i;a:class=addclassshowofdummy">
-							<span data-lift="Loc?locid=Foundation">Foundation demo</span>
-						</span>. <br> <br>
-						<p>
-							<span
-								data-lift="Menu.item?name=Foundation;lift:Loc.i;a:class=nice radius large blue button">
-								<span data-lift="Loc.i">Foundation</span>
-						</p>
-						<hr />
-					</div>
-				</div>
-				<div class="row">
-					<div class="twelv columns">
-
-						<h2 class="capital">
-							T<span>he</span> T<span>witter</span> B<span>ootstrap
-								toolkit</span>
-						</h2>
-						The <a href="http://twitter.github.com/bootstrap/">Twitter
-							Bootstrap</a> toolkit is a great toolkit with lots candy. Apart from
-						giving you easy access and integration of the fobo mix the FoBo
-						module also gives you the setup option to use the bootstrap
-						toolkit separately. The included bootstrap documentation pages is
-						<b>modified</b> to use the FoBo option <span
-							data-lift="Menu.item?name=Bootstrap;lift:Loc.i;a:class=addclassshowofdummy">
-							<span data-lift="Loc?locid=Bootstrap">Bootstrap demo</span>
-						</span>. <br> <br>
-						<p>
-							<span
-								data-lift="Menu.item?name=Bootstrap;lift:Loc.i;a:class=nice radius large blue button">
-								<span data-lift="Loc.i">Bootstrap</span>
-						</p>
-
-						<hr />
-					</div>
-				</div>
-				<div class="row">
-					<div class="twelv columns">
-
-						<h2 class="capital">
-							T<span>he</span> JQ<span>uery</span> M<span>obile 
-								toolkit</span>
-						</h2>
-						    The <a href="http://jquerymobile.com/">JQuery Mobile</a> toolkit is a Touch-Optimized 
-						    Web Framework for Smartphones & Tablets.<br> 
-				            Apart from a ToolKit and JQuery module init option for you to chose your favorite 
-							toolkit and jquery version from there is also a additional MobileToolKit 
-							init option in the fobo module for you to chose a mobile centric toolkit from. 
-							To demonstrate the usage the (in this demo) included JQuery Mobile documentation 
-							pages is <b>modified</b> to use the Fobo modules MobileToolKit option <span 
-							data-lift="Menu.item?name=JQuery-mobile;lift:Loc.i;a:class=addclassshowofdummy">
-							<span data-lift="Loc?locid=JQuery-mobile">JQuery-mobile demo</span>
-						</span>. <br> <br>
-						<p>
-							<span
-								data-lift="Menu.item?name=JQuery-mobile;lift:Loc.i;a:class=nice radius large blue button">
-								<span data-lift="Loc.i">JQuery-mobile</span>
-						</p>
-
-						<hr />
-					</div>
-				</div>				
-
 			</div>
 			<div class="three columns">
 
@@ -178,8 +264,8 @@
 						<h2 class="capital">
 							<i class="icon-resize-vertical"></i>S<span>croll</span>
 						</h2>
-						<strong>Scroll the page</strong> to see the navbar scrollspy
-						function provided by bootstrap.
+						<p><strong>Scroll the page</strong> to see the navbar scrollspy
+						function provided by bootstrap.</p>
 					</div>
 				</div>
 				<div class="row">
@@ -187,8 +273,8 @@
 						<h2 class="capital">
 							<i class="icon-resize-horizontal"></i>D<span>rag</span>
 						</h2>
-						<strong>Drag the window</strong> to see bootstraps and foundations
-						mobile scalabilty in action.
+						<p><strong>Drag the window</strong> to see bootstraps and foundations
+						mobile scalabilty in action.</p>
 					</div>
 				</div>
 				<div class="row">
@@ -196,8 +282,8 @@
 						<h2 class="capital">
 							<i class="icon-zoom-in"></i>M<span>obile device</span>
 						</h2>
-						If you have not done it already open this demo in your favorite
-						smart device.
+						<p>If you have not done it already open this demo in your favorite
+						smart device.</p>
 					</div>
 				</div>
 			</div>

@@ -35,8 +35,16 @@
 						toolkit(s) into your Lift application, giving you the flexibility
 						and choice of setting up and use the toolkit:s (and version:s) of your
 						liking, that is, if you like you can even setup and potentially use 
-						several toolkits simultaneously. 
-						For more information about the FoBo module take a look at the readme on 
+						several toolkits simultaneously. For setup information  
+						<a href="#spysetup"> 
+						  see below</a>.</p>
+						
+						<p>
+						For more information about the FoBo module take a look at the 
+						<span data-lift="Menu.item?name=FoBoAPI;lift:Loc.i;a:class=addclassshowofdummy">
+							<span data-lift="Loc?locid=FoBoAPI">FoBoAPI</span>
+						</span>
+						and the readme on 
 						<a href="https://github.com/karma4u101/FoBo">Github</a>.</p>
 						 
 						<p>Also check out the integrated toolkit documentation for a comprehensive 
@@ -53,7 +61,7 @@
 						<!-- using the FoBoHelper in Demo Snippet, not requered but handy ;) -->
 						<script data-lift="FoBo.Bootstrap.popover?id=#mobile-popover"></script>						
 						<p><b>The FoBo mix -</b> One of the convenience options the FoBo Lift module comes 
-						with is the FoBoInitParams.ToolKit=FoBoXX setup option. 
+						with is the FoBo.InitParam.ToolKit=FoBo.FoBoXX setup option. 
 						The FoBoXX setup option is a love, peace and harmony mix of the 
 						<a href="http://foundation.zurb.com/">ZURB/Foundation</a> and the 
 						<a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap</a>
@@ -61,7 +69,7 @@
 						with its rock & roll solid reactive, mobile scalability and the brilliance of 
 						bootstrap, it's components and interactions.</p>
 						
-						<p>This page uses (among others) the <strong>FoBoInitParams.ToolKit=FoBo02 option</strong> 
+						<p>This page uses (among others) the <strong>FoBo.InitParam.ToolKit=FoBo.FoBo02 option</strong> 
 						of the FoBo module which make use of the <strong>fobo.css</strong>, there is also separate 
 						BootstrapXX, FoundationXX, JQueryMobileXXX options and more. 
 						This demo also make heavy use of a application specific css styling using the 
@@ -79,7 +87,7 @@
 						<p>The <a href="http://foundation.zurb.com/">ZURB/Foundation</a>
 						toolkit is a great reactive and mobile scalable toolkit.</p> 
 						
-						<p>The FoBo module also gives you the (separate) setup option FoBoInitParams.ToolKit=FoundationXXX 
+						<p>The FoBo module also gives you the (separate) setup option <strong>FoBo.InitParam.ToolKit=FoBo.FoundationXXX</strong> 
 						for using the foundation toolkit. For a demonstration take a look at the included <span
 							data-lift="Menu.item?name=Foundation;lift:Loc.i;a:class=addclassshowofdummy">
 							<span data-lift="Loc?locid=Foundation">Foundation demo</span>
@@ -104,7 +112,7 @@
 						components and interactions.</p> 
 						
 						<p>Apart from giving you the easy access and integration of the FoBoXX mix the FoBo module also 
-						gives you the (separate) setup option FoBoInitParams.ToolKit=BootstrapXXX to use the bootstrap toolkit. 
+						gives you the (separate) setup option <strong>FoBo.InitParam.ToolKit=FoBo.BootstrapXXX</strong> to use the bootstrap toolkit. 
 						The included bootstrap documentation pages is <b>modified</b> to use the FoBoXX option <span
 							data-lift="Menu.item?name=Bootstrap;lift:Loc.i;a:class=addclassshowofdummy">
 							<span data-lift="Loc?locid=Bootstrap">Bootstrap demo</span>
@@ -127,10 +135,10 @@
 						    <p>The <a href="http://jquerymobile.com/">JQuery Mobile</a> toolkit is a Touch-Optimized 
 						    Web Framework for Smartphones & Tablets.</p>
 						     
-				            <p>To use this mobile centric toolkit set FoBoInitParams.ToolKit=JQueryMobileXXX and go mobile.</p>
+				            <p>To use this mobile centric toolkit set <strong>FoBo.InitParam.ToolKit=FoBo.JQueryMobileXXX</strong> and go mobile.</p>
 							
 							<p>To demonstrate usage of this mobile centric toolkit the (in this demo) included JQuery Mobile documentation 
-							pages is <b>modified</b> to use the Fobo modules FoBoInitParams.ToolKit=JQueryMobile101 option <span 
+							pages is <b>modified</b> to use the Fobo modules FoBo.InitParam.ToolKit=FoBo.JQueryMobile101 option <span 
 							data-lift="Menu.item?name=JQuery-mobile;lift:Loc.i;a:class=addclassshowofdummy">
 							<span data-lift="Loc?locid=JQuery-mobile">JQuery-mobile demo</span>
 						</span>. </p>
@@ -160,7 +168,7 @@
 						<p>This demo uses the following module setup in lift Boot:</p>
 						<pre class="prettyprint linenums lang-scala">
 
-                           import net.liftmodules.FoBo._
+                           import net.liftmodules.FoBo
 
                            /**
                             * A class that's instantiated early and run.  It allows the application
@@ -170,10 +178,10 @@
                               def boot {
 
                                 //If using defaults FoBo init params can be omitted
-                                FoBoInitParams.JQuery=JQuery171  
-                                FoBoInitParams.ToolKit=FoBo020 
-                                FoBoInitParams.ToolKit=PrettifyJun2011
-                                FoBoInitParams.ToolKit=JQueryMobile101
+                                FoBo.InitParam.JQuery=FoBo.JQuery171  
+                                FoBo.InitParam.ToolKit=FoBo.FoBo020 
+                                FoBo.InitParam.ToolKit=FoBo.PrettifyJun2011
+                                FoBo.InitParam.ToolKit=FoBo.JQueryMobile101
                                 FoBo.init()
                                   :      
 						</pre>

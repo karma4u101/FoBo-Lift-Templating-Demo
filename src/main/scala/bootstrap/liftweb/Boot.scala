@@ -14,7 +14,7 @@ import java.sql.DriverManager
 import _root_.net.liftweb.util.{ Props }
 import _root_.net.liftweb.http.provider.HTTPRequest
 import _root_.net.liftweb.http.auth.{ HttpBasicAuthentication, AuthRole, userRoles }
-import net.liftmodules.FoBo._
+import net.liftmodules.FoBo
 
 object localeOverride extends SessionVar[Box[Locale]](Empty)
 
@@ -26,11 +26,11 @@ class Boot extends Loggable {
   def boot {
 
    //If using defaults FoBo init params can be omitted
-    FoBoInitParams.JQuery=JQuery171  
-    FoBoInitParams.ToolKit=FoBo020
-    FoBoInitParams.ToolKit=PrettifyJun2011
-    FoBoInitParams.ToolKit=JQueryMobile101
-    FoBo.init()   
+    FoBo.InitParam.JQuery=FoBo.JQuery171  
+    FoBo.InitParam.ToolKit=FoBo.FoBo020
+    FoBo.InitParam.ToolKit=FoBo.PrettifyJun2011
+    FoBo.InitParam.ToolKit=FoBo.JQueryMobile101
+    FoBo.init()  
 
     // where to search snippet
     LiftRules.addToPackages("code")
@@ -45,8 +45,9 @@ class Boot extends Loggable {
       Menu(Loc("JQuery-mobile", Link(List("jquery-mobile"), true, "/jquery-mobile/1.0.1/demos/index"),
         "JQuery-mobile")),
       Menu(Loc("DataTables", Link(List("datatables"), true, "/datatables/1.9.0/index"),
-        "DataTables"))  
-        
+        "DataTables")),  
+      Menu(Loc("FoBoAPI", Link(List("foboapi"), true, "/foboapi/index"),
+        "FoBoAPI"))        
     )   
       
     // set the sitemap.  Note if you don't want access control for

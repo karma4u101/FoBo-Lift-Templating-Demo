@@ -212,12 +212,30 @@
 						For more information see the <a href="https://github.com/karma4u101/FoBo">FoBo modules Github</a>.</p>
 						
 						<p>The FoBo module comes with some convinience functions (snippets, optional to use) that will generate some commonly used 
-						bootstrap scripts for you. For instansce instead of doing this (a common bootstrap component init use case) </p>
+						toolkit helper scripts for you. For instansce <b>instead of doing this</b> (a common bootstrap component init use case) </p>
 						<pre class="prettyprint linenums lang-html">
                         &lt;!DOCTYPE html&gt;
                         &lt;html&gt;
                           &lt;head&gt;
-                             :                      
+                             :       
+		                  &lt;script type="text/javascript"&gt;
+			                addLoadEvent(function() {
+				              $('.dropdown-toggle').dropdown()
+			                });			
+			                function addLoadEvent(func) {
+				              var oldonload = window.onload;
+				              if (typeof window.onload != 'function') {
+					            window.onload = func;
+				              } else {
+					            window.onload = function() {
+						          if (oldonload) {
+							        oldonload();
+						          }
+						          func();
+					           }
+				             }
+			               }
+		                  &lt;/script&gt;                                 
                           &lt;/head&gt;
                           &lt;body"&gt;
                              :
@@ -243,12 +261,14 @@
                           &lt;/body&gt;        
                         &lt;/html&gt;    
 						</pre>
-						<p>You can do this using a FoBo:s snippet containing some bootstrap convinience functions: </p>
+						<p><b>You can simply do this</b> using a FoBo:s snippet containing some bootstrap convinience functions: </p>
 						<pre class="prettyprint linenums lang-html">
                         &lt;!DOCTYPE html&gt;
                         &lt;html&gt;
                           &lt;head&gt;
-                               :                      
+                               :
+                          &lt;script data-lift="FoBo.Bootstrap.activateDropdown?on=.dropdown-toggle"&gt;&lt;/script&gt;
+                          &lt;script data-lift="FoBo.ScriptHelper.registerLoadEventFactory"&gt;&lt;/script&gt;                       
                           &lt;/head&gt;
                           &lt;body"&gt;
                                :
@@ -260,7 +280,12 @@
                         &lt;/html&gt;    
 						</pre>						
 						<p>At this writing the available snippet helpers are few but I expect the numbers to grow and you are 
-						wellcome to contribute code and/or ideas.</p>	
+						wellcome to contribute code and/or ideas. Take a look att the API documentation on how to 
+						invoke the helpers and description on what result it produces for example look att the 
+						FoBo.ScriptHelper.registerLoadEventFactory snippet function by open  
+						<a href="/foboapi/#net.liftmodules.FoBo.snippet.FoBo.ScriptHelper">FoBo.ScriptHelper page</a> and 
+						click on the <b>registerLoadEventFactory</b> function name for details. 
+						</p>	
 						<hr />
 					</div>
 				</div>

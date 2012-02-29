@@ -2,41 +2,56 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 <html>
         <head>
-          <title>net.liftmodules.FoBo.snippet.FoBo.Bootstrap</title>
+          <title>net.liftmodules.FoBo.lib.BootstrapScriptHelper</title>
           <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
           
-      <link type="text/css" media="screen" rel="stylesheet" href="../../../../../lib/template.css" />
-      <script type="text/javascript" src="../../../../../lib/jquery.js"></script>
-      <script type="text/javascript" src="../../../../../lib/jquery-ui.js"></script>
-      <script type="text/javascript" src="../../../../../lib/template.js"></script>
-      <script type="text/javascript" src="../../../../../lib/tools.tooltip.js"></script>
+      <link type="text/css" media="screen" rel="stylesheet" href="../../../../lib/template.css" />
+      <script type="text/javascript" src="../../../../lib/jquery.js"></script>
+      <script type="text/javascript" src="../../../../lib/jquery-ui.js"></script>
+      <script type="text/javascript" src="../../../../lib/template.js"></script>
+      <script type="text/javascript" src="../../../../lib/tools.tooltip.js"></script>
     
         </head>
         <body class="type">
       <div id="definition">
-        <img src="../../../../../lib/class_big.png" />
-        <p id="owner"><a name="net" class="extype" href="../../../../package.html">net</a>.<a name="net.liftmodules" class="extype" href="../../../package.html">liftmodules</a>.<a name="net.liftmodules.FoBo" class="extype" href="../../package.html">FoBo</a>.<a name="net.liftmodules.FoBo.snippet" class="extype" href="../package.html">snippet</a>.<a name="net.liftmodules.FoBo.snippet.FoBo" class="extype" href="package.html">FoBo</a></p>
-        <h1>Bootstrap</h1>
+        <img src="../../../../lib/class_big.png" />
+        <p id="owner"><a name="net" class="extype" href="../../../package.html">net</a>.<a name="net.liftmodules" class="extype" href="../../package.html">liftmodules</a>.<a name="net.liftmodules.FoBo" class="extype" href="../package.html">FoBo</a>.<a name="net.liftmodules.FoBo.lib" class="extype" href="package.html">lib</a></p>
+        <h1>BootstrapScriptHelper</h1>
       </div>
 
       <h4 class="signature" id="signature">
       <span class="kind">class</span>
       <span class="symbol"> 
-        <span class="name">Bootstrap</span>
+        <span class="name">BootstrapScriptHelper</span>
         
-        <span class="result"> extends <span name="net.liftweb.http.StatefulSnippet" class="extype">StatefulSnippet</span> with <span name="net.liftweb.common.Loggable" class="extype">Loggable</span></span>
+        <span class="result"> extends <a name="net.liftmodules.FoBo.lib.ScriptHelper" class="extype" href="ScriptHelper.html">ScriptHelper</a></span>
       </span>
       </h4>
       
-          <div class="fullcommenttop" id="comment"><div class="comment cmt"><h4>Bootstrap Snippet</h4><p>This snippet class contains functions for common transform operations useful when working
-with the Bootstrap toolkit.</p></div><dl class="attributes block"> <div class="block">Example:
-                <ol><li class="cmt"><p>Invoke with </p><pre>
- data-lift=&quot;FoBo.Bootstrap.functionName?paramName=paramValue&amp;....&quot; 
-</pre><p>For more examples see the individual transform functions.
-</p></li></ol>
+          <div class="fullcommenttop" id="comment"><div class="comment cmt"><h4>Bootstrap Script Helper</h4><p>Bootstrap script helper is a helper class that implements some commonly
+used bootstrap component init/usage script functions.
+This convenience script functions is used in the FoBo.Bootstrap snippet but
+can also be used as a convenience helper in your own customized snippets.
+</p></div><dl class="attributes block"> <div class="block">Example:
+                <ol><li class="cmt"><p>If you find that the net.liftmodules.FoBo.Bootstrap snippet dose not fit you exact needs
+your can still use the BootstrapScriptHelper class to customize your own project snippets.</p><pre>
+  import net.liftmodules.FoBo.lib.{BootstrapScriptHelper=&gt;sch}
+   :
+  class MySnippet {
+
+    lazy val sch = new sch()
+
+    def someFunc = {
+      :
+      sch.fobohelper(...)
+      :
+    }
+    :
+  }
+</pre></li></ol>
               </div></dl><div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>
-          <div class="superTypes hiddenContent"><span name="net.liftweb.common.Loggable" class="extype">Loggable</span>, <span name="net.liftweb.http.StatefulSnippet" class="extype">StatefulSnippet</span>, <span name="net.liftweb.http.DispatchSnippet" class="extype">DispatchSnippet</span>, AnyRef, <span name="scala.Any" class="extype">Any</span></div>
+          <div class="superTypes hiddenContent"><a name="net.liftmodules.FoBo.lib.ScriptHelper" class="extype" href="ScriptHelper.html">ScriptHelper</a>, AnyRef, <span name="scala.Any" class="extype">Any</span></div>
         </div></div>
         
 
@@ -52,7 +67,7 @@ with the Bootstrap toolkit.</p></div><dl class="attributes block"> <div class="b
                 <span class="filtertype">Inherited</span>
                 <ol><li class="hideall out"><span>Hide All</span></li>
                 <li class="showall in"><span>Show all</span></li></ol>
-                <ol id="linearization"><li name="net.liftmodules.FoBo.snippet.FoBo.Bootstrap" class="in"><span>Bootstrap</span></li><li name="net.liftweb.common.Loggable" class="in"><span>Loggable</span></li><li name="net.liftweb.http.StatefulSnippet" class="in"><span>StatefulSnippet</span></li><li name="net.liftweb.http.DispatchSnippet" class="in"><span>DispatchSnippet</span></li><li name="scala.AnyRef" class="in"><span>AnyRef</span></li><li name="scala.Any" class="in"><span>Any</span></li></ol>
+                <ol id="linearization"><li name="net.liftmodules.FoBo.lib.BootstrapScriptHelper" class="in"><span>BootstrapScriptHelper</span></li><li name="net.liftmodules.FoBo.lib.ScriptHelper" class="in"><span>ScriptHelper</span></li><li name="scala.AnyRef" class="in"><span>AnyRef</span></li><li name="scala.Any" class="in"><span>Any</span></li></ol>
               </div>
           <div id="visbl">
               <span class="filtertype">Visibility</span>
@@ -62,12 +77,12 @@ with the Bootstrap toolkit.</p></div><dl class="attributes block"> <div class="b
 
         <div class="members" id="constructors">
               <h3>Instance Constructors</h3>
-              <ol><li visbl="pub" name="net.liftmodules.FoBo.snippet.FoBo.Bootstrap#this" data-isabs="false">
-      <a id="this:Bootstrap"></a>
+              <ol><li visbl="pub" name="net.liftmodules.FoBo.lib.BootstrapScriptHelper#this" data-isabs="false">
+      <a id="this:BootstrapScriptHelper"></a>
       <h4 class="signature">
       <span class="kind">new</span>
       <span class="symbol"> 
-        <span class="name">Bootstrap</span>
+        <span class="name">BootstrapScriptHelper</span>
         
         <span class="params">()</span>
       </span>
@@ -76,21 +91,7 @@ with the Bootstrap toolkit.</p></div><dl class="attributes block"> <div class="b
     </li></ol>
             </div>
 
-        <div class="types members" id="types">
-              <h3>Type Members</h3>
-              <ol><li visbl="pub" name="net.liftweb.http.DispatchSnippet#DispatchIt" data-isabs="false">
-      <a id="DispatchIt:DispatchIt"></a>
-      <h4 class="signature">
-      <span class="kind">type</span>
-      <span class="symbol"> 
-        <span class="name">DispatchIt</span>
         
-        <span class="result"> = <span name="scala.PartialFunction" class="extype">PartialFunction</span>[String, (<span name="scala.xml.NodeSeq" class="extype">NodeSeq</span>) ⇒ <span name="scala.xml.NodeSeq" class="extype">NodeSeq</span>]</span>
-      </span>
-      </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>DispatchSnippet</dd></dl></div>
-    </li></ol>
-            </div>
         
         
 
@@ -151,41 +152,30 @@ with the Bootstrap toolkit.</p></div><dl class="attributes block"> <div class="b
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd><dt>Definition Classes</dt><dd>Any</dd></dl></div>
-    </li><li visbl="pub" name="net.liftmodules.FoBo.snippet.FoBo.Bootstrap#activateDropdown" data-isabs="false">
-      <a id="activateDropdown:CssSel"></a>
+    </li><li visbl="pub" name="net.liftmodules.FoBo.lib.BootstrapScriptHelper#activateDropdown" data-isabs="false">
+      <a id="activateDropdown(String):Node"></a>
       <h4 class="signature">
       <span class="kind">def</span>
       <span class="symbol"> 
         <span class="name">activateDropdown</span>
         
-        <span class="result">: <span name="net.liftweb.util.CssSel" class="extype">CssSel</span></span>
+        <span class="params">(<span name="on">on: String</span>)</span><span class="result">: <span name="scala.xml.Node" class="extype">Node</span></span>
       </span>
       </h4>
-      <p class="shortcomment cmt">This function loads the dropdown activation</p><div class="fullcomment"><div class="comment cmt"><p>This function loads the dropdown activation</p><p><b>Snippet Param:</b></p><p>- <b>Param</b> <i>on</i> - The element id or class to activate dropdown on</p><p>@example</p><pre>
-    &lt;head&gt;
-      :
-      &lt;script data-lift=&quot;FoBo.Bootstrap.activateDropdown?on=.dropdown-toggle&quot;&gt;&lt;/script&gt;
-      &lt;script data-lift=&quot;FoBo.ScriptHelper.registerLoadEventFactory&quot;&gt;&lt;/script&gt;
-    &lt;/head&gt;
-</pre><p>The load event factory has to be registered ones before any activation can be loaded.</p><p><b>Result:</b> This example will result in the following being injected in place of the snippet invocation:</p><pre>
- &lt;script type=&quot;text/javascript&quot;&gt;
-   // &lt;![CDATA[
-     addLoadEvent(function() { $('.dropdown-toggle').dropdown(); });;
-   // ]]&gt;
- &lt;/script&gt;
- &lt;script type=&quot;text/javascript&quot;&gt;//registerLoadEventFactory script ...&lt;/script&gt;
-</pre></div></div>
-    </li><li visbl="pub" name="net.liftweb.http.StatefulSnippet#addName" data-isabs="false">
-      <a id="addName(String):Unit"></a>
+      <p class="shortcomment cmt">This function will add a load event to activate the dropdown component for a given id.</p><div class="fullcomment"><div class="comment cmt"><p>This function will add a load event to activate the dropdown component for a given id.
+</p></div><dl class="paramcmts block"><dt class="param">on</dt><dd class="cmt"><p>- The class or id of the element for which the dropdown component should be activated.</p></dd></dl></div>
+    </li><li visbl="pub" name="net.liftmodules.FoBo.lib.ScriptHelper#addLoadEvent" data-isabs="false">
+      <a id="addLoadEvent(String):Node"></a>
       <h4 class="signature">
       <span class="kind">def</span>
       <span class="symbol"> 
-        <span class="name">addName</span>
+        <span class="name">addLoadEvent</span>
         
-        <span class="params">(<span name="name">name: String</span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+        <span class="params">(<span name="event">event: String</span>)</span><span class="result">: <span name="scala.xml.Node" class="extype">Node</span></span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>StatefulSnippet</dd></dl></div>
+      <p class="shortcomment cmt">This function adds a specific load event to the load event factory function.</p><div class="fullcomment"><div class="comment cmt"><p>This function adds a specific load event to the load event factory function.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="net.liftmodules.FoBo.lib.ScriptHelper" class="extype" href="ScriptHelper.html">ScriptHelper</a></dd></dl></div>
     </li><li visbl="pub" name="scala.Any#asInstanceOf" data-isabs="false">
       <a id="asInstanceOf[T0]:T0"></a>
       <h4 class="signature">
@@ -197,17 +187,6 @@ with the Bootstrap toolkit.</p></div><dl class="attributes block"> <div class="b
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd><dt>Definition Classes</dt><dd>Any</dd></dl></div>
-    </li><li visbl="pub" name="net.liftmodules.FoBo.snippet.FoBo.Bootstrap#bsh" data-isabs="false">
-      <a id="bsh:BootstrapScriptHelper"></a>
-      <h4 class="signature">
-      <span class="kind">lazy val</span>
-      <span class="symbol"> 
-        <span class="name">bsh</span>
-        
-        <span class="result">: <a name="net.liftmodules.FoBo.lib.BootstrapScriptHelper" class="extype" href="../../lib/BootstrapScriptHelper.html">BootstrapScriptHelper</a></span>
-      </span>
-      </h4>
-      
     </li><li visbl="prt" name="scala.AnyRef#clone" data-isabs="false">
       <a id="clone():AnyRef"></a>
       <h4 class="signature">
@@ -218,21 +197,10 @@ with the Bootstrap toolkit.</p></div><dl class="attributes block"> <div class="b
         <span class="params">()</span><span class="result">: AnyRef</span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a name="java.lang" class="extype" href="../../../../../java/lang/package.html">lang</a>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a name="java.lang" class="extype" href="../../../../java/lang/package.html">lang</a>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
                 <span class="name">@throws</span><span class="args">()</span>
               
         </dd></dl></div>
-    </li><li visbl="pub" name="net.liftmodules.FoBo.snippet.FoBo.Bootstrap#dispatch" data-isabs="false">
-      <a id="dispatch:PartialFunction[String, (NodeSeq) ⇒ NodeSeq]"></a>
-      <h4 class="signature">
-      <span class="kind">def</span>
-      <span class="symbol"> 
-        <span class="name">dispatch</span>
-        
-        <span class="result">: <span name="scala.PartialFunction" class="extype">PartialFunction</span>[String, (<span name="scala.xml.NodeSeq" class="extype">NodeSeq</span>) ⇒ <span name="scala.xml.NodeSeq" class="extype">NodeSeq</span>]</span>
-      </span>
-      </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="net.liftmodules.FoBo.snippet.FoBo.Bootstrap" class="extype" href="">Bootstrap</a> → DispatchSnippet</dd></dl></div>
     </li><li visbl="pub" name="scala.AnyRef#eq" data-isabs="false">
       <a id="eq(AnyRef):Boolean"></a>
       <h4 class="signature">
@@ -265,7 +233,7 @@ with the Bootstrap toolkit.</p></div><dl class="attributes block"> <div class="b
         <span class="params">()</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a name="java.lang" class="extype" href="../../../../../java/lang/package.html">lang</a>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a name="java.lang" class="extype" href="../../../../java/lang/package.html">lang</a>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
                 <span class="name">@throws</span><span class="args">()</span>
               
         </dd></dl></div>
@@ -302,39 +270,6 @@ with the Bootstrap toolkit.</p></div><dl class="attributes block"> <div class="b
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd><dt>Definition Classes</dt><dd>Any</dd></dl></div>
-    </li><li visbl="pub" name="net.liftweb.http.StatefulSnippet#link" data-isabs="false">
-      <a id="link(String,() ⇒ Any,NodeSeq,ElemAttr*):Elem"></a>
-      <h4 class="signature">
-      <span class="kind">def</span>
-      <span class="symbol"> 
-        <span class="name">link</span>
-        
-        <span class="params">(<span name="to">to: String</span>, <span name="func">func: () ⇒ <span name="scala.Any" class="extype">Any</span></span>, <span name="body">body: <span name="scala.xml.NodeSeq" class="extype">NodeSeq</span></span>, <span name="attrs">attrs: <span name="net.liftweb.http.SHtml.ElemAttr" class="extype">ElemAttr</span>*</span>)</span><span class="result">: <span name="scala.xml.Elem" class="extype">Elem</span></span>
-      </span>
-      </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>StatefulSnippet</dd></dl></div>
-    </li><li visbl="prt" name="net.liftweb.common.Loggable#logger" data-isabs="false">
-      <a id="logger:Logger"></a>
-      <h4 class="signature">
-      <span class="kind">val</span>
-      <span class="symbol"> 
-        <span class="name">logger</span>
-        
-        <span class="result">: <span name="net.liftweb.common.Logger" class="extype">Logger</span></span>
-      </span>
-      </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd>Loggable</dd></dl></div>
-    </li><li visbl="pub" name="net.liftweb.http.StatefulSnippet#names" data-isabs="false">
-      <a id="names:Set[String]"></a>
-      <h4 class="signature">
-      <span class="kind">def</span>
-      <span class="symbol"> 
-        <span class="name">names</span>
-        
-        <span class="result">: Set[String]</span>
-      </span>
-      </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>StatefulSnippet</dd></dl></div>
     </li><li visbl="pub" name="scala.AnyRef#ne" data-isabs="false">
       <a id="ne(AnyRef):Boolean"></a>
       <h4 class="signature">
@@ -368,83 +303,42 @@ with the Bootstrap toolkit.</p></div><dl class="attributes block"> <div class="b
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd><dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
-    </li><li visbl="pub" name="net.liftmodules.FoBo.snippet.FoBo.Bootstrap#popover" data-isabs="false">
-      <a id="popover:CssSel"></a>
+    </li><li visbl="pub" name="net.liftmodules.FoBo.lib.BootstrapScriptHelper#popover" data-isabs="false">
+      <a id="popover(String,String):Node"></a>
       <h4 class="signature">
       <span class="kind">def</span>
       <span class="symbol"> 
         <span class="name">popover</span>
         
-        <span class="result">: <span name="net.liftweb.util.CssSel" class="extype">CssSel</span></span>
+        <span class="params">(<span name="id">id: String</span>, <span name="options">options: String = <span class="symbol">&quot;&quot;</span></span>)</span><span class="result">: <span name="scala.xml.Node" class="extype">Node</span></span>
       </span>
       </h4>
-      <p class="shortcomment cmt">This function sets a popover action on a element.</p><div class="fullcomment"><div class="comment cmt"><p>This function sets a popover action on a element.</p><p><b>Snippet Params:</b></p><ul><li><b>Param</b> <i>id</i> - The element id</li><li><b>Param</b> <i>option</i> - The option string see bootstrap documentation for available options.
-</li></ul></div><dl class="attributes block"> <div class="block">Example:
-                <ol><li class="cmt"><p></p><pre>
- &lt;script data-lift=&quot;FoBo.Bootstrap.popover?id=#theId&amp;option=placement:'left'&quot;&gt;&lt;/script&gt; 
-</pre><p><b>Result:</b> This example will result in the following being injected in place of the snippet invocation:</p><pre>
-  &lt;script type=&quot;text/javascript&quot;&gt;
-    // &lt;![CDATA[
-      $(function () { $('#theId').popover({placement:'left'}); }); ;
-    // ]]&gt;
-  &lt;/script&gt;
-</pre></li></ol>
-              </div></dl></div>
-    </li><li visbl="pub" name="net.liftmodules.FoBo.snippet.FoBo.Bootstrap#popoverPreventDefault" data-isabs="false">
-      <a id="popoverPreventDefault:CssSel"></a>
+      <p class="shortcomment cmt">This function sets a popover action on a element.</p><div class="fullcomment"><div class="comment cmt"><p>This function sets a popover action on a element.
+</p></div><dl class="paramcmts block"><dt class="param">id</dt><dd class="cmt"><p>- The id of the element for which the popover should occur</p></dd><dt class="param">options</dt><dd class="cmt"><p>- A string list of popover options</p></dd></dl></div>
+    </li><li visbl="pub" name="net.liftmodules.FoBo.lib.BootstrapScriptHelper#popoverPreventDefault" data-isabs="false">
+      <a id="popoverPreventDefault(String):Node"></a>
       <h4 class="signature">
       <span class="kind">def</span>
       <span class="symbol"> 
         <span class="name">popoverPreventDefault</span>
         
-        <span class="result">: <span name="net.liftweb.util.CssSel" class="extype">CssSel</span></span>
+        <span class="params">(<span name="on">on: String = <span class="symbol">&quot;a[rel=popover]&quot;</span></span>)</span><span class="result">: <span name="scala.xml.Node" class="extype">Node</span></span>
       </span>
       </h4>
-      <p class="shortcomment cmt">This function prevents the default action on a popover element.</p><div class="fullcomment"><div class="comment cmt"><p>This function prevents the default action on a popover element.</p><p><b>Snippet Params:</b></p><ul><li><b>Param</b> <i>on</i> - The element id or something more general like the default value a[rel=popover]
-</li></ul></div><dl class="attributes block"> <div class="block">Example:
-                <ol><li class="cmt"><p></p><pre>
- &lt;script data-lift=&quot;FoBo.Bootstrap.popoverPreventDefault?on=#theId&quot;&gt;&lt;/script&gt; 
-</pre><p><b>Result:</b> This example will result in the following being injected in place of the snippet invocation:</p><pre>
-  &lt;script type=&quot;text/javascript&quot;&gt;
-    // &lt;![CDATA[
-      $(function(){$('#theId').popover().click(function(e){e.preventDefault()});});;
-    // ]]&gt;
-  &lt;/script&gt;
-</pre></li></ol>
-              </div></dl></div>
-    </li><li visbl="pub" name="net.liftweb.http.StatefulSnippet#redirectTo" data-isabs="false">
-      <a id="redirectTo(String):Nothing"></a>
+      <p class="shortcomment cmt">This function prevents default action for a click on a popover.</p><div class="fullcomment"><div class="comment cmt"><p>This function prevents default action for a click on a popover.</p></div><dl class="paramcmts block"><dt class="param">on</dt><dd class="cmt"><p>- Can be a id attribute or something more general like the default a[rel=popover]
+</p></dd></dl></div>
+    </li><li visbl="pub" name="net.liftmodules.FoBo.lib.ScriptHelper#registerLoadEventFactory" data-isabs="false">
+      <a id="registerLoadEventFactory():Node"></a>
       <h4 class="signature">
       <span class="kind">def</span>
       <span class="symbol"> 
-        <span class="name">redirectTo</span>
+        <span class="name">registerLoadEventFactory</span>
         
-        <span class="params">(<span name="where">where: String</span>)</span><span class="result">: <span name="scala.Nothing" class="extype">Nothing</span></span>
+        <span class="params">()</span><span class="result">: <span name="scala.xml.Node" class="extype">Node</span></span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>StatefulSnippet</dd></dl></div>
-    </li><li visbl="pub" name="net.liftweb.http.StatefulSnippet#registerThisSnippet" data-isabs="false">
-      <a id="registerThisSnippet():Unit"></a>
-      <h4 class="signature">
-      <span class="kind">def</span>
-      <span class="symbol"> 
-        <span class="name">registerThisSnippet</span>
-        
-        <span class="params">()</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
-      </span>
-      </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>StatefulSnippet</dd></dl></div>
-    </li><li visbl="pub" name="net.liftweb.http.StatefulSnippet#seeOther" data-isabs="false">
-      <a id="seeOther(String):Nothing"></a>
-      <h4 class="signature">
-      <span class="kind">def</span>
-      <span class="symbol"> 
-        <span class="name">seeOther</span>
-        
-        <span class="params">(<span name="where">where: String</span>)</span><span class="result">: <span name="scala.Nothing" class="extype">Nothing</span></span>
-      </span>
-      </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>StatefulSnippet</dd></dl></div>
+      <p class="shortcomment cmt">This function creates a register load event factory function.</p><div class="fullcomment"><div class="comment cmt"><p>This function creates a register load event factory function.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="net.liftmodules.FoBo.lib.ScriptHelper" class="extype" href="ScriptHelper.html">ScriptHelper</a></dd></dl></div>
     </li><li visbl="pub" name="scala.AnyRef#synchronized" data-isabs="false">
       <a id="synchronized[T0](⇒ T0):T0"></a>
       <h4 class="signature">
@@ -467,17 +361,6 @@ with the Bootstrap toolkit.</p></div><dl class="attributes block"> <div class="b
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
-    </li><li visbl="pub" name="net.liftweb.http.StatefulSnippet#unregisterThisSnippet" data-isabs="false">
-      <a id="unregisterThisSnippet():Unit"></a>
-      <h4 class="signature">
-      <span class="kind">def</span>
-      <span class="symbol"> 
-        <span class="name">unregisterThisSnippet</span>
-        
-        <span class="params">()</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
-      </span>
-      </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>StatefulSnippet</dd></dl></div>
     </li><li visbl="pub" name="scala.AnyRef#wait" data-isabs="false">
       <a id="wait():Unit"></a>
       <h4 class="signature">
@@ -525,12 +408,8 @@ with the Bootstrap toolkit.</p></div><dl class="attributes block"> <div class="b
 
         
 
-        <div name="net.liftweb.common.Loggable" class="parent">
-              <h3>Inherited from <span name="net.liftweb.common.Loggable" class="extype">Loggable</span></h3>
-            </div><div name="net.liftweb.http.StatefulSnippet" class="parent">
-              <h3>Inherited from <span name="net.liftweb.http.StatefulSnippet" class="extype">StatefulSnippet</span></h3>
-            </div><div name="net.liftweb.http.DispatchSnippet" class="parent">
-              <h3>Inherited from <span name="net.liftweb.http.DispatchSnippet" class="extype">DispatchSnippet</span></h3>
+        <div name="net.liftmodules.FoBo.lib.ScriptHelper" class="parent">
+              <h3>Inherited from <a name="net.liftmodules.FoBo.lib.ScriptHelper" class="extype" href="ScriptHelper.html">ScriptHelper</a></h3>
             </div><div name="scala.AnyRef" class="parent">
               <h3>Inherited from AnyRef</h3>
             </div><div name="scala.Any" class="parent">

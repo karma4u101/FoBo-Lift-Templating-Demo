@@ -46,7 +46,7 @@ class Boot extends Loggable {
         "JQuery-mobile")),
       Menu(Loc("DataTables", Link(List("datatables"), true, "/datatables/1.9.0/index"),
         "DataTables")),  
-      Menu(Loc("FoBoAPI", Link(List("foboapi"), true, "/foboapi/index"),
+      Menu(Loc("FoBoAPI", Link(List("foboapi"), true, "/foboapi/"),
         "FoBoAPI"))        
     )   
       

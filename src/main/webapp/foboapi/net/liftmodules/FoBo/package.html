@@ -37,7 +37,10 @@ front-end toolkits with some carefully thought throw and Lift inherit extra bene
    module matures.</li><li>Great mobile scalablity with the modules own unique FoBo mix is a love, peace and harmony mix of the ZURB/Foundation and the Twitter
    Bootstrap front-end toolkit.</li><li>As more front-end toolkits and JQuery plugins will be available to you just a FoBo.Initparam away you will,
    when needed, be able to quick and easy test out and use nifty features like the Google code Prettify kit, DataTables
-   and more.</li></ul><h5>Setup</h5><ul><li>The module is known to work with Lift v2.4 and Scala v2.9.1 but expect it to work with other versions as well.</li><li>For a demonstration of this module see the live <a href="http://www.media4u101.se/fobo-lift-template-demo/">FoBo demo</a> the
+   and more.</li></ul><h5>Small heads up usage warning</h5><p>This API is very young so if you make direct usage of some FoBoHelpers in lib chances are that things change.
+If you want to stay on the safe side usage of FoBo snippets and init operations should be fairly safe.
+After a stable release (we are not there yet) changes to a API function will be announced as deprecated
+at least one release cycle before removed.</p><h5>Setup</h5><ul><li>The module is known to work with Lift v2.4 and Scala v2.9.1 but expect it to work with other versions as well.</li><li>For a demonstration of this module see the live <a href="http://www.media4u101.se/fobo-lift-template-demo/">FoBo demo</a> the
    FoBo demo source is available <a href="https://github.com/karma4u101/FoBo-Lift-Template"> here</a>
 </li></ul></div><dl class="attributes block"> <div class="block">Example:
                 <ol><li class="cmt"><p>To initiate this module for usage in your Lift project
@@ -132,7 +135,7 @@ set something like the following in the projects Lift bootstrap.liftweb.Boot</p>
         <span class="result"> extends FoBoToolkit with Product with Serializable</span>
       </span>
       </h4>
-      <p class="comment cmt">Enable usage of DataTables version 1 9 0 in your bootstrap liftweb Boot.</p>
+      <p class="comment cmt">Enable usage of DataTables version 1_9_0 in your bootstrap liftweb Boot.</p>
     </li><li visbl="pub" name="net.liftmodules.FoBo.package.FoBo010" data-isabs="false">
       <a id="FoBo010:FoBo010"></a>
       <h4 class="signature">

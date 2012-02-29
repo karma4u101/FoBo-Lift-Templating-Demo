@@ -2,37 +2,58 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 <html>
         <head>
-          <title>net.liftmodules.FoBo.package.DataTables190</title>
+          <title>net.liftmodules.FoBo.lib.ScriptHelper</title>
           <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
           
-      <link type="text/css" media="screen" rel="stylesheet" href="../../../lib/template.css" />
-      <script type="text/javascript" src="../../../lib/jquery.js"></script>
-      <script type="text/javascript" src="../../../lib/jquery-ui.js"></script>
-      <script type="text/javascript" src="../../../lib/template.js"></script>
-      <script type="text/javascript" src="../../../lib/tools.tooltip.js"></script>
+      <link type="text/css" media="screen" rel="stylesheet" href="../../../../lib/template.css" />
+      <script type="text/javascript" src="../../../../lib/jquery.js"></script>
+      <script type="text/javascript" src="../../../../lib/jquery-ui.js"></script>
+      <script type="text/javascript" src="../../../../lib/template.js"></script>
+      <script type="text/javascript" src="../../../../lib/tools.tooltip.js"></script>
     
         </head>
-        <body class="value">
+        <body class="type">
       <div id="definition">
-        <img src="../../../lib/object_big.png" />
-        <p id="owner"><a name="net" class="extype" href="../../package.html">net</a>.<a name="net.liftmodules" class="extype" href="../package.html">liftmodules</a>.<a name="net.liftmodules.FoBo" class="extype" href="package.html">FoBo</a>.<a name="net.liftmodules.FoBo.package" class="extype" href="package$.html">package</a></p>
-        <h1>DataTables190</h1>
+        <img src="../../../../lib/class_big.png" />
+        <p id="owner"><a name="net" class="extype" href="../../../package.html">net</a>.<a name="net.liftmodules" class="extype" href="../../package.html">liftmodules</a>.<a name="net.liftmodules.FoBo" class="extype" href="../package.html">FoBo</a>.<a name="net.liftmodules.FoBo.lib" class="extype" href="package.html">lib</a></p>
+        <h1>ScriptHelper</h1>
       </div>
 
       <h4 class="signature" id="signature">
-      <span class="kind">object</span>
+      <span class="kind">class</span>
       <span class="symbol"> 
-        <span class="name">DataTables190</span>
+        <span class="name">ScriptHelper</span>
         
-        <span class="result"> extends <a name="net.liftmodules.FoBo.package.FoBoToolkit" class="extype" href="package$$FoBoToolkit.html">FoBoToolkit</a> with <span name="scala.Product" class="extype">Product</span> with <span name="scala.Serializable" class="extype">Serializable</span></span>
+        <span class="result"> extends AnyRef</span>
       </span>
       </h4>
       
-          <div class="fullcommenttop" id="comment"><div class="comment cmt"><p>Enable usage of DataTables version 1_9_0 in your bootstrap liftweb Boot.</p></div><dl class="attributes block"> <dt>Version</dt><dd><p>1.9.0</p><p> <b>Example:</b></p><pre>
-  FoBo.InitParam.Toolkit=FoBo.DataTables190
-</pre></dd></dl><div class="toggleContainer block">
+          <div class="fullcommenttop" id="comment"><div class="comment cmt"><h4>Script Helper</h4><p>This script helper is a helper class that implements some commonly used script functions.
+This convenience script functions is used in the FoBo.ScriptHelper snippet but
+can also be used as a convenience helper in your own customized snippets.
+</p></div><dl class="attributes block"> <div class="block">Example:
+                <ol><li class="cmt"><p>If you find that the net.liftmodules.FoBo.ScriptHelper snippet dose not fit you exact needs
+your can still use the ScriptHelper class to customize your own project snippets.</p><pre>
+  import net.liftmodules.FoBo.lib.{ScriptHelper=&gt;sch}
+   :
+  class MySnippet {
+
+    lazy val sch = new sch()
+
+    def someFunc = {
+      :
+      sch.fobohelper(...)
+      :
+    }
+    :
+  }
+</pre></li></ol>
+              </div></dl><div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>
-          <div class="superTypes hiddenContent"><span name="scala.Serializable" class="extype">Serializable</span>, <span name="java.io.Serializable" class="extype">Serializable</span>, <span name="scala.Product" class="extype">Product</span>, <span name="scala.Equals" class="extype">Equals</span>, <a name="net.liftmodules.FoBo.package.FoBoToolkit" class="extype" href="package$$FoBoToolkit.html">FoBoToolkit</a>, AnyRef, <span name="scala.Any" class="extype">Any</span></div>
+          <div class="superTypes hiddenContent">AnyRef, <span name="scala.Any" class="extype">Any</span></div>
+        </div><div class="toggleContainer block">
+          <span class="toggle">Known Subclasses</span>
+          <div class="subClasses hiddenContent"><a name="net.liftmodules.FoBo.lib.BootstrapScriptHelper" class="extype" href="BootstrapScriptHelper.html">BootstrapScriptHelper</a></div>
         </div></div>
         
 
@@ -48,7 +69,7 @@
                 <span class="filtertype">Inherited</span>
                 <ol><li class="hideall out"><span>Hide All</span></li>
                 <li class="showall in"><span>Show all</span></li></ol>
-                <ol id="linearization"><li name="net.liftmodules.FoBo.package.DataTables190" class="in"><span>DataTables190</span></li><li name="scala.Serializable" class="in"><span>Serializable</span></li><li name="java.io.Serializable" class="in"><span>Serializable</span></li><li name="scala.Product" class="in"><span>Product</span></li><li name="scala.Equals" class="in"><span>Equals</span></li><li name="net.liftmodules.FoBo.package.FoBoToolkit" class="in"><span>FoBoToolkit</span></li><li name="scala.AnyRef" class="in"><span>AnyRef</span></li><li name="scala.Any" class="in"><span>Any</span></li></ol>
+                <ol id="linearization"><li name="net.liftmodules.FoBo.lib.ScriptHelper" class="in"><span>ScriptHelper</span></li><li name="scala.AnyRef" class="in"><span>AnyRef</span></li><li name="scala.Any" class="in"><span>Any</span></li></ol>
               </div>
           <div id="visbl">
               <span class="filtertype">Visibility</span>
@@ -56,7 +77,21 @@
             </div>
         </div>
 
+        <div class="members" id="constructors">
+              <h3>Instance Constructors</h3>
+              <ol><li visbl="pub" name="net.liftmodules.FoBo.lib.ScriptHelper#this" data-isabs="false">
+      <a id="this:ScriptHelper"></a>
+      <h4 class="signature">
+      <span class="kind">new</span>
+      <span class="symbol"> 
+        <span class="name">ScriptHelper</span>
         
+        <span class="params">()</span>
+      </span>
+      </h4>
+      
+    </li></ol>
+            </div>
 
         
         
@@ -119,6 +154,17 @@
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd><dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li visbl="pub" name="net.liftmodules.FoBo.lib.ScriptHelper#addLoadEvent" data-isabs="false">
+      <a id="addLoadEvent(String):Node"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol"> 
+        <span class="name">addLoadEvent</span>
+        
+        <span class="params">(<span name="event">event: String</span>)</span><span class="result">: <span name="scala.xml.Node" class="extype">Node</span></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">This function adds a specific load event to the load event factory function.</p>
     </li><li visbl="pub" name="scala.Any#asInstanceOf" data-isabs="false">
       <a id="asInstanceOf[T0]:T0"></a>
       <h4 class="signature">
@@ -130,17 +176,6 @@
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd><dt>Definition Classes</dt><dd>Any</dd></dl></div>
-    </li><li visbl="pub" name="net.liftmodules.FoBo.package.DataTables190#canEqual" data-isabs="false">
-      <a id="canEqual(Any):Boolean"></a>
-      <h4 class="signature">
-      <span class="kind">def</span>
-      <span class="symbol"> 
-        <span class="name">canEqual</span>
-        
-        <span class="params">(<span name="arg0">arg0: <span name="scala.Any" class="extype">Any</span></span>)</span><span class="result">: <span name="scala.Boolean" class="extype">Boolean</span></span>
-      </span>
-      </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="net.liftmodules.FoBo.package.DataTables190" class="extype" href="">DataTables190</a> → Equals</dd></dl></div>
     </li><li visbl="prt" name="scala.AnyRef#clone" data-isabs="false">
       <a id="clone():AnyRef"></a>
       <h4 class="signature">
@@ -151,7 +186,7 @@
         <span class="params">()</span><span class="result">: AnyRef</span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a name="java.lang" class="extype" href="../../../java/lang/package.html">lang</a>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a name="java.lang" class="extype" href="../../../../java/lang/package.html">lang</a>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
                 <span class="name">@throws</span><span class="args">()</span>
               
         </dd></dl></div>
@@ -187,7 +222,7 @@
         <span class="params">()</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a name="java.lang" class="extype" href="../../../java/lang/package.html">lang</a>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a name="java.lang" class="extype" href="../../../../java/lang/package.html">lang</a>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
                 <span class="name">@throws</span><span class="args">()</span>
               
         </dd></dl></div>
@@ -202,7 +237,7 @@
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd><dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
-    </li><li visbl="pub" name="net.liftmodules.FoBo.package.DataTables190#hashCode" data-isabs="false">
+    </li><li visbl="pub" name="scala.AnyRef#hashCode" data-isabs="false">
       <a id="hashCode():Int"></a>
       <h4 class="signature">
       <span class="kind">def</span>
@@ -212,7 +247,7 @@
         <span class="params">()</span><span class="result">: <span name="scala.Int" class="extype">Int</span></span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd><dt>Definition Classes</dt><dd><a name="net.liftmodules.FoBo.package.DataTables190" class="extype" href="">DataTables190</a> → AnyRef → Any</dd></dl></div>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
     </li><li visbl="pub" name="scala.Any#isInstanceOf" data-isabs="false">
       <a id="isInstanceOf[T0]:Boolean"></a>
       <h4 class="signature">
@@ -257,61 +292,17 @@
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd><dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
-    </li><li visbl="pub" name="net.liftmodules.FoBo.package.DataTables190#productArity" data-isabs="false">
-      <a id="productArity:Int"></a>
+    </li><li visbl="pub" name="net.liftmodules.FoBo.lib.ScriptHelper#registerLoadEventFactory" data-isabs="false">
+      <a id="registerLoadEventFactory():Node"></a>
       <h4 class="signature">
       <span class="kind">def</span>
       <span class="symbol"> 
-        <span class="name">productArity</span>
+        <span class="name">registerLoadEventFactory</span>
         
-        <span class="result">: <span name="scala.Int" class="extype">Int</span></span>
+        <span class="params">()</span><span class="result">: <span name="scala.xml.Node" class="extype">Node</span></span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="net.liftmodules.FoBo.package.DataTables190" class="extype" href="">DataTables190</a> → Product</dd></dl></div>
-    </li><li visbl="pub" name="net.liftmodules.FoBo.package.DataTables190#productElement" data-isabs="false">
-      <a id="productElement(Int):Any"></a>
-      <h4 class="signature">
-      <span class="kind">def</span>
-      <span class="symbol"> 
-        <span class="name">productElement</span>
-        
-        <span class="params">(<span name="arg0">arg0: <span name="scala.Int" class="extype">Int</span></span>)</span><span class="result">: <span name="scala.Any" class="extype">Any</span></span>
-      </span>
-      </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="net.liftmodules.FoBo.package.DataTables190" class="extype" href="">DataTables190</a> → Product</dd></dl></div>
-    </li><li visbl="pub" name="scala.Product#productIterator" data-isabs="false">
-      <a id="productIterator:Iterator[Any]"></a>
-      <h4 class="signature">
-      <span class="kind">def</span>
-      <span class="symbol"> 
-        <span class="name">productIterator</span>
-        
-        <span class="result">: Iterator[<span name="scala.Any" class="extype">Any</span>]</span>
-      </span>
-      </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Product</dd></dl></div>
-    </li><li visbl="pub" name="net.liftmodules.FoBo.package.DataTables190#productPrefix" data-isabs="false">
-      <a id="productPrefix:String"></a>
-      <h4 class="signature">
-      <span class="kind">def</span>
-      <span class="symbol"> 
-        <span class="name">productPrefix</span>
-        
-        <span class="result">: <span name="java.lang.String" class="extype">String</span></span>
-      </span>
-      </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="net.liftmodules.FoBo.package.DataTables190" class="extype" href="">DataTables190</a> → Product</dd></dl></div>
-    </li><li visbl="prt" name="net.liftmodules.FoBo.package.DataTables190#readResolve" data-isabs="false">
-      <a id="readResolve():AnyRef"></a>
-      <h4 class="signature">
-      <span class="kind">def</span>
-      <span class="symbol"> 
-        <span class="name">readResolve</span>
-        
-        <span class="params">()</span><span class="result">: AnyRef</span>
-      </span>
-      </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd></dl></div>
+      <p class="shortcomment cmt">This function creates a register load event factory function.</p>
     </li><li visbl="pub" name="scala.AnyRef#synchronized" data-isabs="false">
       <a id="synchronized[T0](⇒ T0):T0"></a>
       <h4 class="signature">
@@ -323,7 +314,7 @@
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd><dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
-    </li><li visbl="pub" name="net.liftmodules.FoBo.package.DataTables190#toString" data-isabs="false">
+    </li><li visbl="pub" name="scala.AnyRef#toString" data-isabs="false">
       <a id="toString():String"></a>
       <h4 class="signature">
       <span class="kind">def</span>
@@ -333,7 +324,7 @@
         <span class="params">()</span><span class="result">: <span name="java.lang.String" class="extype">String</span></span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd><dt>Definition Classes</dt><dd><a name="net.liftmodules.FoBo.package.DataTables190" class="extype" href="">DataTables190</a> → AnyRef → Any</dd></dl></div>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
     </li><li visbl="pub" name="scala.AnyRef#wait" data-isabs="false">
       <a id="wait():Unit"></a>
       <h4 class="signature">
@@ -379,36 +370,9 @@
     </li></ol>
             </div>
 
-        <div class="values members" id="values">
-              <h3>Deprecated Value Members</h3>
-              <ol><li visbl="pub" name="scala.Product#productElements" data-isabs="false">
-      <a id="productElements:Iterator[Any]"></a>
-      <h4 class="signature">
-      <span class="kind">def</span>
-      <span class="symbol"> 
-        <span class="name deprecated">productElements</span>
         
-        <span class="result">: Iterator[<span name="scala.Any" class="extype">Any</span>]</span>
-      </span>
-      </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Product</dd><dt>Annotations</dt><dd>
-                <span class="name">@deprecated</span>
-              
-        </dd><dt>Deprecated</dt><dd class="cmt"><p>use productIterator instead</p></dd></dl></div>
-    </li></ol>
-            </div>
 
-        <div name="scala.Serializable" class="parent">
-              <h3>Inherited from <span name="scala.Serializable" class="extype">Serializable</span></h3>
-            </div><div name="java.io.Serializable" class="parent">
-              <h3>Inherited from <span name="java.io.Serializable" class="extype">Serializable</span></h3>
-            </div><div name="scala.Product" class="parent">
-              <h3>Inherited from <span name="scala.Product" class="extype">Product</span></h3>
-            </div><div name="scala.Equals" class="parent">
-              <h3>Inherited from <span name="scala.Equals" class="extype">Equals</span></h3>
-            </div><div name="net.liftmodules.FoBo.package.FoBoToolkit" class="parent">
-              <h3>Inherited from <a name="net.liftmodules.FoBo.package.FoBoToolkit" class="extype" href="package$$FoBoToolkit.html">FoBoToolkit</a></h3>
-            </div><div name="scala.AnyRef" class="parent">
+        <div name="scala.AnyRef" class="parent">
               <h3>Inherited from AnyRef</h3>
             </div><div name="scala.Any" class="parent">
               <h3>Inherited from <span name="scala.Any" class="extype">Any</span></h3>

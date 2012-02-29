@@ -34,36 +34,10 @@
 <script type='text/javascript' src='/classpath/fobo/jquery.js'></script>
 
 
-
 <title class="lift:Menu.title">FoBo-Lift Template demo %*%</title>
 
-		<script type="text/javascript">
-			addLoadEvent(function() {
-				$('.dropdown-toggle').dropdown()
-			});			
-			
-// 			addLoadEvent(function(){
-// 			    $("a[rel=popover]")
-// 			      .popover()
-// 			      .click(function(e) {
-// 			        e.preventDefault()
-// 			       });
-// 			});			
-
-			function addLoadEvent(func) {
-				var oldonload = window.onload;
-				if (typeof window.onload != 'function') {
-					window.onload = func;
-				} else {
-					window.onload = function() {
-						if (oldonload) {
-							oldonload();
-						}
-						func();
-					}
-				}
-			}
-		</script> 
+<script data-lift="FoBo.Bootstrap.activateDropdown?on=.dropdown-toggle"></script>
+<script data-lift="FoBo.ScriptHelper.registerLoadEventFactory"></script>	
 
 
 </head>
@@ -78,6 +52,5 @@
     <script type="text/javascript" src="/classpath/fobo/bootstrap-tooltip.js"></script> 
     <script type="text/javascript" src="/classpath/fobo/bootstrap-popover.js"></script>
     
-<!--     <script type="text/javascript" src="/resources/js/fobo02-demo-app1.js"></script>   -->
 </body>
 </html>

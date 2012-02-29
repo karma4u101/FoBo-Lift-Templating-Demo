@@ -217,11 +217,8 @@
                         &lt;!DOCTYPE html&gt;
                         &lt;html&gt;
                           &lt;head&gt;
-                             :       
-		                  &lt;script type="text/javascript"&gt;
-			                addLoadEvent(function() {
-				              $('.dropdown-toggle').dropdown()
-			                });			
+                             :
+		                  &lt;script type="text/javascript"&gt;                                 		
 			                function addLoadEvent(func) {
 				              var oldonload = window.onload;
 				              if (typeof window.onload != 'function') {
@@ -232,9 +229,12 @@
 							        oldonload();
 						          }
 						          func();
-					           }
-				             }
-			               }
+					            }
+				              }
+			                }
+			                addLoadEvent(function() {
+				              $('.dropdown-toggle').dropdown()
+			                });	   			               
 		                  &lt;/script&gt;                                 
                           &lt;/head&gt;
                           &lt;body"&gt;
@@ -267,8 +267,8 @@
                         &lt;html&gt;
                           &lt;head&gt;
                                :
-                          &lt;script data-lift="FoBo.Bootstrap.activateDropdown?on=.dropdown-toggle"&gt;&lt;/script&gt;
-                          &lt;script data-lift="FoBo.ScriptHelper.registerLoadEventFactory"&gt;&lt;/script&gt;                       
+                          &lt;script data-lift="FoBo.ScriptHelper.registerLoadEventFactory"&gt;&lt;/script&gt;         
+                          &lt;script data-lift="FoBo.Bootstrap.activateDropdown?on=.dropdown-toggle"&gt;&lt;/script&gt;              
                           &lt;/head&gt;
                           &lt;body"&gt;
                                :

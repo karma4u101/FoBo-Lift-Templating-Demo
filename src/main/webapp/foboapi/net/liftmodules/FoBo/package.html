@@ -37,10 +37,30 @@ front-end toolkits with some carefully thought throw and Lift inherit extra bene
    module matures.</li><li>Great mobile scalablity with the modules own unique FoBo mix is a love, peace and harmony mix of the ZURB/Foundation and the Twitter
    Bootstrap front-end toolkit.</li><li>As more front-end toolkits and JQuery plugins will be available to you just a FoBo.Initparam away you will,
    when needed, be able to quick and easy test out and use nifty features like the Google code Prettify kit, DataTables
-   and more.</li></ul><h5>Small heads up usage warning</h5><p>This API is very young so if you make direct usage of some FoBoHelpers in lib chances are that things change.
+   and more.</li><li>FoBo uses Less to build the (all in one) bootstrap.css out of the box (no hands on needed) so if you like you
+   can (if you fork the module source) easily tweak your bootstrap css (via variables.less) see bootstrap
+   documentation form more information.</li></ul><h5>Okey, okey I get it, now take me to the most interesting stuff</h5><p>From a user perspective, the most interesting stuff is probably in the snippet classes in <a name="net.liftmodules.FoBo.snippet.FoBo" class="extype" href="snippet/FoBo/package.html">FoBo</a>.
+Great care has been taken to explain and illustrate how to use the snippet functions so that you can use them
+even if you are not a Lift expert, to show you what I am talking about <b>here is a example showing one way to use the tooltip function:</b></p><hr /><p>def <b>tooltip</b> : CssSel</p><p>This function sets a tooltip action on a element.</p><p><b>Snippet Params:</b></p><ul><li><b>Param</b> <i>id</i> - The element id</li><li><b>Param</b> <i>option</i> - The option string see bootstrap documentation for available options.</li></ul><p><b>Example</b> Showing a example element using the tooltip and the actual snippet invocation</p><pre>
+ &lt;a id=&quot;aId&quot;
+    title=&quot;The most powerful, most secure web framework available today. It simply rocks!&quot;
+    href=&quot;http://liftweb.net/&quot;&gt;Lift&lt;/a&gt;
+ &lt;script data-lift=&quot;FoBo.Bootstrap.tooltip?id=#aId&amp;option=placement:'bottom'&quot;&gt;&lt;/script&gt;
+</pre><p><b>Result:</b> The script tag with the snippet invocation will result in the following being injected in place of the snippet invocation:</p><pre>
+ &lt;a id=&quot;aId&quot;
+    title=&quot;The most powerful, most secure web framework available today. It simply rocks!&quot;
+    href=&quot;http://liftweb.net/&quot;&gt;Lift&lt;/a&gt;
+  &lt;script type=&quot;text/javascript&quot;&gt;
+    // &lt;![CDATA[
+      $(function () { $('#aId').tooltip({placement:'bottom'}); }); ;
+    // ]]&gt;
+  &lt;/script&gt;
+</pre><hr /><h5>Small heads up usage warning</h5><p>This API is very young (with only snapshot releases) so if you make direct usage of some FoBoHelpers in lib chances
+is that things change.
 If you want to stay on the safe side usage of FoBo snippets and init operations should be fairly safe.
 After a stable release (we are not there yet) changes to a API function will be announced as deprecated
-at least one release cycle before removed.</p><h5>Setup</h5><ul><li>The module is known to work with Lift v2.4 and Scala v2.9.1 but expect it to work with other versions as well.</li><li>For a demonstration of this module see the live <a href="http://www.media4u101.se/fobo-lift-template-demo/">FoBo demo</a> the
+at least one release cycle before removed.</p><h5>Help out!</h5><p>There is a lot more that can be done within the boundaries of this API and the FoBo module as a hole so
+your help, suggestions, encouragement, engagement, patches (pull requests) bug-fixes/reports are highly appreciated.</p><h5>Setup</h5><ul><li>The module is known to work with Lift v2.4 and Scala v2.9.1 but expect it to work with other versions as well.</li><li>For a demonstration of this module see the live <a href="http://www.media4u101.se/fobo-lift-template-demo/">FoBo demo</a> the
    FoBo demo source is available <a href="https://github.com/karma4u101/FoBo-Lift-Template"> here</a>
 </li></ul></div><dl class="attributes block"> <div class="block">Example:
                 <ol><li class="cmt"><p>To initiate this module for usage in your Lift project
@@ -55,7 +75,7 @@ set something like the following in the projects Lift bootstrap.liftweb.Boot</p>
     :
    FoBo.init() //now do init
 </pre></li></ol>
-              </div><dt>Version</dt><dd><p>0.3.3</p></dd></dl></div>
+              </div><dt>Version</dt><dd><p>v0.3.5</p></dd></dl></div>
         
 
       <div id="template">

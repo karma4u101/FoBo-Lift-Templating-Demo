@@ -29,12 +29,11 @@
       </h4>
       
           <div class="fullcommenttop" id="comment"><div class="comment cmt"><h4>Script Helper Snippet</h4><p>This snippet class contains functions for common transform operations useful when working
-with the any toolkit.</p></div><dl class="attributes block"> <div class="block">Example:
-                <ol><li class="cmt"><p>Invoke with </p><pre>
+with the any toolkit.
+<b>Example</b> Most of the functions in this class can be invoced using the following pattern.</p><pre>
  data-lift=&quot;FoBo.ScriptHelper.functionName?paramName=paramValue&amp;....&quot; 
 </pre><p>For more examples see the individual transform functions.
-</p></li></ol>
-              </div></dl><div class="toggleContainer block">
+</p></div><div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>
           <div class="superTypes hiddenContent"><span name="net.liftweb.common.Loggable" class="extype">Loggable</span>, <span name="net.liftweb.http.StatefulSnippet" class="extype">StatefulSnippet</span>, <span name="net.liftweb.http.DispatchSnippet" class="extype">DispatchSnippet</span>, AnyRef, <span name="scala.Any" class="extype">Any</span></div>
         </div></div>
@@ -354,7 +353,7 @@ with the any toolkit.</p></div><dl class="attributes block"> <div class="block">
         <span class="result">: <span name="net.liftweb.util.CssSel" class="extype">CssSel</span></span>
       </span>
       </h4>
-      <p class="shortcomment cmt">This function register a load event factory script</p><div class="fullcomment"><div class="comment cmt"><p>This function register a load event factory script</p><p>@example</p><pre>
+      <p class="shortcomment cmt">This function register a load event factory script</p><div class="fullcomment"><div class="comment cmt"><p>This function register a load event factory script</p><p><b>Example</b></p><pre>
     &lt;head&gt;
       :
       &lt;script data-lift=&quot;FoBo.Bootstrap.activateDropdown?on=.dropdown-toggle&quot;&gt;&lt;/script&gt;
@@ -374,9 +373,10 @@ with the any toolkit.</p></div><dl class="attributes block"> <div class="block">
                      oldonload();
                   }
                   func();
+
+               }
             }
          }
-      ;
    // ]]&gt;
  &lt;/script&gt;
 </pre></div></div>

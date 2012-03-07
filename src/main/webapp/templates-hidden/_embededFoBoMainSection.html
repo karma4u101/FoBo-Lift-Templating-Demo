@@ -28,16 +28,19 @@
 						<script data-lift="FoBo.Bootstrap.popoverPreventDefault?on=#bcode-popover"></script>
 
 						<p>
-						This demo demonstrates a optional <a href="http://liftweb.net/">Lift</a>, 
+						This pages demonstrates a optional <a id="lift-tt" title="The most powerful, most secure web framework available today. It simply rocks!" href="http://liftweb.net/">Lift</a>, 
 						 generic front-end toolkit <a
 							href="http://www.assembla.com/spaces/liftweb/wiki/Modules">module</a>
-						FoBo that quick and easy will integrate some great front-end
-						toolkit(s) into your Lift application, giving you the flexibility
-						and choice of setting up and use the toolkit:s (and version:s) of your
-						liking, that is, if you like you can even setup and potentially use 
-						several toolkits simultaneously. For setup information  
-						<a href="#spysetup"> 
-						  see below</a>.</p>
+						FoBo that quick and easy will integrate some of the industry leading 
+						web-centric open source front-end toolkits into your Lift application, 
+						giving you the flexibility and choice of setting up and use the toolkit:s 
+						(and version:s) of your liking, that is, if you like you can even setup 
+						and potentially use several toolkits simultaneously. Added to this is a 
+						growing number of <span data-lift="Menu.item?name=FoBoAPI;lift:Loc.i;a:class=addclassshowofdummy">
+							<span data-lift="Loc?locid=FoBoAPI">FoBoAPI</span>
+						</span> functions (optional to use) that will gives you even more ease of usage, power and control.   
+						For some examples and setup information <a href="#spysetup">see below</a>.</p>
+						<script data-lift="FoBo.Bootstrap.tooltip?id=#lift-tt"></script>  
 						
 						<p>
 						For more information about the FoBo module take a look at the 
@@ -61,21 +64,17 @@
 						<!-- using the FoBoHelper in Demo Snippet, not requered but handy ;) -->
 						<script data-lift="FoBo.Bootstrap.popover?id=#mobile-popover"></script>						
 						<p><b>The FoBo mix -</b> One of the convenience options the FoBo Lift module comes 
-						with is the FoBo.InitParam.ToolKit=FoBo.FoBoXX setup option. 
-						The FoBoXX setup option is a love, peace and harmony mix of the 
+						with is the <b>FoBo02 setup option</b>. The FoBo02 setup option is a love, peace and harmony mix of the 
 						<a href="http://foundation.zurb.com/">ZURB/Foundation</a> and the 
 						<a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap</a>
 						front-end toolkit. This concert mix will give you the awesomeness of foundation 
 						with its rock & roll solid reactive, mobile scalability and the brilliance of 
 						bootstrap, it's components and interactions.</p>
 						
-						<p>This page uses (among others) the <strong>FoBo.InitParam.ToolKit=FoBo.FoBo02 option</strong> 
-						of the FoBo module which make use of the <strong>fobo.css</strong>, there is also separate 
-						BootstrapXX, FoundationXX, JQueryMobileXXX options and more. 
-						This demo also make heavy use of a application specific css styling using the 
-						<strong>fobo02-demo-app1.css</strong> file (external to the module).</p>
-						
-												
+						<p>This demo uses (among others) the <strong>FoBo02 Toolkit option</strong> 
+						of the FoBo module but that is just <b>one of several Toolkit setup options</b>, 
+						there is also separate BootstrapXX, FoundationXX, JQueryMobileXXX Toolkit options and more. 
+						This demo also make use of a application specific css styling file (external to the module).</p>	
 						<hr />
 					</div>
 				</div>
@@ -87,7 +86,7 @@
 						<p>The <a href="http://foundation.zurb.com/">ZURB/Foundation</a>
 						toolkit is a great reactive and mobile scalable toolkit.</p> 
 						
-						<p>The FoBo module also gives you the (separate) setup option <strong>FoBo.InitParam.ToolKit=FoBo.FoundationXXX</strong> 
+						<p>The FoBo module also gives you the (separate) setup option <strong>FoundationXXX</strong> 
 						for using the foundation toolkit. For a demonstration take a look at the included <span
 							data-lift="Menu.item?name=Foundation;lift:Loc.i;a:class=addclassshowofdummy">
 							<span data-lift="Loc?locid=Foundation">Foundation demo</span>
@@ -112,11 +111,19 @@
 						components and interactions.</p> 
 						
 						<p>Apart from giving you the easy access and integration of the FoBoXX mix the FoBo module also 
-						gives you the (separate) setup option <strong>FoBo.InitParam.ToolKit=FoBo.BootstrapXXX</strong> to use the bootstrap toolkit. 
-						The included bootstrap documentation pages is <b>modified</b> to use the FoBoXX option <span
+						gives you the <strong>BootstrapXXX</strong> setup option for using the bootstrap toolkit. 
+						The <span
 							data-lift="Menu.item?name=Bootstrap;lift:Loc.i;a:class=addclassshowofdummy">
-							<span data-lift="Loc?locid=Bootstrap">Bootstrap demo</span>
-						</span> but can as easily (or even more so) be set up and used with the BootstrapXXX option.</p> 
+							bootstrap documentation pages</span> in this demo is slightly <b>modified</b> to use the 
+						FoBoXX mix option 
+						</span> but can as easily (or even more so) be set up and used with the BootstrapXXX option.
+						For a example see <a href="https://github.com/karma4u101/Templating-With-Twitter-Bootstrap">Templating-With-Twitter-Bootstrap</a> 
+						project it uses the FoBo module with the Bootstrap200 setup option.</p> 
+						
+						<p>FoBo:s build system has hooks into <a id="less-tt" title="The dynamic stylesheet language" href="http://lesscss.org/">LESS</a> to dynamicaly generate the bootstrap.css so if you like you can make some 
+						serious tweaks to the generated bootstrap.css. See bootstrap demo and documentation for more info on how to use Less with bootstrap.
+						</p>
+						<script data-lift="FoBo.Bootstrap.tooltip?id=#less-tt"></script>
 						<p>
 							<span
 								data-lift="Menu.item?name=Bootstrap;lift:Loc.i;a:class=nice radius large blue button">
@@ -135,13 +142,12 @@
 						    <p>The <a href="http://jquerymobile.com/">JQuery Mobile</a> toolkit is a Touch-Optimized 
 						    Web Framework for Smartphones & Tablets.</p>
 						     
-				            <p>To use this mobile centric toolkit set <strong>FoBo.InitParam.ToolKit=FoBo.JQueryMobileXXX</strong> and go mobile.</p>
+				            <p>To use this mobile centric toolkit set the <strong>JQueryMobileXXX</strong> option and go mobile.</p>
 							
-							<p>To demonstrate usage of this mobile centric toolkit the (in this demo) included JQuery Mobile documentation 
-							pages is <b>modified</b> to use the Fobo modules FoBo.InitParam.ToolKit=FoBo.JQueryMobile101 option <span 
+							<p>The <span 
 							data-lift="Menu.item?name=JQuery-mobile;lift:Loc.i;a:class=addclassshowofdummy">
 							<span data-lift="Loc?locid=JQuery-mobile">JQuery-mobile demo</span>
-						</span>. </p>
+						</span> pages in this demo is <b>modified</b> to use the JQueryMobile101 option. </p>
 						<p>
 							<span
 								data-lift="Menu.item?name=JQuery-mobile;lift:Loc.i;a:class=nice radius large blue button">
@@ -149,146 +155,171 @@
 						</p>
 						<hr />
 					</div>
-				</div>		
-				<a id="spysetup"></a>		
+				</div>	
+				
 				<div class="row">
 					<div class="twelv columns">
+
 						<h2 class="capital">
-							S<span>etup and</span> U<span>sage</span> 
+							D<span>ata</span>T<span>ables</span> 
 						</h2>
-						<p>For now you have to clone and build the module yourself but thats easy and straight forward 
-						so, if you have not done it already, go ahead and do it now, you will find all information you 
-						need to prepare the module for usage on <a href="https://github.com/karma4u101/FoBo">Github FoBo module</a>, 
-						then come back here for integration and usage. 
+						    <p><a href="http://datatables.net/">DataTables</a> is a plug-in for the jQuery Javascript library. It is a 
+						    highly flexible tool, based upon the foundations of progressive enhancement, which will add advanced 
+						    interaction controls to any HTML table.</p>   
+							
+							<p>The <span 
+							data-lift="Menu.item?name=DataTables;lift:Loc.i;a:class=addclassshowofdummy">
+							<span data-lift="Loc?locid=DataTables">DataTables demo</span>
+						</span> pages in this demo is <b>modified</b> to use the DataTables190 option. </p>
+						<p>
+							<span
+								data-lift="Menu.item?name=DataTables;lift:Loc.i;a:class=nice radius large blue button">
+								<span data-lift="Loc.i">DataTables</span>
 						</p>
-						
-						<p>To initiate and release the powers of the FoBo module chose the Toolkit option(s) you 
-						prefer and then call FoBo.init() from your lift projects Boot.</p> 
-						
-						<p>This demo uses the following module setup in lift Boot:</p>
-						<pre class="prettyprint linenums lang-scala">
-
-                           import net.liftmodules.FoBo
-
-                           /**
-                            * A class that's instantiated early and run.  It allows the application
-                            * to modify lift's environment
-                            **/
-                            class Boot extends Loggable {
-                              def boot {
-
-                                //If using defaults FoBo init params can be omitted
-                                FoBo.InitParam.JQuery=FoBo.JQuery171  
-                                FoBo.InitParam.ToolKit=FoBo.FoBo020 
-                                FoBo.InitParam.ToolKit=FoBo.PrettifyJun2011
-                                FoBo.InitParam.ToolKit=FoBo.JQueryMobile101
-                                FoBo.init()
-                                  :      
-						</pre>
-						<p>In Lift's html5 template:s add (depending on your setup) something like this:</p>
-						<pre class="prettyprint linenums lang-html">
-                        &lt;!DOCTYPE html&gt;
-                        &lt;html&gt;
-                          &lt;head&gt;
-                             :
-                             &lt;!--Main css for the FoBo020 module option--&gt;
-                             &lt;link href="/classpath/fobo/fobo.css" type="text/css" rel="stylesheet"&gt;
-                             &lt;!--app specific tweeks and overrides external to module goes here--&gt;
-                             &lt;link href="[path to your projects app css]" type="text/css" rel="stylesheet"&gt;  
-                             :                        
-                          &lt;/head&gt;
-                          &lt;!--Demo page setup for prettyprint and bootstrap scrollspy--&gt;
-                          &lt;body data-spy="scroll" data-target="#fobo-navbar" data-offset="40" onload="prettyPrint()"&gt;
-                             :
-                             &lt;!--In end of page (for fast pageload) add the scripts you need--&gt; 
-                             &lt;script src="/classpath/fobo/prettify.js" type="text/javascript"&gt;&lt;/script&gt;
-                             &lt;script src="/classpath/fobo/lang-scala.js" type="text/javascript"&gt;&lt;/script&gt;
-                             &lt;script src="/classpath/fobo/bootstrap-scrollspy.js" type="text/javascript"&gt;&lt;/script&gt;
-                             :
-                          &lt;/body&gt;        
-                        &lt;/html&gt;    
-						</pre>
-						<p>Note the uniform setup without any version references in the html templates, making way for a smooth(er) toolkit upgrade. 
-						For more information see the <a href="https://github.com/karma4u101/FoBo">FoBo modules Github</a>.</p>
-						
-						<p>The FoBo module comes with some convinience functions (snippets, optional to use) that will generate some commonly used 
-						toolkit helper scripts for you. For instansce <b>instead of doing this</b> (a common bootstrap component init use case) </p>
-						<pre class="prettyprint linenums lang-html">
-                        &lt;!DOCTYPE html&gt;
-                        &lt;html&gt;
-                          &lt;head&gt;
-                             :
-		                  &lt;script type="text/javascript"&gt;                                 		
-			                function addLoadEvent(func) {
-				              var oldonload = window.onload;
-				              if (typeof window.onload != 'function') {
-					            window.onload = func;
-				              } else {
-					            window.onload = function() {
-						          if (oldonload) {
-							        oldonload();
-						          }
-						          func();
-					            }
-				              }
-			                }
-			                addLoadEvent(function() {
-				              $('.dropdown-toggle').dropdown()
-			                });	   			               
-		                  &lt;/script&gt;                                 
-                          &lt;/head&gt;
-                          &lt;body"&gt;
-                             :
-                              &lt;!-- Set a boostrap popover element --&gt;   
-	                      &lt;a href="#" rel="popover" title="The Title" data-content="The content ..." id="theId"&gt;...&lt;/a&gt;
-                              &lt;!-- Initiate the popover and place it on the left --&gt;
-	                      &lt;script&gt;
-                                $(function () { 
-                                  $("#theId").popover({placement:'left'});
-                                }); 
-                              &lt;/script&gt; 
-                              &lt;!-- Prevent the default action for click on the popover --&gt;
-                              &lt;script&gt; 
-                                $(function(){
-                                  $("a[rel=popover]")
-                                    .popover()
-                                    .click(function(e) {
-                                      e.preventDefault()
-                                  });
-                                });
-                              &lt;/script&gt; 
-                               : 
-                          &lt;/body&gt;        
-                        &lt;/html&gt;    
-						</pre>
-						<p><b>You can simply do this</b> using a FoBo:s snippet containing some bootstrap convinience functions: </p>
-						<pre class="prettyprint linenums lang-html">
-                        &lt;!DOCTYPE html&gt;
-                        &lt;html&gt;
-                          &lt;head&gt;
-                               :
-                          &lt;script data-lift="FoBo.ScriptHelper.registerLoadEventFactory"&gt;&lt;/script&gt;         
-                          &lt;script data-lift="FoBo.Bootstrap.activateDropdown?on=.dropdown-toggle"&gt;&lt;/script&gt;              
-                          &lt;/head&gt;
-                          &lt;body"&gt;
-                               :
-	                      &lt;a href="#" rel="popover" title="The Title" data-content="The content ..." id="theId"&gt;...&lt;/a&gt;
-                              &lt;script data-lift="FoBo.Bootstrap.popover?id=#theId&options=placement:'left'"&gt;&lt;/script&gt;
-                              &lt;script data-lift="FoBo.Bootstrap.popoverPreventDefault">&lt;/script&gt;
-                               : 
-                          &lt;/body&gt;        
-                        &lt;/html&gt;    
-						</pre>						
-						<p>At this writing the available snippet helpers are few but I expect the numbers to grow and you are 
-						wellcome to contribute code and/or ideas. Take a look att the API documentation on how to 
-						invoke the helpers and description on what result it produces for example look att the 
-						FoBo.ScriptHelper.registerLoadEventFactory snippet function by open  
-						<a href="/foboapi/#net.liftmodules.FoBo.snippet.FoBo.ScriptHelper">FoBo.ScriptHelper page</a> and 
-						click on the <b>registerLoadEventFactory</b> function name for details. 
-						</p>	
 						<hr />
 					</div>
-				</div>
+				</div>					
+					
+
+<!-- 				<div class="row"> -->
+<!-- 					<div class="twelv columns"> -->
+<!-- 						<h2 class="capital"> -->
+<!-- 							S<span>etup and</span> U<span>sage</span>  -->
+<!-- 						</h2> -->
+<!-- 						<p>For now you have to clone and build the module yourself but thats easy and straight forward  -->
+<!-- 						so, if you have not done it already, go ahead and do it now, you will find all information you  -->
+<!-- 						need to prepare the module for usage on <a href="https://github.com/karma4u101/FoBo">Github FoBo module</a>,  -->
+<!-- 						then come back here for integration and usage.  -->
+<!-- 						</p> -->
+						
+<!-- 						<p>To initiate and release the powers of the FoBo module chose the Toolkit option(s) you  -->
+<!-- 						prefer and then call FoBo.init() from your lift projects Boot.</p>  -->
+						
+<!-- 						<p>This demo uses the following module setup in lift Boot:</p> -->
+<!-- 						<pre class="prettyprint linenums lang-scala"> -->
+
+<!--                            import net.liftmodules.FoBo -->
+
+<!--                            /** -->
+<!--                             * A class that's instantiated early and run.  It allows the application -->
+<!--                             * to modify lift's environment -->
+<!--                             **/ -->
+<!--                             class Boot extends Loggable { -->
+<!--                               def boot { -->
+
+<!--                                 //If using defaults FoBo init params can be omitted -->
+<!--                                 FoBo.InitParam.JQuery=FoBo.JQuery171   -->
+<!--                                 FoBo.InitParam.ToolKit=FoBo.FoBo020  -->
+<!--                                 FoBo.InitParam.ToolKit=FoBo.PrettifyJun2011 -->
+<!--                                 FoBo.InitParam.ToolKit=FoBo.JQueryMobile101 -->
+<!--                                 FoBo.init() -->
+<!--                                   :       -->
+<!-- 						</pre> -->
+<!-- 						<p>In Lift's html5 template:s add (depending on your setup) something like this:</p> -->
+<!-- 						<pre class="prettyprint linenums lang-html"> -->
+<!--                         &lt;!DOCTYPE html&gt; -->
+<!--                         &lt;html&gt; -->
+<!--                           &lt;head&gt; -->
+<!--                              : -->
+<!--                              &lt;!--Main css for the FoBo020 module option--&gt; -->
+<!--                              &lt;link href="/classpath/fobo/fobo.css" type="text/css" rel="stylesheet"&gt; -->
+<!--                              &lt;!--app specific tweeks and overrides external to module goes here--&gt; -->
+<!--                              &lt;link href="[path to your projects app css]" type="text/css" rel="stylesheet"&gt;   -->
+<!--                              :                         -->
+<!--                           &lt;/head&gt; -->
+<!--                           &lt;!--Demo page setup for prettyprint and bootstrap scrollspy--&gt; -->
+<!--                           &lt;body data-spy="scroll" data-target="#fobo-navbar" data-offset="40" onload="prettyPrint()"&gt; -->
+<!--                              : -->
+<!--                              &lt;!--In end of page (for fast pageload) add the scripts you need--&gt;  -->
+<!--                              &lt;script src="/classpath/fobo/prettify.js" type="text/javascript"&gt;&lt;/script&gt; -->
+<!--                              &lt;script src="/classpath/fobo/lang-scala.js" type="text/javascript"&gt;&lt;/script&gt; -->
+<!--                              &lt;script src="/classpath/fobo/bootstrap-scrollspy.js" type="text/javascript"&gt;&lt;/script&gt; -->
+<!--                              : -->
+<!--                           &lt;/body&gt;         -->
+<!--                         &lt;/html&gt;     -->
+<!-- 						</pre> -->
+<!-- 						<p>Note the uniform setup without any version references in the html templates, making way for a smooth(er) toolkit upgrade.  -->
+<!-- 						For more information see the <a href="https://github.com/karma4u101/FoBo">FoBo modules Github</a>.</p> -->
+						
+<!-- 						<p>The FoBo module comes with some convinience functions (snippets, optional to use) that will generate some commonly used  -->
+<!-- 						toolkit helper scripts for you. For instansce doing it the Lift - FoBo way <b>you can simply do this</b> using a FoBo:s snippet containing some bootstrap convinience functions: </p> -->
+<!-- 						<pre class="prettyprint linenums lang-html"> -->
+<!--                         &lt;!DOCTYPE html&gt; -->
+<!--                         &lt;html&gt; -->
+<!--                           &lt;head&gt; -->
+<!--                                : -->
+<!--                           &lt;script data-lift="FoBo.ScriptHelper.registerLoadEventFactory"&gt;&lt;/script&gt;          -->
+<!--                           &lt;script data-lift="FoBo.Bootstrap.activateDropdown?on=.dropdown-toggle"&gt;&lt;/script&gt;               -->
+<!--                           &lt;/head&gt; -->
+<!--                           &lt;body"&gt; -->
+<!--                                : -->
+<!-- 	                      &lt;a href="#" rel="popover" title="The Title" data-content="The content ..." id="theId"&gt;...&lt;/a&gt; -->
+<!--                               &lt;script data-lift="FoBo.Bootstrap.popover?id=#theId&options=placement:'left'"&gt;&lt;/script&gt; -->
+<!--                               &lt;script data-lift="FoBo.Bootstrap.popoverPreventDefault">&lt;/script&gt; -->
+<!--                                :  -->
+<!--                           &lt;/body&gt;         -->
+<!--                         &lt;/html&gt;     -->
+<!-- 						</pre>	 -->
+
+<!-- 						<p> <b>.... instead of doing this</b> (a common bootstrap component init use case) </p> -->
+<!-- 						<pre class="prettyprint linenums lang-html"> -->
+<!--                         &lt;!DOCTYPE html&gt; -->
+<!--                         &lt;html&gt; -->
+<!--                           &lt;head&gt; -->
+<!--                              : -->
+<!-- 		                  &lt;script type="text/javascript"&gt;                                 		 -->
+<!-- 			                function addLoadEvent(func) { -->
+<!-- 				              var oldonload = window.onload; -->
+<!-- 				              if (typeof window.onload != 'function') { -->
+<!-- 					            window.onload = func; -->
+<!-- 				              } else { -->
+<!-- 					            window.onload = function() { -->
+<!-- 						          if (oldonload) { -->
+<!-- 							        oldonload(); -->
+<!-- 						          } -->
+<!-- 						          func(); -->
+<!-- 					            } -->
+<!-- 				              } -->
+<!-- 			                } -->
+<!-- 			                addLoadEvent(function() { -->
+<!-- 				              $('.dropdown-toggle').dropdown() -->
+<!-- 			                });	   			                -->
+<!-- 		                  &lt;/script&gt;                                  -->
+<!--                           &lt;/head&gt; -->
+<!--                           &lt;body"&gt; -->
+<!--                              : -->
+<!--                               &lt;!-- Set a boostrap popover element --&gt;    -->
+<!-- 	                      &lt;a href="#" rel="popover" title="The Title" data-content="The content ..." id="theId"&gt;...&lt;/a&gt; -->
+<!--                               &lt;!-- Initiate the popover and place it on the left --&gt; -->
+<!-- 	                      &lt;script&gt; -->
+<!--                                 $(function () {  -->
+<!--                                   $("#theId").popover({placement:'left'}); -->
+<!--                                 });  -->
+<!--                               &lt;/script&gt;  -->
+<!--                               &lt;!-- Prevent the default action for click on the popover --&gt; -->
+<!--                               &lt;script&gt;  -->
+<!--                                 $(function(){ -->
+<!--                                   $("a[rel=popover]") -->
+<!--                                     .popover() -->
+<!--                                     .click(function(e) { -->
+<!--                                       e.preventDefault() -->
+<!--                                   }); -->
+<!--                                 }); -->
+<!--                               &lt;/script&gt;  -->
+<!--                                :  -->
+<!--                           &lt;/body&gt;         -->
+<!--                         &lt;/html&gt;     -->
+<!-- 						</pre>											 -->
+<!-- 						<p>At this writing the available snippet helpers are few but expect the numbers to grow. You are  -->
+<!-- 						wellcome to contribute code and/or ideas. Take a look att the API documentation on how to  -->
+<!-- 						invoke the helpers and description on what result it produces for example look att the  -->
+<!-- 						FoBo.ScriptHelper.registerLoadEventFactory snippet function by open   -->
+<!-- 						<a href="/foboapi/#net.liftmodules.FoBo.snippet.FoBo.ScriptHelper">FoBo.ScriptHelper page</a> and  -->
+<!-- 						click on the <b>registerLoadEventFactory</b> function name for details.  -->
+<!-- 						</p>	 -->
+<!-- 						<hr /> -->
+<!-- 					</div> -->
+<!-- 				</div> -->
 			</div>
 			<div class="three columns">
 

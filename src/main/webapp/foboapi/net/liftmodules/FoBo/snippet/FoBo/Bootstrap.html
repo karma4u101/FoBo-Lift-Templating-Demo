@@ -467,6 +467,28 @@ with the Bootstrap toolkit.</p></div><dl class="attributes block"> <div class="b
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li visbl="pub" name="net.liftmodules.FoBo.snippet.FoBo.Bootstrap#tooltip" data-isabs="false">
+      <a id="tooltip:CssSel"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol"> 
+        <span class="name">tooltip</span>
+        
+        <span class="result">: <span name="net.liftweb.util.CssSel" class="extype">CssSel</span></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">This function sets a tooltip action on a element.</p><div class="fullcomment"><div class="comment cmt"><p>This function sets a tooltip action on a element.</p><p><b>Snippet Params:</b></p><ul><li><b>Param</b> <i>id</i> - The element id</li><li><b>Param</b> <i>option</i> - The option string see bootstrap documentation for available options.</li></ul><p><b>Example</b> Showing a example element using the tooltip and the actual snippet invocation</p><pre>
+ &lt;a id=&quot;aId&quot;
+    title=&quot;The most powerful, most secure web framework available today. It simply rocks!&quot;
+    href=&quot;http://liftweb.net/&quot;&gt;Lift&lt;/a&gt;
+ &lt;script data-lift=&quot;FoBo.Bootstrap.tooltip?id=#aId&amp;option=placement:'bottom'&quot;&gt;&lt;/script&gt;
+</pre><p><b>Result:</b> The script tag with the snippet invocation will result in the following being injected in place of the snippet invocation:</p><pre>
+  &lt;script type=&quot;text/javascript&quot;&gt;
+    // &lt;![CDATA[
+      $(function () { $('#aId').tooltip({placement:'bottom'}); }); ;
+    // ]]&gt;
+  &lt;/script&gt;
+</pre></div></div>
     </li><li visbl="pub" name="net.liftweb.http.StatefulSnippet#unregisterThisSnippet" data-isabs="false">
       <a id="unregisterThisSnippet():Unit"></a>
       <h4 class="signature">

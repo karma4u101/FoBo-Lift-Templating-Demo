@@ -30,6 +30,7 @@ class Boot extends Loggable {
     FoBo.InitParam.ToolKit=FoBo.FoBo020
     FoBo.InitParam.ToolKit=FoBo.PrettifyJun2011
     FoBo.InitParam.ToolKit=FoBo.JQueryMobile101
+    FoBo.InitParam.ToolKit=FoBo.DataTables190
     FoBo.init()  
 
     // where to search snippet
@@ -46,10 +47,15 @@ class Boot extends Loggable {
         "JQuery-mobile")),
       Menu(Loc("DataTables", Link(List("datatables"), true, "/datatables/1.9.0/index"),
         "DataTables")),  
-      Menu(Loc("FoBoAPI", Link(List("foboapi"), true, "/foboapi/"),
+      Menu(Loc("FoBoAPI", Link(List("foboapi"), true, "/foboapi/#net.liftmodules.FoBo.package"),
         "FoBoAPI"))        
     )   
       
+    LiftRules.uriNotFound.prepend(NamedPF("404handler"){
+      case (req,failure) => 
+        NotFoundAsTemplate(ParsePath(List("404"),"html",false,false))
+    })
+
     // set the sitemap.  Note if you don't want access control for
     // each page, just comment this line out.
     LiftRules.setSiteMap(SiteMap(entries: _*))
@@ -61,9 +67,6 @@ class Boot extends Loggable {
     // Make the spinny image go away when it ends
     LiftRules.ajaxEnd =
       Full(() => LiftRules.jsArtifacts.hide("ajax-loader").cmd)
-
-    // Use jQuery 1.4
-    LiftRules.jsArtifacts = net.liftweb.http.js.jquery.JQuery14Artifacts
 
     // Force the request to be UTF-8
     LiftRules.early.append(_.setCharacterEncoding("UTF-8"))

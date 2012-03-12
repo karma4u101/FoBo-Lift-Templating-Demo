@@ -30,17 +30,17 @@
       
           <div class="fullcommenttop" id="comment"><div class="comment cmt"><h4>Welcome to FoBo - A generic Front-End Toolkit Lift Module</h4><p>The <a name="net.liftmodules.FoBo" class="extype" href="">FoBo</a> Package is the starting point for this API.
 The FoBo modules Github home is <a href="https://github.com/karma4u101/FoBo">here</a></p><h5>What FoBo will do for you</h5><p>This module gives you quick and easy integration of some of the industry leading web-centric open source
-front-end toolkits with some carefully thought throw and Lift inherit extra benefits.</p><p>Among the benefits is:</p><ul><li>due to a small footprint and uniform declaration and integration points across toolkit versions only a
-   small amount of changes will bee needed for a up/down-grading of a used Toolkit, optimally it will just be
-   a version change of the FoBo.Initparam in Lift bootstrap.liftweb.Boot.</li><li>the modules included lib Objects and Snippet helpers will ease you from writing some common toolkit component
-   integration scripts. At this writing the snippet helpers is few but expect the numbers to grow as the
-   module matures.</li><li>Great mobile scalablity with the modules own unique FoBo mix is a love, peace and harmony mix of the ZURB/Foundation and the Twitter
-   Bootstrap front-end toolkit.</li><li>As more front-end toolkits and JQuery plugins will be available to you just a FoBo.Initparam away you will,
-   when needed, be able to quick and easy test out and use nifty features like the Google code Prettify kit, DataTables
-   and more.</li><li>FoBo uses Less to build the (all in one) bootstrap.css out of the box (no hands on needed) so if you like you
+front-end toolkits with some carefully thought throw Scala/Lift inherit extra benefits.</p><p>Among the benefits is:</p><ul><li>due to a small footprint and uniform declaration and integration points across toolkit versions only a
+   small amount of changes will bee needed for a up/down-grading of a used Toolkit, optimally, if the toolkit
+   has no breaking changes it will just be a version change of the FoBo.Initparam in Lift bootstrap.liftweb.Boot.</li><li>the modules included lib Classes and Snippet helpers will ease you from writing some commonly used toolkit
+   component integration scripts making it a simple snippet invocation.
+   At this writing the snippet helpers is few but expect the numbers to grow as the module matures.</li><li>Great mobile scalablity with some mobile enabled toolkits and the modules own unique FoBo mix that is a
+   love, peace and harmony mix of the ZURB/Foundation and the Twitter Bootstrap front-end toolkit.</li><li>As more front-end toolkits and JQuery plugins will be available to you just a FoBo.Initparam away you will,
+   when needed, be able to quick and easy test out and use nifty features like the Google code Prettify kit,
+   DataTables and more.</li><li>FoBo uses Less to build the (all in one) bootstrap.css out of the box (no hands on needed) so if you like you
    can (if you fork the module source) easily tweak your bootstrap css (via variables.less) see bootstrap
-   documentation form more information.</li></ul><h5>Okey, okey I get it, now take me to the most interesting stuff</h5><p>From a user perspective, the most interesting stuff is probably in the snippet classes in <a name="net.liftmodules.FoBo.snippet.FoBo" class="extype" href="snippet/FoBo/package.html">FoBo</a>.
-Great care has been taken to explain and illustrate how to use the snippet functions so that you can use them
+   documentation form more information.</li></ul><h5>FoBo supported toolkits and plugins</h5><p>The following is a list of available toolkits and plugins</p><ul><li>JQuery  [v1.6.4, v1.7.1]</li><li>Bootstrap [v1.4.0, v2.0.0]</li><li>Foundation [v2.1.4, v2.1.5]</li><li>DataTables [v1.9.0]</li><li>JQuery-mobile [v1.0.1]</li><li>Google Code Prettify [vJun2011]</li><li>Knockout JS [v2.0.0]</li><li>FoBo v0.2 (comprised of foundation v2.1.5,bootstrap v2.0.0,orbit v1.4.0)</li><li>FoBo v0.1 (comprised of foundation v2.1.4,bootstrap v1.4.0,orbit v1.3.0)</li></ul><h5>Okey, okey I get it, now take me to the most interesting stuff</h5><p>From a user perspective, the most interesting stuff is probably in the snippet classes in <a name="net.liftmodules.FoBo.snippet.FoBo" class="extype" href="snippet/FoBo/package.html">FoBo</a>.
+Great care has been taken to explain and illustrate how to use the snippet methods so that you can use them
 even if you are not a Lift expert, to show you what I am talking about <b>here is a example showing one way to use the tooltip function:</b></p><hr /><p>def <b>tooltip</b> : CssSel</p><p>This function sets a tooltip action on a element.</p><p><b>Snippet Params:</b></p><ul><li><b>Param</b> <i>id</i> - The element id</li><li><b>Param</b> <i>option</i> - The option string see bootstrap documentation for available options.</li></ul><p><b>Example</b> Showing a example element using the tooltip and the actual snippet invocation</p><pre>
  &lt;a id=&quot;aId&quot;
     title=&quot;The most powerful, most secure web framework available today. It simply rocks!&quot;
@@ -58,8 +58,8 @@ even if you are not a Lift expert, to show you what I am talking about <b>here i
 </pre><hr /><h5>Small heads up usage warning</h5><p>This API is very young (with only snapshot releases) so if you make direct usage of some FoBoHelpers in lib chances
 is that things change.
 If you want to stay on the safe side usage of FoBo snippets and init operations should be fairly safe.
-After a stable release (we are not there yet) changes to a API function will be announced as deprecated
-at least one release cycle before removed.</p><h5>Help out!</h5><p>There is a lot more that can be done within the boundaries of this API and the FoBo module as a hole so
+After a stable release (we are not there yet) changes to a API method will be announced as deprecated
+at least one release cycle before method signature changes or removal.</p><h5>Help out!</h5><p>There is a lot more that can be done within the boundaries of this API and the FoBo module as a hole so
 your help, suggestions, encouragement, engagement, patches (pull requests) bug-fixes/reports are highly appreciated.</p><h5>Setup</h5><ul><li>The module is known to work with Lift v2.4 and Scala v2.9.1 but expect it to work with other versions as well.</li><li>For a demonstration of this module see the live <a href="http://www.media4u101.se/fobo-lift-template-demo/">FoBo demo</a> the
    FoBo demo source is available <a href="https://github.com/karma4u101/FoBo-Lift-Template"> here</a>
 </li></ul></div><dl class="attributes block"> <div class="block">Example:
@@ -75,7 +75,7 @@ set something like the following in the projects Lift bootstrap.liftweb.Boot</p>
     :
    FoBo.init() //now do init
 </pre></li></ol>
-              </div><dt>Version</dt><dd><p>v0.3.5</p></dd></dl></div>
+              </div><dt>Version</dt><dd><p>v0.3.6</p></dd></dl></div>
         
 
       <div id="template">
@@ -244,6 +244,17 @@ set something like the following in the projects Lift bootstrap.liftweb.Boot</p>
       </span>
       </h4>
       <p class="comment cmt">Enable usage of JQueryMobile version 1_0_1 in your bootstrap liftweb Boot.</p>
+    </li><li visbl="pub" name="net.liftmodules.FoBo.package.Knockout200" data-isabs="false">
+      <a id="Knockout200:Knockout200"></a>
+      <h4 class="signature">
+      <span class="kind">object</span>
+      <span class="symbol"> 
+        <a href="package$$Knockout200$.html"><span class="name">Knockout200</span></a>
+        
+        <span class="result"> extends FoBoToolkit with Product with Serializable</span>
+      </span>
+      </h4>
+      <p class="comment cmt">Enable usage of KnockOut version 2_0_0 in your bootstrap liftweb Boot.</p>
     </li><li visbl="pub" name="net.liftmodules.FoBo.package.PrettifyJun2011" data-isabs="false">
       <a id="PrettifyJun2011:PrettifyJun2011"></a>
       <h4 class="signature">

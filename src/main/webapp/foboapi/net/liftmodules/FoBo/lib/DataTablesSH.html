@@ -24,7 +24,7 @@
       <span class="symbol"> 
         <span class="name">DataTablesSH</span>
         
-        <span class="result"> extends AnyRef</span>
+        <span class="result"> extends <span name="net.liftweb.common.Loggable" class="extype">Loggable</span></span>
       </span>
       </h4>
       
@@ -51,7 +51,7 @@ your can still use the ScriptHelper class to customize your own project snippets
 </pre></li></ol>
               </div></dl><div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>
-          <div class="superTypes hiddenContent">AnyRef, <span name="scala.Any" class="extype">Any</span></div>
+          <div class="superTypes hiddenContent"><span name="net.liftweb.common.Loggable" class="extype">Loggable</span>, AnyRef, <span name="scala.Any" class="extype">Any</span></div>
         </div></div>
         
 
@@ -67,7 +67,7 @@ your can still use the ScriptHelper class to customize your own project snippets
                 <span class="filtertype">Inherited</span>
                 <ol><li class="hideall out"><span>Hide All</span></li>
                 <li class="showall in"><span>Show all</span></li></ol>
-                <ol id="linearization"><li name="net.liftmodules.FoBo.lib.DataTablesSH" class="in"><span>DataTablesSH</span></li><li name="scala.AnyRef" class="in"><span>AnyRef</span></li><li name="scala.Any" class="in"><span>Any</span></li></ol>
+                <ol id="linearization"><li name="net.liftmodules.FoBo.lib.DataTablesSH" class="in"><span>DataTablesSH</span></li><li name="net.liftweb.common.Loggable" class="in"><span>Loggable</span></li><li name="scala.AnyRef" class="in"><span>AnyRef</span></li><li name="scala.Any" class="in"><span>Any</span></li></ol>
               </div>
           <div id="visbl">
               <span class="filtertype">Visibility</span>
@@ -178,17 +178,17 @@ your can still use the ScriptHelper class to customize your own project snippets
               
         </dd></dl></div>
     </li><li visbl="pub" name="net.liftmodules.FoBo.lib.DataTablesSH#dataTable" data-isabs="false">
-      <a id="dataTable(String):Node"></a>
+      <a id="dataTable(String,String):Node"></a>
       <h4 class="signature">
       <span class="kind">def</span>
       <span class="symbol"> 
         <span class="name">dataTable</span>
         
-        <span class="params">(<span name="id">id: String</span>)</span><span class="result">: <span name="scala.xml.Node" class="extype">Node</span></span>
+        <span class="params">(<span name="id">id: String</span>, <span name="options">options: String = <span class="symbol">&quot;&quot;</span></span>)</span><span class="result">: <span name="scala.xml.Node" class="extype">Node</span></span>
       </span>
       </h4>
       <p class="shortcomment cmt">This function sets a dataTable element.</p><div class="fullcomment"><div class="comment cmt"><p>This function sets a dataTable element.
-</p></div><dl class="paramcmts block"><dt class="param">id</dt><dd class="cmt"><p>- The id for which the dataTable should be set</p></dd></dl></div>
+</p></div><dl class="paramcmts block"><dt class="param">id</dt><dd class="cmt"><p>- The id for which the dataTable should be set</p></dd><dt class="param">options</dt><dd class="cmt"><p>- dataTable options default=&quot;&quot;</p></dd></dl></div>
     </li><li visbl="pub" name="scala.AnyRef#eq" data-isabs="false">
       <a id="eq(AnyRef):Boolean"></a>
       <h4 class="signature">
@@ -258,6 +258,17 @@ your can still use the ScriptHelper class to customize your own project snippets
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd><dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li visbl="prt" name="net.liftweb.common.Loggable#logger" data-isabs="false">
+      <a id="logger:Logger"></a>
+      <h4 class="signature">
+      <span class="kind">val</span>
+      <span class="symbol"> 
+        <span class="name">logger</span>
+        
+        <span class="result">: <span name="net.liftweb.common.Logger" class="extype">Logger</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd>Loggable</dd></dl></div>
     </li><li visbl="pub" name="scala.AnyRef#ne" data-isabs="false">
       <a id="ne(AnyRef):Boolean"></a>
       <h4 class="signature">
@@ -360,7 +371,9 @@ your can still use the ScriptHelper class to customize your own project snippets
 
         
 
-        <div name="scala.AnyRef" class="parent">
+        <div name="net.liftweb.common.Loggable" class="parent">
+              <h3>Inherited from <span name="net.liftweb.common.Loggable" class="extype">Loggable</span></h3>
+            </div><div name="scala.AnyRef" class="parent">
               <h3>Inherited from AnyRef</h3>
             </div><div name="scala.Any" class="parent">
               <h3>Inherited from <span name="scala.Any" class="extype">Any</span></h3>

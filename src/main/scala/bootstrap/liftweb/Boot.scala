@@ -14,6 +14,9 @@ import java.sql.DriverManager
 import _root_.net.liftweb.util.{ Props }
 import _root_.net.liftweb.http.provider.HTTPRequest
 import _root_.net.liftweb.http.auth.{ HttpBasicAuthentication, AuthRole, userRoles }
+
+import code.model._
+
 import net.liftmodules.FoBo
 
 object localeOverride extends SessionVar[Box[Locale]](Empty)
@@ -31,10 +34,38 @@ class Boot extends Loggable {
     FoBo.InitParam.ToolKit=FoBo.PrettifyJun2011
     FoBo.InitParam.ToolKit=FoBo.JQueryMobile101
     FoBo.InitParam.ToolKit=FoBo.DataTables190
+    FoBo.InitParam.ToolKit=FoBo.Knockout200
     FoBo.init()  
 
     // where to search snippet
     LiftRules.addToPackages("code")
+
+    /*un-comment and switch to db of your liking */
+    MySchemaHelper.initSquerylRecordWithInMemoryDB
+    //MySchemaHelper.initSquerylRecordWithMySqlDB
+    //MySchemaHelper.initSquerylRecordWithPostgresDB
+
+    Props.mode match {
+      case Props.RunModes.Development => {
+        logger.info("RunMode is DEVELOPMENT")
+        /*OBS! do no use this in a production env*/
+        if (Props.getBool("db.schemify", false)) {
+          MySchemaHelper.dropAndCreateSchema
+        }
+        // pass paths that start with 'console' to be processed by the H2Console servlet
+        if (MySchemaHelper.isUsingH2Driver) {
+          /* make db console browser-accessible in dev mode at /console 
+           * see http://www.h2database.com/html/tutorial.html#tutorial_starting_h2_console 
+           * Embedded Mode JDBC URL: jdbc:h2:mem:test User Name:test Password:test */
+          logger.info("Set up H2 db console at /console ")
+          LiftRules.liftRequest.append({
+            case r if (r.path.partPath match { case "console" :: _ => true case _ => false }) => false
+          })
+        }
+      }
+      case Props.RunModes.Production => logger.info("RunMode is PRODUCTION")
+      case _                         => logger.info("RunMode is TEST, PILOT or STAGING")
+    }    
     
     // Build SiteMap
     val entries = List(

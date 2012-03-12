@@ -3,3 +3,30 @@
 * Put your application specific styling here.
 *
 **********************************************/
+
+
+/*data table fixes*/
+
+.dataTables_wrapper .ui-toolbar {
+    padding: 5px 5px 2px 5px;
+}
+.dataTables_filter {
+/* 	padding-bottom:0px; */
+}
+.dataTables_filter > label > input {
+ float:right;
+ padding-bottom:0px;
+ background-color: #eee;
+}
+
+.dataTables_length > label > select{
+  float:left;
+  width:50px;
+  padding:0px;
+  padding-right:2px;
+  margin-bottom: 0px;
+  background-color:inherit;
+  display:inline;
+}
+
+/*end data table fixes*/

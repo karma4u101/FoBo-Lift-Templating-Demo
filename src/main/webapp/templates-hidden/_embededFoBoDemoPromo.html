@@ -32,7 +32,9 @@
 						<p>To initiate and release the powers of the FoBo module chose the Toolkit option(s) you 
 						prefer and then call FoBo.init() from your lift projects Boot.</p> 
 						
-						<p>This demo uses the following module setup in lift Boot:</p>
+						<p>Using FoBo in your own project you should set up the init param for the toolkit module you need or 
+						if you are using the module defults just call FoBo.init(). This demo uses the following 
+						<strong>unusually heavy</strong> module setup in lift Boot:</p>
 						<pre class="prettyprint linenums lang-scala">
 
                            import net.liftmodules.FoBo
@@ -49,6 +51,8 @@
                                 FoBo.InitParam.ToolKit=FoBo.FoBo020 
                                 FoBo.InitParam.ToolKit=FoBo.PrettifyJun2011
                                 FoBo.InitParam.ToolKit=FoBo.JQueryMobile101
+                                FoBo.InitParam.ToolKit=FoBo.DataTables190
+                                FoBo.InitParam.ToolKit=FoBo.Knockout200
                                 FoBo.init()
                                   :      
 						</pre>

@@ -47,8 +47,9 @@
 
 <!-- The datatables -->
 <script type="text/javascript" charset="utf-8" src="/classpath/fobo/jquery.dataTables.js"></script>
-<script data-lift="FoBo.DataTables.dataTable?id=#example&options='bJQueryUI':true,'sPaginationType':'full_numbers'"></script>
-<script data-lift="FoBo.DataTables.dataTable?id=#example2&options='bJQueryUI':true,'sPaginationType':'full_numbers'"></script>
+<script data-lift="FoBo.DataTables.dataTable?id=#dtexample1&options='bJQueryUI':true,'sPaginationType':'full_numbers'"></script>
+<!-- Demo snippet datatable example on the dtdemo2 div that will contain a datatable with id = tableId -->
+<script data-lift="DataTables.semiDynamicDT?on=#dtdemo2&tableId=dtexample2"></script>
 
 <!-- The knockout js  -->
 <script type="text/javascript" charset="utf-8" src="/classpath/fobo/knockout.js"></script>
@@ -61,7 +62,7 @@
 
 <script type="text/javascript">
   var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-28767506-1']);
+  _gaq.push(['_setAccount','UA-28767506-1']);
   _gaq.push(['_setDomainName', 'media4u101.se']);
   _gaq.push(['_trackPageview']);
 

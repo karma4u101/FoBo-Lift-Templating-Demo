@@ -26,7 +26,7 @@ You don't need to use it but the project also includes a Eclipse plug-in for bro
 
 1) Get the examples
 
-	git clone git@github.com:karma4u101/FoBo-Lift-Template.git
+	git clone git://github.com:karma4u101/FoBo-Lift-Template.git
 	cd FoBo-Lift-Template
 
 2) Update & Run Jetty

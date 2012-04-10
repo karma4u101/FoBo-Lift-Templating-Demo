@@ -19,7 +19,7 @@ import com.jolbox.bonecp.BoneCPConfig
 
 object MySchema extends Schema {
   val city = table[City]("City")
-
+  val rengine = table[REngine]("REngine")
 }
 
 /*

@@ -203,7 +203,9 @@
 <!-- <div class="DTTT_container">			             -->
 <!-- <div class="demo_jui"> -->
 <!-- <div data-lift="Cities"> -->
-<p>Setting up a datatable</p> 
+<br/>
+<h6>A simple setup</h6>
+<br/> 
 						<pre class="prettyprint linenums lang-html">
                         &lt;!DOCTYPE html&gt;
                         &lt;html&gt;
@@ -242,7 +244,7 @@
                             &lt;/script&gt;
                               :                                                    
 		              </pre>
-		                 				
+ 		                 				
 <table cellpadding="0" cellspacing="0" border="0" class="display" id="dtexample1">
 	<thead>
 		<tr>
@@ -662,6 +664,74 @@
 <br/>
 <br/>
 <br/>
+<h6>A setup via demo snippet with some json and a database backend</h6> 
+<br/>
+						<pre class="prettyprint linenums lang-html">
+                        &lt;!DOCTYPE html&gt;
+                        &lt;html&gt;
+                          &lt;head&gt;
+                               :
+                            &lt;!-- Use the smoothness theme --&gt;  
+                            &lt;link rel="stylesheet" type='text/css' href="/classpath/fobo/themes/smoothness.css"/&gt;
+                            &lt;!-- &lt;link rel="stylesheet" type='text/css' href="/classpath/fobo/themes/ui-lightness.css"/&gt; --&gt;
+                            &lt;link rel="stylesheet" type='text/css' href="/classpath/fobo/jquery.dataTables_themeroller.css"/&gt;
+                               :
+                            &lt;script type="text/javascript" charset="utf-8" src="/classpath/fobo/jquery.dataTables.js">&lt;/script&gt;
+
+                            &lt;!-- Demo snippet datatable example on the dtdemo2 div that will contain a datatable with id = tableId --&gt;
+                            &lt;script data-lift="DataTables.semiDynamicDT?on=#dtdemo2&tableId=dtexample2"> &lt;/script&gt;
+
+                          &lt;/head&gt;
+                          &lt;body"&gt;
+                               :
+                            &lt;table cellpadding="0" cellspacing="0" border="0" class="display" id="example"&gt;
+                               :
+                            &lt;/table&gt;   
+                          &lt;/body&gt;        
+                        &lt;/html&gt;    
+						</pre>	
+						<p>The demo snippet invocation will transform the call to the following script:</p>
+						<pre class="prettyprint linenums lang-html">
+                        &lt;!DOCTYPE html&gt;
+                        &lt;html&gt;
+                          &lt;head&gt;
+                              :
+                            &lt;script type="text/javascript" charset="utf-8" src="/classpath/fobo/jquery.dataTables.js">&lt;/script&gt;                          
+                            &lt;script type="text/javascript"&gt;
+                            // &lt;![CDATA[
+                            $(document).ready(function() {
+                              $('#dtdemo2').html( '&lt;table cellpadding="0" cellspacing="0" border="0" class="display" id="dtexample2">&lt;/table&gt;' );
+                              $('#dtexample2').dataTable( 
+                                {
+                                  "bJQueryUI":true,
+                                  "sPaginationType":"full_numbers",
+                                  "aaData":[["Trident","Internet Explorer 4.0","Win 95+","4","X"],...,["Other browsers","All others","-","-","U"]],
+                                  "aoColumns":[{
+                                    "sTitle":"Rendering Engine"
+                                  },{
+                                    "sTitle":"Browser"
+                                  },{
+                                    "sTitle":"Platform(s)"
+                                  },{
+                                    "sTitle":"Engine Version", "sClass":"center"
+                                  },{
+                                    "sTitle":"CSS Grade", "sClass":"center",
+                                    "fnRender": function(obj) {
+                                                   var sReturn = obj.aData[ obj.iDataColumn ];
+                                                   if ( sReturn == 'A' ) { 
+                                                     sReturn = '&lt;b&gt;A&lt;/b&gt;'; 
+                                                   } 
+                                                   return sReturn; 
+                                                 } ;
+                                  }]
+                                }
+                              );   
+                            } );           
+                            // ]]&gt;
+                            &lt;/script&gt;
+                               :                                                    
+						</pre>
+
 <div id="dtdemo2"></div>	
 <span>A semi-dynamic data table with hocks to the demos DataTable snippet that fetches the data from a database.</span>
 <!-- </div> -->

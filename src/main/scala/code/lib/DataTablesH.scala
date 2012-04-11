@@ -67,39 +67,49 @@ class DataTablesH extends Loggable {
         t.row 
       }
     ) ~
-    ("aoColumns" -> //aoColumns
-      columns.map {c => 
+    ("aoColumns" -> 
+      columns.map { c => 
         ("sTitle" -> c.sTitle.map(_.title)  ) ~
         ("sClass" -> c.sClass.map(_.cd)  ) ~
-        ("fnRender" -> c.fnRender.map(_.fn))
+        ("fnRender" -> c.fnRender.map(_.fn.rawJsCmd))
       }  
-    ) 
+    ) ~
+    ("aoColumnDefs" -> 
+      columnDefs.map{ d => 
+        ("bVisible" -> d.bvisible) ~
+        ("aTargets" -> d.atargets)
+      }
+    )
   }
   private case class aaDT(row:List[String])
   private case class sTitle(title:String)                    
   private case class sClass(cd:String)
-  private case class fnRender(fn:String)
-  private case class aoCol(sTitle:Option[sTitle],sClass:Option[sClass],fnRender:Option[fnRender])   
+  private case class fnRender(fn:JsRaw)
+  private case class aoCol(sTitle:Option[sTitle],sClass:Option[sClass],fnRender:Option[fnRender]) 
+  private case class aoColDef(bvisible:Boolean,atargets:List[Int])
   private val highlightA = { JsRaw(""" function(obj) {
                                         var sReturn = obj.aData[ obj.iDataColumn ]; 
                                         if ( sReturn == 'A' ) { 
                                           sReturn = '<b>A</b>'; 
                                         } 
                                         return sReturn; 
-                                      } """).cmd 
+                                      } """)
   }
   
   private val columns = List(
+                     aoCol(Some(sTitle("Id")),None,None),
                      aoCol(Some(sTitle("Rendering Engine")),None,None),
                      aoCol(Some(sTitle("Browser")),None,None),
                      aoCol(Some(sTitle("Platform(s)")),None,None),
                      aoCol(Some(sTitle("Engine Version")),Some(sClass("center")),None),
                      aoCol(Some(sTitle("CSS Grade")),Some(sClass("center")),Some(fnRender(highlightA) ) )
                     )
+                    
+  private val columnDefs = List(aoColDef(false,List(0)))                  
 
   private def rengineData = {
     val ccList:List[REngine]  = REngine.getAllList()
-    ccList.map(c => aaDT(List(c.engine.is,c.browser.is,c.platform.is,c.version.is,c.grade.is)))
+    ccList.map(c => aaDT(List(c.id.toString(),c.engine.is,c.browser.is,c.platform.is,c.version.is,c.grade.is)))
   }
                     
 //  private val aoColumns = {

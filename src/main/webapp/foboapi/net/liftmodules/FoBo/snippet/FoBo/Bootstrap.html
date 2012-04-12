@@ -29,12 +29,11 @@
       </h4>
       
           <div class="fullcommenttop" id="comment"><div class="comment cmt"><h4>Bootstrap Snippet</h4><p>This snippet class contains functions for common transform operations useful when working
-with the Bootstrap toolkit.</p></div><dl class="attributes block"> <div class="block">Example:
-                <ol><li class="cmt"><p>Invoke with </p><pre>
+with the Bootstrap toolkit.
+<b>Example</b> Invoke with</p><pre>
  data-lift=&quot;FoBo.Bootstrap.functionName?paramName=paramValue&amp;....&quot; 
 </pre><p>For more examples see the individual transform functions.
-</p></li></ol>
-              </div></dl><div class="toggleContainer block">
+</p></div><div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>
           <div class="superTypes hiddenContent"><span name="net.liftweb.common.Loggable" class="extype">Loggable</span>, <span name="net.liftweb.http.StatefulSnippet" class="extype">StatefulSnippet</span>, <span name="net.liftweb.http.DispatchSnippet" class="extype">DispatchSnippet</span>, AnyRef, <span name="scala.Any" class="extype">Any</span></div>
         </div></div>
@@ -161,7 +160,7 @@ with the Bootstrap toolkit.</p></div><dl class="attributes block"> <div class="b
         <span class="result">: <span name="net.liftweb.util.CssSel" class="extype">CssSel</span></span>
       </span>
       </h4>
-      <p class="shortcomment cmt">This function loads the dropdown activation</p><div class="fullcomment"><div class="comment cmt"><p>This function loads the dropdown activation</p><p><b>Snippet Param:</b></p><p>- <b>Param</b> <i>on</i> - The element id or class to activate dropdown on</p><p>@example</p><pre>
+      <p class="shortcomment cmt">This function loads the dropdown activation</p><div class="fullcomment"><div class="comment cmt"><p>This function loads the dropdown activation</p><p><b>Snippet Param:</b></p><p>- <b>Param</b> <i>on</i> - The element id or class to activate dropdown on</p><p><b>Example</b></p><pre>
     &lt;head&gt;
       :
       &lt;script data-lift=&quot;FoBo.Bootstrap.activateDropdown?on=.dropdown-toggle&quot;&gt;&lt;/script&gt;
@@ -367,9 +366,7 @@ with the Bootstrap toolkit.</p></div><dl class="attributes block"> <div class="b
         <span class="result">: <span name="net.liftweb.util.CssSel" class="extype">CssSel</span></span>
       </span>
       </h4>
-      <p class="shortcomment cmt">This function sets a popover action on a element.</p><div class="fullcomment"><div class="comment cmt"><p>This function sets a popover action on a element.</p><p><b>Snippet Params:</b></p><ul><li><b>Param</b> <i>id</i> - The element id</li><li><b>Param</b> <i>option</i> - The option string see bootstrap documentation for available options.
-</li></ul></div><dl class="attributes block"> <div class="block">Example:
-                <ol><li class="cmt"><p></p><pre>
+      <p class="shortcomment cmt">This function sets a popover action on a element.</p><div class="fullcomment"><div class="comment cmt"><p>This function sets a popover action on a element.</p><p><b>Snippet Params:</b></p><ul><li><b>Param</b> <i>id</i> - The element id</li><li><b>Param</b> <i>option</i> - The option string see bootstrap documentation for available options.</li></ul><p><b>Example</b></p><pre>
  &lt;script data-lift=&quot;FoBo.Bootstrap.popover?id=#theId&amp;option=placement:'left'&quot;&gt;&lt;/script&gt; 
 </pre><p><b>Result:</b> This example will result in the following being injected in place of the snippet invocation:</p><pre>
   &lt;script type=&quot;text/javascript&quot;&gt;
@@ -377,8 +374,7 @@ with the Bootstrap toolkit.</p></div><dl class="attributes block"> <div class="b
       $(function () { $('#theId').popover({placement:'left'}); }); ;
     // ]]&gt;
   &lt;/script&gt;
-</pre></li></ol>
-              </div></dl></div>
+</pre></div></div>
     </li><li visbl="pub" name="net.liftmodules.FoBo.snippet.FoBo.Bootstrap#popoverPreventDefault" data-isabs="false">
       <a id="popoverPreventDefault:CssSel"></a>
       <h4 class="signature">
@@ -389,9 +385,7 @@ with the Bootstrap toolkit.</p></div><dl class="attributes block"> <div class="b
         <span class="result">: <span name="net.liftweb.util.CssSel" class="extype">CssSel</span></span>
       </span>
       </h4>
-      <p class="shortcomment cmt">This function prevents the default action on a popover element.</p><div class="fullcomment"><div class="comment cmt"><p>This function prevents the default action on a popover element.</p><p><b>Snippet Params:</b></p><ul><li><b>Param</b> <i>on</i> - The element id or something more general like the default value a[rel=popover]
-</li></ul></div><dl class="attributes block"> <div class="block">Example:
-                <ol><li class="cmt"><p></p><pre>
+      <p class="shortcomment cmt">This function prevents the default action on a popover element.</p><div class="fullcomment"><div class="comment cmt"><p>This function prevents the default action on a popover element.</p><p><b>Snippet Params:</b></p><ul><li><b>Param</b> <i>on</i> - The element id or something more general like the default value a[rel=popover]</li></ul><p><b>Example</b></p><pre>
  &lt;script data-lift=&quot;FoBo.Bootstrap.popoverPreventDefault?on=#theId&quot;&gt;&lt;/script&gt; 
 </pre><p><b>Result:</b> This example will result in the following being injected in place of the snippet invocation:</p><pre>
   &lt;script type=&quot;text/javascript&quot;&gt;
@@ -399,8 +393,7 @@ with the Bootstrap toolkit.</p></div><dl class="attributes block"> <div class="b
       $(function(){$('#theId').popover().click(function(e){e.preventDefault()});});;
     // ]]&gt;
   &lt;/script&gt;
-</pre></li></ol>
-              </div></dl></div>
+</pre></div></div>
     </li><li visbl="pub" name="net.liftweb.http.StatefulSnippet#redirectTo" data-isabs="false">
       <a id="redirectTo(String):Nothing"></a>
       <h4 class="signature">

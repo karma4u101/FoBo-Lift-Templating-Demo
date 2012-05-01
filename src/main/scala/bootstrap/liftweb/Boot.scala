@@ -63,13 +63,27 @@ class Boot extends Loggable {
           })
         }
       }
-      case Props.RunModes.Production => logger.info("RunMode is PRODUCTION")
+      case Props.RunModes.Production => {
+        logger.info("RunMode is PRODUCTION")
+        if (Props.getBool("db.schemify", false)) {
+          logger.warn("DB.SCHEMIFY is TRUE in production.props, db data will be reset on restart of app")
+          MySchemaHelper.dropAndCreateSchema
+        }else{
+            logger.info("db.shemify is disabled in production.props")
+        }        
+      }
       case _                         => logger.info("RunMode is TEST, PILOT or STAGING")
     }    
     
     // Build SiteMap
     val entries = List(
       Menu.i("Home") / "index",
+      //FoBo will generate a nav dropdown from this    
+      Menu.i("gendemo.dropdown1.text") / "#" >> LocGroup("frontNav") >> PlaceHolder submenus (
+         Menu.i("gendemo.page1a.text") / "page1a" ,  
+         Menu.i("gendemo.page1b.text") / "page1b" ,
+         Menu.i("gendemo.page1c.text") / "page1c"),
+      
       Menu(Loc("Foundation", Link(List("foundation"), true, "/foundation/index"),
         "Foundation")),
       Menu(Loc("Bootstrap", Link(List("bootstrap"), true, "/bootstrap/index"),

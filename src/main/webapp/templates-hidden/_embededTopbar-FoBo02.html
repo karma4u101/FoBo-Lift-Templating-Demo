@@ -12,10 +12,10 @@
 	<!--  search google "google h1 tag span inside" its okey google will not search discriminate this h1 tag -->
 
 
-	<!-- demonstrating a five different ways to use lift sitemap and internationalization -->
-	<!-- and adding a dummy class to the generated links-->
+	<!-- demonstrating a five different ways to use lift sitemap menu and internationalization -->
+	<!-- demo adding a dummy class to the generated links-->
+	<!-- using the FoBo BootstrapNav API snippet object to generate menu from lift sitemap menu, cudos to Damian Helme -->
 	<!-- fobo 0.2 / bootstrap 2.0.0 -->
-
 	<div class="navbar navbar-fixed-top" id="fobo-navbar">
 		<div class="navbar-inner">
 
@@ -48,7 +48,6 @@
 						<span data-lift="Loc?locid=ref.link.text">References</span>
 						</a></li>
 										
-
 						<li class="dropdown">
 						  <a data-toggle="dropdown"
 							class="dropdown-toggle" href="#"> <span
@@ -105,7 +104,7 @@
 							</ul></li>
 					</ul>
 
-                    <!-- Fobo snippet generating  -->
+                    <!-- FoBo snippet generating Bootstrap Navigation from lift sitemap menu -->
 				    <span data-lift="FoBo.BootstrapNav.menuToTBNav?eager_eval=true"> 
 				      <span data-lift="Menu.builder?top:class=nav pull-right;li_item:class=active;linkToSelf=true;expandAll=true;group=frontNav"></span>
 				    </span>	

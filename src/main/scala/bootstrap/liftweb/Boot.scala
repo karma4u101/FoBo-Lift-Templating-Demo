@@ -78,11 +78,11 @@ class Boot extends Loggable {
     // Build SiteMap
     val entries = List(
       Menu.i("Home") / "index",
-      //FoBo will generate a nav dropdown from this    
-      Menu.i("gendemo.dropdown1.text") / "#" >> LocGroup("frontNav") >> PlaceHolder submenus (
-         Menu.i("gendemo.page1a.text") / "page1a" ,  
-         Menu.i("gendemo.page1b.text") / "page1b" ,
-         Menu.i("gendemo.page1c.text") / "page1c"),
+      
+//      how to to make this work without # converted to %23 the api call below is working 
+//      Menu.i("Home-Top") / "#spyhome",
+//      Menu.i("About") / "#spyabout",
+
       
       Menu(Loc("Foundation", Link(List("foundation"), true, "/foundation/index"),
         "Foundation")),
@@ -93,7 +93,12 @@ class Boot extends Loggable {
       Menu(Loc("DataTables", Link(List("datatables"), true, "/datatables/1.9.0/index"),
         "DataTables")),  
       Menu(Loc("FoBoAPI", Link(List("foboapi"), true, "/foboapi/#net.liftmodules.FoBo.package"),
-        "FoBoAPI"))        
+        "FoBoAPI")),
+      //FoBo will generate a nav dropdown from this    
+      Menu.i("gendemo.dropdown1.text") / "#" >> LocGroup("frontNav") >> PlaceHolder submenus (
+         Menu.i("gendemo.page1a.text") / "page1a" ,  
+         Menu.i("gendemo.page1b.text") / "page1b" ,
+         Menu.i("gendemo.page1c.text") / "page1c")        
     )   
       
     LiftRules.uriNotFound.prepend(NamedPF("404handler"){

@@ -143,16 +143,9 @@ li {
 /*end frontheader brand*/
 
 
-#spyhome {
+#spyhome,#spyabout,#spysetup,#spyfooter {
 	position:relative;top:-40px;
 }
-#spypuff {
-	position:relative;top:-40px;
-}
-#spyref {
-	position:relative;top:-40px;
-}
-
 
 .demo-promo-section {
 	background: none repeat scroll 0 0 #EEE; /*#2C4150;*/

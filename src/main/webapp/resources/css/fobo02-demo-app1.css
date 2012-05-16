@@ -413,13 +413,13 @@ hr {
 	      width: 100%;
         }	
 		.header h1.fhcapital { 
- 		font-size: 200%;  
+ 		font-size: 180%;  
 		line-height: 1.2; 
 		}
 		.header h6.fhbrand-sub { 
 		font-size: 45%;  
 		line-height: 1.2; 
-		margin-top:-28px;
+		margin-top:-22px;
 		}
 /* 		.header h1 a,.header .fhbrand{ */
 /*            padding:20px 10px 0px 12px; */
@@ -431,13 +431,13 @@ hr {
 	      width: 100%;
         }	
 		.header h1.fhcapital { 
- 		font-size: 165%;  
+ 		font-size: 140%;  
 		line-height: 1.2; 
 		}
 		.header h6.fhbrand-sub { 
 		font-size: 38%;  
 		line-height: 1.2; 
-		margin-top:-22px;
+		margin-top:-18px;
 		}
 /* 		.header h1 a,.header .fhbrand{ */
 /*            padding:20px 2px 0px 12px; */

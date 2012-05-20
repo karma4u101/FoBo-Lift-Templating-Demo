@@ -34,9 +34,12 @@
 						
 						<p>Using FoBo in your own project you should set up the init param for the toolkit module you need or 
 						if you are using the module defaults just call FoBo.init(). This demo uses the following 
-						<strong>unusually heavy</strong> module setup in lift Boot:</p>
+						<strong>unusually heavy</strong> module setup in lift Boot.<br/> 
+						</p>
+						<div class="alert alert-info">A bootstrap only setup could be done as a one-liner with <i>net.liftmodules.FoBo.init()</i></div>
+						<span class="label">FoBo setup in Lift Boot</span> 
 						<pre class="prettyprint linenums lang-scala">
-
+                            :
                            import net.liftmodules.FoBo
 
                            /**
@@ -57,6 +60,7 @@
                                   :      
 						</pre>
 						<p>In Lift's html5 template:s add (depending on your setup) something like this:</p>
+						<span class="label">Lift surround template</span> 
 						<pre class="prettyprint linenums lang-html">
                         &lt;!DOCTYPE html&gt;
                         &lt;html&gt;
@@ -79,11 +83,23 @@
                           &lt;/body&gt;        
                         &lt;/html&gt;    
 						</pre>
-						<p>Note the uniform setup without any version references in the html templates, making way for a smooth(er) toolkit upgrade. 
-						For more information see the <a href="https://github.com/karma4u101/FoBo">FoBo modules Github</a>.</p>
+						<p>Note the uniform setup without any version references in the html templates, making way for a smooth(er) 
+						toolkit upgrade. For more information see the <a href="https://github.com/karma4u101/FoBo">FoBo modules Github</a>.
+						</p>
+						<div class="alert alert-info">A minimal bootstrap only template setup would be to set the css path to <i>"/classpath/fobo/bootstrap.css"</i> 
+						and adding app. specific css and additional bootstrap scripts as needed.</div>
+						
+						<h2 class="capital">
+							F<span>o</span>B<span>o</span> S<span>nippets</span> 
+						</h2>
 						
 						<p>The FoBo module comes with some convinience functions (snippets, optional to use) that will generate some commonly used 
-						toolkit helper scripts for you. For instansce doing it the Lift - FoBo way <b>you can simply do this</b> using a FoBo:s snippet containing some bootstrap convinience functions: </p>
+						toolkit helper scripts for you. For instansce doing it the Lift - FoBo way <b>you can simply do this</b> using a FoBo:s snippet 
+						containing some bootstrap convinience functions: </p>
+						
+						<h6>The FoBo.Bootstrap Snippet</h6>
+						
+						<span class="label">Activate dropdown</span>
 						<pre class="prettyprint linenums lang-html">
                         &lt;!DOCTYPE html&gt;
                         &lt;html&gt;
@@ -92,6 +108,15 @@
                           &lt;script data-lift="FoBo.ScriptHelper.registerLoadEventFactory"&gt;&lt;/script&gt;         
                           &lt;script data-lift="FoBo.Bootstrap.activateDropdown?on=.dropdown-toggle"&gt;&lt;/script&gt;              
                           &lt;/head&gt;
+                           :       
+                        &lt;/html&gt;    
+						</pre>
+						
+						<span class="label">Set a popover</span> and preventing default on-click action
+						<pre class="prettyprint linenums lang-html">
+                        &lt;!DOCTYPE html&gt;
+                        &lt;html&gt;
+                            :
                           &lt;body"&gt;
                                :
 	                      &lt;a href="#" rel="popover" title="The Title" data-content="The content ..." id="theId"&gt;...&lt;/a&gt;
@@ -100,9 +125,10 @@
                                : 
                           &lt;/body&gt;        
                         &lt;/html&gt;    
-						</pre>	
+						</pre>							
 
-						<p> <b>.... instead of doing this</b> (a common bootstrap component init use case) </p>
+						<p> <b>.... instead of doing the following </b> (a common bootstrap component init use case) </p>
+						<span class="label">Transformed output</span>
 						<pre class="prettyprint linenums lang-html">
                         &lt;!DOCTYPE html&gt;
                         &lt;html&gt;
@@ -150,7 +176,72 @@
                                : 
                           &lt;/body&gt;        
                         &lt;/html&gt;    
-						</pre>											
+						</pre>			
+						
+						<span class="label">A Bootstrap tooltip</span>
+						<pre class="prettyprint linenums lang-html">
+                        &lt;!DOCTYPE html&gt;
+                        &lt;html&gt;
+                            :
+                          &lt;body"&gt;
+                               :
+                            This pages demonstrates a optional 
+                            &lt;a id="lift-tt" title="The most powerful, most secure web framework available today. It simply rocks!" href="http://liftweb.net/"&gt;Lift&lt;/a&gt; 
+                            module...   
+                               :  
+                            &lt;script data-lift="FoBo.Bootstrap.tooltip?id=#lift-tt"&gt;&lt;/script&gt;
+                               : 
+                          &lt;/body&gt;        
+                        &lt;/html&gt;    
+						</pre>							
+						
+						<div class="alert alert-info">I am using the html5 attribute "data-lift" for hocks to Lift but if
+						 you like you are wellcome to use the class attribute instead like class="lift:...." </div>
+						
+						<h6>The FoBo.BootstrapNav Snippet</h6>	
+						<p>The FoBo.BootstrapNav snippet will let you define lift menu parts that will be transformed 
+						into a Bootstrap Nav menu. This work is originally contributed to the FoBo module by community 
+						member Damian Helme, read his blog post <a href="http://tech.damianhelme.com/twitter-bootstrap-navbar-dropdowns-and-lifts" >
+						Twitter Bootstrap Navbar Dropdowns and Lift's Menu.builder</a> for more information. </p>
+						   
+						<span class="label">Part of your Lift SiteMap</span> with the <b>LocGroup</b> that will be transformed into Bootstrap Navbar 
+						<pre class="prettyprint linenums lang-scala">
+                                  :
+                                Menu("Test") / "test" >> LocGroup("test") >> PlaceHolder submenus (
+                                  Menu("Test 2") / "test2",
+                                  Menu("Test 3") / "test3"
+                                ),
+                                :      
+						</pre>						
+						
+						<span class="label">Your Lift Template</span> 
+						<pre class="prettyprint linenums lang-html">
+                        &lt;!DOCTYPE html&gt;
+                        &lt;html&gt;
+                            :
+                          &lt;body"&gt;
+                          
+                           &lt;div class="navbar"&gt;
+                             &lt;div class="navbar-inner"&gt;
+                               &lt;div class="container"&gt;                          
+                                :  
+                               &lt;!--The navbar snippet invocation--&gt; 
+                               &lt;span data-lift="FoBo.BootstrapNav.menuToTBNav?eager_eval=true"&gt; 
+                                 &lt;span data-lift="Menu.builder?top:class=nav pull-right;li_item:class=active;linkToSelf=true;expandAll=true;group=test"&gt;&lt;/span&gt;
+                               &lt;/span&gt;     
+                                : 
+                               &lt;/div&gt;
+                             &lt;/div&gt;
+                           &lt;/div&gt;
+                             :  
+                          &lt;/body&gt;        
+                        &lt;/html&gt;    
+						</pre>							
+										
+						<div class="alert alert-info">In this demo you will find the rellevant code in the <i>SiteMap</i> section of 
+						<i>Lift Boot</i> and the snippet invoctation in the _embededTopbar-FoBo02.html template.
+						</div>
+														
 						<p>At this writing the available snippet helpers are few but expect the numbers to grow. You are 
 						wellcome to contribute code and/or ideas. Take a look att the API documentation on how to 
 						invoke the helpers and description on what result it produces for example look att the 
@@ -204,8 +295,7 @@
 <!-- <div class="demo_jui"> -->
 <!-- <div data-lift="Cities"> -->
 <br/>
-<h6>A simple setup</h6>
-<br/> 
+                        <span class="label">A simple setup</span>
 						<pre class="prettyprint linenums lang-html">
                         &lt;!DOCTYPE html&gt;
                         &lt;html&gt;
@@ -229,6 +319,7 @@
                         &lt;/html&gt;    
 						</pre>	
 						<p>The FoBo snippet invocation will transform the API call to the following script:</p>
+						<span class="label">The transformation</span>
 						<pre class="prettyprint linenums lang-html">
                         &lt;!DOCTYPE html&gt;
                         &lt;html&gt;
@@ -664,8 +755,8 @@
 <br/>
 <br/>
 <br/>
-<h6>A setup via demo snippet with some json and a database backend</h6> 
-<br/>
+
+                       <span class="label">A setup via demo snippet with some json and a database backend</span>
 						<pre class="prettyprint linenums lang-html">
                         &lt;!DOCTYPE html&gt;
                         &lt;html&gt;
@@ -691,6 +782,7 @@
                         &lt;/html&gt;    
 						</pre>	
 						<p>The demo snippet invocation will transform the call to the following script:</p>
+						<span class="label">The transformation</span>
 						<pre class="prettyprint linenums lang-html">
                         &lt;!DOCTYPE html&gt;
                         &lt;html&gt;
@@ -737,7 +829,8 @@
 						</pre>
 
 <div id="dtdemo2" ></div>	
-<span>A semi-dynamic data table with hocks to the demos DataTable snippet that fetches the data from a database and a hiden Id column.</span>
+<span>A semi-dynamic data table with hocks to the demos DataTable snippet that fetches the data from a database. 
+It also demonstrates the usage of a hiden Id column.</span>
 <!-- </div> -->
 <!-- </div>			             -->
 <br/>

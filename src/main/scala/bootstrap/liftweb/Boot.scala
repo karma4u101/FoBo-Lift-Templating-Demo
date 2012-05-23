@@ -90,6 +90,8 @@ class Boot extends Loggable {
         "Bootstrap")),
       Menu(Loc("JQuery-mobile", Link(List("jquery-mobile"), true, "/jquery-mobile/1.0.1/demos/index"),
         "JQuery-mobile")),
+      Menu(Loc("JQuery-mobile-1.1.0", Link(List("jquery-mobile-1.1.0"), true, "/jquery-mobile/1.1.0/demos/index"),
+        "JQuery-mobile-v1.1.0")),        
       Menu(Loc("DataTables", Link(List("datatables"), true, "/datatables/1.9.0/index"),
         "DataTables")),  
       Menu(Loc("FoBoAPI", Link(List("foboapi"), true, "/foboapi/#net.liftmodules.FoBo.package"),

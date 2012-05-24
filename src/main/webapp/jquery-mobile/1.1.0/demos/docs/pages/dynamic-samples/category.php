@@ -116,8 +116,8 @@ if( $_SERVER[ "HTTP_X_REQUESTED_WITH" ] && $_SERVER[ "HTTP_X_REQUESTED_WITH" ] =
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Vehicles</title>
 <link rel="stylesheet"  href="../../../css/themes/default/">
-<script src="../../../js/jquery.js"></script>
-<script src="../../../js/jquery.mobile-1.1.0.js"></script>
+<script src="/classpath/fobo/jquery.js"></script>
+<script src="/classpath/fobo/jquery.mobile.js"></script>
 </head>
 <body>
 <div data-role="page" data-add-back-btn="true">

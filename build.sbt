@@ -25,6 +25,8 @@ EclipseKeys.withSource := true
 
 transitiveClassifiers := Seq("sources")//,"javadocs")
 
+//"net.liftmodules" %% "fobo" % (liftVersion+"-0.4.2-SNAPSHOT") withJavadoc() withSources() 
+
 libraryDependencies ++= {
   val liftVersion = "2.4" // Put the current/latest lift version here
   Seq(
@@ -33,7 +35,7 @@ libraryDependencies ++= {
     "net.liftweb" %% "lift-squeryl-record" % liftVersion % "compile->default" withSources(),
     "net.liftweb" %% "lift-wizard" % liftVersion % "compile->default",
     "net.liftweb" %% "lift-testkit" % liftVersion % "compile->default",
-    "net.liftmodules" %% "fobo" % (liftVersion+"-0.4.2-SNAPSHOT") withJavadoc() withSources() 
+    "net.liftmodules" %% "fobo" % (liftVersion+"-0.5.0-SNAPSHOT") withJavadoc() withSources() 
     )
 }
 

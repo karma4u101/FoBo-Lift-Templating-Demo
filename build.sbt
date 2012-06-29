@@ -19,7 +19,12 @@ scanDirectories in Compile := Nil
 logLevel := Level.Info
 //Level.Info.Debug
 
-resolvers += "Java.net Maven2 Repository" at "http://download.java.net/maven/2/"
+resolvers ++= Seq(
+  "Scala Tools Releases" at "http://scala-tools.org/repo-releases/",
+  "Scala Tools Snapshot" at "http://scala-tools.org/repo-snapshots/",
+  "Java.net Maven2 Repository" at "http://download.java.net/maven/2/",
+  "Media4u101 SNAPSHOT Repository" at "http://www.media4u101.se:8081/nexus/content/repositories/snapshots/"
+)
 
 EclipseKeys.withSource := true
 

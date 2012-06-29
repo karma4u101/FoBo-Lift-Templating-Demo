@@ -21,8 +21,9 @@ best regards Peter Petersson
 
 Quick Start
 -----------
-Prerequisites for running this Lift example is that you have the FoBo module, Git and Java installed and configured on the target computer.
+Prerequisites for running this Lift example is that you have Git and Java installed and configured on the target computer.
 You don't need to use it but the project also includes a Eclipse plug-in for browsing and following/working with the code, see the Scala IDE section.   
+As of FoBo v0.5.0 you do no longer need fetch FoBo and do a publish-local of it as it is now available via repository and will be fetched for you via dependancys. 
 
 1) Get the examples
 

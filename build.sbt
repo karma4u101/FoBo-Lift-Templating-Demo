@@ -3,7 +3,7 @@ organization := "se.media4u101"
 
 name := "FoBo-Lift-Template"
 
-version := "2.6-SNAPSHOT"
+version := "2.7-SNAPSHOT"
 
 scalaVersion := "2.9.1"
 
@@ -23,14 +23,12 @@ resolvers ++= Seq(
   "Scala Tools Releases" at "http://scala-tools.org/repo-releases/",
   "Scala Tools Snapshot" at "http://scala-tools.org/repo-snapshots/",
   "Java.net Maven2 Repository" at "http://download.java.net/maven/2/",
-  "Media4u101 SNAPSHOT Repository" at "http://www.media4u101.se:8081/nexus/content/repositories/snapshots/"
+  "Media4u101 Repository" at "http://www.media4u101.se:8081/nexus/content/repositories/releases/"
 )
 
 EclipseKeys.withSource := true
 
 transitiveClassifiers := Seq("sources")//,"javadocs")
-
-//"net.liftmodules" %% "fobo" % (liftVersion+"-0.4.2-SNAPSHOT") withJavadoc() withSources() 
 
 libraryDependencies ++= {
   val liftVersion = "2.4" // Put the current/latest lift version here
@@ -40,7 +38,7 @@ libraryDependencies ++= {
     "net.liftweb" %% "lift-squeryl-record" % liftVersion % "compile->default" withSources(),
     "net.liftweb" %% "lift-wizard" % liftVersion % "compile->default",
     "net.liftweb" %% "lift-testkit" % liftVersion % "compile->default",
-    "net.liftmodules" %% "fobo" % (liftVersion+"-0.5.0-SNAPSHOT") withJavadoc() withSources() 
+    "net.liftmodules" %% "fobo" % (liftVersion+"-0.5") withJavadoc() withSources() 
     )
 }
 

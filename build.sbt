@@ -23,7 +23,8 @@ resolvers ++= Seq(
   "Scala Tools Releases" at "http://scala-tools.org/repo-releases/",
   "Scala Tools Snapshot" at "http://scala-tools.org/repo-snapshots/",
   "Java.net Maven2 Repository" at "http://download.java.net/maven/2/",
-  "Media4u101 Repository" at "http://www.media4u101.se:8081/nexus/content/repositories/releases/"
+  "Media4u101 Repository" at "http://www.media4u101.se:8081/nexus/content/repositories/releases/",
+  "Media4u101 Snapshot Repository" at "http://www.media4u101.se:8081/nexus/content/repositories/snapshots/"
 )
 
 EclipseKeys.withSource := true
@@ -38,7 +39,7 @@ libraryDependencies ++= {
     "net.liftweb" %% "lift-squeryl-record" % liftVersion % "compile->default" withSources(),
     "net.liftweb" %% "lift-wizard" % liftVersion % "compile->default",
     "net.liftweb" %% "lift-testkit" % liftVersion % "compile->default",
-    "net.liftmodules" %% "fobo" % (liftVersion+"-0.5") withJavadoc() withSources() 
+    "net.liftmodules" %% "fobo" % (liftVersion+"-0.5.2-SNAPSHOT") withJavadoc() withSources() 
     )
 }
 

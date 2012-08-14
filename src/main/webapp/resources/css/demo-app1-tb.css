@@ -35,7 +35,7 @@ li {
 }
 
 /*bootstrap 2.0.0 topbar replacement navbar*/
-.navbar .bo-container {
+.navbar .container {
 	width:auto;
     margin-left: auto;
     margin-right: auto;
@@ -118,7 +118,7 @@ li {
 .header .fhbrand {
     color: #FFFFFF;
     display: block;
-    float: left;
+    float: right;
     font-size: 22px;
     font-weight: 200;
     line-height: 1;
@@ -134,10 +134,9 @@ li {
     text-decoration:none;
     }
 .header h1{ position:relative; }
-.header h1 a,.header .fhbrand{
-    float:left;
+.header h1 a,.header .fhbrand {
     display:block;
-    padding:28px 20px 5px 12px;
+    padding:28px 20px 5px 2px;
     margin-left:-10px;
     font-weight:200;
     line-height:1;
@@ -147,7 +146,7 @@ li {
 .header h1.fhcapital span.smal { font-size: 46%; text-transform: lowercase; letter-spacing: -1px;}
 .header h1.fhcapital span.smaler { font-size: 32%; text-transform: lowercase; letter-spacing: -1px;}
 .header h6.fhbrand-sub {
-    float:left;
+/*     float:left; */
     display:block;
     padding-left:5px;
     font-size: 65%;
@@ -431,19 +430,20 @@ hr {
     @media (min-width: 768px) and (max-width: 979px) {  
         body {
 	      padding-top:0px;
-/* 	      width: 100%; */
 	      padding-left: 0px;
           padding-right: 0px;	      
         }
 	    .navbar-fixed-top {
            margin-bottom: 0px;
+           margin-left: 0px;
+           margin-right: 0px;           
         }
 		.header h1.fhcapital { 
- 		font-size: 220%;  
+ 		font-size: 280%;  
 		line-height: 1.2; 
 		}
 		.header h6.fhbrand-sub { 
-		font-size: 45%;  
+		font-size: 60%;  
 		line-height: 1.2; 
 		margin-top:-6px;
 		} 
@@ -462,13 +462,16 @@ hr {
         }
 	    .navbar-fixed-top {
            margin-bottom: 0px;
+           margin-left: 0px;
+           margin-right: 0px;           
         }        
+        .header .fhbrand {float:left;margin-left:10px;}
 		.header h1.fhcapital { 
- 		font-size: 180%;  
+ 		font-size: 250%;  
 		line-height: 1.2; 
 		}
 		.header h6.fhbrand-sub { 
-		font-size: 38%;  
+		font-size: 55%;  
 		line-height: 1.2; 
 		margin-top:-6px;
 		}
@@ -486,10 +489,20 @@ hr {
           padding-left: 0px;
           padding-right: 0px;
         } 
-        .navbar-fixed-top, .navbar-fixed-bottom {
+        .navbar-fixed-top {
           margin-left: 0px;
           margin-right: 0px;
-        }             
+        } 
+        .header .fhbrand {float:left;margin-left:2px;}
+		.header h1.fhcapital { 
+ 		font-size: 145%;  
+		line-height: 1.2; 
+		}
+		.header h6.fhbrand-sub { 
+		font-size: 27%;  
+		line-height: 1.2; 
+		margin-top:-6px;
+		}                    
     }
 
 

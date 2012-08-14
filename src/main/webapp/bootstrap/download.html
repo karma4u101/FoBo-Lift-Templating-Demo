@@ -2,28 +2,29 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Bootstrap, from Twitter</title>
+    <title>Download · Twitter Bootstrap</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+    <!-- Le styles -->
+    <link href="assets/css/bootstrap.css" rel="stylesheet">
+    <link href="assets/css/bootstrap-responsive.css" rel="stylesheet">
+    <link href="assets/css/docs.css" rel="stylesheet">
+    <link href="assets/js/google-code-prettify/prettify.css" rel="stylesheet">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>
       <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
 
-    <!-- Le styles -->
-    <link href="/classpath/fobo/fobo.css" rel="stylesheet">
-    
-    <link href="assets/css/docs.css" rel="stylesheet">  
-    
-    <link href="assets/js/google-code-prettify/prettify.css" rel="stylesheet">
-
     <!-- Le fav and touch icons -->
     <link rel="shortcut icon" href="assets/ico/favicon.ico">
-    <link rel="apple-touch-icon" href="assets/ico/apple-touch-icon.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="assets/ico/apple-touch-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="assets/ico/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png">
+
   </head>
 
   <body data-spy="scroll" data-target=".subnav" data-offset="50">
@@ -33,14 +34,14 @@
     ================================================== -->
     <div class="navbar navbar-fixed-top">
       <div class="navbar-inner">
-        <div class="bo-container">
-          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+        <div class="container">
+          <button type="button"class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
-          </a>
+          </button>
           <a class="brand" href="./index.html">Bootstrap</a>
-          <div class="nav-collapse">
+          <div class="nav-collapse collapse">
             <ul class="nav">
               <li class="">
                 <a href="./index.html">Overview</a>
@@ -73,7 +74,7 @@
       </div>
     </div>
 
-    <div class="bo-container">
+    <div class="container">
 
 <!-- Masthead
 ================================================== -->
@@ -94,11 +95,11 @@
   <div class="page-header">
     <a class="btn btn-small pull-right toggle-all" href="#">Toggle all</a>
     <h1>
-      1. Chose components
+      1. Choose components
       <small>Get just the CSS you need</small>
     </h1>
   </div>
-  <div class="bo-row download-builder">
+  <div class="row download-builder">
     <div class="span3">
       <h3>Scaffolding</h3>
       <label class="checkbox"><input checked="checked" type="checkbox" value="reset.less"> Normalize and reset</label>
@@ -108,7 +109,7 @@
       <h3>Base CSS</h3>
       <label class="checkbox"><input checked="checked" type="checkbox" value="type.less"> Headings, body, etc</label>
       <label class="checkbox"><input checked="checked" type="checkbox" value="code.less"> Code and pre</label>
-      <label class="checkbox"><input checked="checked" type="checkbox" value="labels.less"> Labels</label>
+      <label class="checkbox"><input checked="checked" type="checkbox" value="labels-badges.less"> Labels and badges</label>
       <label class="checkbox"><input checked="checked" type="checkbox" value="tables.less"> Tables</label>
       <label class="checkbox"><input checked="checked" type="checkbox" value="forms.less"> Forms</label>
       <label class="checkbox"><input checked="checked" type="checkbox" value="buttons.less"> Buttons</label>
@@ -143,9 +144,13 @@
       <label class="checkbox"><input checked="checked" type="checkbox" value="utilities.less"> Utilities</label>
       <label class="checkbox"><input checked="checked" type="checkbox" value="component-animations.less"> Component animations</label>
       <h3>Responsive</h3>
-      <label class="checkbox"><input checked="checked" type="checkbox" value="responsive.less"> Responsive layouts</label>
+      <label class="checkbox"><input checked="checked" type="checkbox" value="responsive-utilities.less"> Visible/hidden classes</label>
+      <label class="checkbox"><input checked="checked" type="checkbox" value="responsive-767px-max.less"> Narrow tablets and below (<767px)</label>
+      <label class="checkbox"><input checked="checked" type="checkbox" value="responsive-768px-979px.less"> Tablets to desktops (767-979px)</label>
+      <label class="checkbox"><input checked="checked" type="checkbox" value="responsive-1200px-min.less"> Large desktops (>1200px)</label>
+      <label class="checkbox"><input checked="checked" type="checkbox" value="responsive-navbar.less"> Responsive navbar</label>
     </div><!-- /span -->
-  </div><!-- /bo-row -->
+  </div><!-- /row -->
 </section>
 
 <section class="download" id="plugins">
@@ -156,7 +161,7 @@
       <small>Quickly add only the necessary javascript</small>
     </h1>
   </div>
-  <div class="bo-row download-builder">
+  <div class="row download-builder">
     <div class="span4">
       <label class="checkbox">
         <input type="checkbox" checked="true" value="bootstrap-transition.js">
@@ -211,9 +216,9 @@
     </div><!-- /span -->
     <div class="span4">
       <h4 class="muted">Heads up!</h4>
-      <p class="muted">All plugins require the latest version of <a href="http://jquery.com/" target="_blank">jQuery</a> to be included.</p>
+      <p class="muted">All checked plugins will be compiled into a single file, bootstrap.js. All plugins require the latest version of <a href="http://jquery.com/" target="_blank">jQuery</a> to be included.</p>
     </div><!-- /span -->
-  </div><!-- /bo-row -->
+  </div><!-- /row -->
 </section>
 
 
@@ -225,8 +230,14 @@
       <small>Optionally modify Bootstrap without a compiler</small>
     </h1>
   </div>
-  <div class="bo-row download-builder">
+  <div class="row download-builder">
     <div class="span3">
+      <h3>Scaffolding</h3>
+      <label>@bodyBackground</label>
+      <input type="text" class="span3" placeholder="@white">
+      <label>@textColor</label>
+      <input type="text" class="span3" placeholder="@grayDark">
+
       <h3>Links</h3>
       <label>@linkColor</label>
       <input type="text" class="span3" placeholder="#08c">
@@ -247,6 +258,13 @@
       <input type="text" class="span3" placeholder="#c3325f">
       <label>@purple</label>
       <input type="text" class="span3" placeholder="#7a43b6">
+
+      <h3>Sprites</h3>
+      <label>@iconSpritePath</label>
+      <input type="text" class="span3" placeholder="'../img/glyphicons-halflings.png'">
+      <label>@iconWhiteSpritePath</label>
+      <input type="text" class="span3" placeholder="'../img/glyphicons-halflings-white.png'">
+
     </div><!-- /span -->
     <div class="span3">
       <h3>Grid system</h3>
@@ -261,20 +279,46 @@
       <input type="text" class="span3" placeholder="6.382978723%">
       <label>@fluidGridGutterWidth</label>
       <input type="text" class="span3" placeholder="2.127659574%">
+
       <h3>Typography</h3>
+      <label>@sansFontFamily</label>
+      <input type="text" class="span3" placeholder="'Helvetica Neue', Helvetica, Arial, sans-serif">
+      <label>@serifFontFamily</label>
+      <input type="text" class="span3" placeholder="Georgia, 'Times New Roman', Times, serif">
+      <label>@monoFontFamily</label>
+      <input type="text" class="span3" placeholder="Menlo, Monaco, 'Courier New', monospace">
       <label>@baseFontSize</label>
       <input type="text" class="span3" placeholder="13px">
       <label>@baseFontFamily</label>
-      <input type="text" class="span3" placeholder="'Helvetica Neue', Helvetica, Arial, sans-serif">
+      <input type="text" class="span3" placeholder="@sansFontFamily">
       <label>@baseLineHeight</label>
       <input type="text" class="span3" placeholder="18px">
+      <label>@altFontFamily</label>
+      <input type="text" class="span3" placeholder="@serifFontFamily">
+      <label>@headingsFontFamily</label>
+      <input type="text" class="span3" placeholder="inherit">
+      <label>@headingsFontWeight</label>
+      <input type="text" class="span3" placeholder="bold">
+      <label>@headingsColor</label>
+      <input type="text" class="span3" placeholder="inherit">
+      <label>@heroUnitBackground</label>
+      <input type="text" class="span3" placeholder="@grayLighter">
+      <label>@heroUnitHeadingColor</label>
+      <input type="text" class="span3" placeholder="inherit">
+      <label>@heroUnitLeadColor</label>
+      <input type="text" class="span3" placeholder="inherit">
     </div><!-- /span -->
     <div class="span3">
-      <h3>Forms</h3>
-      <label>@primaryButtonColor</label>
-      <input type="text" class="span3" placeholder="@blue">
-      <label>@placeholderText</label>
-      <input type="text" class="span3" placeholder="@grayLight">
+      <h3>Tables</h3>
+      <label>@tableBackground</label>
+      <input type="text" class="span3" placeholder="transparent">
+      <label>@tableBackgroundAccent</label>
+      <input type="text" class="span3" placeholder="#f9f9f9">
+      <label>@tableBackgroundHover</label>
+      <input type="text" class="span3" placeholder="#f5f5f5">
+      <label>@tableBorder</label>
+      <input type="text" class="span3" placeholder="#ddd">
+
       <h3>Navbar</h3>
       <label>@navbarHeight</label>
       <input type="text" class="span3" placeholder="40px">
@@ -284,12 +328,59 @@
       <input type="text" class="span3" placeholder="@grayDark">
       <label>@navbarText</label>
       <input type="text" class="span3" placeholder="@grayLight">
+      <label>@navbarBrandColor</label>
+      <input type="text" class="span3" placeholder="@navbarLinkColor">
       <label>@navbarLinkColor</label>
       <input type="text" class="span3" placeholder="@grayLight">
       <label>@navbarLinkColorHover</label>
       <input type="text" class="span3" placeholder="@white">
+      <label>@navbarLinkColorActive</label>
+      <input type="text" class="span3" placeholder="@navbarLinkColorHover">
+      <label>@navbarLinkBackgroundHover</label>
+      <input type="text" class="span3" placeholder="transparent">
+      <label>@navbarLinkBackgroundActive</label>
+      <input type="text" class="span3" placeholder="@navbarBackground">
+      <label>@navbarSearchBackground</label>
+      <input type="text" class="span3" placeholder="lighten(@navbarBackground, 25%)">
+      <label>@navbarSearchBackgroundFocus</label>
+      <input type="text" class="span3" placeholder="@white">
+      <label>@navbarSearchBorder</label>
+      <input type="text" class="span3" placeholder="darken(@navbarSearchBackground, 30%)">
+      <label>@navbarSearchPlaceholderColor</label>
+      <input type="text" class="span3" placeholder="#ccc">
+
+      <h3>Dropdowns</h3>
+      <label>@dropdownBackground</label>
+      <input type="text" class="span3" placeholder="@white">
+      <label>@dropdownBorder</label>
+      <input type="text" class="span3" placeholder="rgba(0,0,0,.2)">
+      <label>@dropdownLinkColor</label>
+      <input type="text" class="span3" placeholder="@grayDark">
+      <label>@dropdownLinkColorHover</label>
+      <input type="text" class="span3" placeholder="@white">
+      <label>@dropdownLinkBackgroundHover</label>
+      <input type="text" class="span3" placeholder="@linkColor">
     </div><!-- /span -->
     <div class="span3">
+      <h3>Forms</h3>
+      <label>@placeholderText</label>
+      <input type="text" class="span3" placeholder="@grayLight">
+      <label>@inputBackground</label>
+      <input type="text" class="span3" placeholder="@white">
+      <label>@inputBorder</label>
+      <input type="text" class="span3" placeholder="#ccc">
+      <label>@inputBorderRadius</label>
+      <input type="text" class="span3" placeholder="3px">
+      <label>@inputDisabledBackground</label>
+      <input type="text" class="span3" placeholder="@grayLighter">
+      <label>@formActionsBackground</label>
+      <input type="text" class="span3" placeholder="#f5f5f5">
+
+      <label>@btnPrimaryBackground</label>
+      <input type="text" class="span3" placeholder="@linkColor">
+      <label>@btnPrimaryBackgroundHighlight</label>
+      <input type="text" class="span3" placeholder="darken(@white, 10%);">
+
       <h3>Form states &amp; alerts</h3>
       <label>@warningText</label>
       <input type="text" class="span3" placeholder="#c09853">
@@ -308,7 +399,7 @@
       <label>@infoBackground</label>
       <input type="text" class="span3" placeholder="#d9edf7">
     </div><!-- /span -->
-  </div><!-- /bo-row -->
+  </div><!-- /row -->
 </section>
 
 <section class="download" id="download">
@@ -318,7 +409,7 @@
     </h1>
   </div>
   <div class="download-btn">
-    <a class="btn btn-primary" href="#">Customize and Download</a>
+    <a class="btn btn-primary" href="#" >Customize and Download</a>
     <h4>What's included?</h4>
     <p>Downloads include compiled CSS, compiled and minified CSS, and compiled jQuery plugins, all nicely packed up into a zipball for your convenience.</p>
   </div>
@@ -334,7 +425,7 @@
         <p>Icons from <a href="http://glyphicons.com">Glyphicons Free</a>, licensed under <a href="http://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>.</p>
       </footer>
 
-    </div><!-- /bo-container -->
+    </div><!-- /container -->
 
 
 
@@ -342,20 +433,20 @@
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
-    <script src="/classpath/fobo/jquery.js"></script>
+    <script src="assets/js/jquery.js"></script>
     <script src="assets/js/google-code-prettify/prettify.js"></script>
-    <script src="/classpath/fobo/bootstrap-transition.js"></script>
-    <script src="/classpath/fobo/bootstrap-alert.js"></script>
-    <script src="/classpath/fobo/bootstrap-modal.js"></script>
-    <script src="/classpath/fobo/bootstrap-dropdown.js"></script>
-    <script src="/classpath/fobo/bootstrap-scrollspy.js"></script>
-    <script src="/classpath/fobo/bootstrap-tab.js"></script>
-    <script src="/classpath/fobo/bootstrap-tooltip.js"></script>
-    <script src="/classpath/fobo/bootstrap-popover.js"></script>
-    <script src="/classpath/fobo/bootstrap-button.js"></script>
-    <script src="/classpath/fobo/bootstrap-collapse.js"></script>
-    <script src="/classpath/fobo/bootstrap-carousel.js"></script>
-    <script src="/classpath/fobo/bootstrap-typeahead.js"></script>
+    <script src="assets/js/bootstrap-transition.js"></script>
+    <script src="assets/js/bootstrap-alert.js"></script>
+    <script src="assets/js/bootstrap-modal.js"></script>
+    <script src="assets/js/bootstrap-dropdown.js"></script>
+    <script src="assets/js/bootstrap-scrollspy.js"></script>
+    <script src="assets/js/bootstrap-tab.js"></script>
+    <script src="assets/js/bootstrap-tooltip.js"></script>
+    <script src="assets/js/bootstrap-popover.js"></script>
+    <script src="assets/js/bootstrap-button.js"></script>
+    <script src="assets/js/bootstrap-collapse.js"></script>
+    <script src="assets/js/bootstrap-carousel.js"></script>
+    <script src="assets/js/bootstrap-typeahead.js"></script>
     <script src="assets/js/application.js"></script>
 
 

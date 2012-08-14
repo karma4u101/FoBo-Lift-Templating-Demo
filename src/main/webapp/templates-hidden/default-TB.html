@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<!-- Set the viewport width to device width for mobile -->
+<meta name="viewport" content="width=device-width" />
+
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="description" content="" />
+<meta name="keywords" content="" />
+<link rel="shortcut icon" href="resources/images/mobile_device_128x128.png" type="image/x-icon">
+
+<!--[if lt IE 9]>
+  <link rel="stylesheet" href="/resources/css/ie.css">
+<![endif]-->
+
+<!-- IE Fix for HTML5 Tags -->
+<!--[if lt IE 9]>
+  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+
+<!-- Including some font from Google's Font Directory -->
+<link rel="stylesheet" type="text/css"
+	href="http://fonts.googleapis.com/css?family=Crushed|Gruppo|Orbitron:bold" />
+<link rel="stylesheet" type="text/css"
+	href="http://fonts.googleapis.com/css?family=Lobster" />
+
+<!-- Included JS Files -->
+<script type='text/javascript' src='/classpath/fobo/jquery.js'></script>
+<script type="text/javascript" charset="utf-8" src="/classpath/fobo/knockout.js"></script>
+<script type="text/javascript" charset="utf-8" src="/classpath/fobo/jquery.dataTables.js"></script>
+
+<!-- Demo snippet datatable example -->
+<script data-lift="FoBo.DataTables.dataTable?id=#dtexample1&options='bJQueryUI':true,'sPaginationType':'full_numbers'"></script>
+<script data-lift="DataTables.semiDynamicDT?on=#dtdemo2&tableId=dtexample2"></script>
+
+
+<script data-lift="FoBo.ScriptHelper.registerLoadEventFactory">	</script>
+<script data-lift="FoBo.Bootstrap.activateDropdown?on=.dropdown-toggle"></script>
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount','UA-28767506-1']);
+  _gaq.push(['_setDomainName', 'media4u101.se']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+<!-- Place this render call where appropriate -->
+<script type="text/javascript">
+ (function() {
+   var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+   po.src = 'https://apis.google.com/js/plusone.js';
+   var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+  })();
+</script>	
+
+<title class="lift:Menu.title">FoBo - A Generic Lift Front-End Toolkit Module / Demo - %*%</title>
+</head>
+<body onload="prettyPrint()" data-offset="40" data-target="#fobo-navbar" data-spy="scroll">
+
+	<div id="content"></div>
+	
+	
+	<script type="text/javascript" src="/classpath/fobo/prettify.js"></script>
+	<script type="text/javascript" src="/classpath/fobo/lang-scala.js"></script>
+    <script type="text/javascript" src="/classpath/fobo/bootstrap.js"></script>
+    
+    
+</body>
+</html>

@@ -8,33 +8,45 @@
 </head>
 <body class="lift:content_id=fobo-main">
 
-	<div id="fobo-main" class="lift:surround?with=default;at=content">
+	<div id="fobo-main" class="lift:surround?with=default-TB;at=content">
 	
         <!-- data-lift="head" <== merges data to the html head -->
 		<!-- Included your own app specific CSS File here -->
 		<!-- This demo page will get its demo specific css file merged into the head of this page -->
-		<link data-lift="head" rel="stylesheet" type='text/css' href="/resources/css/fobo02-demo-app1.css">
-		<link data-lift="head" rel="stylesheet" type='text/css' href="/classpath/fobo/prettify.css">
 
-		<span data-lift='embed?what=_embededTopbar-FoBo02'> Embedding
+        <!-- Included TOOLKIT SPECIFIC CSS Files -->
+        <link data-lift="head" rel="stylesheet" type='text/css' href="/classpath/fobo/themes/smoothness.css"/>
+        <link data-lift="head" rel="stylesheet" type='text/css' href="/classpath/fobo/jquery.dataTables_themeroller.css"/>
+        <link data-lift="head" rel="stylesheet" type='text/css' href="/classpath/fobo/prettify.css">
+        <link data-lift="head" rel="stylesheet" type='text/css' href="/classpath/fobo/bootstrap.css"/>
+        <link data-lift="head" rel="stylesheet" type='text/css' href="/classpath/fobo/bootstrap-responsive.css"/>		
+        
+        <!-- Included APP. SPECIFIC CSS Files -->
+		<link data-lift="head" rel="stylesheet" type='text/css' href="/resources/css/demo-app1-tb.css">
+		<link data-lift="head" rel="stylesheet" type='text/css' href="/resources/css/app.css">
+		
+		
+		<span data-lift='embed?what=_embededNavbar-TB'> Embedding
 			the topbar here</span> 
 			
-		<a id="spyhome"></a>
-		<span data-lift='embed?what=_embededFoBoHeaderSection'> Embedding
+		<div class="container-fluid">	
+		
+		  <a id="spyhome"></a>
+		  <span data-lift='embed?what=_embededHeaderSection-TB'> Embedding
 			header section</span>
 						
-		<a id="spyabout"></a>
-		<span data-lift='embed?what=_embededFoBoMainSection'> Embedding
+		  <a id="spyabout"></a>
+		  <span data-lift='embed?what=_embededMainSection-TB'> Embedding
 			main section</span>
 
-        <span data-lift='embed?what=_embededFoBoDemoPromo'> Embedding
+          <span data-lift='embed?what=_embededDemoPromo-TB'> Embedding
 			demo promo section</span>
 			
-		<a id="spyfooter"></a>
-        <span data-lift='embed?what=_embededFoBoFooterSection'> Embedding
+		  <a id="spyfooter"></a>
+          <span data-lift='embed?what=_embededFooterSection-TB'> Embedding
 			footer section</span>
-
+        </div>
+        
 	</div>
-
 </body>
 </html>

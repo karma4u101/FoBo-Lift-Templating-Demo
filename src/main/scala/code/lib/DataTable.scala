@@ -1,4 +1,12 @@
-package code.snippet
+package code.lib
+
+/*
+ * Original code contributed by lubiluk (Paweł Gajewski) http://about.something.pl/art/jquery-datatables-with-lift-framework.html
+ *
+ * KARMA4U NOTE: I have made some slight encapsulation changes to the original code and it looks promising 
+ * for being included in the FoBo API. Although inclusion of some of the extra functionality found in my 
+ * code.lib.DataTableH.scala would be great i.e with some flexible column and row alignment and styling abilities.     
+ * */
 
 import _root_.scala.xml.{ NodeSeq, Node, Elem, PCData, Text }
 import _root_.net.liftweb.common._
@@ -13,11 +21,6 @@ import Helpers._
 import _root_.net.liftweb.json.JsonDSL._
 import _root_.net.liftweb.json._
 import scala.util.parsing.json.JSONArray
-
-//lubiluk - Paweł Gajewski 
-//based on the aoutocomplete widget 
-//http://timperrett.com/2010/10/13/using-lifts-autocomplete-widget/
-//https://github.com/pcetsogtoo/lift-autocomplete
 
 object DataTable {
   def apply(
@@ -47,32 +50,18 @@ object DataTable {
     attrs: (String, String)*) = new DataTable().render(columns, fun, id, jsonOptions, attrs: _*)
 }
 
-abstract class DataTableSource(
+protected abstract class DataTableSource(
   val totalRecords: Long,
   val totalDisplayRecords: Long) {
   def jsonData: JValue
 }
 
 /**
-* Class for holding data to be return to DataTable
-*
-* Use this class to return data as simple JSON array of arrays
-*/
-class DataTableArraySource(
-  totalRecords: Long,
-  totalDisplayRecords: Long,
-  val data: List[List[String]])
-  extends DataTableSource(totalRecords, totalDisplayRecords) {
-  def jsonData = JArray(data.map(r => JArray(r.map(JString(_)))))
-}
-
-
-/**
 * Class for holding data to be return to DataTable.
 *
 * Use this class to return data as JSON array of objects, so you can set DT_RowId and DT_RowClass
 */
-class DataTableObjectSource(
+protected class DataTableObjectSource(
   totalRecords: Long,
   totalDisplayRecords: Long,
   val data: List[List[(String, String)]])
@@ -83,7 +72,7 @@ class DataTableObjectSource(
 /**
 * Class for holding params sent by DataTable
 */
-class DataTableParams(
+protected class DataTableParams(
   val displayStart: Long,
   val displayLength: Long,
   val columns: Int,
@@ -98,7 +87,21 @@ class DataTableParams(
   val sortDirs: List[String],
   val dataProps: List[String])
 
-class DataTable {
+/**
+* Class for holding data to be return to DataTable
+*
+* Use this class to return data as simple JSON array of arrays
+*/
+private class DataTableArraySource(
+  totalRecords: Long,
+  totalDisplayRecords: Long,
+  val data: List[List[String]])
+  extends DataTableSource(totalRecords, totalDisplayRecords) {
+  def jsonData = JArray(data.map(r => JArray(r.map(JString(_)))))
+}
+
+
+private class DataTable {
 
   /**
 * Render a DataTable
@@ -222,7 +225,7 @@ $("#""" + id + """").dataTable(""" + datatableOptions.toJsCmd + """);
       attrs.foldLeft(
         <table id={ id }>
           <head_merge>
-            <script type="text/javascript" src="/classpath/fobo/jquery.dataTables.js"></script>
+            <script charset="utf-8" type="text/javascript" src="/classpath/fobo/jquery.dataTables.js"></script>
             { Script(onLoad) }
           </head_merge>
           <thead>

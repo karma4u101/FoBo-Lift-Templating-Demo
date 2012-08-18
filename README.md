@@ -7,13 +7,13 @@ See the [FoBo - Lift Front-End Toolkit Module](https://github.com/karma4u101/FoB
 Demonstration of this module demo is set up and live [here](http://www.media4u101.se/fobo-lift-template-demo/). 
 The corresponding FoBo module is available [here](https://github.com/karma4u101/FoBo). 
 
-Note: This was initially intended to be a basic/starter lift template with the FoBo module initiated 
-but it has turned out more of a separate demo. There are lots of basic lift templats out there, fork 
-the demo, run it and look at the code and its examples. It's really simple to integrate the FoBo module 
-in any lift project but if you are looking for a good basic lift starter template try out 
-[this one](https://github.com/heiflo/lift-basic-2.4-sbt-0.11.2) or maybe my 
-[Templating-With-Twitter-Bootstrap](https://github.com/karma4u101/Templating-With-Twitter-Bootstrap) 
-suits your needs, be sure to correct the module version in build.sbt as it may lag behind.  
+**Note:** This was initially intended to be a basic/starter lift template with the FoBo module initiated 
+but it has turned out to be more of a comprehensive demo. There are lots of basic lift starter templats out there 
+and for a FoBo incdued one see below, so just fork the demo, run it and look at the code and its examples. 
+
+It's really simple to integrate the FoBo module in any lift project but here is a basic lift starter template 
+that includes the FoBo module, it is set up for twitter bootstrap usage 
+[Templating-With-Twitter-Bootstrap](https://github.com/karma4u101/Templating-With-Twitter-Bootstrap).  
 
 Improvements, contributions and suggestions are welcome!
 
@@ -58,4 +58,4 @@ Sbteclipse provides SBT command to create Eclipse project files
 User powered basic example 
 ==========================
 **(*)** This is a _unofficial_ Lift user powered basic assembly example which means it is a work based on the 
-sound foundation of Lift and done by a developer who uses Lift for development ;), sharing it with others. 
+sound foundation of Lift, done by a developer who uses Lift for development ;), sharing it with others. 

@@ -31,7 +31,7 @@ class Boot extends Loggable {
    //If using defaults FoBo init params can be omitted
     FoBo.InitParam.JQuery=FoBo.JQuery171  
     //FoBo.InitParam.ToolKit=FoBo.FoBo020
-    FoBo.InitParam.ToolKit=FoBo.Bootstrap204
+    FoBo.InitParam.ToolKit=FoBo.Bootstrap210
     FoBo.InitParam.ToolKit=FoBo.Foundation215
     FoBo.InitParam.ToolKit=FoBo.PrettifyJun2011
     FoBo.InitParam.ToolKit=FoBo.JQueryMobile110
@@ -90,6 +90,8 @@ class Boot extends Loggable {
         "Foundation")),
       Menu(Loc("Bootstrap", Link(List("bootstrap"), true, "/bootstrap/index"),
         "Bootstrap")),
+      Menu(Loc("Bootstrap-2.1.0", Link(List("bootstrap-2.1.0"), true, "/bootstrap-2.1.0/index"),
+        "Bootstrap-2.1.0")),        
 //      Menu(Loc("JQuery-mobile", Link(List("jquery-mobile"), true, "/jquery-mobile/1.0.1/demos/index"),
 //        "JQuery-mobile")),
       Menu(Loc("JQuery-mobile", Link(List("jquery-mobile"), true, "/jquery-mobile/1.1.0/demos/index"),

@@ -3,7 +3,7 @@ organization := "se.media4u101"
 
 name := "FoBo-Lift-Template"
 
-version := "2.8-SNAPSHOT"
+version := "2.9-SNAPSHOT"
 
 scalaVersion := "2.9.1"
 
@@ -39,7 +39,7 @@ libraryDependencies ++= {
     "net.liftweb" %% "lift-squeryl-record" % liftVersion % "compile->default" withSources(),
     "net.liftweb" %% "lift-wizard" % liftVersion % "compile->default",
     "net.liftweb" %% "lift-testkit" % liftVersion % "compile->default",
-    "net.liftmodules" %% "fobo" % (liftVersion+"-0.5.5-SNAPSHOT") withJavadoc() withSources() 
+    "net.liftmodules" %% "fobo" % (liftVersion+"-0.6.0-SNAPSHOT") withJavadoc() withSources() 
     )
 }
 

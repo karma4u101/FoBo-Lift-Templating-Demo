@@ -80,7 +80,7 @@ class Boot extends Loggable {
     // Build SiteMap
     val entries = List(
       Menu.i("Home") / "index",
-      
+      Menu.i("Bo") / "bo",
 //      how to to make this work without # converted to %23 the api call below is working 
 //      Menu.i("Home-Top") / "#spyhome",
 //      Menu.i("About") / "#spyabout",

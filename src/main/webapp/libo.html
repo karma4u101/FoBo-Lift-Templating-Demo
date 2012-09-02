@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="content-type" />
+
+<title>Fobo Bootstrap Demo</title>
+
+</head>
+<body class="lift:content_id=fobo-main">
+
+	<div id="fobo-main" class="lift:surround?with=libo/default;at=content">
+	
+        <!-- data-lift="head" <== merges data to the html head -->
+		<!-- Included your own app specific CSS File here -->
+		<!-- This demo page will get its demo specific css file merged into the head of this page -->
+
+        <!-- Included TOOLKIT SPECIFIC CSS Files -->
+        <link data-lift="head" rel="stylesheet" type='text/css' href="/classpath/fobo/prettify.css">
+        <link data-lift="head" rel="stylesheet" type='text/css' href="/classpath/fobo/bootstrap.css"/>
+        <link data-lift="head" rel="stylesheet" type='text/css' href="/classpath/fobo/bootstrap-responsive.css"/>		
+        
+        <!-- Included APP. SPECIFIC CSS/JS Files -->
+		<link data-lift="head" rel="stylesheet" type='text/css' href="/resources/css/libo-app.css"/>
+		<script data-lift="head" type='text/javascript' src='resources/js/libo-app.js'></script>
+		
+		<span data-lift='embed?what=libo/_navbar'> Embedding
+			the topbar here</span>		
+			
+		<div class="container-fluid">
+		
+		<a id="spyhome"></a>
+		  <span data-lift='embed?what=libo/_headerSection'> Embedding
+			header section</span>
+					
+		  <a id="spyabout"></a>
+		  <span data-lift='embed?what=libo/_ingressSection'> Embedding
+			main section</span>					
+		
+		
+		  <a id="spysetup"></a>
+          <span data-lift='embed?what=libo/_demoSection'> Embedding
+			demo section</span>		
+			
+	      <a id="spyfooter"></a>
+          <span data-lift='embed?what=libo/_footerSection'> Embedding
+			footer section</span>	
+		
+		</div>		    
+	</div>
+</body>
+</html>

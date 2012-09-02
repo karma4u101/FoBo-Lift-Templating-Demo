@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="content-type" />
+
+<title>Embeded Topbar template</title>
+</head>
+
+<!-- This is a embedable piece of html -->
+<body class="lift:content_id=fobo-bo-demo">
+
+<section class="demo-section" id="fobo-bo-demo">
+<head_merge> </head_merge>
+
+<!-- 		<div class="row-fluid"> -->
+<!-- 			<div class="span12"> -->
+			
+				<div class="row-fluid">
+					<div class="span3">
+						<ul class="row-fluid nav nav-list bs-docs-sidenav"
+							data-spy="affix">
+							<li><a href="#overview"><i class="icon-chevron-right"></i>
+									Overview</a></li>
+							<li><a href="#setup"><i class="icon-chevron-right"></i>
+									Setup</a></li>
+							<li><a href="#fobo-snippets"><i
+									class="icon-chevron-right"></i> FoBo-Snippets</a></li>
+							<!--           <li><a href="#dropdowns"><i class="icon-chevron-right"></i> Dropdown</a></li> -->
+							<!--           <li><a href="#scrollspy"><i class="icon-chevron-right"></i> Scrollspy</a></li> -->
+							<!--           <li><a href="#tabs"><i class="icon-chevron-right"></i> Tab</a></li> -->
+							<!--           <li><a href="#tooltips"><i class="icon-chevron-right"></i> Tooltip</a></li> -->
+							<!--           <li><a href="#popovers"><i class="icon-chevron-right"></i> Popover</a></li> -->
+							<!--           <li><a href="#alerts"><i class="icon-chevron-right"></i> Alert</a></li> -->
+							<!--           <li><a href="#buttons"><i class="icon-chevron-right"></i> Button</a></li> -->
+							<!--           <li><a href="#collapse"><i class="icon-chevron-right"></i> Collapse</a></li> -->
+							<!--           <li><a href="#carousel"><i class="icon-chevron-right"></i> Carousel</a></li> -->
+							<!--           <li><a href="#typeahead"><i class="icon-chevron-right"></i> Typeahead</a></li> -->
+							<!--           <li><a href="#affix"><i class="icon-chevron-right"></i> Affix</a></li> -->
+						</ul>
+					</div>
+                   
+					<div class="span9">
+
+					
+                        <a id="overview"></a>
+						<section>
+							
+								<h2 class="capital">
+									O<span>verview</span>
+								</h2>
+								<p>
+									The main documentation for general Bootstrap usage included in
+									this demo is currently the <span
+										data-lift="Menu.item?name=Bootstrap-2.1.0;lift:Loc.i;"><span
+										data-lift="Loc.i">Bootstrap-2.1.0</span></span> documentation.
+								</p>
+
+						</section>
+						
+						<a id="setup"></a>
+						<section>
+							<h2 class="capital">
+								S<span>etup</span>
+							</h2>
+							<p>To fetch and integrate the FoBo module into your project
+								using the SBT add the following in build.sbt.</p>
+							<span class="label">SBT setup for FoBo usage </span>
+
+							<p>To initiate the FoBo module, chose the Toolkit option(s)
+								you prefer and then call FoBo.init() from your lift projects
+								Boot.</p>
+
+							<p>
+								Using FoBo in your own project you should set up the init param
+								for the toolkit module you need or if you are using the module
+								defaults just call FoBo.init(). This demo uses the following <strong>unusually
+									heavy</strong> module setup in lift Boot.<br />
+							</p>
+							<div class="alert alert-info">
+								A bootstrap only setup could be done as a one-liner with <i>net.liftmodules.FoBo.init()</i>
+							</div>
+							<span class="label">FoBo Bootstrap setup in Lift Boot</span>
+							<pre class="prettyprint linenums lang-scala">
+                            :
+                           import net.liftmodules.FoBo
+
+                           /**
+                            * A class that's instantiated early and run.  It allows the application
+                            * to modify lift's environment
+                            **/
+                            class Boot extends Loggable {
+                              def boot {
+                                  :
+                                FoBo.InitParam.JQuery=FoBo.JQuery172  
+                                FoBo.InitParam.ToolKit=FoBo.Bootstrap210 
+                                FoBo.init()
+                                  :      
+						</pre>
+							<p>In Lift's html5 template:s add (depending on your setup)
+								something like this:</p>
+							<span class="label">Lift surround template</span>
+							<pre class="prettyprint linenums lang-html">
+                        &lt;!DOCTYPE html&gt;
+                        &lt;html&gt;
+                          &lt;head&gt;
+                             :
+                             &lt;!--Main css for the FoBo020 module option--&gt;
+                             &lt;link href="/classpath/fobo/bootstrap.css" type="text/css" rel="stylesheet"&gt;
+                             &lt;link href="/classpath/fobo/bootstrap-responsive.css" type="text/css" rel="stylesheet"&gt;
+                             &lt;!--app specific tweeks and overrides external to module goes here--&gt;
+                             &lt;link href="[path to your projects app css]" type="text/css" rel="stylesheet"&gt;  
+                             :                        
+                          &lt;/head&gt;
+                          &lt;!--Demo page setup for prettyprint and bootstrap scrollspy--&gt;
+                          &lt;body data-spy="scroll" data-offset="40"&gt;
+                             :
+                             &lt;!--In end of page (for fast pageload) add the scripts you need--&gt; 
+                             &lt;script src="/classpath/fobo/bootstrap.js" type="text/javascript"&gt;&lt;/script&gt;
+                             :
+                          &lt;/body&gt;        
+                        &lt;/html&gt;    
+						</pre>
+							<p>
+								Note the uniform setup without any version references in the
+								html templates, making way for a smooth(er) toolkit upgrade. For
+								more information see the <a
+									href="https://github.com/karma4u101/FoBo">FoBo modules
+									Github</a>.
+							</p>
+							<div class="alert alert-info">
+								A minimal bootstrap only template setup would be to set the css
+								path to <i>"/classpath/fobo/bootstrap.css"</i> and adding app.
+								specific css and additional bootstrap scripts as needed.
+							</div>
+
+						</section>
+
+                        <a id="fobo-snippets"></a>
+						<section >
+							<h2 class="capital">
+								F<span>o</span>B<span>o</span> S<span>nippets</span>
+							</h2>
+
+							<p>
+								The FoBo module comes with some convinience functions (snippets,
+								optional to use) that will generate some commonly used toolkit
+								helper scripts for you. For instansce doing it the Lift - FoBo
+								way <b>you can simply do this</b> using a FoBo:s snippet
+								containing some bootstrap convinience functions:
+							</p>
+
+							<h6>The FoBo.Bootstrap Snippet</h6>
+
+							<span class="label">Activate dropdown</span>
+							<pre class="prettyprint linenums lang-html">
+                        &lt;!DOCTYPE html&gt;
+                        &lt;html&gt;
+                          &lt;head&gt;
+                               :
+                          &lt;script data-lift="FoBo.ScriptHelper.registerLoadEventFactory"&gt;&lt;/script&gt;         
+                          &lt;script data-lift="FoBo.Bootstrap.activateDropdown?on=.dropdown-toggle"&gt;&lt;/script&gt;              
+                          &lt;/head&gt;
+                           :       
+                        &lt;/html&gt;    
+						</pre>
+
+							<span class="label">Set a popover</span> and preventing default
+							on-click action
+							<pre class="prettyprint linenums lang-html">
+                        &lt;!DOCTYPE html&gt;
+                        &lt;html&gt;
+                            :
+                          &lt;body"&gt;
+                               :
+	                      &lt;a href="#" rel="popover" title="The Title" data-content="The content ..." id="theId"&gt;...&lt;/a&gt;
+                              &lt;script data-lift="FoBo.Bootstrap.popover?id=#theId&options=placement:'left'"&gt;&lt;/script&gt;
+                              &lt;script data-lift="FoBo.Bootstrap.popoverPreventDefault">&lt;/script&gt;
+                               : 
+                          &lt;/body&gt;        
+                        &lt;/html&gt;    
+						</pre>
+
+							<p>
+								<b>.... instead of doing the following </b> (a common bootstrap
+								component init use case)
+							</p>
+							<span class="label">Transformed output</span>
+							<pre class="prettyprint linenums lang-html">
+                        &lt;!DOCTYPE html&gt;
+                        &lt;html&gt;
+                          &lt;head&gt;
+                             :
+		                  &lt;script type="text/javascript"&gt;                                 		
+			                function addLoadEvent(func) {
+				              var oldonload = window.onload;
+				              if (typeof window.onload != 'function') {
+					            window.onload = func;
+				              } else {
+					            window.onload = function() {
+						          if (oldonload) {
+							        oldonload();
+						          }
+						          func();
+					            }
+				              }
+			                }
+			                addLoadEvent(function() {
+				              $('.dropdown-toggle').dropdown()
+			                });	   			               
+		                  &lt;/script&gt;                                 
+                          &lt;/head&gt;
+                          &lt;body"&gt;
+                             :
+                              &lt;!-- Set a boostrap popover element --&gt;   
+	                      &lt;a href="#" rel="popover" title="The Title" data-content="The content ..." id="theId"&gt;...&lt;/a&gt;
+                              &lt;!-- Initiate the popover and place it on the left --&gt;
+	                      &lt;script&gt;
+                                $(function () { 
+                                  $("#theId").popover({placement:'left'});
+                                }); 
+                              &lt;/script&gt; 
+                              &lt;!-- Prevent the default action for click on the popover --&gt;
+                              &lt;script&gt; 
+                                $(function(){
+                                  $("a[rel=popover]")
+                                    .popover()
+                                    .click(function(e) {
+                                      e.preventDefault()
+                                  });
+                                });
+                              &lt;/script&gt; 
+                               : 
+                          &lt;/body&gt;        
+                        &lt;/html&gt;    
+						</pre>
+
+							<span class="label">A Bootstrap tooltip</span>
+							<pre class="prettyprint linenums lang-html">
+                        &lt;!DOCTYPE html&gt;
+                        &lt;html&gt;
+                            :
+                          &lt;body"&gt;
+                               :
+                            This pages demonstrates a optional 
+                            &lt;a id="lift-tt" title="The most powerful, most secure web framework available today. It simply rocks!" href="http://liftweb.net/"&gt;Lift&lt;/a&gt; 
+                            module...   
+                               :  
+                            &lt;script data-lift="FoBo.Bootstrap.tooltip?id=#lift-tt"&gt;&lt;/script&gt;
+                               : 
+                          &lt;/body&gt;        
+                        &lt;/html&gt;    
+						</pre>
+
+							<div class="alert alert-info">I am using the html5
+								attribute "data-lift" for hocks to Lift but if you like you are
+								wellcome to use the class attribute instead like
+								class="lift:...."</div>
+
+							<h6>The FoBo.BootstrapNav Snippet</h6>
+							<p>
+								The FoBo.BootstrapNav snippet will let you define lift menu
+								parts that will be transformed into a Bootstrap Nav menu. This
+								work is originally contributed to the FoBo module by community
+								member Damian Helme, read his blog post <a
+									href="http://tech.damianhelme.com/twitter-bootstrap-navbar-dropdowns-and-lifts">
+									Twitter Bootstrap Navbar Dropdowns and Lift's Menu.builder</a> for
+								more information.
+							</p>
+
+							<span class="label">Part of your Lift SiteMap</span> with the <b>LocGroup</b>
+							that will be transformed into Bootstrap Navbar
+							<pre class="prettyprint linenums lang-scala">
+                                  :
+                                Menu("Test") / "test" >> LocGroup("test") >> PlaceHolder submenus (
+                                  Menu("Test 2") / "test2",
+                                  Menu("Test 3") / "test3"
+                                ),
+                                :      
+						</pre>
+
+							<span class="label">Your Lift Template</span>
+							<pre class="prettyprint linenums lang-html">
+                        &lt;!DOCTYPE html&gt;
+                        &lt;html&gt;
+                            :
+                          &lt;body"&gt;
+                          
+                           &lt;div class="navbar"&gt;
+                             &lt;div class="navbar-inner"&gt;
+                               &lt;div class="container"&gt;                          
+                                :  
+                               &lt;!--The navbar snippet invocation--&gt; 
+                               &lt;span data-lift="FoBo.BootstrapNav.menuToTBNav?eager_eval=true"&gt; 
+                                 &lt;span data-lift="Menu.builder?top:class=nav pull-right;li_item:class=active;linkToSelf=true;expandAll=true;group=test"&gt;&lt;/span&gt;
+                               &lt;/span&gt;     
+                                : 
+                               &lt;/div&gt;
+                             &lt;/div&gt;
+                           &lt;/div&gt;
+                             :  
+                          &lt;/body&gt;        
+                        &lt;/html&gt;    
+						</pre>
+
+							<div class="alert alert-info">
+								In this demo you will find the rellevant code in the <i>SiteMap</i>
+								section of <i>Lift Boot</i> and the snippet invoctation in the
+								_embededTopbar-FoBo02.html template.
+							</div>
+
+							<p>
+								At this writing the available snippet helpers are few but expect
+								the numbers to grow. You are wellcome to contribute code and/or
+								ideas. Take a look att the API documentation on how to invoke
+								the helpers and description on what result it produces for
+								example look att the FoBo.ScriptHelper.registerLoadEventFactory
+								snippet function by open <a
+									href="/foboapi/#net.liftmodules.FoBo.snippet.FoBo.ScriptHelper">FoBo.ScriptHelper
+									page</a> and click on the <b>registerLoadEventFactory</b> function
+								name for details.
+							</p>
+							<hr />
+
+						</section>
+
+                     
+					</div> 
+				</div>
+
+<!-- 			</div> -->
+<!-- 		</div> -->
+		
+</section>
+
+
+</body>

@@ -29,7 +29,7 @@ class Boot extends Loggable {
   def boot {
 
    //If using defaults FoBo init params can be omitted
-    FoBo.InitParam.JQuery=FoBo.JQuery171  
+    FoBo.InitParam.JQuery=FoBo.JQuery172  
     //FoBo.InitParam.ToolKit=FoBo.FoBo020
     FoBo.InitParam.ToolKit=FoBo.Bootstrap210
     FoBo.InitParam.ToolKit=FoBo.Foundation215
@@ -80,7 +80,7 @@ class Boot extends Loggable {
     // Build SiteMap
     val entries = List(
       Menu.i("Home") / "index",
-      Menu.i("Bo") / "bo",
+      Menu.i("LiBo") / "libo",
 //      how to to make this work without # converted to %23 the api call below is working 
 //      Menu.i("Home-Top") / "#spyhome",
 //      Menu.i("About") / "#spyabout",

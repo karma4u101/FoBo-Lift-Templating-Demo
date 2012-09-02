@@ -25,10 +25,10 @@
 						<img src="/resources/images/fobo_demo_bcode.png"/></a>
 						</div>
 				
-						<script data-lift="FoBo.Bootstrap.popover?id=#bcode-popover&options=placement:'left'"></script>						
+						<script data-lift="FoBo.Bootstrap.popover?id=#bcode-popover&options=placement:'left',trigger:'hover'"></script>						
 						<script data-lift="FoBo.Bootstrap.popoverPreventDefault?on=#bcode-popover"></script>
 
-						<p>
+						<p>						
 						This pages demonstrates a optional <a id="lift-tt" title="The most powerful, most secure web framework available today. It simply rocks!" href="http://liftweb.net/">Lift</a>, 
 						 generic front-end toolkit <a
 							href="http://www.assembla.com/spaces/liftweb/wiki/Modules">module</a>
@@ -62,6 +62,35 @@
 						
 					</div>
 				</div>
+				
+				
+				<div class="row-fluid">
+					<div class="span12">
+
+						<h2 class="capital">
+						<img id="mobile-popover" data-content="Use your favorite barcode reader to quick and easy load this page in your mobile." title="View in Mobile!" rel="popover" style="max-height:40px;width:auto;" src="/resources/images/mobile_device_128x128.png" />
+						M<span>obile</span> S<span>calability with</span> F<span>o</span>B<span class="smal">o</span>	 
+						</h2>  
+						<p>FoBo comes with setup options for several front end toolkits including ZURB/Foundation, Twitter Bootstrap
+						and JQuery Mobile. ZURB/Foundation and Twitter Bootstrap are both great reactive and media scalable toolkits. 
+						The JQuery Mobile toolkit is a awsome Touch-Optimized Web Framework for Smartphones & Tablets. </p>
+                          												
+						<script data-lift="FoBo.Bootstrap.popover?id=#mobile-popover&options=trigger:'hover'"></script>	
+						<!--					
+						<p><b>The FoBo mix -</b> One of the convenience options the FoBo Lift module comes 
+						with is the FoBo02 setup option. The FoBo02 setup option is a love, peace and harmony mix of the 
+						<a href="http://foundation.zurb.com/">ZURB/Foundation</a> and the 
+						<a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap</a>
+						front-end toolkit. This concert mix will give you the awesomeness of foundation 
+						with its rock & roll solid reactive, mobile scalability and the brilliance of 
+						bootstrap, it's components and interactions.</p>
+						
+						<div class="alert alert-warning">With the arrival of <strong>Twitter Bootstrap v2.0.4+</strong> the fluid and 
+						reactive functions in bootstrap has matured allot making the FoBo02 option (described in this section) close to superfluous.</div>
+						-->
+						<hr />
+					</div>
+				</div>				
 				
 				<div class="row-fluid">
 				  <div class="span12">	
@@ -115,33 +144,43 @@
 				    
                   </div>
                 </div>
-                
+                				
 				<div class="row-fluid">
 					<div class="span12">
 
 						<h2 class="capital">
-						<img id="mobile-popover" data-content="Use your favorite barcode reader to quick and easy load this page in your mobile." title="View in Mobile!" rel="popover" style="max-height:40px;width:auto;" src="/resources/images/mobile_device_128x128.png" />
-						M<span>obile</span> S<span>calability with</span> F<span>o</span>B<span class="smal">o</span>	 
-						</h2>  
-						<p>FoBo comes with setup options for several front end toolkits including ZURB/Foundation and Twitter Bootstrap 
-						they are both great reactive and media scalable toolkits. 
-						The JQuery Mobile toolkit is a Touch-Optimized Web Framework for Smartphones & Tablets. </p>
-                        												
-						<script data-lift="FoBo.Bootstrap.popover?id=#mobile-popover"></script>						
-						<p><b>The FoBo mix -</b> One of the convenience options the FoBo Lift module comes 
-						with is the <b>FoBo02 setup option</b>. The FoBo02 setup option is a love, peace and harmony mix of the 
-						<a href="http://foundation.zurb.com/">ZURB/Foundation</a> and the 
-						<a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap</a>
-						front-end toolkit. This concert mix will give you the awesomeness of foundation 
-						with its rock & roll solid reactive, mobile scalability and the brilliance of 
-						bootstrap, it's components and interactions.</p>
+							T<span>he</span> T<span>witter</span> B<span>ootstrap
+								toolkit</span>
+						</h2>
 						
-						<div class="alert alert-warning">With the arrival of <strong>Twitter Bootstrap v2.0.4+</strong> the fluid and 
-						reactive functions in bootstrap has matured allot making the FoBo02 option (described in this section) close to superfluous.</div>
+						<p>The <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap</a> toolkit is a great 
+						toolkit with lots of compontents and candy. It's simple and flexible and have popular user interface 
+						components and interactions.</p> 
 						
+						<p>FoBo-Less project build system used by the FoBo module has hooks into 
+						<a id="less-tt" title="The dynamic stylesheet language" href="http://lesscss.org/">LESS</a> 
+						to dynamicaly generate the bootstrap css files so if you like you can make some 
+						serious tweaks to the generated bootstrap.css. See bootstrap demo and documentation 
+						for more info on how to use Less with bootstrap.
+						</p>
+						<script data-lift="FoBo.Bootstrap.tooltip?id=#less-tt"></script>
+						<p>
+							<span
+								data-lift="Menu.item?name=Bootstrap-2.1.0;lift:Loc.i;a:class=btn btn-primary btn-large">
+								<span data-lift="Loc.i">Bootstrap-2.1.0</span></span>
+<!-- 							<span -->
+<!-- 								data-lift="Menu.item?name=LiBo;lift:Loc.i;a:class=btn btn-primary btn-large"> -->
+<!-- 								<span data-lift="Loc.i">LiBo</span></span>	 -->
+						</p>
+						
+						<div class="alert alert-info">
+						<p>For a stripped down bootstrap only setup example using FoBo see also the <a href="https://github.com/karma4u101/Templating-With-Twitter-Bootstrap">Templating-With-Twitter-Bootstrap</a> 
+						project it uses the FoBo module with the Bootstrap204 setup option.</p>
+						</div> 						
 						<hr />
+						
 					</div>
-				</div>
+				</div>				
 				
 				<div class="row-fluid">
 					<div class="span12">
@@ -166,45 +205,7 @@
 						
 					</div>
 				</div>
-				
-				<div class="row-fluid">
-					<div class="span12">
-
-						<h2 class="capital">
-							T<span>he</span> T<span>witter</span> B<span>ootstrap
-								toolkit</span>
-						</h2>
-						<p>The <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap</a> toolkit is a great 
-						toolkit with lots of candy. It's simple and flexible and have popular user interface 
-						components and interactions.</p> 
-						
-						<p>Apart from giving you the easy access and integration of the FoBoXX mix the FoBo module also 
-						gives you the <strong>BootstrapXXX</strong> setup option for using the bootstrap toolkit. 
-						The <span
-							data-lift="Menu.item?name=Bootstrap;lift:Loc.i;a:class=addclassshowofdummy">
-							bootstrap documentation pages</span> in this demo is slightly <b>modified</b> to use the 
-						FoBoXX mix option but can as easily (or even more so) be set up and used with the BootstrapXXX option.
-						</p>
-						
-						<p>FoBo:s build system has hooks into <a id="less-tt" title="The dynamic stylesheet language" href="http://lesscss.org/">LESS</a> to dynamicaly generate the bootstrap.css so if you like you can make some 
-						serious tweaks to the generated bootstrap.css. See bootstrap demo and documentation for more info on how to use Less with bootstrap.
-						</p>
-						<script data-lift="FoBo.Bootstrap.tooltip?id=#less-tt"></script>
-						<p>
-							<span
-								data-lift="Menu.item?name=Bootstrap;lift:Loc.i;a:class=btn btn-primary btn-large">
-								<span data-lift="Loc.i">Bootstrap</span></span>
-						</p>
-						
-						<div class="alert alert-info">
-						<p>For a stripped down bootstrap only setup example using FoBo see also <a href="https://github.com/karma4u101/Templating-With-Twitter-Bootstrap">Templating-With-Twitter-Bootstrap</a> 
-						project it uses the FoBo module with the Bootstrap204 setup option.</p>
-						</div> 						
-						<hr />
-						
-					</div>
-				</div>
-				
+								
 				<div class="row-fluid">
 					<div class="span12">
 
@@ -300,7 +301,7 @@
 						<h2 class="capital">
 							<i class="icon-zoom-in"></i>M<span>obile device</span>
 						</h2>
-						<p><strong>Reactive Web -</strong> If you have not done it already open this demo in your favorite
+						<p><strong>Responsive Web -</strong> If you have not done it already open this demo in your favorite
 						smart device. Get the url quick and easy by pointing your barcode reader 
 						to the barcode image.</p>
 						
@@ -325,7 +326,7 @@
 						<h2 class="capital">
 							<i class="icon-resize-horizontal"></i>D<span>rag</span>
 						</h2>
-						<p><strong>Drag the window</strong> to see foundations (and bootstraps)
+						<p><strong>Drag the window</strong> to see bootstraps (and foundations)
 						fluid and reactive grid with mobile scalabilty in action.</p>
 						
 					</div>

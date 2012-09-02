@@ -1,0 +1,55 @@
+/*********************************************
+*
+* Put your application specific styling here.
+*
+**********************************************/
+
+
+/*data table fixes*/
+
+#dtexample1_wrapper .ui-toolbar {
+    padding: 5px 5px 2px 5px;
+}
+
+#dtexample1_filter  > label > input {
+/*  float:right; */
+  width:150px;
+  padding:0px;
+  padding-right:2px;
+  margin-bottom: 0px;
+/*   background-color:inherit; */
+  display:inline;	
+/*  padding-bottom:0px; */
+ background-color: #eee;
+}
+
+#dtexample1_length  > label > select{
+/*   float:left; */
+  width:50px;
+  padding:0px;
+  padding-right:2px;
+  margin-bottom: 0px;
+  background-color:inherit;
+  display:inline;
+}
+
+#dtexample2_filter > label > input {
+  width:150px;
+  padding:0px;
+  padding-right:2px;
+  margin-bottom: 0px;
+/*   background-color:inherit; */
+  display:inline;
+  background-color: #eee;	
+}
+
+#dtexample2_length > label > select {
+  width:50px;
+  padding:0px;
+  padding-right:2px;
+  margin-bottom: 0px;
+  background-color:inherit;
+  display:inline;	
+}
+
+/*end data table fixes*/

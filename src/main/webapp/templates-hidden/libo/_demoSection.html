@@ -63,8 +63,33 @@
 								S<span>etup</span>
 							</h2>
 							<p>To fetch and integrate the FoBo module into your project
-								using the SBT add the following in build.sbt.</p>
+								using SBT add the following in build.sbt.</p>
 							<span class="label">SBT setup for FoBo usage </span>
+							<pre class="prettyprint linenums lang-scala">
+ :
+ 
+ resolvers ++= Seq(
+   "Sonatype snapshots"             at "http://oss.sonatype.org/content/repositories/snapshots",
+   "Sonatype releases"              at "http://oss.sonatype.org/content/repositories/releases",
+   "Media4u101 Repository"          at "http://www.media4u101.se:8081/nexus/content/repositories/releases/",
+   "Media4u101 Snapshot Repository" at "http://www.media4u101.se:8081/nexus/content/repositories/snapshots/"
+    :
+ )
+ :
+ 
+libraryDependencies ++= {
+  val liftVersion = "2.5-M1" // Put the current/latest lift version here
+  Seq(
+    "net.liftweb"     %% "lift-webkit" % liftVersion % "compile->default" withSources(),
+     :
+    "net.liftmodules" %% "fobo"        % (liftVersion+"-X.Y.Z-SNAPSHOT") withJavadoc() withSources() 
+    )
+}                            
+						</pre>
+						 
+						<div class="alert alert-info">
+						  If you are using <strong>Maven</strong> instead of SBT the FoBo relevant resolvers is the Medai4u101 repository.
+						</div>
 
 							<p>To initiate the FoBo module, chose the Toolkit option(s)
 								you prefer and then call FoBo.init() from your lift projects
@@ -104,14 +129,14 @@
                         &lt;html&gt;
                           &lt;head&gt;
                              :
-                             &lt;!--Main css for the FoBo020 module option--&gt;
+                             &lt;!--Main css for the Bootstrap module option--&gt;
                              &lt;link href="/classpath/fobo/bootstrap.css" type="text/css" rel="stylesheet"&gt;
                              &lt;link href="/classpath/fobo/bootstrap-responsive.css" type="text/css" rel="stylesheet"&gt;
                              &lt;!--app specific tweeks and overrides external to module goes here--&gt;
                              &lt;link href="[path to your projects app css]" type="text/css" rel="stylesheet"&gt;  
                              :                        
                           &lt;/head&gt;
-                          &lt;!--Demo page setup for prettyprint and bootstrap scrollspy--&gt;
+                          &lt;!--Page setup with bootstrap scrollspy--&gt;
                           &lt;body data-spy="scroll" data-offset="40"&gt;
                              :
                              &lt;!--In end of page (for fast pageload) add the scripts you need--&gt; 

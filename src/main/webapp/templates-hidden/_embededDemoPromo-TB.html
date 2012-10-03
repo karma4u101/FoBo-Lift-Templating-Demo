@@ -22,9 +22,10 @@
 						<h2 class="capital">
 							S<span>etup and</span> U<span>sage</span> 
 						</h2>
-						<p>For now you have to clone and build the module yourself but thats easy and straight forward 
-						so, if you have not done it already, go ahead and do it now, you will find all information you 
-						need to prepare the module for usage on <a href="https://github.com/karma4u101/FoBo">Github FoBo module</a>, 
+						<p>There are pre-built artifacts of FoBo available (for example see the build file for this project) 
+						but if you wish you can also build the module yourself, it's easy and straight forward so, 
+						if you have not done it already, go ahead, you will find all the information you need to prepare 
+						the module for usage on <a href="https://github.com/karma4u101/FoBo">Github FoBo module</a>, 
 						then come back here for integration and usage. 
 						</p>
 						
@@ -48,9 +49,8 @@
                             class Boot extends Loggable {
                               def boot {
 
-                                //If using defaults FoBo init params can be omitted
                                 FoBo.InitParam.JQuery=FoBo.JQuery171  
-                                FoBo.InitParam.ToolKit=FoBo.FoBo020 
+                                FoBo.InitParam.ToolKit=FoBo.Bootstrap210 
                                 FoBo.InitParam.ToolKit=FoBo.PrettifyJun2011
                                 FoBo.InitParam.ToolKit=FoBo.JQueryMobile110
                                 FoBo.InitParam.ToolKit=FoBo.DataTables190
@@ -65,8 +65,9 @@
                         &lt;html&gt;
                           &lt;head&gt;
                              :
-                             &lt;!--Main css for the FoBo020 module option--&gt;
-                             &lt;link href="/classpath/fobo/fobo.css" type="text/css" rel="stylesheet"&gt;
+                             &lt;!--Main css for the Bootstrap210 module option--&gt;
+                             &lt;link href="/classpath/fobo/bootstrap.css" type="text/css" rel="stylesheet"&gt;
+                             &lt;link href="/classpath/fobo/bootstrap-responsive.css" type="text/css" rel="stylesheet"&gt;
                              &lt;!--app specific tweeks and overrides external to module goes here--&gt;
                              &lt;link href="[path to your projects app css]" type="text/css" rel="stylesheet"&gt;  
                              :                        
@@ -77,7 +78,7 @@
                              &lt;!--In end of page (for fast pageload) add the scripts you need--&gt; 
                              &lt;script src="/classpath/fobo/prettify.js" type="text/javascript"&gt;&lt;/script&gt;
                              &lt;script src="/classpath/fobo/lang-scala.js" type="text/javascript"&gt;&lt;/script&gt;
-                             &lt;script src="/classpath/fobo/bootstrap-scrollspy.js" type="text/javascript"&gt;&lt;/script&gt;
+                             &lt;script src="/classpath/fobo/bootstrap.js" type="text/javascript"&gt;&lt;/script&gt;
                              :
                           &lt;/body&gt;        
                         &lt;/html&gt;    
@@ -85,8 +86,6 @@
 						<p>Note the uniform setup without any version references in the html templates, making way for a smooth(er) 
 						toolkit upgrade. For more information see the <a href="https://github.com/karma4u101/FoBo">FoBo modules Github</a>.
 						</p>
-						<div class="alert alert-info">A minimal bootstrap only template setup would be to set the css path to <i>"/classpath/fobo/bootstrap.css"</i> 
-						and adding app. specific css and additional bootstrap scripts as needed.</div>
 						
 						<h2 class="capital">
 							F<span>o</span>B<span>o</span> S<span>nippets</span> 

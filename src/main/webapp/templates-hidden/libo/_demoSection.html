@@ -20,7 +20,7 @@
 						<ul class="row-fluid nav nav-list bs-docs-sidenav"
 							data-spy="affix">
 							<li><a href="#overview"><i class="icon-chevron-right"></i>
-									Overview</a></li>
+									Geting Started</a></li>
 							<li><a href="#setup"><i class="icon-chevron-right"></i>
 									Setup</a></li>
 							<li><a href="#fobo-snippets"><i
@@ -46,7 +46,7 @@
 						<section>
 							
 								<h2 class="capital">
-									O<span>verview</span>
+									G<span>etting</span> S<span>tarted</span>
 								</h2>
 								<p>
 									The main documentation for general Bootstrap usage included in
@@ -62,21 +62,23 @@
 							<h2 class="capital">
 								S<span>etup</span>
 							</h2>
-							<p>To fetch and integrate the FoBo module into your project
-								using SBT add the following in build.sbt.</p>
+							<p>To integrate FoBo for usage in your existing Lift project this section will 
+							show you how to set it up. I am assuming you are using SBT but if you are using Maven or 
+							some other build system you will probably be able to extract the needed information, 
+							its pretty straight forward and easy.</p>
 							<span class="label">SBT setup for FoBo usage </span>
 							<pre class="prettyprint linenums lang-scala">
  :
  
- resolvers ++= Seq(
+resolvers ++= Seq(
    "Sonatype snapshots"             at "http://oss.sonatype.org/content/repositories/snapshots",
    "Sonatype releases"              at "http://oss.sonatype.org/content/repositories/releases",
    "Media4u101 Repository"          at "http://www.media4u101.se:8081/nexus/content/repositories/releases/",
    "Media4u101 Snapshot Repository" at "http://www.media4u101.se:8081/nexus/content/repositories/snapshots/"
     :
- )
- :
+)
  
+// Lift  
 libraryDependencies ++= {
   val liftVersion = "2.5-M1" // Put the current/latest lift version here
   Seq(
@@ -85,7 +87,24 @@ libraryDependencies ++= {
     "net.liftmodules" %% "fobo"        % (liftVersion+"-X.Y.Z-SNAPSHOT") withJavadoc() withSources() 
     )
 }                            
+
+// Customize any further dependencies as desired
+libraryDependencies ++= Seq(
+  "org.eclipse.jetty"        % "jetty-webapp"   % "8.0.3.v20111011"  % "container",
+   :
+   )
 						</pre>
+						<p>In the resolvers section: -- For your convenience pre-compiled FoBo module artifacts currently resides at my Media4u101 repository 
+						so if you do not fork and compile the FoBo module(s) yourself you will need to add these lines 
+						and the module will be fetched for you from the repository (recommended).</p>
+						
+						<p>In the library dependency section: -- Declare the FoBo lift module with the version
+						string starting with the lift version number used for your project and appending the
+						module version on the form "-X.Y.Z"</p>
+						
+						<p>Example on github: -- Here is the complete <a href="https://github.com/karma4u101/Templating-With-Twitter-Bootstrap/blob/master/build.sbt">build.sbt file</a> used in  
+						<a href="https://github.com/karma4u101/Templating-With-Twitter-Bootstrap">Templating With Twitter Bootstrap</a>
+						</p>
 						 
 						<div class="alert alert-info">
 						  If you are using <strong>Maven</strong> instead of SBT the FoBo relevant resolvers is the Medai4u101 repository.

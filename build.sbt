@@ -28,7 +28,7 @@ EclipseKeys.withSource := true
 transitiveClassifiers := Seq("sources")//,"javadocs")
 
 libraryDependencies ++= {
-  val liftVersion = "2.5-M1" // Put the current/latest lift version here
+  val liftVersion = "2.5-M2" // Put the current/latest lift version here
   Seq(
     "net.liftweb"     %% "lift-webkit"         % liftVersion % "compile->default" withSources(),
     "net.liftweb"     %% "lift-mapper"         % liftVersion % "compile->default",

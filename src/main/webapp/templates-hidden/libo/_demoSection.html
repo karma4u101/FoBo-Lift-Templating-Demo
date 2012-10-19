@@ -21,11 +21,13 @@
 							data-spy="affix">
 							<li><a href="#overview"><i class="icon-chevron-right"></i>
 									Geting Started</a></li>
+							<li><a href="#starterproj"><i class="icon-chevron-right"></i> Starter Project</a></li>		
 							<li><a href="#setup"><i class="icon-chevron-right"></i>
 									Setup</a></li>
+							<li><a href="#customization"><i class="icon-chevron-right"></i> Bootstrap customization</a></li>		
 							<li><a href="#fobo-snippets"><i
 									class="icon-chevron-right"></i> FoBo-Snippets</a></li>
-							<!--           <li><a href="#dropdowns"><i class="icon-chevron-right"></i> Dropdown</a></li> -->
+							
 							<!--           <li><a href="#scrollspy"><i class="icon-chevron-right"></i> Scrollspy</a></li> -->
 							<!--           <li><a href="#tabs"><i class="icon-chevron-right"></i> Tab</a></li> -->
 							<!--           <li><a href="#tooltips"><i class="icon-chevron-right"></i> Tooltip</a></li> -->
@@ -49,21 +51,38 @@
 									G<span>etting</span> S<span>tarted</span>
 								</h2>
 								<p>
-									The main documentation for general Bootstrap usage included in
-									this demo is currently the <span
-										data-lift="Menu.item?name=Bootstrap-2.1.0;lift:Loc.i;"><span
+									The following section will show you how to set up and use FoBo in your Lift project. 
+									The main documentation for general Bootstrap usage included in this demo is currently the 
+									<span data-lift="Menu.item?name=Bootstrap-2.1.0;lift:Loc.i;"><span
 										data-lift="Loc.i">Bootstrap-2.1.0</span></span> documentation.
 								</p>
-
 						</section>
+						
+						
+                       <a id="starterproj"></a>
+						<section >
+						   	<h2 class="capital">
+								S<span>tarter</span> P<span>roject</span>
+							</h2>
+							<p>
+                            <span class="label label-success">Kick start!</span> If you are about to start a new Lift project that includes FoBo with Bootstrap you can 
+                            get a kick start by forking the 
+                            <a href="https://github.com/karma4u101/Templating-With-Twitter-Bootstrap">Templating-With-Twitter-Bootstrap</a> 
+						    project, it uses the FoBo module pre-set-up for use with the latest release of Bootstrap. If already have a Lift 
+						    project that you want to extend with FoBo and bootstrap functionality the next section is for you, so read on 
+						    for setup information. 
+							</p>
+						</section>						
+						
 						
 						<a id="setup"></a>
 						<section>
 							<h2 class="capital">
 								S<span>etup</span>
 							</h2>
-							<p>To integrate FoBo for usage in your existing Lift project this section will 
-							show you how to set it up. I am assuming you are using SBT but if you are using Maven or 
+							<p>To integrate <a href="https://github.com/karma4u101/FoBo">FoBo</a> for usage in your existing Lift 
+							project this section will show you how to set it up. I am assuming you are using 
+							<a href="http://www.scala-sbt.org/">SBT</a> but if you are using Maven or 
 							some other build system you will probably be able to extract the needed information, 
 							its pretty straight forward and easy.</p>
 							<span class="label">SBT setup for FoBo usage </span>
@@ -94,24 +113,38 @@ libraryDependencies ++= Seq(
    :
    )
 						</pre>
-						<p>In the resolvers section: -- For your convenience pre-compiled FoBo module artifacts currently resides at my Media4u101 repository 
-						so if you do not fork and compile the FoBo module(s) yourself you will need to add these lines 
-						and the module will be fetched for you from the repository (recommended).</p>
 						
-						<p>In the library dependency section: -- Declare the FoBo lift module with the version
-						string starting with the lift version number used for your project and appending the
-						module version on the form "-X.Y.Z"</p>
-						
-						<p>Example on github: -- Here is the complete <a href="https://github.com/karma4u101/Templating-With-Twitter-Bootstrap/blob/master/build.sbt">build.sbt file</a> used in  
-						<a href="https://github.com/karma4u101/Templating-With-Twitter-Bootstrap">Templating With Twitter Bootstrap</a>
-						</p>
-						 
 						<div class="alert alert-info">
-						  If you are using <strong>Maven</strong> instead of SBT the FoBo relevant resolvers is the Medai4u101 repository.
+						  If you are using <strong>Maven</strong> instead of <a href="http://www.scala-sbt.org/">SBT</a> the FoBo 
+						  relevant resolvers is the Medai4u101 repository.
 						</div>
+												
+						<dl>
+						<dt>The resolvers section:</dt> 
+						<dd>For your convenience pre-compiled FoBo module artifacts currently resides at the Media4u101 repository 
+						specified by <code>"http://www.media4u101.se:8081/nexus/content/repositories/releases/"</code> and 
+						<code>"../snapshot/"</code>, see the corresponding lines specified in the <code>resolvers</code> section. 
+						So if you do not wish to fork and compile the FoBo module(s) yourself you will need to add these lines in 
+						order to have the module fetched from the repository for you (recommended).</dd>
+						
+					
+						
+						<dt>The library dependency section:</dt> 
+						<dd>Declare the FoBo lift module line <code>"net.liftmodules" %% "fobo"        % (liftVersion+"-X.Y.Z-SNAPSHOT") withJavadoc() withSources()</code> 
+						with the version string starting with the lift version number used for your project and appending the
+						module version on the form "-X.Y.Z"</dd>
+						
+						
+						<dt>Example on github:</dt> 
+						<dd>Here is the complete <a href="https://github.com/karma4u101/Templating-With-Twitter-Bootstrap/blob/master/build.sbt">build.sbt file</a> used in  
+						<a href="https://github.com/karma4u101/Templating-With-Twitter-Bootstrap">Templating With Twitter Bootstrap</a>
+						</dd>
+						</dl>
+						 
+
 
 							<p>To initiate the FoBo module, chose the Toolkit option(s)
-								you prefer and then call FoBo.init() from your lift projects
+								you prefer and then call <code>FoBo.init()</code> from your lift projects
 								Boot.</p>
 
 							<p>
@@ -120,9 +153,7 @@ libraryDependencies ++= Seq(
 								defaults just call FoBo.init(). This demo uses the following <strong>unusually
 									heavy</strong> module setup in lift Boot.<br />
 							</p>
-							<div class="alert alert-info">
-								A bootstrap only setup could be done as a one-liner with <i>net.liftmodules.FoBo.init()</i>
-							</div>
+							
 							<span class="label">FoBo Bootstrap setup in Lift Boot</span>
 							<pre class="prettyprint linenums lang-scala">
                             :
@@ -148,6 +179,7 @@ libraryDependencies ++= Seq(
                         &lt;html&gt;
                           &lt;head&gt;
                              :
+                             &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
                              &lt;!--Main css for the Bootstrap module option--&gt;
                              &lt;link href="/classpath/fobo/bootstrap.css" type="text/css" rel="stylesheet"&gt;
                              &lt;link href="/classpath/fobo/bootstrap-responsive.css" type="text/css" rel="stylesheet"&gt;
@@ -178,6 +210,25 @@ libraryDependencies ++= Seq(
 							</div>
 
 						</section>
+
+
+
+                       <a id="customization"></a>
+						<section >
+						   	<h2 class="capital">
+								B<span>ootstrap</span> C<span>ustomization</span>
+							</h2>
+							<p>
+						  For common use it is suficient to use the pre-compiled artifact but using FoBo and the extra "module" 
+						  <a href="https://github.com/karma4u101/FoBo-Less">FoBo-Less</a> it is also 
+						  possible to do heavy customization of bootstraps "Look" using variables as shown in 
+						  <a href="../bootstrap-2.1.0/customize.html#variables">Customize variables</a> however this requires that   
+						  you manage your own build of FoBo and FoBo-Less locally. <br/>
+						   
+							</p>
+						</section>
+
+
 
                         <a id="fobo-snippets"></a>
 						<section >

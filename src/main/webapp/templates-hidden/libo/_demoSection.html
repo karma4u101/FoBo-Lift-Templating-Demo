@@ -9,84 +9,92 @@
 <!-- This is a embedable piece of html -->
 <body class="lift:content_id=fobo-bo-demo">
 
-<section class="demo-section" id="fobo-bo-demo">
-<head_merge> </head_merge>
+	<section class="demo-section" id="fobo-bo-demo">
+		<head_merge> </head_merge>
 
-<!-- 		<div class="row-fluid"> -->
-<!-- 			<div class="span12"> -->
-			
-				<div class="row-fluid">
-					<div class="span3">
-						<ul class="row-fluid nav nav-list bs-docs-sidenav"
-							data-spy="affix">
-							<li><a href="#overview"><i class="icon-chevron-right"></i>
-									Geting Started</a></li>
-							<li><a href="#starterproj"><i class="icon-chevron-right"></i> Starter Project</a></li>		
-							<li><a href="#setup"><i class="icon-chevron-right"></i>
-									Setup</a></li>
-							<li><a href="#customization"><i class="icon-chevron-right"></i> Bootstrap customization</a></li>		
-							<li><a href="#fobo-snippets"><i
-									class="icon-chevron-right"></i> FoBo-Snippets</a></li>
-							
-							<!--           <li><a href="#scrollspy"><i class="icon-chevron-right"></i> Scrollspy</a></li> -->
-							<!--           <li><a href="#tabs"><i class="icon-chevron-right"></i> Tab</a></li> -->
-							<!--           <li><a href="#tooltips"><i class="icon-chevron-right"></i> Tooltip</a></li> -->
-							<!--           <li><a href="#popovers"><i class="icon-chevron-right"></i> Popover</a></li> -->
-							<!--           <li><a href="#alerts"><i class="icon-chevron-right"></i> Alert</a></li> -->
-							<!--           <li><a href="#buttons"><i class="icon-chevron-right"></i> Button</a></li> -->
-							<!--           <li><a href="#collapse"><i class="icon-chevron-right"></i> Collapse</a></li> -->
-							<!--           <li><a href="#carousel"><i class="icon-chevron-right"></i> Carousel</a></li> -->
-							<!--           <li><a href="#typeahead"><i class="icon-chevron-right"></i> Typeahead</a></li> -->
-							<!--           <li><a href="#affix"><i class="icon-chevron-right"></i> Affix</a></li> -->
-						</ul>
-					</div>
-                   
-					<div class="span9">
+		<!-- 		<div class="row-fluid"> -->
+		<!-- 			<div class="span12"> -->
 
-					
-                        <a id="overview"></a>
-						<section>
-							
-								<h2 class="capital">
-									G<span>etting</span> S<span>tarted</span>
-								</h2>
-								<p>
-									The following section will show you how to set up and use FoBo in your Lift project. 
-									The main documentation for general Bootstrap usage included in this demo is currently the 
-									<span data-lift="Menu.item?name=Bootstrap-2.1.0;lift:Loc.i;"><span
-										data-lift="Loc.i">Bootstrap-2.1.0</span></span> documentation.
-								</p>
-						</section>
-						
-						
-                       <a id="starterproj"></a>
-						<section >
-						   	<h2 class="capital">
-								S<span>tarter</span> P<span>roject</span>
-							</h2>
-							<p>
-                            <span class="label label-success">Kick start!</span> If you are about to start a new Lift project that includes FoBo with Bootstrap you can 
-                            get a kick start by forking the 
-                            <a href="https://github.com/karma4u101/Templating-With-Twitter-Bootstrap">Templating-With-Twitter-Bootstrap</a> 
-						    project, it uses the FoBo module pre-set-up for use with the latest release of Bootstrap. If you already have a Lift 
-						    project that you want to extend with FoBo/Bootstrap functionality the next section is for you, so read on 
-						    for setup information. 
-							</p>
-						</section>						
-						
-						
-						<a id="setup"></a>
-						<section>
-							<h2 class="capital">
-								S<span>etup</span>
-							</h2>
-							<p>To integrate <a href="https://github.com/karma4u101/FoBo">FoBo</a> for usage in your existing Lift 
-							project this section will show you how to set it up. I am assuming you are using 
-							<a href="http://www.scala-sbt.org/">SBT</a> but if you are using Maven or 
-							some other build system you will probably be able to extract the needed information, 
-							its pretty straight forward and easy.</p>
-							<span class="label">SBT setup for FoBo usage </span>
-							<pre class="prettyprint linenums lang-scala">
+		<div class="row-fluid">
+			<div class="span3">
+				<ul class="row-fluid nav nav-list bs-docs-sidenav" data-spy="affix">
+					<li><a href="#overview"><i class="icon-chevron-right"></i>
+							Geting Started</a></li>
+					<li><a href="#starterproj"><i class="icon-chevron-right"></i>
+							Starter Project</a></li>
+					<li><a href="#setup"><i class="icon-chevron-right"></i>
+							Setup</a></li>
+					<li><a href="#customization"><i class="icon-chevron-right"></i>
+							Bootstrap customization</a></li>
+					<li><a href="#fobo-snippets"><i class="icon-chevron-right"></i>
+							FoBo-Snippets</a></li>
+
+					<!--           <li><a href="#scrollspy"><i class="icon-chevron-right"></i> Scrollspy</a></li> -->
+					<!--           <li><a href="#tabs"><i class="icon-chevron-right"></i> Tab</a></li> -->
+					<!--           <li><a href="#tooltips"><i class="icon-chevron-right"></i> Tooltip</a></li> -->
+					<!--           <li><a href="#popovers"><i class="icon-chevron-right"></i> Popover</a></li> -->
+					<!--           <li><a href="#alerts"><i class="icon-chevron-right"></i> Alert</a></li> -->
+					<!--           <li><a href="#buttons"><i class="icon-chevron-right"></i> Button</a></li> -->
+					<!--           <li><a href="#collapse"><i class="icon-chevron-right"></i> Collapse</a></li> -->
+					<!--           <li><a href="#carousel"><i class="icon-chevron-right"></i> Carousel</a></li> -->
+					<!--           <li><a href="#typeahead"><i class="icon-chevron-right"></i> Typeahead</a></li> -->
+					<!--           <li><a href="#affix"><i class="icon-chevron-right"></i> Affix</a></li> -->
+				</ul>
+			</div>
+
+			<div class="span9">
+
+
+				<a id="overview"></a>
+				<section>
+
+					<h2 class="capital">
+						G<span>etting</span> S<span>tarted</span>
+					</h2>
+					<p>
+						The following section will show you how to set up and use FoBo in
+						your Lift project. The main documentation for general Bootstrap
+						usage included in this demo is currently the <span
+							data-lift="Menu.item?name=Bootstrap-2.1.0;lift:Loc.i;"><span
+							data-lift="Loc.i">Bootstrap-2.1.0</span></span> documentation.
+					</p>
+				</section>
+
+
+				<a id="starterproj"></a>
+				<section>
+					<h2 class="capital">
+						S<span>tarter</span> P<span>roject</span>
+					</h2>
+					<p>
+						<span class="label label-success">Kick start!</span> If you are
+						about to start a new Lift project that includes FoBo with
+						Bootstrap you can get a kick start by forking the <a
+							href="https://github.com/karma4u101/Templating-With-Twitter-Bootstrap">Templating-With-Twitter-Bootstrap</a>
+						project, it uses the FoBo module pre-set-up for use with the
+						latest release of Bootstrap. If you already have a Lift project
+						that you want to extend with FoBo/Bootstrap functionality the next
+						section is for you, so read on for setup information.
+					</p>
+				</section>
+
+
+				<a id="setup"></a>
+				<section>
+					<h2 class="capital">
+						S<span>etup</span>
+					</h2>
+					<p>
+						To integrate <a href="https://github.com/karma4u101/FoBo">FoBo</a>
+						for usage in your existing Lift project this section will show you
+						how to set it up. I am assuming you are using <a
+							href="http://www.scala-sbt.org/">SBT</a> but if you are using
+						Maven or some other build system you will probably be able to
+						extract the needed information, its pretty straight forward and
+						easy.
+					</p>
+					<span class="label">SBT setup for FoBo usage </span>
+					<pre class="prettyprint linenums lang-scala">
  :
 // Lift  
 libraryDependencies ++= {
@@ -104,44 +112,60 @@ libraryDependencies ++= Seq(
    :
    )
 						</pre>
-						
-						<div class="alert alert-info">
-						  If you are using <strong>Maven</strong> instead of <a href="http://www.scala-sbt.org/">SBT</a> the FoBo 
-						  artifacts is at the <code>oss.sonatype.org</code> repository.
-						</div>
-												
-						<dl>
-						<dt>The resolvers section:</dt> 
-						<dd>For your convenience pre-compiled FoBo module artifacts currently resides at the same repository 
-						as Lift and other lift modules so there is no need for additional resolvers.</dd>
-						
-						<dt>The library dependency section:</dt> 
-						<dd>Declare the FoBo lift module line <code>"net.liftmodules" %% "fobo"        % (liftVersion+"-X.Y.Z-SNAPSHOT") withJavadoc() withSources()</code> 
-						with the version string starting with the lift version number used for your project and appending the
-						module version on the form "-X.Y.Z"</dd>
-						
-						
-						<dt>Example on github:</dt> 
-						<dd>Here is the complete <a href="https://github.com/karma4u101/Templating-With-Twitter-Bootstrap/blob/master/build.sbt">build.sbt file</a> used in  
-						<a href="https://github.com/karma4u101/Templating-With-Twitter-Bootstrap">Templating With Twitter Bootstrap</a>
+
+					<div class="alert alert-info">
+						If you are using <strong>Maven</strong> instead of <a
+							href="http://www.scala-sbt.org/">SBT</a> the FoBo artifacts is at
+						the
+						<code>oss.sonatype.org</code>
+						repository.
+					</div>
+
+					<dl>
+						<dt>The resolvers section:</dt>
+						<dd>For your convenience pre-compiled FoBo module artifacts
+							currently resides at the same repository as Lift and other lift
+							modules so there is no need for additional resolvers.</dd>
+
+						<dt>The library dependency section:</dt>
+						<dd>
+							Declare the FoBo lift module line
+							<code>"net.liftmodules" %% "fobo" %
+								(liftVersion+"-X.Y.Z-SNAPSHOT") withJavadoc() withSources()</code>
+							with the version string starting with the lift version number
+							used for your project and appending the module version on the
+							form "-X.Y.Z"
 						</dd>
-						</dl>
-						 
 
 
-							<p>To initiate the FoBo module, chose the Toolkit option(s)
-								you prefer and then call <code>FoBo.init()</code> from your lift projects
-								Boot.</p>
+						<dt>Example on github:</dt>
+						<dd>
+							Here is the complete <a
+								href="https://github.com/karma4u101/Templating-With-Twitter-Bootstrap/blob/master/build.sbt">build.sbt
+								file</a> used in <a
+								href="https://github.com/karma4u101/Templating-With-Twitter-Bootstrap">Templating
+								With Twitter Bootstrap</a>
+						</dd>
+					</dl>
 
-							<p>
-								Using FoBo in your own project you should set up the init param
-								for the toolkit module you need or if you are using the module
-								defaults just call FoBo.init(). This demo uses the following <strong>unusually
-									heavy</strong> module setup in lift Boot.<br />
-							</p>
-							
-							<span class="label">FoBo Bootstrap setup in Lift Boot</span>
-							<pre class="prettyprint linenums lang-scala">
+
+
+					<p>
+						To initiate the FoBo module, chose the Toolkit option(s) you
+						prefer and then call
+						<code>FoBo.init()</code>
+						from your lift projects Boot.
+					</p>
+
+					<p>
+						Using FoBo in your own project you should set up the init param
+						for the toolkit module you need or if you are using the module
+						defaults just call FoBo.init(). This demo uses the following <strong>unusually
+							heavy</strong> module setup in lift Boot.<br />
+					</p>
+
+					<span class="label">FoBo Bootstrap setup in Lift Boot</span>
+					<pre class="prettyprint linenums lang-scala">
                             :
                            import net.liftmodules.FoBo
 
@@ -157,10 +181,10 @@ libraryDependencies ++= Seq(
                                 FoBo.init()
                                   :      
 						</pre>
-							<p>In Lift's html5 template:s add (depending on your setup)
-								something like this:</p>
-							<span class="label">Lift surround template</span>
-							<pre class="prettyprint linenums lang-html">
+					<p>In Lift's html5 template:s add (depending on your setup)
+						something like this:</p>
+					<span class="label">Lift surround template</span>
+					<pre class="prettyprint linenums lang-html">
                         &lt;!DOCTYPE html&gt;
                         &lt;html&gt;
                           &lt;head&gt;
@@ -182,151 +206,133 @@ libraryDependencies ++= Seq(
                           &lt;/body&gt;        
                         &lt;/html&gt;    
 						</pre>
-							<p>
-								Note the uniform setup without any version references in the
-								html templates, making way for a smooth(er) toolkit upgrade. For
-								more information see the <a
-									href="https://github.com/karma4u101/FoBo">FoBo modules
-									Github</a>.
-							</p>
+					<p>
+						Note the uniform setup without any version references in the html
+						templates, making way for a smooth(er) toolkit upgrade. For more
+						information see the <a href="https://github.com/karma4u101/FoBo">FoBo
+							modules Github</a>.
+					</p>
 
-						</section>
-
-
-
-                       <a id="customization"></a>
-						<section >
-						   	<h2 class="capital">
-								B<span>ootstrap</span> C<span>ustomization</span>
-							</h2>
-							<p>
-						  For common use it is sufficient to use the pre-compiled artifact but using FoBo and the extra "module" 
-						  <a href="https://github.com/karma4u101/FoBo-Less">FoBo-Less</a> it is also 
-						  possible to do heavy customization of bootstraps "Look" using variables as shown in 
-						  <a href="../bootstrap-2.1.0/customize.html#variables">Customize variables</a> however this requires that   
-						  you manage your own build of FoBo and FoBo-Less locally. <br/>
-						   
-							</p>
-						</section>
+				</section>
 
 
 
-                        <a id="fobo-snippets"></a>
-						<section >
-							<h2 class="capital">
-								F<span>o</span>B<span>o</span> S<span>nippets</span>
-							</h2>
+				<a id="customization"></a>
+				<section>
+					<h2 class="capital">
+						B<span>ootstrap</span> C<span>ustomization</span>
+					</h2>
+					<p>
+						For common use it is sufficient to use the pre-compiled artifact
+						but using FoBo and the extra "module" <a
+							href="https://github.com/karma4u101/FoBo-Less">FoBo-Less</a> it
+						is also possible to do heavy customization of bootstraps "Look"
+						using variables as shown in <a
+							href="../bootstrap-2.1.0/customize.html#variables">Customize
+							variables</a> however this requires that you manage your own build of
+						FoBo and FoBo-Less locally. <br />
 
-                            <div class="dropdown clearfix">
-                              <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu" style="display: block; position: static; margin-bottom: 5px; *width: 180px;">
-								<li>
-								  <span data-lift="Menu.item?name=Bootstrap;">
-								    <span data-lift="Loc.i">Bootstrap</span>
-								  </span>  
-								</li>
-								<li>
-								  <span data-lift="Menu.item?name=Bootstrap-2.1.0;">
-								    <span data-lift="Loc.i">Bootstrap-2.1.0</span>
-								  </span>  
-								</li>														
-                                <li class="divider"></li>							
-                                <li>
-                                  <span data-lift="Menu.item?name=FoBoAPI;lift:Loc.i;">
-                                    <span data-lift="Loc?locid=FoBoAPI">FoBo API</span>
-	                              </span>
-                                </li>
-                              </ul>
-                            </div>
+					</p>
+				</section>
 
 
-<div class="dropdown clearfix" style="padding-right:30px;">
-  <div class="navbar">
-    <div class="navbar-inner">
-      <div class="container">
-        <ul class="nav">    
-						<li class="dropdown">
-						  <a id="content-dropdown" data-toggle="dropdown"
-							class="dropdown-toggle" href="#"> <span
-								data-lift="Loc?locid=content.dropdown.text">Content</span> <b
-								class="caret"></b>
-						  </a>
-							<ul class="dropdown-menu">
-								<li>
-								  <span data-lift="Menu.item?name=Bootstrap;">
-								    <span data-lift="Loc.i">Bootstrap</span>
-								  </span>  
-								</li>
-								<li>
-								  <span data-lift="Menu.item?name=Bootstrap-2.1.0;">
-								    <span data-lift="Loc.i">Bootstrap-2.1.0</span>
-								  </span>  
-								</li>																
-								<li class="divider"></li>
-								<li>
-								  <span data-lift="Menu.item?name=FoBoAPI;">
-								      <span data-lift="Loc?locid=FoBoAPI">FoBo API</span>
-								  </span>
-							   </li>																						
-							</ul>
-					   </li>   
-					   
-						<li class="dropdown">
-						  <a id="content-dropdown" data-toggle="dropdown"
-							class="dropdown-toggle" href="#"> <span
-								data-lift="Loc?locid=gendemo.dropdown2.text">dd text</span> <b
-								class="caret"></b>
-						  </a>
-							<ul class="dropdown-menu">
-								<li>
-								  <span data-lift="Menu.item?name=gendemo.page1a.text;">
-								    <span data-lift="Loc.i">gendemo.page1a.text</span>
-								  </span>  
-								</li>
-								<li>
-								  <span data-lift="Menu.item?name=gendemo.page1b.text;">
-								    <span data-lift="Loc.i">gendemo.page1b.text</span>
-								  </span>  
-								</li>
-								<li>
-								  <span data-lift="Menu.item?name=gendemo.page1c.text;">
-								    <span data-lift="Loc.i">gendemo.page1c.text</span>
-								  </span>  
-								</li>																								
-								<li class="divider"></li>
-								<li>
-								  <span data-lift="Menu.item?name=FoBoAPI;">
-								      <span data-lift="Loc?locid=FoBoAPI">FoBo API</span>
-								  </span>
-							   </li>																						
-							</ul>
-					   </li>   					      
 
-        </ul>
-       <span data-lift="FoBo.BootstrapNav.menuToTBNav?eager_eval=true">  
-          <span data-lift="Menu.builder?top:class=nav pull-right ;li_item:class=active;linkToSelf=true;expandAll=true;group=frontNav"></span> 
-        </span>         
-					<form action="" class="navbar-search pull-right">
-						<input placeholder="Search" class="search-query span8" type="text">
-					</form>        
-        
- 
-           	
-      </div>
-    </div>
-  </div>
-</div>				    
-							<p>
-								The FoBo module comes with some convinience functions (snippets,
-								optional to use) that will generate some commonly used toolkit
-								helper scripts for you. For instansce doing it the Lift - FoBo
-								way <b>you can simply do this</b> using a FoBo:s snippet
-								containing some bootstrap convinience functions:
-							</p>
+				<a id="fobo-snippets"></a>
+				<section>
+					<h2 class="capital">
+						F<span>o</span>B<span>o</span> S<span>nippets</span>
+					</h2>
 
-							<h6>The FoBo.Bootstrap Snippet</h6>
+					<div class="dropdown clearfix">
+						<ul class="dropdown-menu" role="menu"
+							aria-labelledby="dropdownMenu"
+							style="display: block; position: static; margin-bottom: 5px; *width: 180px;">
+							<li><span data-lift="Menu.item?name=Bootstrap;"> <span
+									data-lift="Loc.i">Bootstrap</span>
+							</span></li>
+							<li><span data-lift="Menu.item?name=Bootstrap-2.1.0;">
+									<span data-lift="Loc.i">Bootstrap-2.1.0</span>
+							</span></li>
+							<li class="divider"></li>
+							<li><span data-lift="Menu.item?name=FoBoAPI;lift:Loc.i;">
+									<span data-lift="Loc?locid=FoBoAPI">FoBo API</span>
+							</span></li>
+						</ul>
+					</div>
 
-							<span class="label">Activate dropdown</span>
-							<pre class="prettyprint linenums lang-html">
+					<div class="dropdown clearfix" style="padding-right: 30px;">
+						<div class="navbar">
+							<div class="navbar-inner">
+								<div class="container">
+									<ul class="nav">
+										<li class="dropdown"><a id="content-dropdown"
+											data-toggle="dropdown" class="dropdown-toggle" href="#">
+												<span data-lift="Loc?locid=content.dropdown.text">Content</span>
+												<b class="caret"></b>
+										</a>
+											<ul class="dropdown-menu">
+												<li><span data-lift="Menu.item?name=Bootstrap;">
+														<span data-lift="Loc.i">Bootstrap</span>
+												</span></li>
+												<li><span data-lift="Menu.item?name=Bootstrap-2.1.0;">
+														<span data-lift="Loc.i">Bootstrap-2.1.0</span>
+												</span></li>
+												<li class="divider"></li>
+												<li><span data-lift="Menu.item?name=FoBoAPI;"> <span
+														data-lift="Loc?locid=FoBoAPI">FoBo API</span>
+												</span></li>
+											</ul></li>
+
+										<li class="dropdown"><a id="content-dropdown"
+											data-toggle="dropdown" class="dropdown-toggle" href="#">
+												<span data-lift="Loc?locid=gendemo.dropdown2.text">dd
+													text</span> <b class="caret"></b>
+										</a>
+											<ul class="dropdown-menu">
+												<li><span
+													data-lift="Menu.item?name=gendemo.page1a.text;"> <span
+														data-lift="Loc.i">gendemo.page1a.text</span>
+												</span></li>
+												<li><span
+													data-lift="Menu.item?name=gendemo.page1b.text;"> <span
+														data-lift="Loc.i">gendemo.page1b.text</span>
+												</span></li>
+												<li><span
+													data-lift="Menu.item?name=gendemo.page1c.text;"> <span
+														data-lift="Loc.i">gendemo.page1c.text</span>
+												</span></li>
+												<li class="divider"></li>
+												<li><span data-lift="Menu.item?name=FoBoAPI;"> <span
+														data-lift="Loc?locid=FoBoAPI">FoBo API</span>
+												</span></li>
+											</ul></li>
+
+									</ul>
+									<span data-lift="FoBo.BootstrapNav.menuToTBNav?eager_eval=true">
+										<span
+										data-lift="Menu.builder?top:class=nav pull-right ;li_item:class=active;linkToSelf=true;expandAll=true;group=frontNav"></span>
+									</span>
+									<form action="" class="navbar-search pull-right">
+										<input placeholder="Search" class="search-query span8"
+											type="text">
+									</form>
+
+								</div>
+							</div>
+						</div>
+					</div>
+					<p>
+						The FoBo module comes with some convinience functions (snippets,
+						optional to use) that will generate some commonly used toolkit
+						helper scripts for you. For instansce doing it the Lift - FoBo way
+						<b>you can simply do this</b> using a FoBo:s snippet containing
+						some bootstrap convinience functions:
+					</p>
+
+					<h6>The FoBo.Bootstrap Snippet</h6>
+
+					<span class="label">Activate dropdown</span>
+					<pre class="prettyprint linenums lang-html">
                         &lt;!DOCTYPE html&gt;
                         &lt;html&gt;
                           &lt;head&gt;
@@ -338,9 +344,9 @@ libraryDependencies ++= Seq(
                         &lt;/html&gt;    
 						</pre>
 
-							<span class="label">Set a popover</span> and preventing default
-							on-click action
-							<pre class="prettyprint linenums lang-html">
+					<span class="label">Set a popover</span> and preventing default
+					on-click action
+					<pre class="prettyprint linenums lang-html">
                         &lt;!DOCTYPE html&gt;
                         &lt;html&gt;
                             :
@@ -354,12 +360,12 @@ libraryDependencies ++= Seq(
                         &lt;/html&gt;    
 						</pre>
 
-							<p>
-								<b>.... instead of doing the following </b> (a common bootstrap
-								component init use case)
-							</p>
-							<span class="label">Transformed output</span>
-							<pre class="prettyprint linenums lang-html">
+					<p>
+						<b>.... instead of doing the following </b> (a common bootstrap
+						component init use case)
+					</p>
+					<span class="label">Transformed output</span>
+					<pre class="prettyprint linenums lang-html">
                         &lt;!DOCTYPE html&gt;
                         &lt;html&gt;
                           &lt;head&gt;
@@ -408,8 +414,8 @@ libraryDependencies ++= Seq(
                         &lt;/html&gt;    
 						</pre>
 
-							<span class="label">A Bootstrap tooltip</span>
-							<pre class="prettyprint linenums lang-html">
+					<span class="label">A Bootstrap tooltip</span>
+					<pre class="prettyprint linenums lang-html">
                         &lt;!DOCTYPE html&gt;
                         &lt;html&gt;
                             :
@@ -425,25 +431,24 @@ libraryDependencies ++= Seq(
                         &lt;/html&gt;    
 						</pre>
 
-							<div class="alert alert-info">I am using the html5
-								attribute "data-lift" for hocks to Lift but if you like you are
-								wellcome to use the class attribute instead like
-								class="lift:...."</div>
+					<div class="alert alert-info">I am using the html5 attribute
+						"data-lift" for hocks to Lift but if you like you are wellcome to
+						use the class attribute instead like class="lift:...."</div>
 
-							<h6>The FoBo.BootstrapNav Snippet</h6>
-							<p>
-								The FoBo.BootstrapNav snippet will let you define lift menu
-								parts that will be transformed into a Bootstrap Nav menu. This
-								work is originally contributed to the FoBo module by community
-								member Damian Helme, read his blog post <a
-									href="http://tech.damianhelme.com/twitter-bootstrap-navbar-dropdowns-and-lifts">
-									Twitter Bootstrap Navbar Dropdowns and Lift's Menu.builder</a> for
-								more information.
-							</p>
+					<h6>The FoBo.BootstrapNav Snippet</h6>
+					<p>
+						The FoBo.BootstrapNav snippet will let you define lift menu parts
+						that will be transformed into a Bootstrap Nav menu. This work is
+						originally contributed to the FoBo module by community member
+						Damian Helme, read his blog post <a
+							href="http://tech.damianhelme.com/twitter-bootstrap-navbar-dropdowns-and-lifts">
+							Twitter Bootstrap Navbar Dropdowns and Lift's Menu.builder</a> for
+						more information.
+					</p>
 
-							<span class="label">Part of your Lift SiteMap</span> with the <b>LocGroup</b>
-							that will be transformed into Bootstrap Navbar
-							<pre class="prettyprint linenums lang-scala">
+					<span class="label">Part of your Lift SiteMap</span> with the <b>LocGroup</b>
+					that will be transformed into Bootstrap Navbar
+					<pre class="prettyprint linenums lang-scala">
                                   :
                                 Menu("Test") / "test" >> LocGroup("test") >> PlaceHolder submenus (
                                   Menu("Test 2") / "test2",
@@ -452,8 +457,8 @@ libraryDependencies ++= Seq(
                                 :      
 						</pre>
 
-							<span class="label">Your Lift Template</span>
-							<pre class="prettyprint linenums lang-html">
+					<span class="label">Your Lift Template</span>
+					<pre class="prettyprint linenums lang-html">
                         &lt;!DOCTYPE html&gt;
                         &lt;html&gt;
                             :
@@ -476,35 +481,35 @@ libraryDependencies ++= Seq(
                         &lt;/html&gt;    
 						</pre>
 
-							<div class="alert alert-info">
-								In this demo you will find the rellevant code in the <i>SiteMap</i>
-								section of <i>Lift Boot</i> and the snippet invoctation in the
-								_embededTopbar-FoBo02.html template.
-							</div>
+					<div class="alert alert-info">
+						In this demo you will find the rellevant code in the <i>SiteMap</i>
+						section of <i>Lift Boot</i> and the snippet invoctation in the
+						_embededTopbar-FoBo02.html template.
+					</div>
 
-							<p>
-								At this writing the available snippet helpers are few but expect
-								the numbers to grow. You are wellcome to contribute code and/or
-								ideas. Take a look att the API documentation on how to invoke
-								the helpers and description on what result it produces for
-								example look att the FoBo.ScriptHelper.registerLoadEventFactory
-								snippet function by open <a
-									href="/foboapi/#net.liftmodules.FoBo.snippet.FoBo.ScriptHelper">FoBo.ScriptHelper
-									page</a> and click on the <b>registerLoadEventFactory</b> function
-								name for details.
-							</p>
-							<hr />
+					<p>
+						At this writing the available snippet helpers are few but expect
+						the numbers to grow. You are wellcome to contribute code and/or
+						ideas. Take a look att the API documentation on how to invoke the
+						helpers and description on what result it produces for example
+						look att the FoBo.ScriptHelper.registerLoadEventFactory snippet
+						function by open <a
+							href="/foboapi/#net.liftmodules.FoBo.snippet.FoBo.ScriptHelper">FoBo.ScriptHelper
+							page</a> and click on the <b>registerLoadEventFactory</b> function
+						name for details.
+					</p>
+					<hr />
 
-						</section>
+				</section>
 
-                     
-					</div> 
-				</div>
 
-<!-- 			</div> -->
-<!-- 		</div> -->
-		
-</section>
+			</div>
+		</div>
+
+		<!-- 			</div> -->
+		<!-- 		</div> -->
+
+	</section>
 
 
 </body>

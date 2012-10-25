@@ -217,15 +217,104 @@ libraryDependencies ++= Seq(
 								F<span>o</span>B<span>o</span> S<span>nippets</span>
 							</h2>
 
- <div class="dropdown clearfix">
-    <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu" style="display: block; position: static; margin-bottom: 5px; *width: 180px;">
-    <li><a tabindex="-1" href="#">Action</a></li>
-    <li><a tabindex="-1" href="#">Another action</a></li>
-    <li><a tabindex="-1" href="#">Something else here</a></li>
-    <li class="divider"></li>
-    <li><a tabindex="-1" href="#">Separated link</a></li>
-    </ul>
-</div>
+                            <div class="dropdown clearfix">
+                              <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu" style="display: block; position: static; margin-bottom: 5px; *width: 180px;">
+								<li>
+								  <span data-lift="Menu.item?name=Bootstrap;">
+								    <span data-lift="Loc.i">Bootstrap</span>
+								  </span>  
+								</li>
+								<li>
+								  <span data-lift="Menu.item?name=Bootstrap-2.1.0;">
+								    <span data-lift="Loc.i">Bootstrap-2.1.0</span>
+								  </span>  
+								</li>														
+                                <li class="divider"></li>							
+                                <li>
+                                  <span data-lift="Menu.item?name=FoBoAPI;lift:Loc.i;">
+                                    <span data-lift="Loc?locid=FoBoAPI">FoBo API</span>
+	                              </span>
+                                </li>
+                              </ul>
+                            </div>
+
+
+<div class="dropdown clearfix" style="padding-right:30px;">
+  <div class="navbar">
+    <div class="navbar-inner">
+      <div class="container">
+        <ul class="nav">    
+						<li class="dropdown">
+						  <a id="content-dropdown" data-toggle="dropdown"
+							class="dropdown-toggle" href="#"> <span
+								data-lift="Loc?locid=content.dropdown.text">Content</span> <b
+								class="caret"></b>
+						  </a>
+							<ul class="dropdown-menu">
+								<li>
+								  <span data-lift="Menu.item?name=Bootstrap;">
+								    <span data-lift="Loc.i">Bootstrap</span>
+								  </span>  
+								</li>
+								<li>
+								  <span data-lift="Menu.item?name=Bootstrap-2.1.0;">
+								    <span data-lift="Loc.i">Bootstrap-2.1.0</span>
+								  </span>  
+								</li>																
+								<li class="divider"></li>
+								<li>
+								  <span data-lift="Menu.item?name=FoBoAPI;">
+								      <span data-lift="Loc?locid=FoBoAPI">FoBo API</span>
+								  </span>
+							   </li>																						
+							</ul>
+					   </li>   
+					   
+						<li class="dropdown">
+						  <a id="content-dropdown" data-toggle="dropdown"
+							class="dropdown-toggle" href="#"> <span
+								data-lift="Loc?locid=gendemo.dropdown2.text">dd text</span> <b
+								class="caret"></b>
+						  </a>
+							<ul class="dropdown-menu">
+								<li>
+								  <span data-lift="Menu.item?name=gendemo.page1a.text;">
+								    <span data-lift="Loc.i">gendemo.page1a.text</span>
+								  </span>  
+								</li>
+								<li>
+								  <span data-lift="Menu.item?name=gendemo.page1b.text;">
+								    <span data-lift="Loc.i">gendemo.page1b.text</span>
+								  </span>  
+								</li>
+								<li>
+								  <span data-lift="Menu.item?name=gendemo.page1c.text;">
+								    <span data-lift="Loc.i">gendemo.page1c.text</span>
+								  </span>  
+								</li>																								
+								<li class="divider"></li>
+								<li>
+								  <span data-lift="Menu.item?name=FoBoAPI;">
+								      <span data-lift="Loc?locid=FoBoAPI">FoBo API</span>
+								  </span>
+							   </li>																						
+							</ul>
+					   </li>   					      
+
+        </ul>
+       <span data-lift="FoBo.BootstrapNav.menuToTBNav?eager_eval=true">  
+          <span data-lift="Menu.builder?top:class=nav pull-right ;li_item:class=active;linkToSelf=true;expandAll=true;group=frontNav"></span> 
+        </span>         
+					<form action="" class="navbar-search pull-right">
+						<input placeholder="Search" class="search-query span8" type="text">
+					</form>        
+        
+ 
+           	
+      </div>
+    </div>
+  </div>
+</div>				    
 							<p>
 								The FoBo module comes with some convinience functions (snippets,
 								optional to use) that will generate some commonly used toolkit

@@ -55,8 +55,8 @@
 						The following section will show you how to set up and use FoBo in
 						your Lift project. The main documentation for general Bootstrap
 						usage included in this demo is currently the <span
-							data-lift="Menu.item?name=Bootstrap-2.1.0;lift:Loc.i;"><span
-							data-lift="Loc.i">Bootstrap-2.1.0</span></span> documentation.
+							data-lift="Menu.item?name=Bootstrap-2.2.0;lift:Loc.i;"><span
+							data-lift="Loc.i">Bootstrap-2.2.0</span></span> documentation.
 					</p>
 				</section>
 
@@ -95,13 +95,13 @@
 					</p>
 					<span class="label">SBT setup for FoBo usage </span>
 					<pre class="prettyprint linenums lang-scala">
- :
+ ⋮
 // Lift  
 libraryDependencies ++= {
-  val liftVersion = "2.5-M2" // Put the current/latest lift version here
+  val liftVersion = "2.5-M3" // Put the current/latest lift version here
   Seq(
     "net.liftweb"     %% "lift-webkit" % liftVersion % "compile->default" withSources(),
-     :
+         ⋮
     "net.liftmodules" %% "fobo"        % (liftVersion+"-X.Y.Z-SNAPSHOT") withJavadoc() withSources() 
     )
 }                            
@@ -109,7 +109,7 @@ libraryDependencies ++= {
 // Customize any further dependencies as desired
 libraryDependencies ++= Seq(
   "org.eclipse.jetty"        % "jetty-webapp"   % "8.0.3.v20111011"  % "container",
-   :
+     ⋮
    )
 						</pre>
 
@@ -166,45 +166,45 @@ libraryDependencies ++= Seq(
 
 					<span class="label">FoBo Bootstrap setup in Lift Boot</span>
 					<pre class="prettyprint linenums lang-scala">
-                            :
-                           import net.liftmodules.FoBo
+   ⋮
+import net.liftmodules.FoBo
 
-                           /**
-                            * A class that's instantiated early and run.  It allows the application
-                            * to modify lift's environment
-                            **/
-                            class Boot extends Loggable {
-                              def boot {
-                                  :
-                                FoBo.InitParam.JQuery=FoBo.JQuery172  
-                                FoBo.InitParam.ToolKit=FoBo.Bootstrap210 
-                                FoBo.init()
-                                  :      
-						</pre>
+/**
+ * A class that's instantiated early and run.  It allows the application
+ * to modify lift's environment
+ **/
+  class Boot extends Loggable {
+    def boot {
+           ⋮
+      FoBo.InitParam.JQuery=FoBo.JQuery172  
+      FoBo.InitParam.ToolKit=FoBo.Bootstrap220 
+      FoBo.init()
+           ⋮     
+					</pre>
 					<p>In Lift's html5 template:s add (depending on your setup)
 						something like this:</p>
 					<span class="label">Lift surround template</span>
 					<pre class="prettyprint linenums lang-html">
-                        &lt;!DOCTYPE html&gt;
-                        &lt;html&gt;
-                          &lt;head&gt;
-                             :
-                             &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
-                             &lt;!--Main css for the Bootstrap module option--&gt;
-                             &lt;link href="/classpath/fobo/bootstrap.css" type="text/css" rel="stylesheet"&gt;
-                             &lt;link href="/classpath/fobo/bootstrap-responsive.css" type="text/css" rel="stylesheet"&gt;
-                             &lt;!--app specific tweeks and overrides external to module goes here--&gt;
-                             &lt;link href="[path to your projects app css]" type="text/css" rel="stylesheet"&gt;  
-                             :                        
-                          &lt;/head&gt;
-                          &lt;!--Page setup with bootstrap scrollspy--&gt;
-                          &lt;body data-spy="scroll" data-offset="40"&gt;
-                             :
-                             &lt;!--In end of page (for fast pageload) add the scripts you need--&gt; 
-                             &lt;script src="/classpath/fobo/bootstrap.js" type="text/javascript"&gt;&lt;/script&gt;
-                             :
-                          &lt;/body&gt;        
-                        &lt;/html&gt;    
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+         ⋮
+     &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+     &lt;!--Main css for the Bootstrap module option--&gt;
+     &lt;link href="/classpath/fobo/bootstrap.css" type="text/css" rel="stylesheet"&gt;
+     &lt;link href="/classpath/fobo/bootstrap-responsive.css" type="text/css" rel="stylesheet"&gt;
+     &lt;!--app specific tweeks and overrides external to module goes here--&gt;
+     &lt;link href="[path to your projects app css]" type="text/css" rel="stylesheet"&gt;  
+         ⋮                       
+  &lt;/head&gt;
+  &lt;!--Page setup with bootstrap scrollspy--&gt;
+  &lt;body data-spy="scroll" data-offset="40"&gt;
+         ⋮
+     &lt;!--In end of page (for fast pageload) add the scripts you need--&gt; 
+     &lt;script src="/classpath/fobo/bootstrap.js" type="text/javascript"&gt;&lt;/script&gt;
+         ⋮
+  &lt;/body&gt;        
+&lt;/html&gt;    
 						</pre>
 					<p>
 						Note the uniform setup without any version references in the html
@@ -242,6 +242,8 @@ libraryDependencies ++= Seq(
 					<h2 class="capital">
 						F<span>o</span>B<span>o</span> S<span>nippets</span>
 					</h2>
+
+										<span data-lift="MyMenu.builder?group=testLG"></span>
 
 					<div class="dropdown clearfix">
 						<ul class="dropdown-menu" role="menu"
@@ -308,14 +310,16 @@ libraryDependencies ++= Seq(
 											</ul></li>
 
 									</ul>
-									<span data-lift="FoBo.BootstrapNav.menuToTBNav?eager_eval=true">
-										<span
-										data-lift="Menu.builder?top:class=nav pull-right ;li_item:class=active;linkToSelf=true;expandAll=true;group=frontNav"></span>
-									</span>
-									<form action="" class="navbar-search pull-right">
-										<input placeholder="Search" class="search-query span8"
-											type="text">
-									</form>
+<!-- 									<span data-lift="FoBo.BootstrapNav.menuToTBNav?eager_eval=true"> -->
+<!-- 										<span data-lift="Menu.builder?top:class=nav pull-right ;li_item:class=active;linkToSelf=true;expandAll=true;group=frontNav"></span> -->
+<!-- 									</span> -->
+                                        
+
+
+<!-- 									<form action="" class="navbar-search pull-right"> -->
+<!-- 										<input placeholder="Search" class="search-query span8" -->
+<!-- 											type="text"> -->
+<!-- 									</form> -->
 
 								</div>
 							</div>
@@ -333,31 +337,31 @@ libraryDependencies ++= Seq(
 
 					<span class="label">Activate dropdown</span>
 					<pre class="prettyprint linenums lang-html">
-                        &lt;!DOCTYPE html&gt;
-                        &lt;html&gt;
-                          &lt;head&gt;
-                               :
-                          &lt;script data-lift="FoBo.ScriptHelper.registerLoadEventFactory"&gt;&lt;/script&gt;         
-                          &lt;script data-lift="FoBo.Bootstrap.activateDropdown?on=.dropdown-toggle"&gt;&lt;/script&gt;              
-                          &lt;/head&gt;
-                           :       
-                        &lt;/html&gt;    
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    ⋮
+  &lt;script data-lift="FoBo.ScriptHelper.registerLoadEventFactory"&gt;&lt;/script&gt;         
+  &lt;script data-lift="FoBo.Bootstrap.activateDropdown?on=.dropdown-toggle"&gt;&lt;/script&gt;              
+  &lt;/head&gt;
+    ⋮       
+&lt;/html&gt;    
 						</pre>
 
 					<span class="label">Set a popover</span> and preventing default
 					on-click action
 					<pre class="prettyprint linenums lang-html">
-                        &lt;!DOCTYPE html&gt;
-                        &lt;html&gt;
-                            :
-                          &lt;body"&gt;
-                               :
-	                      &lt;a href="#" rel="popover" title="The Title" data-content="The content ..." id="theId"&gt;...&lt;/a&gt;
-                              &lt;script data-lift="FoBo.Bootstrap.popover?id=#theId&options=placement:'left'"&gt;&lt;/script&gt;
-                              &lt;script data-lift="FoBo.Bootstrap.popoverPreventDefault">&lt;/script&gt;
-                               : 
-                          &lt;/body&gt;        
-                        &lt;/html&gt;    
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    ⋮
+  &lt;body"&gt;
+           ⋮
+      &lt;a href="#" rel="popover" title="The Title" data-content="The content ..." id="theId"&gt;...&lt;/a&gt;
+      &lt;script data-lift="FoBo.Bootstrap.popover?id=#theId&options=placement:'left'"&gt;&lt;/script&gt;
+      &lt;script data-lift="FoBo.Bootstrap.popoverPreventDefault">&lt;/script&gt;
+           ⋮ 
+  &lt;/body&gt;        
+&lt;/html&gt;    
 						</pre>
 
 					<p>
@@ -366,69 +370,69 @@ libraryDependencies ++= Seq(
 					</p>
 					<span class="label">Transformed output</span>
 					<pre class="prettyprint linenums lang-html">
-                        &lt;!DOCTYPE html&gt;
-                        &lt;html&gt;
-                          &lt;head&gt;
-                             :
-		                  &lt;script type="text/javascript"&gt;                                 		
-			                function addLoadEvent(func) {
-				              var oldonload = window.onload;
-				              if (typeof window.onload != 'function') {
-					            window.onload = func;
-				              } else {
-					            window.onload = function() {
-						          if (oldonload) {
-							        oldonload();
-						          }
-						          func();
-					            }
-				              }
-			                }
-			                addLoadEvent(function() {
-				              $('.dropdown-toggle').dropdown()
-			                });	   			               
-		                  &lt;/script&gt;                                 
-                          &lt;/head&gt;
-                          &lt;body"&gt;
-                             :
-                              &lt;!-- Set a boostrap popover element --&gt;   
-	                      &lt;a href="#" rel="popover" title="The Title" data-content="The content ..." id="theId"&gt;...&lt;/a&gt;
-                              &lt;!-- Initiate the popover and place it on the left --&gt;
-	                      &lt;script&gt;
-                                $(function () { 
-                                  $("#theId").popover({placement:'left'});
-                                }); 
-                              &lt;/script&gt; 
-                              &lt;!-- Prevent the default action for click on the popover --&gt;
-                              &lt;script&gt; 
-                                $(function(){
-                                  $("a[rel=popover]")
-                                    .popover()
-                                    .click(function(e) {
-                                      e.preventDefault()
-                                  });
-                                });
-                              &lt;/script&gt; 
-                               : 
-                          &lt;/body&gt;        
-                        &lt;/html&gt;    
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+       ⋮
+    &lt;script type="text/javascript"&gt;         		
+	  function addLoadEvent(func) {
+	 	 var oldonload = window.onload;
+	 	 if (typeof window.onload != 'function') {
+	 	   window.onload = func;
+	 	 } else {
+	 	   window.onload = function() {
+	 		 if (oldonload) {
+	 		   oldonload();
+	 		 }
+	 		 func();
+	 	   }
+	  	 }
+	  }
+	  addLoadEvent(function() {
+		 $('.dropdown-toggle').dropdown()
+	  });	   			               
+    &lt;/script&gt;                                
+  &lt;/head&gt;
+&lt;body"&gt;
+           ⋮
+      &lt;!-- Set a boostrap popover element --&gt;   
+	  &lt;a href="#" rel="popover" title="The Title" data-content="The content ..." id="theId"&gt;...&lt;/a&gt;
+      &lt;!-- Initiate the popover and place it on the left --&gt;
+	  &lt;script&gt;
+        $(function () { 
+          $("#theId").popover({placement:'left'});
+        }); 
+      &lt;/script&gt; 
+      &lt;!-- Prevent the default action for click on the popover --&gt;
+      &lt;script&gt; 
+        $(function(){
+          $("a[rel=popover]")
+            .popover()
+            .click(function(e) {
+              e.preventDefault()
+          });
+        });
+      &lt;/script&gt; 
+           ⋮
+  &lt;/body&gt;        
+&lt;/html&gt;    
 						</pre>
 
 					<span class="label">A Bootstrap tooltip</span>
 					<pre class="prettyprint linenums lang-html">
-                        &lt;!DOCTYPE html&gt;
-                        &lt;html&gt;
-                            :
-                          &lt;body"&gt;
-                               :
-                            This pages demonstrates a optional 
-                            &lt;a id="lift-tt" title="The most powerful, most secure web framework available today. It simply rocks!" href="http://liftweb.net/"&gt;Lift&lt;/a&gt; 
-                            module...   
-                               :  
-                            &lt;script data-lift="FoBo.Bootstrap.tooltip?id=#lift-tt"&gt;&lt;/script&gt;
-                               : 
-                          &lt;/body&gt;        
-                        &lt;/html&gt;    
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+   ⋮
+  &lt;body"&gt;
+       ⋮
+    This pages demonstrates a optional 
+    &lt;a id="lift-tt" title="The most powerful, most secure web framework available today. It simply rocks!" href="http://liftweb.net/"&gt;Lift&lt;/a&gt; 
+    module...   
+       ⋮ 
+    &lt;script data-lift="FoBo.Bootstrap.tooltip?id=#lift-tt"&gt;&lt;/script&gt;
+       ⋮ 
+  &lt;/body&gt;        
+&lt;/html&gt;    
 						</pre>
 
 					<div class="alert alert-info">I am using the html5 attribute
@@ -449,36 +453,36 @@ libraryDependencies ++= Seq(
 					<span class="label">Part of your Lift SiteMap</span> with the <b>LocGroup</b>
 					that will be transformed into Bootstrap Navbar
 					<pre class="prettyprint linenums lang-scala">
-                                  :
-                                Menu("Test") / "test" >> LocGroup("test") >> PlaceHolder submenus (
-                                  Menu("Test 2") / "test2",
-                                  Menu("Test 3") / "test3"
-                                ),
-                                :      
+   :
+ Menu("Test") / "test" >> LocGroup("test") >> PlaceHolder submenus (
+   Menu("Test 2") / "test2",
+   Menu("Test 3") / "test3"
+ ),
+ ⋮      
 						</pre>
 
 					<span class="label">Your Lift Template</span>
 					<pre class="prettyprint linenums lang-html">
-                        &lt;!DOCTYPE html&gt;
-                        &lt;html&gt;
-                            :
-                          &lt;body"&gt;
-                          
-                           &lt;div class="navbar"&gt;
-                             &lt;div class="navbar-inner"&gt;
-                               &lt;div class="container"&gt;                          
-                                :  
-                               &lt;!--The navbar snippet invocation--&gt; 
-                               &lt;span data-lift="FoBo.BootstrapNav.menuToTBNav?eager_eval=true"&gt; 
-                                 &lt;span data-lift="Menu.builder?top:class=nav pull-right;li_item:class=active;linkToSelf=true;expandAll=true;group=test"&gt;&lt;/span&gt;
-                               &lt;/span&gt;     
-                                : 
-                               &lt;/div&gt;
-                             &lt;/div&gt;
-                           &lt;/div&gt;
-                             :  
-                          &lt;/body&gt;        
-                        &lt;/html&gt;    
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+   ⋮
+  &lt;body"&gt;
+  
+   &lt;div class="navbar"&gt;
+     &lt;div class="navbar-inner"&gt;
+       &lt;div class="container"&gt;  
+             ⋮  
+       &lt;!--The navbar snippet invocation--&gt; 
+       &lt;span data-lift="FoBo.BootstrapNav.menuToTBNav?eager_eval=true"&gt; 
+         &lt;span data-lift="Menu.builder?top:class=nav pull-right;li_item:class=active;linkToSelf=true;expandAll=true;group=test"&gt;&lt;/span&gt;
+       &lt;/span&gt;     
+             ⋮ 
+       &lt;/div&gt;
+     &lt;/div&gt;
+   &lt;/div&gt;
+     ⋮  
+  &lt;/body&gt;        
+&lt;/html&gt;    
 						</pre>
 
 					<div class="alert alert-info">

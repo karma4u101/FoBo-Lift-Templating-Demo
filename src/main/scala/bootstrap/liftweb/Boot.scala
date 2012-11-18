@@ -16,6 +16,7 @@ import _root_.net.liftweb.http.provider.HTTPRequest
 import _root_.net.liftweb.http.auth.{ HttpBasicAuthentication, AuthRole, userRoles }
 
 import code.model._
+import code.snippet._
 
 import net.liftmodules.FoBo
 
@@ -31,7 +32,7 @@ class Boot extends Loggable {
    //If using defaults FoBo init params can be omitted
     FoBo.InitParam.JQuery=FoBo.JQuery172  
     //FoBo.InitParam.ToolKit=FoBo.FoBo020
-    FoBo.InitParam.ToolKit=FoBo.Bootstrap210
+    FoBo.InitParam.ToolKit=FoBo.Bootstrap220
     FoBo.InitParam.ToolKit=FoBo.Foundation215
     FoBo.InitParam.ToolKit=FoBo.PrettifyJun2011
     FoBo.InitParam.ToolKit=FoBo.JQueryMobile110
@@ -77,15 +78,19 @@ class Boot extends Loggable {
       case _                         => logger.info("RunMode is TEST, PILOT or STAGING")
     }    
     
+    
+    LiftRules.snippetDispatch.prepend{
+      case "menu" => MyMenu
+      case "Menu" => MyMenu
+    }
+
     // Build SiteMap
+    /*
     val entries = List(
       Menu.i("Home") / "index",
       Menu.i("LiBo") / "libo",
-//      how to to make this work without # converted to %23 the api call below is working 
-//      Menu.i("Home-Top") / "#spyhome",
-//      Menu.i("About") / "#spyabout",
 
-      
+
       Menu(Loc("Foundation", Link(List("foundation"), true, "/foundation/index"),
         "Foundation")),
       Menu(Loc("Bootstrap", Link(List("bootstrap"), true, "/bootstrap/index"),
@@ -106,6 +111,7 @@ class Boot extends Loggable {
          Menu.i("gendemo.page1b.text") / "page1b" ,
          Menu.i("gendemo.page1c.text") / "page1c")        
     )   
+    */
       
     LiftRules.uriNotFound.prepend(NamedPF("404handler"){
       case (req,failure) => 
@@ -114,8 +120,9 @@ class Boot extends Loggable {
 
     // set the sitemap.  Note if you don't want access control for
     // each page, just comment this line out.
-    LiftRules.setSiteMap(SiteMap(entries: _*))
-
+    //LiftRules.setSiteMap(SiteMap(entries: _*))
+    LiftRules.setSiteMap(Paths.sitemap)
+    
     //Show the spinny image when an Ajax call starts
     LiftRules.ajaxStart =
       Full(() => LiftRules.jsArtifacts.show("ajax-loader").cmd)
@@ -143,3 +150,67 @@ class Boot extends Loggable {
 
 }
 
+object Paths {
+  import xml.NodeSeq
+  import scala.xml._
+  
+  val index            = Menu.i("Home") / "index"
+  val liboIndex        = Menu.i("LiBo") / "libo"
+  val foundationDoc    = Menu(Loc("Foundation", Link(List("foundation"), true, "/foundation/index"), "Foundation"))
+  val bootstrap204Doc  = Menu(Loc("Bootstrap", Link(List("bootstrap"), true, "/bootstrap/index"),"Bootstrap"))
+  val bootstrap210Doc  = Menu(Loc("Bootstrap-2.1.0", Link(List("bootstrap-2.1.0"), true, "/bootstrap-2.1.0/index"),"Bootstrap-2.1.0"))
+  val bootstrap220Doc  = Menu(Loc("Bootstrap-2.2.0", Link(List("bootstrap-2.2.0"), true, "/bootstrap-2.2.0/index"),S.loc("Bootstrap-2.2.0", Text("Bootstrap-2.2.0"))))
+  val jqueryMobileDoc  = Menu(Loc("JQuery-mobile", Link(List("jquery-mobile"), true, "/jquery-mobile/1.1.0/demos/index"),"JQuery-mobile"))
+  val datatablesDoc    = Menu(Loc("DataTables", Link(List("datatables"), true, "/datatables/1.9.0/index"),"DataTables"))
+  val foboApiDoc       = Menu(Loc("FoBoAPI", Link(List("foboapi"), true, "/foboapi/#net.liftmodules.FoBo.package"),"FoBoAPI"))
+  val frontNavLG       = Menu.i("gendemo.dropdown1.text") / "#" >> LocGroup("frontNav") >> PlaceHolder submenus (
+                           Menu.i("gendemo.page1a.text") / "page1a" ,  
+                           Menu.i("gendemo.page1b.text") / "page1b" ,
+                           Menu.i("gendemo.page1c.text") / "page1c");
+  val testLG           = Menu.i("TestTop") / "#" >> LocGroup("testLG") submenus (
+                           Menu.i("Test1a") / "page1a" , 
+                           Menu.i("Test1b") / "page1b" ,
+                           Menu.i("Test1c") / "page1c")
+  val testLGTop        = Menu.i("TestTop") / "#"
+  val testLG1a         = Menu.i("Test1a") / "page1a"
+  val testLG1b         = Menu.i("Test1b") / "page1b"
+  val testLG1c         = Menu.i("Test1c") / "page1c"
+  
+  def sitemap = SiteMap(
+      index,
+      liboIndex,
+      foundationDoc,
+      bootstrap204Doc,
+      bootstrap210Doc,
+      bootstrap220Doc,
+      jqueryMobileDoc,
+      datatablesDoc,
+      foboApiDoc,
+      testLGTop >> LocGroup("testLG") >> PlaceHolder submenus (
+         testLG1a,
+         testLG1b,
+         testLG1c)
+     // frontNavLG
+      )
+  /*
+  val page2 = Menu.i("page2") / "index2"
+  val page3 = Menu.i("page3") / "index3"
+  val page4 = Menu.i("page4") / "index4"
+  val page5 = Menu.i("page5") / "index5"
+
+  def sitemap = SiteMap(
+    index >> Snippet("mysnippet", addDivider _ ) submenus(
+      page2,
+      page3
+    ),
+    page4,
+    page5
+  )
+
+  def addDivider( ns: NodeSeq): NodeSeq ={
+    println("we got " + ns)
+    ns
+  }
+  */
+
+}

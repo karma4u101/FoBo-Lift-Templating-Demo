@@ -31,7 +31,6 @@ class Boot extends Loggable {
 
    //If using defaults FoBo init params can be omitted
     FoBo.InitParam.JQuery=FoBo.JQuery172  
-    //FoBo.InitParam.ToolKit=FoBo.FoBo020
     FoBo.InitParam.ToolKit=FoBo.Bootstrap222
     FoBo.InitParam.ToolKit=FoBo.Foundation215
     FoBo.InitParam.ToolKit=FoBo.PrettifyJun2011
@@ -77,42 +76,7 @@ class Boot extends Loggable {
       }
       case _                         => logger.info("RunMode is TEST, PILOT or STAGING")
     }    
-    
-    
-//    LiftRules.snippetDispatch.prepend{
-//      case "menu" => MyMenu
-//      case "Menu" => MyMenu
-//    }
-
-    // Build SiteMap
-    /*
-    val entries = List(
-      Menu.i("Home") / "index",
-      Menu.i("LiBo") / "libo",
-
-
-      Menu(Loc("Foundation", Link(List("foundation"), true, "/foundation/index"),
-        "Foundation")),
-      Menu(Loc("Bootstrap", Link(List("bootstrap"), true, "/bootstrap/index"),
-        "Bootstrap")),
-      Menu(Loc("Bootstrap-2.1.0", Link(List("bootstrap-2.1.0"), true, "/bootstrap-2.1.0/index"),
-        "Bootstrap-2.1.0")),        
-//      Menu(Loc("JQuery-mobile", Link(List("jquery-mobile"), true, "/jquery-mobile/1.0.1/demos/index"),
-//        "JQuery-mobile")),
-      Menu(Loc("JQuery-mobile", Link(List("jquery-mobile"), true, "/jquery-mobile/1.1.0/demos/index"),
-        "JQuery-mobile")),        
-      Menu(Loc("DataTables", Link(List("datatables"), true, "/datatables/1.9.0/index"),
-        "DataTables")),  
-      Menu(Loc("FoBoAPI", Link(List("foboapi"), true, "/foboapi/#net.liftmodules.FoBo.package"),
-        "FoBoAPI")),
-      //FoBo will generate a nav dropdown from this    
-      Menu.i("gendemo.dropdown1.text") / "#" >> LocGroup("frontNav") >> PlaceHolder submenus (
-         Menu.i("gendemo.page1a.text") / "page1a" ,  
-         Menu.i("gendemo.page1b.text") / "page1b" ,
-         Menu.i("gendemo.page1c.text") / "page1c")        
-    )   
-    */
-      
+          
     LiftRules.uriNotFound.prepend(NamedPF("404handler"){
       case (req,failure) => 
         NotFoundAsTemplate(ParsePath(List("404"),"html",false,false))
@@ -147,7 +111,6 @@ class Boot extends Loggable {
     })
 
   }
-
 }
 
 object Paths {
@@ -173,17 +136,11 @@ object Paths {
   val contentDD        = Menu.i("ContentDD") / "ddlabel1"
   val divider1         = Menu("divider1") / "divider1"
   val hdivider1        = Menu("hdivider1") / "hdvidider1"
-  /*
-  val testLGTop        = Menu.i("TestTop") / "ddLabel2"
-  val testLG1a         = Menu.i("Test1a") / "page1a"
-  val testLG1b         = Menu.i("Test1b") / "page1b"
-  val testLG1c         = Menu.i("Test1c") / "page1c"
-  */
+  
   def sitemap = SiteMap(
       index >> LocGroup("mdemo1"),
       liboIndex,
       hdivider1 >> LocGroup("mdemo1") >> FoBo.TBLocInfo.DividerVertical,
-     // about,
       libospyhome,
       libospyabout,
       libospysetup,
@@ -198,31 +155,5 @@ object Paths {
       foundationDoc,
       jqueryMobileDoc,
       datatablesDoc
-//      testLGTop >> LocGroup("testLG") >> PlaceHolder submenus (
-//         testLG1a,
-//         testLG1b,
-//         testLG1c)
-     // frontNavLG
       )
-  /*
-  val page2 = Menu.i("page2") / "index2"
-  val page3 = Menu.i("page3") / "index3"
-  val page4 = Menu.i("page4") / "index4"
-  val page5 = Menu.i("page5") / "index5"
-
-  def sitemap = SiteMap(
-    index >> Snippet("mysnippet", addDivider _ ) submenus(
-      page2,
-      page3
-    ),
-    page4,
-    page5
-  )
-
-  def addDivider( ns: NodeSeq): NodeSeq ={
-    println("we got " + ns)
-    ns
-  }
-  */
-
 }

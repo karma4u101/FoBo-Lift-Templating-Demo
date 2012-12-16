@@ -17,8 +17,8 @@
 					class="icon-bar"></span> <span class="icon-bar"></span>
 				</a> <a href="/index" class="brand">FoBo</a>
 				<div class="nav-collapse">			
-					<ul class="nav">
-					
+				    <!--  
+					<ul class="nav">	
 						<li>
 						<a href="#spyhome">
 						<i class="icon-home"></i>
@@ -39,71 +39,12 @@
 						<i class="icon-info-sign"></i>
 						<span data-lift="Loc?locid=ref.link.text">References</span>
 						</a></li>
-										
-						<li class="dropdown">
-						  <a id="content-dropdown" data-toggle="dropdown"
-							class="dropdown-toggle" href="#"> <span
-								data-lift="Loc?locid=content.dropdown.text">Content</span> <b
-								class="caret"></b>
-						  </a>
-
-							<ul class="dropdown-menu">
-								
-								<li><a href="#spyabout"> 
-								<i class="icon-question-sign"></i> 
-								<span
-										data-lift="Loc?locid=about.link.text">About</span>
-								</a></li>
-								
-						        <li><a href="#spysetup"> 
-						        <i class="icon-asterisk "></i>
-						        <span data-lift="Loc?locid=setup.link.text">Setup</span>
-						        </a></li>								
-								
-								<li><a href="#spyfooter"> 
-								<i class="icon-info-sign"></i> <span
-										data-lift="Loc?locid=ref.link.text">References</span>
-								</a></li>
-								
-								<li class="divider"></li>
-								
-								<li>
-								  <span data-lift="Menu.item?name=Bootstrap;">
-								    <span data-lift="Loc.i">Bootstrap</span>
-								  </span>  
-								</li>
-								<li>
-								  <span data-lift="Menu.item?name=Bootstrap-2.1.0;">
-								    <span data-lift="Loc.i">Bootstrap-2.1.0</span>
-								  </span>  
-								</li>																
-								<li class="divider"></li>
-								<li>
-								  <span data-lift="Menu.item?name=FoBoAPI;">
-								      <span data-lift="Loc?locid=FoBoAPI">FoBo API</span>
-<!-- 									 <span data-lift="Loc?locid=api.link.text">FoBo API</span> -->
-								  </span>
-							   </li>											
-																
-							</ul></li>
-													
-							
-					</ul>
-
-                    <!-- FoBo snippet generating Bootstrap Navigation from lift sitemap menu -->
-				    <span data-lift="FoBo.BootstrapNav.menuToTBNav?eager_eval=true"> 
-				      <span data-lift="Menu.builder?top:class=nav pull-right;li_item:class=active;linkToSelf=true;expandAll=true;group=frontNav"></span>
-				    </span>		
-				    
-					<ul class="nav pull-right">
-						<li>
-						  <span data-lift="Menu.item?name=FoBoAPI;lift:Loc.i;">
-						  <i class="icon-book"></i>
-						  <span data-lift="Loc?locid=api.link.text">FoBo API</span>
-						  </span>
-						 </li>
-					</ul>	 
-
+				    </ul>
+				    -->
+				    <span data-lift="FoBo.TBNavbar.builder?group=liboSpyTop"></span>
+				    <span data-lift="FoBo.TBNavbar.builder?group=liboTop1"></span>
+                    <span data-lift="FoBo.TBNavbar.builderPullRight?group=liboTop2"></span>
+            	
 					
 				</div>
 			</div>

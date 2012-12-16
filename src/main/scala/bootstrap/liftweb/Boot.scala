@@ -32,7 +32,7 @@ class Boot extends Loggable {
    //If using defaults FoBo init params can be omitted
     FoBo.InitParam.JQuery=FoBo.JQuery172  
     //FoBo.InitParam.ToolKit=FoBo.FoBo020
-    FoBo.InitParam.ToolKit=FoBo.Bootstrap220
+    FoBo.InitParam.ToolKit=FoBo.Bootstrap222
     FoBo.InitParam.ToolKit=FoBo.Foundation215
     FoBo.InitParam.ToolKit=FoBo.PrettifyJun2011
     FoBo.InitParam.ToolKit=FoBo.JQueryMobile110
@@ -79,10 +79,10 @@ class Boot extends Loggable {
     }    
     
     
-    LiftRules.snippetDispatch.prepend{
-      case "menu" => MyMenu
-      case "Menu" => MyMenu
-    }
+//    LiftRules.snippetDispatch.prepend{
+//      case "menu" => MyMenu
+//      case "Menu" => MyMenu
+//    }
 
     // Build SiteMap
     /*
@@ -156,40 +156,52 @@ object Paths {
   
   val index            = Menu.i("Home") / "index"
   val liboIndex        = Menu.i("LiBo") / "libo"
-  val foundationDoc    = Menu(Loc("Foundation", Link(List("foundation"), true, "/foundation/index"), "Foundation"))
-  val bootstrap204Doc  = Menu(Loc("Bootstrap", Link(List("bootstrap"), true, "/bootstrap/index"),"Bootstrap"))
-  val bootstrap210Doc  = Menu(Loc("Bootstrap-2.1.0", Link(List("bootstrap-2.1.0"), true, "/bootstrap-2.1.0/index"),"Bootstrap-2.1.0"))
-  val bootstrap220Doc  = Menu(Loc("Bootstrap-2.2.0", Link(List("bootstrap-2.2.0"), true, "/bootstrap-2.2.0/index"),S.loc("Bootstrap-2.2.0", Text("Bootstrap-2.2.0"))))
-  val jqueryMobileDoc  = Menu(Loc("JQuery-mobile", Link(List("jquery-mobile"), true, "/jquery-mobile/1.1.0/demos/index"),"JQuery-mobile"))
-  val datatablesDoc    = Menu(Loc("DataTables", Link(List("datatables"), true, "/datatables/1.9.0/index"),"DataTables"))
-  val foboApiDoc       = Menu(Loc("FoBoAPI", Link(List("foboapi"), true, "/foboapi/#net.liftmodules.FoBo.package"),"FoBoAPI"))
-  val frontNavLG       = Menu.i("gendemo.dropdown1.text") / "#" >> LocGroup("frontNav") >> PlaceHolder submenus (
-                           Menu.i("gendemo.page1a.text") / "page1a" ,  
-                           Menu.i("gendemo.page1b.text") / "page1b" ,
-                           Menu.i("gendemo.page1c.text") / "page1c");
-  val testLG           = Menu.i("TestTop") / "#" >> LocGroup("testLG") submenus (
-                           Menu.i("Test1a") / "page1a" , 
-                           Menu.i("Test1b") / "page1b" ,
-                           Menu.i("Test1c") / "page1c")
-  val testLGTop        = Menu.i("TestTop") / "#"
+  val libospyhome      = Menu(Loc("LiboSpyHome"  , Link(List("libospyhome")  , true, "#spyhome")  , S.loc("LiboSpyHome" , Text("Home"))      , LocGroup("liboSpyTop")))
+  val libospyabout     = Menu(Loc("LiboSpyAbout" , Link(List("libospyabout") , true, "#spyabout") , S.loc("LiboSpyAbout", Text("About"))     , LocGroup("liboSpyTop")))
+  val libospysetup     = Menu(Loc("LiboSpySetup" , Link(List("libospysetup") , true, "#spysetup") , S.loc("LiboSpySetup", Text("Setup"))     , LocGroup("liboSpyTop")))
+  val libospyfooter    = Menu(Loc("LiboSpyFooter", Link(List("libospyfooter"), true, "#spyfooter"), S.loc("LiboSpyRef"  , Text("Referenser")), LocGroup("liboSpyTop")))
+  
+  val foundationDoc    = Menu(Loc("Foundation"     , Link(List("foundation")     , true, "/foundation/index")                     , "Foundation"))
+  val bootstrap204Doc  = Menu(Loc("Bootstrap"      , Link(List("bootstrap")      , true, "/bootstrap/index")                      , "Bootstrap"))
+  val bootstrap210Doc  = Menu(Loc("Bootstrap-2.1.0", Link(List("bootstrap-2.1.0"), true, "/bootstrap-2.1.0/index")                , S.loc("Bootstrap-2.1.0", Text("Bootstrap-2.1.0"))   ))
+  val bootstrap220Doc  = Menu(Loc("Bootstrap-2.2.0", Link(List("bootstrap-2.2.0"), true, "/bootstrap-2.2.0/index")                , S.loc("Bootstrap-2.2.0", Text("Bootstrap-2.2.0"))   ))
+  val bootstrap222Doc  = Menu(Loc("Bootstrap-2.2.2", Link(List("bootstrap-2.2.2"), true, "/bootstrap-2.2.2/index")                , S.loc("Bootstrap-2.2.2", Text("Bootstrap-2.2.2"))   ))
+  val jqueryMobileDoc  = Menu(Loc("JQuery-mobile"  , Link(List("jquery-mobile")  , true, "/jquery-mobile/1.1.0/demos/index")      , "JQuery-mobile"))
+  val datatablesDoc    = Menu(Loc("DataTables"     , Link(List("datatables")     , true, "/datatables/1.9.0/index")               , "DataTables"))
+  val foboApiDoc       = Menu(Loc("FoBoAPI"        , Link(List("foboapi")        , true, "/foboapi/#net.liftmodules.FoBo.package"), S.loc("FoBoAPI"  , Text("FoBo API")), LocGroup("liboTop2","mdemo2") ))
+  
+  val contentDD        = Menu.i("ContentDD") / "ddlabel1"
+  val divider1         = Menu("divider1") / "divider1"
+  val hdivider1        = Menu("hdivider1") / "hdvidider1"
+  /*
+  val testLGTop        = Menu.i("TestTop") / "ddLabel2"
   val testLG1a         = Menu.i("Test1a") / "page1a"
   val testLG1b         = Menu.i("Test1b") / "page1b"
   val testLG1c         = Menu.i("Test1c") / "page1c"
-  
+  */
   def sitemap = SiteMap(
-      index,
+      index >> LocGroup("mdemo1"),
       liboIndex,
+      hdivider1 >> LocGroup("mdemo1") >> FoBo.TBLocInfo.DividerVertical,
+     // about,
+      libospyhome,
+      libospyabout,
+      libospysetup,
+      libospyfooter,
+      contentDD >> LocGroup("liboTop1","mdemo1") >> PlaceHolder submenus ( 
+          bootstrap210Doc ,
+          bootstrap220Doc ,
+          bootstrap222Doc ,
+          divider1  >> FoBo.TBLocInfo.Divider,
+          foboApiDoc 
+      ),
       foundationDoc,
-      bootstrap204Doc,
-      bootstrap210Doc,
-      bootstrap220Doc,
       jqueryMobileDoc,
-      datatablesDoc,
-      foboApiDoc,
-      testLGTop >> LocGroup("testLG") >> PlaceHolder submenus (
-         testLG1a,
-         testLG1b,
-         testLG1c)
+      datatablesDoc
+//      testLGTop >> LocGroup("testLG") >> PlaceHolder submenus (
+//         testLG1a,
+//         testLG1b,
+//         testLG1c)
      // frontNavLG
       )
   /*

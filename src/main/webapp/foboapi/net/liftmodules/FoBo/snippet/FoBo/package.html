@@ -12,7 +12,7 @@
       <script type="text/javascript" src="../../../../../lib/tools.tooltip.js"></script>
     
         </head>
-        <body class="value">
+        <body onload="sh_highlightDocument('../lib/', '.min.js');" class="value">
       <div id="definition">
         <img src="../../../../../lib/package_big.png" />
         <p id="owner"><a name="net" class="extype" href="../../../../package.html">net</a>.<a name="net.liftmodules" class="extype" href="../../../package.html">liftmodules</a>.<a name="net.liftmodules.FoBo" class="extype" href="../../package.html">FoBo</a>.<a name="net.liftmodules.FoBo.snippet" class="extype" href="../package.html">snippet</a></p>
@@ -20,29 +20,30 @@
       </div>
 
       <h4 class="signature" id="signature">
-      <span class="kind">package</span>
-      <span class="symbol"> 
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
         <span class="name">FoBo</span>
-        
-        
       </span>
       </h4>
       
-          <div class="fullcommenttop" id="comment"></div>
+      <div class="fullcommenttop" id="comment"></div>
+    
+
+      <div id="mbrsel">
+        <div id="textfilter"><span class="pre"></span><span class="input"><input accesskey="/" type="text" /></span><span class="post"></span></div>
         
+        
+        <div id="visbl">
+            <span class="filtertype">Visibility</span>
+            <ol><li class="public in"><span>Public</span></li><li class="all out"><span>All</span></li></ol>
+          </div>
+      </div>
 
       <div id="template">
-
-        <div id="mbrsel">
-          <div id="textfilter"><span class="pre"></span><span class="input"><input accesskey="/" type="text" /></span><span class="post"></span></div>
-          
-          
-          <div id="visbl">
-              <span class="filtertype">Visibility</span>
-              <ol><li class="public in"><span>Public</span></li><li class="all out"><span>All</span></li></ol>
-            </div>
-        </div>
-
+        <div id="allMembers">
         
 
         <div class="types members" id="types">
@@ -50,11 +51,12 @@
               <ol><li visbl="pub" name="net.liftmodules.FoBo.snippet.FoBo.Bootstrap" data-isabs="false">
       <a id="Bootstrap:Bootstrap"></a>
       <h4 class="signature">
-      <span class="kind">class</span>
-      <span class="symbol"> 
-        <a href="Bootstrap.html"><span class="name">Bootstrap</span></a>
-        
-        <span class="result"> extends StatefulSnippet with Loggable</span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="Bootstrap.html"><span class="name">Bootstrap</span></a><span class="result"> extends StatefulSnippet with Loggable</span>
       </span>
       </h4>
       <p class="comment cmt">This snippet class contains functions for common transform operations useful when working
@@ -62,11 +64,12 @@ with the Bootstrap toolkit.</p>
     </li><li visbl="pub" name="net.liftmodules.FoBo.snippet.FoBo.DataTables" data-isabs="false">
       <a id="DataTables:DataTables"></a>
       <h4 class="signature">
-      <span class="kind">class</span>
-      <span class="symbol"> 
-        <a href="DataTables.html"><span class="name">DataTables</span></a>
-        
-        <span class="result"> extends StatefulSnippet with Loggable</span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="DataTables.html"><span class="name">DataTables</span></a><span class="result"> extends StatefulSnippet with Loggable</span>
       </span>
       </h4>
       <p class="comment cmt">This snippet class contains functions for common transform operations useful when working
@@ -74,54 +77,79 @@ with the the DataTables toolkit.</p>
     </li><li visbl="pub" name="net.liftmodules.FoBo.snippet.FoBo.ScriptHelper" data-isabs="false">
       <a id="ScriptHelper:ScriptHelper"></a>
       <h4 class="signature">
-      <span class="kind">class</span>
-      <span class="symbol"> 
-        <a href="ScriptHelper.html"><span class="name">ScriptHelper</span></a>
-        
-        <span class="result"> extends StatefulSnippet with Loggable</span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="ScriptHelper.html"><span class="name">ScriptHelper</span></a><span class="result"> extends StatefulSnippet with Loggable</span>
       </span>
       </h4>
       <p class="comment cmt">This snippet class contains functions for common transform operations useful when working
 with the any toolkit.</p>
     </li></ol>
             </div>
-        
+
         
 
         <div class="values members" id="values">
               <h3>Value Members</h3>
-              <ol><li visbl="pub" name="net.liftmodules.FoBo.snippet.FoBo.BootstrapNav" data-isabs="false">
-      <a id="BootstrapNav:BootstrapNav"></a>
-      <h4 class="signature">
-      <span class="kind">object</span>
-      <span class="symbol"> 
-        <a href="BootstrapNav$.html"><span class="name">BootstrapNav</span></a>
-        
-        <span class="result"> extends Logger</span>
-      </span>
-      </h4>
-      <p class="comment cmt">This snippet object transforms lift sitemap menu with specified loc group name into Bootsrap nav menu items including dropdown menu items.</p>
-    </li><li visbl="pub" name="net.liftmodules.FoBo.snippet.FoBo.Info" data-isabs="false">
+              <ol><li visbl="pub" name="net.liftmodules.FoBo.snippet.FoBo.Info" data-isabs="false">
       <a id="Info:Info"></a>
       <h4 class="signature">
-      <span class="kind">object</span>
-      <span class="symbol"> 
-        <a href="Info$.html"><span class="name">Info</span></a>
-        
-        <span class="result"> extends StatefulSnippet with Loggable</span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="Info$.html"><span class="name">Info</span></a><span class="result"> extends StatefulSnippet with Loggable</span>
       </span>
       </h4>
       <p class="comment cmt">This snippet object contains transform functions containing some FoBo Information</p>
+    </li><li visbl="pub" name="net.liftmodules.FoBo.snippet.FoBo.TBNavbar" data-isabs="false">
+      <a id="TBNavbar:TBNavbar"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="TBNavbar$.html"><span class="name">TBNavbar</span></a><span class="result"> extends FlexMenuBuilder with DispatchSnippet</span>
+      </span>
+      </h4>
+      <p class="comment cmt">This snippet object transforms lift SiteMap menu items associated with specified loc
+group name's into twitter bootsrap nav menu items including dropdown menu items from SiteMap submenu's.</p>
     </li></ol>
             </div>
 
-        
+        <div class="values members" id="values">
+              <h3>Deprecated Value Members</h3>
+              <ol><li visbl="pub" name="net.liftmodules.FoBo.snippet.FoBo.BootstrapNav" data-isabs="false">
+      <a id="BootstrapNav:BootstrapNav"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="BootstrapNav$.html"><span class="name deprecated" title="Deprecated: (Since version FoBo v0.7.3) For Lift &gt;= v2.5 use the newer TB***Menu snippets">BootstrapNav</span></a><span class="result"> extends Logger</span>
+      </span>
+      </h4>
+      <p class="comment cmt">This snippet object transforms lift sitemap menu with specified loc group name into Bootsrap nav menu items including dropdown menu items.</p>
+    </li></ol>
+            </div>
+        </div>
 
+        <div id="inheritedMembers">
         
+        </div>
 
       </div>
-      
+
       <div id="tooltip"></div>
-      
+
+      <div id="footer">  </div>
+
+
     </body>
       </html>

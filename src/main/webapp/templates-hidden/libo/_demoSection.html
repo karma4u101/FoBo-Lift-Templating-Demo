@@ -18,14 +18,14 @@
 		<div class="row-fluid">
 			<div class="span3">
 				<ul class="row-fluid nav nav-list bs-docs-sidenav" data-spy="affix">
-					<li><a href="#overview"><i class="icon-chevron-right"></i>
-							Geting Started</a></li>
+	                <li><a href="#gstarted"><i class="icon-chevron-right"></i>
+							Getting started</a></li>				
 					<li><a href="#starterproj"><i class="icon-chevron-right"></i>
 							Starter Project</a></li>
-					<li><a href="#setup"><i class="icon-chevron-right"></i>
-							Setup</a></li>
+					<li><a href="#modulesetup"><i class="icon-chevron-right"></i>
+							Module Setup</a></li>
 					<li><a href="#customization"><i class="icon-chevron-right"></i>
-							Bootstrap customization</a></li>
+							Bootstrap Customization</a></li>
 					<li><a href="#fobo-snippets"><i class="icon-chevron-right"></i>
 							FoBo-Snippets</a></li>
 
@@ -43,11 +43,9 @@
 			</div>
 
 			<div class="span9">
-
-
-				<a id="overview"></a>
+                
+				<a id="gstarted"></a>
 				<section>
-
 					<h2 class="capital">
 						G<span>etting</span> S<span>tarted</span>
 					</h2>
@@ -55,8 +53,8 @@
 						The following section will show you how to set up and use FoBo in
 						your Lift project. The main documentation for general Bootstrap
 						usage included in this demo is currently the <span
-							data-lift="Menu.item?name=Bootstrap-2.2.0;lift:Loc.i;"><span
-							data-lift="Loc.i">Bootstrap-2.2.0</span></span> documentation.
+							data-lift="Menu.item?name=Bootstrap-2.2.2;lift:Loc.i;"><span
+							data-lift="Loc.i">Bootstrap-2.2.2</span></span> documentation.
 					</p>
 				</section>
 
@@ -79,10 +77,10 @@
 				</section>
 
 
-				<a id="setup"></a>
+				<a id="modulesetup"></a>
 				<section>
 					<h2 class="capital">
-						S<span>etup</span>
+						M<span>odule</span> S<span>etup</span>
 					</h2>
 					<p>
 						To integrate <a href="https://github.com/karma4u101/FoBo">FoBo</a>
@@ -243,97 +241,123 @@ import net.liftmodules.FoBo
 						F<span>o</span>B<span>o</span> S<span>nippets</span>
 					</h2>
 
-										<span data-lift="MyMenu.builder?group=testLG"></span>
+<!-- 										<span data-lift="MyMenu.builder?group=testLG"></span> -->
 
-					<div class="dropdown clearfix">
-						<ul class="dropdown-menu" role="menu"
-							aria-labelledby="dropdownMenu"
-							style="display: block; position: static; margin-bottom: 5px; *width: 180px;">
-							<li><span data-lift="Menu.item?name=Bootstrap;"> <span
-									data-lift="Loc.i">Bootstrap</span>
-							</span></li>
-							<li><span data-lift="Menu.item?name=Bootstrap-2.1.0;">
-									<span data-lift="Loc.i">Bootstrap-2.1.0</span>
-							</span></li>
-							<li class="divider"></li>
-							<li><span data-lift="Menu.item?name=FoBoAPI;lift:Loc.i;">
-									<span data-lift="Loc?locid=FoBoAPI">FoBo API</span>
-							</span></li>
-						</ul>
-					</div>
-
-					<div class="dropdown clearfix" style="padding-right: 30px;">
-						<div class="navbar">
-							<div class="navbar-inner">
-								<div class="container">
-									<ul class="nav">
-										<li class="dropdown"><a id="content-dropdown"
-											data-toggle="dropdown" class="dropdown-toggle" href="#">
-												<span data-lift="Loc?locid=content.dropdown.text">Content</span>
-												<b class="caret"></b>
-										</a>
-											<ul class="dropdown-menu">
-												<li><span data-lift="Menu.item?name=Bootstrap;">
-														<span data-lift="Loc.i">Bootstrap</span>
-												</span></li>
-												<li><span data-lift="Menu.item?name=Bootstrap-2.1.0;">
-														<span data-lift="Loc.i">Bootstrap-2.1.0</span>
-												</span></li>
-												<li class="divider"></li>
-												<li><span data-lift="Menu.item?name=FoBoAPI;"> <span
-														data-lift="Loc?locid=FoBoAPI">FoBo API</span>
-												</span></li>
-											</ul></li>
-
-										<li class="dropdown"><a id="content-dropdown"
-											data-toggle="dropdown" class="dropdown-toggle" href="#">
-												<span data-lift="Loc?locid=gendemo.dropdown2.text">dd
-													text</span> <b class="caret"></b>
-										</a>
-											<ul class="dropdown-menu">
-												<li><span
-													data-lift="Menu.item?name=gendemo.page1a.text;"> <span
-														data-lift="Loc.i">gendemo.page1a.text</span>
-												</span></li>
-												<li><span
-													data-lift="Menu.item?name=gendemo.page1b.text;"> <span
-														data-lift="Loc.i">gendemo.page1b.text</span>
-												</span></li>
-												<li><span
-													data-lift="Menu.item?name=gendemo.page1c.text;"> <span
-														data-lift="Loc.i">gendemo.page1c.text</span>
-												</span></li>
-												<li class="divider"></li>
-												<li><span data-lift="Menu.item?name=FoBoAPI;"> <span
-														data-lift="Loc?locid=FoBoAPI">FoBo API</span>
-												</span></li>
-											</ul></li>
-
-									</ul>
-<!-- 									<span data-lift="FoBo.BootstrapNav.menuToTBNav?eager_eval=true"> -->
-<!-- 										<span data-lift="Menu.builder?top:class=nav pull-right ;li_item:class=active;linkToSelf=true;expandAll=true;group=frontNav"></span> -->
-<!-- 									</span> -->
-                                        
+<!-- 					<div class="dropdown clearfix"> -->
+<!-- 						<ul class="dropdown-menu" role="menu" -->
+<!-- 							aria-labelledby="dropdownMenu" -->
+<!-- 							style="display: block; position: static; margin-bottom: 5px; *width: 180px;"> -->
+<!-- 							<li><span data-lift="Menu.item?name=Bootstrap;"> <span -->
+<!-- 									data-lift="Loc.i">Bootstrap</span> -->
+<!-- 							</span></li> -->
+<!-- 							<li><span data-lift="Menu.item?name=Bootstrap-2.1.0;"> -->
+<!-- 									<span data-lift="Loc.i">Bootstrap-2.1.0</span> -->
+<!-- 							</span></li> -->
+<!-- 							<li class="divider"></li> -->
+<!-- 							<li><span data-lift="Menu.item?name=FoBoAPI;lift:Loc.i;"> -->
+<!-- 									<span data-lift="Loc?locid=FoBoAPI">FoBo API</span> -->
+<!-- 							</span></li> -->
+<!-- 						</ul> -->
+<!-- 					</div> -->
 
 
-<!-- 									<form action="" class="navbar-search pull-right"> -->
-<!-- 										<input placeholder="Search" class="search-query span8" -->
-<!-- 											type="text"> -->
-<!-- 									</form> -->
+					<p>
+						The FoBo module comes with some convinience functions (snippets, optional to use) 
+						that will, among other things, help you, build menues, create popups and tooltips and more. 
+						For more information see the <a href="foboapi/#net.liftmodules.FoBo.snippet.FoBo.package">snippet package section</a> 
+						in the <span data-lift="Menu.item?name=FoBoAPI;lift:Loc.i;"><span data-lift="Loc.i">FoBoAPI</span></span>	. 
+					</p>
 
+					<section>
+						<h4>The FoBo.Navbar Snippet</h4>
+						
+						<span class="label">Navbar Usage</span>
+						<pre class="prettyprint lang-html">					
+ &lt;span data-lift="FoBo.TBNavbar.builder?group=[LocGroup-Name]"&gt;&lt;/span&gt;
+ &lt;span data-lift="FoBo.TBNavbar.builderPullRight?group=[LocGroup-Name]"&gt;&lt;/span&gt;					     
+					    </pre>
+					    
+					    
+						<div class="dropdown clearfix" style="padding-right: 30px;">
+							<div class="navbar">
+								<div class="navbar-inner">
+									<div class="container-fluid">
+										<a data-target=".nav-collapse" data-toggle="collapse"
+											class="btn btn-navbar"> <span class="icon-bar"></span> <span
+											class="icon-bar"></span> <span class="icon-bar"></span>
+										</a> <a href="#" class="brand">Navbar Example</a>
+										<div class="nav-collapse">
+
+											<span data-lift="FoBo.TBNavbar.builder?group=mdemo1"></span>
+											<span data-lift="FoBo.TBNavbar.builderPullRight?group=mdemo2"></span>
+
+										</div>
+									</div>
 								</div>
 							</div>
 						</div>
-					</div>
-					<p>
-						The FoBo module comes with some convinience functions (snippets,
-						optional to use) that will generate some commonly used toolkit
-						helper scripts for you. For instansce doing it the Lift - FoBo way
-						<b>you can simply do this</b> using a FoBo:s snippet containing
-						some bootstrap convinience functions:
-					</p>
 
-					<h6>The FoBo.Bootstrap Snippet</h6>
+
+						
+					    			
+					    <span class="label">Navbar Example - Template code</span>			       			
+						<pre class="prettyprint linenums lang-html">					
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    ⋮
+  &lt;body"&gt;
+     ⋮
+   &lt;div class="navbar"&gt; &lt;!-- for example 'navbar navbar-fixed-top' --&gt;
+     &lt;div class="navbar-inner"&gt;
+	   &lt;div class="container-fluid"&gt;
+          &lt;a data-target=".nav-collapse" data-toggle="collapse" class="btn btn-navbar"&gt; 
+            &lt;span class="icon-bar"&gt;&lt;/span&gt; 
+            &lt;span class="icon-bar"&gt;&lt;/span&gt; 
+            &lt;span class="icon-bar"&gt;&lt;/span&gt;
+          &lt;/a&gt; &lt;a href="#" class="brand">Navbar Example&lt;/a&gt;
+          &lt;div class="nav-collapse"&gt;
+            &lt;span data-lift="FoBo.TBNavbar.builder?group=mdemo1"&gt;&lt;/span&gt;
+            &lt;span data-lift="FoBo.TBNavbar.builderPullRight?group=mdemo2"&gt;&lt;/span&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+       ⋮ 
+  &lt;/body&gt;        
+&lt;/html&gt; 					 
+					    </pre>
+					    
+					<span class="label">Navbar Example - Lift SiteMap</span> Showing the <b>LocGroup's</b> that will be transformed into Bootstrap Navbar items for this example.
+					Take a closer look, <a href="https://github.com/karma4u101/FoBo-Lift-Template/blob/master/src/main/scala/bootstrap/liftweb/Boot.scala">here</a> is the Boot.scala file on Github.
+					<pre class="prettyprint linenums lang-scala">
+   ⋮
+  val liboIndex        = Menu.i("LiBo") / "libo"
+  val bootstrap210Doc  = Menu(Loc("Bootstrap-2.1.0", Link(List("bootstrap-2.1.0"), true, "/bootstrap-2.1.0/index")                , S.loc("Bootstrap-2.1.0", Text("Bootstrap-2.1.0"))   ))
+  val bootstrap220Doc  = Menu(Loc("Bootstrap-2.2.0", Link(List("bootstrap-2.2.0"), true, "/bootstrap-2.2.0/index")                , S.loc("Bootstrap-2.2.0", Text("Bootstrap-2.2.0"))   ))
+  val bootstrap222Doc  = Menu(Loc("Bootstrap-2.2.2", Link(List("bootstrap-2.2.2"), true, "/bootstrap-2.2.2/index")                , S.loc("Bootstrap-2.2.2", Text("Bootstrap-2.2.2"))   ))
+  val foboApiDoc       = Menu(Loc("FoBoAPI"        , Link(List("foboapi")        , true, "/foboapi/#net.liftmodules.FoBo.package"), S.loc("FoBoAPI"        , Text("FoBo API")), LocGroup("liboTop2","mdemo2") ))
+  val contentDD        = Menu.i("ContentDD") / "ddlabel1"
+  val divider1         = Menu("divider1") / "divider1"
+  val hdivider1        = Menu("hdivider1") / "hdvidider1"     
+   ⋮
+  def sitemap = SiteMap(
+     ⋮
+    liboIndex,
+    hdivider1 >> LocGroup("mdemo1") >> FoBo.TBLocInfo.DividerVertical,   
+    contentDD >> LocGroup("liboTop1","mdemo1") >> PlaceHolder submenus ( 
+      bootstrap210Doc ,
+      bootstrap220Doc ,
+      bootstrap222Doc ,
+      divider1  >> FoBo.TBLocInfo.Divider,
+      foboApiDoc 
+    ), 
+     ⋮  
+  ) 
+						</pre>
+											    
+					</section>
+
+					<h4>The FoBo.Bootstrap Snippet</h4>
 
 					<span class="label">Activate dropdown</span>
 					<pre class="prettyprint linenums lang-html">

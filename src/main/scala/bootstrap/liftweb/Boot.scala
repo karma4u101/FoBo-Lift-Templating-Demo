@@ -114,8 +114,19 @@ class Boot extends Loggable {
 }
 
 object Paths {
-  import xml.NodeSeq
+  //import xml.NodeSeq
   import scala.xml._
+
+  val divider1         = Menu("divider1") / "divider1"
+  val divider2         = Menu("divider2") / "divider2"
+  val divider3         = Menu("divider3") / "divider3"
+  val hdivider1        = Menu("hdivider1") / "hdvidider1"
+  //nav headers
+  val navHeader1       = Menu.i("NavHeader1") / "navHeader1"
+  val navHeader2       = Menu.i("NavHeader2") / "navHeader2"
+  
+  val content1DD       = Menu.i("Content1DD") / "ddlabel1"
+  val content11DD      = Menu.i("Content11DD") / "ddlabel11"  
   
   val index            = Menu.i("Home") / "index"
   val liboIndex        = Menu.i("LiBo") / "libo"
@@ -123,29 +134,30 @@ object Paths {
   val libospyabout     = Menu(Loc("LiboSpyAbout" , Link(List("libospyabout") , true, "#spyabout") , S.loc("LiboSpyAbout", Text("About"))     , LocGroup("liboSpyTop")))
   val libospysetup     = Menu(Loc("LiboSpySetup" , Link(List("libospysetup") , true, "#spysetup") , S.loc("LiboSpySetup", Text("Setup"))     , LocGroup("liboSpyTop")))
   val libospyfooter    = Menu(Loc("LiboSpyFooter", Link(List("libospyfooter"), true, "#spyfooter"), S.loc("LiboSpyRef"  , Text("Referenser")), LocGroup("liboSpyTop")))
-  
+    
   val foundationDoc    = Menu(Loc("Foundation"     , Link(List("foundation")     , true, "/foundation/index")                     , "Foundation"))
   val bootstrap204Doc  = Menu(Loc("Bootstrap"      , Link(List("bootstrap")      , true, "/bootstrap/index")                      , "Bootstrap"))
   val bootstrap210Doc  = Menu(Loc("Bootstrap-2.1.0", Link(List("bootstrap-2.1.0"), true, "/bootstrap-2.1.0/index")                , S.loc("Bootstrap-2.1.0", Text("Bootstrap-2.1.0"))   ))
-  val bootstrap220Doc  = Menu(Loc("Bootstrap-2.2.0", Link(List("bootstrap-2.2.0"), true, "/bootstrap-2.2.0/index")                , S.loc("Bootstrap-2.2.0", Text("Bootstrap-2.2.0"))   ))
-  val bootstrap222Doc  = Menu(Loc("Bootstrap-2.2.2", Link(List("bootstrap-2.2.2"), true, "/bootstrap-2.2.2/index")                , S.loc("Bootstrap-2.2.2", Text("Bootstrap-2.2.2"))   ))
+  val bootstrap220Doc  = Menu(Loc("Bootstrap-2.2.0", Link(List("bootstrap-2.2.0"), true, "/bootstrap-2.2.0/index")                , S.loc("Bootstrap-2.2.0", Text("Bootstrap-2.2.0")), LocGroup("nldemo1")  ))
+  val bootstrap222Doc  = Menu(Loc("Bootstrap-2.2.2", Link(List("bootstrap-2.2.2"), true, "/bootstrap-2.2.2/index")                , S.loc("Bootstrap-2.2.2", Text("Bootstrap-2.2.2")), LocGroup("nldemo1")   ))
   val jqueryMobileDoc  = Menu(Loc("JQuery-mobile"  , Link(List("jquery-mobile")  , true, "/jquery-mobile/1.1.0/demos/index")      , "JQuery-mobile"))
   val datatablesDoc    = Menu(Loc("DataTables"     , Link(List("datatables")     , true, "/datatables/1.9.0/index")               , "DataTables"))
-  val foboApiDoc       = Menu(Loc("FoBoAPI"        , Link(List("foboapi")        , true, "/foboapi/#net.liftmodules.FoBo.package"), S.loc("FoBoAPI"  , Text("FoBo API")), LocGroup("liboTop2","mdemo2") ))
+  val foboApiDoc       = Menu(Loc("FoBoAPI"        , Link(List("foboapi")        , true, "/foboapi/#net.liftmodules.FoBo.package"), S.loc("FoBoAPI"  , Text("FoBo API")), LocGroup("liboTop2","mdemo2","nldemo1") ))
   
-  val contentDD        = Menu.i("ContentDD") / "ddlabel1"
-  val divider1         = Menu("divider1") / "divider1"
-  val hdivider1        = Menu("hdivider1") / "hdvidider1"
+  val nlHelp           = Menu.i("NLHelp") / "helpindex"
+
   
   def sitemap = SiteMap(
-      index >> LocGroup("mdemo1"),
+      navHeader1 >> LocGroup("nldemo1") >> FoBo.TBLocInfo.NavHeader,
+      index >> LocGroup("mdemo1","nldemo1"),
+      navHeader2 >> LocGroup("nldemo1") >> FoBo.TBLocInfo.NavHeader,
       liboIndex,
       hdivider1 >> LocGroup("mdemo1") >> FoBo.TBLocInfo.DividerVertical,
-      libospyhome,
+      libospyhome ,
       libospyabout,
       libospysetup,
       libospyfooter,
-      contentDD >> LocGroup("liboTop1","mdemo1") >> PlaceHolder submenus ( 
+      content1DD >> LocGroup("liboTop1","mdemo1") >> PlaceHolder submenus ( 
           bootstrap210Doc ,
           bootstrap220Doc ,
           bootstrap222Doc ,
@@ -154,6 +166,8 @@ object Paths {
       ),
       foundationDoc,
       jqueryMobileDoc,
-      datatablesDoc
+      datatablesDoc,
+      divider3 >> LocGroup("nldemo1") >> FoBo.TBLocInfo.Divider,
+      nlHelp >> LocGroup("nldemo1")
       )
 }

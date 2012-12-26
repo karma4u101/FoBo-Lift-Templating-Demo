@@ -12,7 +12,7 @@
       <script type="text/javascript" src="../../../lib/tools.tooltip.js"></script>
     
         </head>
-        <body onload="sh_highlightDocument('../lib/', '.min.js');" class="value">
+        <body class="value">
       <div id="definition">
         <img src="../../../lib/package_big.png" />
         <p id="owner"><a name="net" class="extype" href="../../package.html">net</a>.<a name="net.liftmodules" class="extype" href="../package.html">liftmodules</a></p>
@@ -20,16 +20,15 @@
       </div>
 
       <h4 class="signature" id="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">package</span>
-      </span>
-      <span class="symbol">
+      <span class="kind">package</span>
+      <span class="symbol"> 
         <span class="name">FoBo</span>
+        
+        
       </span>
       </h4>
       
-      <div class="fullcommenttop" id="comment"><div class="comment cmt"><h4>Welcome to FoBo - A generic Front-End Toolkit Lift Module</h4><p>The <a name="net.liftmodules.FoBo" class="extype" href="">FoBo</a> Package is the starting point for this API.
+          <div class="fullcommenttop" id="comment"><div class="comment cmt"><h4>Welcome to FoBo - A generic Front-End Toolkit Lift Module</h4><p>The <a name="net.liftmodules.FoBo" class="extype" href="">FoBo</a> Package is the starting point for this API.
 The FoBo modules Github home is <a href="https://github.com/karma4u101/FoBo">here</a></p><h5>What FoBo will do for you</h5><p>This module gives you quick and easy integration of some of the industry leading web-centric open source
 front-end toolkits with some carefully thought throw Scala/Lift inherit extra benefits.</p><p>Among the benefits is:</p><ul><li>due to a small footprint and uniform declaration and integration points across toolkit versions only a
    small amount of changes will bee needed for a up/down-grading of a used Toolkit, optimally, if the toolkit
@@ -42,18 +41,18 @@ front-end toolkits with some carefully thought throw Scala/Lift inherit extra be
    documentation form more information.</li></ul><h5>FoBo supported toolkits and plugins</h5><p>The following is a list of available toolkits and plugins</p><ul><li>JQuery  [v1.6.4, v1.7.1, v1.7.2]</li><li>Bootstrap [v1.4.0, v2.0.0, v2.0.4, v2.1.0, v2.2.0, v2.2.2]</li><li>Foundation [v2.1.4, v2.1.5]</li><li>DataTables [v1.9.0]</li><li>JQuery-mobile [v1.0.1, v1.1.0]</li><li>Google Code Prettify [vJun2011]</li><li>Knockout JS [v2.0.0, v2.1.0]</li><li>FoBo v0.2.0 (comprised of foundation v2.1.5,bootstrap v2.0.0,orbit v1.4.0)</li><li>FoBo v0.1.0 (comprised of foundation v2.1.4,bootstrap v1.4.0,orbit v1.3.0)</li></ul><h5>Okey, okey I get it, now take me to the most interesting stuff</h5><p>From a user perspective, the most interesting stuff is probably in the snippet classes in <a name="net.liftmodules.FoBo.snippet.FoBo" class="extype" href="snippet/FoBo/package.html">FoBo</a>.
 Great care has been taken to explain and illustrate how to use the snippet methods so that you can use them
 even if you are not a Lift expert, to show you what I am talking about <b>here is a example showing one way to use the tooltip function:</b></p><hr /><p>def <b>tooltip</b> : CssSel</p><p>This function sets a tooltip action on a element.</p><p><b>Snippet Params:</b></p><ul><li><b>Param</b> <i>id</i> - The element id</li><li><b>Param</b> <i>option</i> - The option string see bootstrap documentation for available options.</li></ul><p><b>Example</b> Showing a example element using the tooltip and the actual snippet invocation</p><pre>
- &lt;a id=<span class="lit">"aId"</span>
-    title=<span class="lit">"The most powerful, most secure web framework available today. It simply rocks!"</span>
-    href=<span class="lit">"http://liftweb.net/"</span>&gt;Lift&lt;/a&gt;
- &lt;script data-lift=<span class="lit">"FoBo.Bootstrap.tooltip?id=#aId&option=placement:'bottom'"</span>&gt;&lt;/script&gt;
+ &lt;a id=&quot;aId&quot;
+    title=&quot;The most powerful, most secure web framework available today. It simply rocks!&quot;
+    href=&quot;http://liftweb.net/&quot;&gt;Lift&lt;/a&gt;
+ &lt;script data-lift=&quot;FoBo.Bootstrap.tooltip?id=#aId&amp;option=placement:'bottom'&quot;&gt;&lt;/script&gt;
 </pre><p><b>Result:</b> The script tag with the snippet invocation will result in the following being injected in place of the snippet invocation:</p><pre>
- &lt;a id=<span class="lit">"aId"</span>
-    title=<span class="lit">"The most powerful, most secure web framework available today. It simply rocks!"</span>
-    href=<span class="lit">"http://liftweb.net/"</span>&gt;Lift&lt;/a&gt;
-  &lt;script <span class="kw">type</span>=<span class="lit">"text/javascript"</span>&gt;
-    <span class="cmt">// <![CDATA[</span>
-      $(function () { $(<span class="lit">'#aId'</span>).tooltip({placement:<span class="lit">'bottom'</span>}); }); ;
-    <span class="cmt">// ]]></span>
+ &lt;a id=&quot;aId&quot;
+    title=&quot;The most powerful, most secure web framework available today. It simply rocks!&quot;
+    href=&quot;http://liftweb.net/&quot;&gt;Lift&lt;/a&gt;
+  &lt;script type=&quot;text/javascript&quot;&gt;
+    // &lt;![CDATA[
+      $(function () { $('#aId').tooltip({placement:'bottom'}); }); ;
+    // ]]&gt;
   &lt;/script&gt;
 </pre><hr /><h5>Small heads up usage warning</h5><p>This API is very young (with only snapshot releases) so if you make direct usage of some FoBoHelpers in lib
 chances is that things change.
@@ -65,31 +64,31 @@ your help, suggestions, encouragement, engagement, patches (pull requests) bug-f
 </li></ul></div><dl class="attributes block"> <div class="block">Example:
                 <ol><li class="cmt"><p>To initiate this module for usage in your Lift project
 set something like the following in the projects Lift bootstrap.liftweb.Boot</p><pre>
-   <span class="kw">import</span> net.liftmodules.FoBo
+   import net.liftmodules.FoBo
     :
     :
-   <span class="cmt">//If using defaults FoBo init params can be omitted</span>
-   FoBo.InitParam.JQuery=FoBo.JQueryXXX  <span class="cmt">//one jquery version</span>
-   FoBo.InitParam.ToolKit=FoBo.TheFirstToolkitXXX <span class="cmt">//one or more toolkits</span>
+   //If using defaults FoBo init params can be omitted
+   FoBo.InitParam.JQuery=FoBo.JQueryXXX  //one jquery version
+   FoBo.InitParam.ToolKit=FoBo.TheFirstToolkitXXX //one or more toolkits
    FoBo.InitParam.ToolKit=FoBo.TheSecondToolkitYYY
     :
-   FoBo.init() <span class="cmt">//now do init</span>
+   FoBo.init() //now do init
 </pre></li></ol>
-              </div><dt>Version</dt><dd><p>v0.7.5</p></dd></dl></div>
-    
-
-      <div id="mbrsel">
-        <div id="textfilter"><span class="pre"></span><span class="input"><input accesskey="/" type="text" /></span><span class="post"></span></div>
+              </div><dt>Version</dt><dd><p>v0.7.6</p></dd></dl></div>
         
-        
-        <div id="visbl">
-            <span class="filtertype">Visibility</span>
-            <ol><li class="public in"><span>Public</span></li><li class="all out"><span>All</span></li></ol>
-          </div>
-      </div>
 
       <div id="template">
-        <div id="allMembers">
+
+        <div id="mbrsel">
+          <div id="textfilter"><span class="pre"></span><span class="input"><input accesskey="/" type="text" /></span><span class="post"></span></div>
+          
+          
+          <div id="visbl">
+              <span class="filtertype">Visibility</span>
+              <ol><li class="public in"><span>Public</span></li><li class="all out"><span>All</span></li></ol>
+            </div>
+        </div>
+
         
 
         <div class="types members" id="types">
@@ -97,30 +96,28 @@ set something like the following in the projects Lift bootstrap.liftweb.Boot</p>
               <ol><li visbl="pub" name="net.liftmodules.FoBo.package.FoBoJQuery" data-isabs="true">
       <a id="FoBoJQuery:FoBoJQuery"></a>
       <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">trait</span>
-      </span>
-      <span class="symbol">
-        <a href="package$$FoBoJQuery.html"><span class="name">FoBoJQuery</span></a><span class="result"> extends AnyRef</span>
+      <span class="kind">trait</span>
+      <span class="symbol"> 
+        <a href="package$$FoBoJQuery.html"><span class="name">FoBoJQuery</span></a>
+        
+        <span class="result"> extends AnyRef</span>
       </span>
       </h4>
       
     </li><li visbl="pub" name="net.liftmodules.FoBo.package.FoBoToolkit" data-isabs="true">
       <a id="FoBoToolkit:FoBoToolkit"></a>
       <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">trait</span>
-      </span>
-      <span class="symbol">
-        <a href="package$$FoBoToolkit.html"><span class="name">FoBoToolkit</span></a><span class="result"> extends AnyRef</span>
+      <span class="kind">trait</span>
+      <span class="symbol"> 
+        <a href="package$$FoBoToolkit.html"><span class="name">FoBoToolkit</span></a>
+        
+        <span class="result"> extends AnyRef</span>
       </span>
       </h4>
       
     </li></ol>
             </div>
-
+        
         
 
         <div class="values members" id="values">
@@ -128,144 +125,132 @@ set something like the following in the projects Lift bootstrap.liftweb.Boot</p>
               <ol><li visbl="pub" name="net.liftmodules.FoBo.package.Bootstrap210" data-isabs="false">
       <a id="Bootstrap210:Bootstrap210"></a>
       <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">object</span>
-      </span>
-      <span class="symbol">
-        <a href="package$$Bootstrap210$.html"><span class="name">Bootstrap210</span></a><span class="result"> extends FoBoToolkit with Product with Serializable</span>
+      <span class="kind">object</span>
+      <span class="symbol"> 
+        <a href="package$$Bootstrap210$.html"><span class="name">Bootstrap210</span></a>
+        
+        <span class="result"> extends FoBoToolkit with Product with Serializable</span>
       </span>
       </h4>
       <p class="comment cmt">Enable usage of Twitter Bootstrap version 2_1_0 in your bootstrap liftweb Boot.</p>
     </li><li visbl="pub" name="net.liftmodules.FoBo.package.Bootstrap220" data-isabs="false">
       <a id="Bootstrap220:Bootstrap220"></a>
       <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">object</span>
-      </span>
-      <span class="symbol">
-        <a href="package$$Bootstrap220$.html"><span class="name">Bootstrap220</span></a><span class="result"> extends FoBoToolkit with Product with Serializable</span>
+      <span class="kind">object</span>
+      <span class="symbol"> 
+        <a href="package$$Bootstrap220$.html"><span class="name">Bootstrap220</span></a>
+        
+        <span class="result"> extends FoBoToolkit with Product with Serializable</span>
       </span>
       </h4>
       <p class="comment cmt">Enable usage of Twitter Bootstrap version 2_2_0 in your bootstrap liftweb Boot.</p>
     </li><li visbl="pub" name="net.liftmodules.FoBo.package.Bootstrap222" data-isabs="false">
       <a id="Bootstrap222:Bootstrap222"></a>
       <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">object</span>
-      </span>
-      <span class="symbol">
-        <a href="package$$Bootstrap222$.html"><span class="name">Bootstrap222</span></a><span class="result"> extends FoBoToolkit with Product with Serializable</span>
+      <span class="kind">object</span>
+      <span class="symbol"> 
+        <a href="package$$Bootstrap222$.html"><span class="name">Bootstrap222</span></a>
+        
+        <span class="result"> extends FoBoToolkit with Product with Serializable</span>
       </span>
       </h4>
       <p class="comment cmt">Enable usage of Twitter Bootstrap version 2_2_2 in your bootstrap liftweb Boot.</p>
     </li><li visbl="pub" name="net.liftmodules.FoBo.package.DataTables190" data-isabs="false">
       <a id="DataTables190:DataTables190"></a>
       <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">object</span>
-      </span>
-      <span class="symbol">
-        <a href="package$$DataTables190$.html"><span class="name">DataTables190</span></a><span class="result"> extends FoBoToolkit with Product with Serializable</span>
+      <span class="kind">object</span>
+      <span class="symbol"> 
+        <a href="package$$DataTables190$.html"><span class="name">DataTables190</span></a>
+        
+        <span class="result"> extends FoBoToolkit with Product with Serializable</span>
       </span>
       </h4>
       <p class="comment cmt">Enable usage of DataTables version 1_9_0 in your bootstrap liftweb Boot.</p>
     </li><li visbl="pub" name="net.liftmodules.FoBo.package.Foundation215" data-isabs="false">
       <a id="Foundation215:Foundation215"></a>
       <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">object</span>
-      </span>
-      <span class="symbol">
-        <a href="package$$Foundation215$.html"><span class="name">Foundation215</span></a><span class="result"> extends FoBoToolkit with Product with Serializable</span>
+      <span class="kind">object</span>
+      <span class="symbol"> 
+        <a href="package$$Foundation215$.html"><span class="name">Foundation215</span></a>
+        
+        <span class="result"> extends FoBoToolkit with Product with Serializable</span>
       </span>
       </h4>
       <p class="comment cmt">Enable usage of Foundation version 2_1_5 in your bootstrap liftweb Boot.</p>
     </li><li visbl="pub" name="net.liftmodules.FoBo.package.InitParam" data-isabs="false">
       <a id="InitParam:InitParam"></a>
       <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">object</span>
-      </span>
-      <span class="symbol">
-        <a href="package$$InitParam$.html"><span class="name">InitParam</span></a><span class="result"> extends FoBoToolkit with FoBoJQuery</span>
+      <span class="kind">object</span>
+      <span class="symbol"> 
+        <a href="package$$InitParam$.html"><span class="name">InitParam</span></a>
+        
+        <span class="result"> extends FoBoToolkit with FoBoJQuery</span>
       </span>
       </h4>
       <p class="comment cmt">Enable Toolkit(s)/JQuery options for the FoBo module in your bootstrap liftweb Boot</p>
     </li><li visbl="pub" name="net.liftmodules.FoBo.package.JQuery172" data-isabs="false">
       <a id="JQuery172:JQuery172"></a>
       <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">object</span>
-      </span>
-      <span class="symbol">
-        <a href="package$$JQuery172$.html"><span class="name">JQuery172</span></a><span class="result"> extends FoBoJQuery with Product with Serializable</span>
+      <span class="kind">object</span>
+      <span class="symbol"> 
+        <a href="package$$JQuery172$.html"><span class="name">JQuery172</span></a>
+        
+        <span class="result"> extends FoBoJQuery with Product with Serializable</span>
       </span>
       </h4>
       <p class="comment cmt">Enable usage of JQuery version 1_7_2 in your bootstrap liftweb Boot.</p>
     </li><li visbl="pub" name="net.liftmodules.FoBo.package.JQueryMobile110" data-isabs="false">
       <a id="JQueryMobile110:JQueryMobile110"></a>
       <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">object</span>
-      </span>
-      <span class="symbol">
-        <a href="package$$JQueryMobile110$.html"><span class="name">JQueryMobile110</span></a><span class="result"> extends FoBoToolkit with Product with Serializable</span>
+      <span class="kind">object</span>
+      <span class="symbol"> 
+        <a href="package$$JQueryMobile110$.html"><span class="name">JQueryMobile110</span></a>
+        
+        <span class="result"> extends FoBoToolkit with Product with Serializable</span>
       </span>
       </h4>
       <p class="comment cmt">Enable usage of JQueryMobile version 1_1_0 in your liftweb Boot.</p>
     </li><li visbl="pub" name="net.liftmodules.FoBo.package.Knockout200" data-isabs="false">
       <a id="Knockout200:Knockout200"></a>
       <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">object</span>
-      </span>
-      <span class="symbol">
-        <a href="package$$Knockout200$.html"><span class="name">Knockout200</span></a><span class="result"> extends FoBoToolkit with Product with Serializable</span>
+      <span class="kind">object</span>
+      <span class="symbol"> 
+        <a href="package$$Knockout200$.html"><span class="name">Knockout200</span></a>
+        
+        <span class="result"> extends FoBoToolkit with Product with Serializable</span>
       </span>
       </h4>
       <p class="comment cmt">Enable usage of KnockOut version 2_1_0 in your bootstrap liftweb Boot.</p>
     </li><li visbl="pub" name="net.liftmodules.FoBo.package.Knockout210" data-isabs="false">
       <a id="Knockout210:Knockout210"></a>
       <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">object</span>
-      </span>
-      <span class="symbol">
-        <a href="package$$Knockout210$.html"><span class="name">Knockout210</span></a><span class="result"> extends FoBoToolkit with Product with Serializable</span>
+      <span class="kind">object</span>
+      <span class="symbol"> 
+        <a href="package$$Knockout210$.html"><span class="name">Knockout210</span></a>
+        
+        <span class="result"> extends FoBoToolkit with Product with Serializable</span>
       </span>
       </h4>
       <p class="comment cmt">Enable usage of KnockOut version 2_0_0 in your bootstrap liftweb Boot.</p>
     </li><li visbl="pub" name="net.liftmodules.FoBo.package.PrettifyJun2011" data-isabs="false">
       <a id="PrettifyJun2011:PrettifyJun2011"></a>
       <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">object</span>
-      </span>
-      <span class="symbol">
-        <a href="package$$PrettifyJun2011$.html"><span class="name">PrettifyJun2011</span></a><span class="result"> extends FoBoToolkit with Product with Serializable</span>
+      <span class="kind">object</span>
+      <span class="symbol"> 
+        <a href="package$$PrettifyJun2011$.html"><span class="name">PrettifyJun2011</span></a>
+        
+        <span class="result"> extends FoBoToolkit with Product with Serializable</span>
       </span>
       </h4>
       <p class="comment cmt">Enable usage of Prettify version Jun2011 in your bootstrap liftweb Boot.</p>
     </li><li visbl="pub" name="net.liftmodules.FoBo.package.TBLocInfo" data-isabs="false">
       <a id="TBLocInfo:TBLocInfo"></a>
       <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">object</span>
-      </span>
-      <span class="symbol">
-        <a href="package$$TBLocInfo$.html"><span class="name">TBLocInfo</span></a><span class="result"> extends AnyRef</span>
+      <span class="kind">object</span>
+      <span class="symbol"> 
+        <a href="package$$TBLocInfo$.html"><span class="name">TBLocInfo</span></a>
+        
+        <span class="result"> extends AnyRef</span>
       </span>
       </h4>
       <p class="comment cmt">Extends your Lift SiteMap with various common bootstrap menu manipulations such
@@ -273,12 +258,11 @@ as horizontal and vertical menu dividers and menu labels (labels coming soon).</
     </li><li visbl="pub" name="net.liftmodules.FoBo.package#init" data-isabs="false">
       <a id="init():Unit"></a>
       <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">init</span><span class="params">()</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      <span class="kind">def</span>
+      <span class="symbol"> 
+        <span class="name">init</span>
+        
+        <span class="params">()</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
       </span>
       </h4>
       <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="net.liftmodules.FoBo.package" class="extype" href="package$.html">package</a></dd><div class="block">Example:
@@ -291,24 +275,22 @@ params so default Toolkit and JQuery values will be used.
     </li><li visbl="pub" name="net.liftmodules.FoBo.lib" data-isabs="false">
       <a id="lib:lib"></a>
       <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">package</span>
-      </span>
-      <span class="symbol">
+      <span class="kind">package</span>
+      <span class="symbol"> 
         <a href="lib/package.html"><span class="name">lib</span></a>
+        
+        
       </span>
       </h4>
       
     </li><li visbl="pub" name="net.liftmodules.FoBo.snippet" data-isabs="false">
       <a id="snippet:snippet"></a>
       <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">package</span>
-      </span>
-      <span class="symbol">
+      <span class="kind">package</span>
+      <span class="symbol"> 
         <a href="snippet/package.html"><span class="name">snippet</span></a>
+        
+        
       </span>
       </h4>
       
@@ -320,125 +302,110 @@ params so default Toolkit and JQuery values will be used.
               <ol><li visbl="pub" name="net.liftmodules.FoBo.package.Bootstrap140" data-isabs="false">
       <a id="Bootstrap140:Bootstrap140"></a>
       <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">object</span>
-      </span>
-      <span class="symbol">
-        <a href="package$$Bootstrap140$.html"><span class="name deprecated" title="Deprecated: (Since version FoBo v0.7.3) Use Bootstrap210 or newer">Bootstrap140</span></a><span class="result"> extends FoBoToolkit with Product with Serializable</span>
+      <span class="kind">object</span>
+      <span class="symbol"> 
+        <a href="package$$Bootstrap140$.html"><span class="name deprecated">Bootstrap140</span></a>
+        
+        <span class="result"> extends FoBoToolkit with Product with Serializable</span>
       </span>
       </h4>
       <p class="comment cmt">Enable usage of Twitter Bootstrap version 1_4_0 in your bootstrap liftweb Boot.</p>
     </li><li visbl="pub" name="net.liftmodules.FoBo.package.Bootstrap200" data-isabs="false">
       <a id="Bootstrap200:Bootstrap200"></a>
       <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">object</span>
-      </span>
-      <span class="symbol">
-        <a href="package$$Bootstrap200$.html"><span class="name deprecated" title="Deprecated: (Since version FoBo v0.7.3) Use Bootstrap210 or newer">Bootstrap200</span></a><span class="result"> extends FoBoToolkit with Product with Serializable</span>
+      <span class="kind">object</span>
+      <span class="symbol"> 
+        <a href="package$$Bootstrap200$.html"><span class="name deprecated">Bootstrap200</span></a>
+        
+        <span class="result"> extends FoBoToolkit with Product with Serializable</span>
       </span>
       </h4>
       <p class="comment cmt">Enable usage of Twitter Bootstrap version 2_0_0 in your bootstrap liftweb Boot.</p>
     </li><li visbl="pub" name="net.liftmodules.FoBo.package.Bootstrap204" data-isabs="false">
       <a id="Bootstrap204:Bootstrap204"></a>
       <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">object</span>
-      </span>
-      <span class="symbol">
-        <a href="package$$Bootstrap204$.html"><span class="name deprecated" title="Deprecated: (Since version FoBo v0.7.3) Use Bootstrap210 or newer">Bootstrap204</span></a><span class="result"> extends FoBoToolkit with Product with Serializable</span>
+      <span class="kind">object</span>
+      <span class="symbol"> 
+        <a href="package$$Bootstrap204$.html"><span class="name deprecated">Bootstrap204</span></a>
+        
+        <span class="result"> extends FoBoToolkit with Product with Serializable</span>
       </span>
       </h4>
       <p class="comment cmt">Enable usage of Twitter Bootstrap version 2_0_4 in your bootstrap liftweb Boot.</p>
     </li><li visbl="pub" name="net.liftmodules.FoBo.package.FoBo010" data-isabs="false">
       <a id="FoBo010:FoBo010"></a>
       <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">object</span>
-      </span>
-      <span class="symbol">
-        <a href="package$$FoBo010$.html"><span class="name deprecated" title="Deprecated: (Since version FoBo v0.7.3) Use Bootstrap210 or newer">FoBo010</span></a><span class="result"> extends FoBoToolkit with Product with Serializable</span>
+      <span class="kind">object</span>
+      <span class="symbol"> 
+        <a href="package$$FoBo010$.html"><span class="name deprecated">FoBo010</span></a>
+        
+        <span class="result"> extends FoBoToolkit with Product with Serializable</span>
       </span>
       </h4>
       <p class="comment cmt">Enable usage of FoBo version 0_1_0 in your bootstrap liftweb Boot.</p>
     </li><li visbl="pub" name="net.liftmodules.FoBo.package.FoBo020" data-isabs="false">
       <a id="FoBo020:FoBo020"></a>
       <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">object</span>
-      </span>
-      <span class="symbol">
-        <a href="package$$FoBo020$.html"><span class="name deprecated" title="Deprecated: (Since version FoBo v0.7.3) Use Bootstrap210 or newer">FoBo020</span></a><span class="result"> extends FoBoToolkit with Product with Serializable</span>
+      <span class="kind">object</span>
+      <span class="symbol"> 
+        <a href="package$$FoBo020$.html"><span class="name deprecated">FoBo020</span></a>
+        
+        <span class="result"> extends FoBoToolkit with Product with Serializable</span>
       </span>
       </h4>
       <p class="comment cmt">Enable usage of FoBo version 0_2_0 in your bootstrap liftweb Boot.</p>
     </li><li visbl="pub" name="net.liftmodules.FoBo.package.Foundation214" data-isabs="false">
       <a id="Foundation214:Foundation214"></a>
       <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">object</span>
-      </span>
-      <span class="symbol">
-        <a href="package$$Foundation214$.html"><span class="name deprecated" title="Deprecated: (Since version FoBo v0.7.3) Use Foundation215">Foundation214</span></a><span class="result"> extends FoBoToolkit with Product with Serializable</span>
+      <span class="kind">object</span>
+      <span class="symbol"> 
+        <a href="package$$Foundation214$.html"><span class="name deprecated">Foundation214</span></a>
+        
+        <span class="result"> extends FoBoToolkit with Product with Serializable</span>
       </span>
       </h4>
       <p class="comment cmt">Enable usage of Foundation version 2_1_4 in your bootstrap liftweb Boot.</p>
     </li><li visbl="pub" name="net.liftmodules.FoBo.package.JQuery164" data-isabs="false">
       <a id="JQuery164:JQuery164"></a>
       <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">object</span>
-      </span>
-      <span class="symbol">
-        <a href="package$$JQuery164$.html"><span class="name deprecated" title="Deprecated: (Since version FoBo v0.7.3) Use JQuery172 or the Lift-JQuery-Module">JQuery164</span></a><span class="result"> extends FoBoJQuery with Product with Serializable</span>
+      <span class="kind">object</span>
+      <span class="symbol"> 
+        <a href="package$$JQuery164$.html"><span class="name deprecated">JQuery164</span></a>
+        
+        <span class="result"> extends FoBoJQuery with Product with Serializable</span>
       </span>
       </h4>
       <p class="comment cmt">Enable usage of JQuery version 1_6_4 in your bootstrap liftweb Boot.</p>
     </li><li visbl="pub" name="net.liftmodules.FoBo.package.JQuery171" data-isabs="false">
       <a id="JQuery171:JQuery171"></a>
       <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">object</span>
-      </span>
-      <span class="symbol">
-        <a href="package$$JQuery171$.html"><span class="name deprecated" title="Deprecated: (Since version FoBo v0.7.3) Use JQuery172 or the Lift-JQuery-Module">JQuery171</span></a><span class="result"> extends FoBoJQuery with Product with Serializable</span>
+      <span class="kind">object</span>
+      <span class="symbol"> 
+        <a href="package$$JQuery171$.html"><span class="name deprecated">JQuery171</span></a>
+        
+        <span class="result"> extends FoBoJQuery with Product with Serializable</span>
       </span>
       </h4>
       <p class="comment cmt">Enable usage of JQuery version 1_7_1 in your bootstrap liftweb Boot.</p>
     </li><li visbl="pub" name="net.liftmodules.FoBo.package.JQueryMobile101" data-isabs="false">
       <a id="JQueryMobile101:JQueryMobile101"></a>
       <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">object</span>
-      </span>
-      <span class="symbol">
-        <a href="package$$JQueryMobile101$.html"><span class="name deprecated" title="Deprecated: (Since version FoBo v0.7.3) Use JQueryMobile110">JQueryMobile101</span></a><span class="result"> extends FoBoToolkit with Product with Serializable</span>
+      <span class="kind">object</span>
+      <span class="symbol"> 
+        <a href="package$$JQueryMobile101$.html"><span class="name deprecated">JQueryMobile101</span></a>
+        
+        <span class="result"> extends FoBoToolkit with Product with Serializable</span>
       </span>
       </h4>
       <p class="comment cmt">Enable usage of JQueryMobile version 1_0_1 in your liftweb Boot.</p>
     </li></ol>
             </div>
-        </div>
 
-        <div id="inheritedMembers">
         
-        </div>
 
       </div>
-
+      
       <div id="tooltip"></div>
-
-      <div id="footer">  </div>
-
-
+      
     </body>
       </html>

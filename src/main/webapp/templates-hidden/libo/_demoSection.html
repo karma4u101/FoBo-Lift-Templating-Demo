@@ -241,43 +241,32 @@ import net.liftmodules.FoBo
 						F<span>o</span>B<span>o</span> S<span>nippets</span>
 					</h2>
 
-<!-- 										<span data-lift="MyMenu.builder?group=testLG"></span> -->
-
-<!-- 					<div class="dropdown clearfix"> -->
-<!-- 						<ul class="dropdown-menu" role="menu" -->
-<!-- 							aria-labelledby="dropdownMenu" -->
-<!-- 							style="display: block; position: static; margin-bottom: 5px; *width: 180px;"> -->
-<!-- 							<li><span data-lift="Menu.item?name=Bootstrap;"> <span -->
-<!-- 									data-lift="Loc.i">Bootstrap</span> -->
-<!-- 							</span></li> -->
-<!-- 							<li><span data-lift="Menu.item?name=Bootstrap-2.1.0;"> -->
-<!-- 									<span data-lift="Loc.i">Bootstrap-2.1.0</span> -->
-<!-- 							</span></li> -->
-<!-- 							<li class="divider"></li> -->
-<!-- 							<li><span data-lift="Menu.item?name=FoBoAPI;lift:Loc.i;"> -->
-<!-- 									<span data-lift="Loc?locid=FoBoAPI">FoBo API</span> -->
-<!-- 							</span></li> -->
-<!-- 						</ul> -->
-<!-- 					</div> -->
-
-
 					<p>
 						The FoBo module comes with some convinience functions (snippets, optional to use) 
 						that will, among other things, help you, build menues, create popups and tooltips and more. 
 						For more information see the <a href="foboapi/#net.liftmodules.FoBo.snippet.FoBo.package">snippet package section</a> 
 						in the <span data-lift="Menu.item?name=FoBoAPI;lift:Loc.i;"><span data-lift="Loc.i">FoBoAPI</span></span>	. 
 					</p>
-
+					
+                    <hr/>
+                    
 					<section>
 						<h4>The FoBo.Navbar Snippet</h4>
-						
+						<p>The FoBo.Navbar snippet gives you a simple way to build your Bootstrap nav from Lift SiteMap item's, 
+						combine this with the use of the FoBo.TBLocInfo object and you can do pretty much anything you are used to
+						only a lot easier and with a lot less code.</p>
 						<span class="label">Navbar Usage</span>
 						<pre class="prettyprint lang-html">					
  &lt;span data-lift="FoBo.TBNavbar.builder?group=[LocGroup-Name]"&gt;&lt;/span&gt;
  &lt;span data-lift="FoBo.TBNavbar.builderPullRight?group=[LocGroup-Name]"&gt;&lt;/span&gt;					     
 					    </pre>
 					    
+					    <p>The above shows you how to transform SiteMap items to nav items in a NavBar. 
+					    You can specify one or more <strong>nav</strong> builder's, i.e groups of items, on a NavBar where each
+					    group is specified by it's Lift LocGroup belonging. Items in a builder group can be pulled to the right 
+					    in the NavBar by using the pull right builder.</p>
 					    
+					    <span class="label">Navbar Example - The rendering</span>
 						<div class="dropdown clearfix" style="padding-right: 30px;">
 							<div class="navbar">
 								<div class="navbar-inner">
@@ -295,12 +284,19 @@ import net.liftmodules.FoBo
 									</div>
 								</div>
 							</div>
-						</div>
+						</div>				
 
-
+                        <p>This example represent a typical navbar that can be fixed to the top or the bottom of the page. 
+                        It can also, like this one, be used with a reactive fluid grid container to make it scale down 
+                        and be usefull on mobile devices and pads. In this example there are also menu dividers between the 
+                        Home and Content items and in the dropdown menu between the bootstrap and FoBo documentation items, 
+                        rendering of this decorators is acomplished by the use of the FoBo.TBLocInfo object in the SiteMap 
+                        like <code>FoBo.TBLocInfo.DividerVertical</code> and <code>FoBo.TBLocInfo.Divider</code> respectively.
+                            
+                        </p>
 						
 					    			
-					    <span class="label">Navbar Example - Template code</span>			       			
+					    <span class="label">Navbar Example - The template code</span>			       			
 						<pre class="prettyprint linenums lang-html">					
 &lt;!DOCTYPE html&gt;
 &lt;html&gt;
@@ -327,18 +323,8 @@ import net.liftmodules.FoBo
 &lt;/html&gt; 					 
 					    </pre>
 					    
-					<span class="label">Navbar Example - Lift SiteMap</span> Showing the <b>LocGroup's</b> that will be transformed into Bootstrap Navbar items for this example.
-					Take a closer look, <a href="https://github.com/karma4u101/FoBo-Lift-Template/blob/master/src/main/scala/bootstrap/liftweb/Boot.scala">here</a> is the Boot.scala file on Github.
-					<pre class="prettyprint linenums lang-scala">
-   ⋮
-  val liboIndex        = Menu.i("LiBo") / "libo"
-  val bootstrap210Doc  = Menu(Loc("Bootstrap-2.1.0", Link(List("bootstrap-2.1.0"), true, "/bootstrap-2.1.0/index")                , S.loc("Bootstrap-2.1.0", Text("Bootstrap-2.1.0"))   ))
-  val bootstrap220Doc  = Menu(Loc("Bootstrap-2.2.0", Link(List("bootstrap-2.2.0"), true, "/bootstrap-2.2.0/index")                , S.loc("Bootstrap-2.2.0", Text("Bootstrap-2.2.0"))   ))
-  val bootstrap222Doc  = Menu(Loc("Bootstrap-2.2.2", Link(List("bootstrap-2.2.2"), true, "/bootstrap-2.2.2/index")                , S.loc("Bootstrap-2.2.2", Text("Bootstrap-2.2.2"))   ))
-  val foboApiDoc       = Menu(Loc("FoBoAPI"        , Link(List("foboapi")        , true, "/foboapi/#net.liftmodules.FoBo.package"), S.loc("FoBoAPI"        , Text("FoBo API")), LocGroup("liboTop2","mdemo2") ))
-  val contentDD        = Menu.i("ContentDD") / "ddlabel1"
-  val divider1         = Menu("divider1") / "divider1"
-  val hdivider1        = Menu("hdivider1") / "hdvidider1"     
+					<span class="label">Navbar Example - The SiteMap</span> Showing the <b>LocGroup's</b> that will be transformed into Bootstrap Navbar items for this example.
+					<pre class="prettyprint linenums lang-scala">   
    ⋮
   def sitemap = SiteMap(
      ⋮
@@ -354,8 +340,87 @@ import net.liftmodules.FoBo
      ⋮  
   ) 
 						</pre>
-											    
+						<p>
+						If you wish to take a closer look, <a href="https://github.com/karma4u101/FoBo-Lift-Template/blob/master/src/main/scala/bootstrap/liftweb/Boot.scala">here</a> is the Boot.scala file on Github.	
+						</p>												    
+					</section>		
+					
+					<hr/>
+
+					<section>
+						<h4>The FoBo.Navlist Snippet</h4>
+						<p>The FoBo.Navlist snippet gives you a simple way to build a Bootstrap navlist from Lift SiteMap item's, 
+						</p>
+						<span class="label">Navlist Usage</span>
+						<pre class="prettyprint lang-html">					
+ &lt;span data-lift="FoBo.TBNavlist.builder?group=[LocGroup-Name]"&gt;&lt;/span&gt;					     
+					    </pre>
+					    
+					    <p>The above shows you how to transform SiteMap items to list items in a Navlist. </p>
+					    
+					    <span class="label">Navlist Example - The rendering</span>
+					    <div class="well" style="max-width: 220px; padding: 8px 0;">
+					       <span data-lift="FoBo.TBNavlist.builder?group=nldemo1"></span>
+					    </div>				
+
+                        <p>This navlist example have some SiteMap menu link items and 
+                        <strong>nav header's/menu lable's</strong> and a menu divider. The label's is set 
+                        in Lift's SiteMap by "marking" the item as a <code>FoBo.TBLocInfo.NavHeader</code> item,  
+                        The menu divider is "marked" by using <code>FoBo.TBLocInfo.Divider</code>  
+                        in the SiteMap.
+                        </p>
+						
+					    			
+					    <span class="label">Navlist Example - The template code</span>			       			
+						<pre class="prettyprint linenums lang-html">					
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    ⋮
+  &lt;body"&gt;
+     ⋮
+&lt;div class="well" style="max-width: 220px; padding: 8px 0;"&gt;
+  &lt;span data-lift="FoBo.TBNavlist.builder?group=nldemo1">&lt;/span&gt;
+&lt;/div&gt;			
+       ⋮ 
+  &lt;/body&gt;        
+&lt;/html&gt; 					 
+					    </pre>
+					    
+					<span class="label">Navlist Example - The SiteMap</span> Showing the <b>LocGroup nldemo1</b> that will be transformed into Bootstrap Navlist items for this example.
+					<pre class="prettyprint linenums lang-scala">
+ 
+   ⋮
+  def sitemap = SiteMap(
+       ⋮
+    navHeader1 >> LocGroup("nldemo1") >> FoBo.TBLocInfo.NavHeader,   
+    index >> LocGroup("mdemo1","nldemo1"),
+    navHeader2 >> LocGroup("nldemo1") >> FoBo.TBLocInfo.NavHeader,
+       ⋮
+    contentDD >> LocGroup("liboTop1","mdemo1") >> PlaceHolder submenus ( 
+           ⋮
+      bootstrap220Doc ,
+      bootstrap222Doc ,
+           ⋮
+      foboApiDoc 
+    ), 
+       ⋮  
+    divider3 >> LocGroup("nldemo1") >> FoBo.TBLocInfo.Divider,
+    nlHelp >> LocGroup("nldemo1")     
+  ) 
+						</pre>
+						<p>
+						If you wish to take a closer look, <a href="https://github.com/karma4u101/FoBo-Lift-Template/blob/master/src/main/scala/bootstrap/liftweb/Boot.scala">here</a> is the Boot.scala file on Github.	
+						</p>				    
 					</section>
+
+
+					
+					
+					
+					
+					
+					
+					
 
 					<h4>The FoBo.Bootstrap Snippet</h4>
 
@@ -463,57 +528,7 @@ import net.liftmodules.FoBo
 						"data-lift" for hocks to Lift but if you like you are wellcome to
 						use the class attribute instead like class="lift:...."</div>
 
-					<h6>The FoBo.BootstrapNav Snippet</h6>
-					<p>
-						The FoBo.BootstrapNav snippet will let you define lift menu parts
-						that will be transformed into a Bootstrap Nav menu. This work is
-						originally contributed to the FoBo module by community member
-						Damian Helme, read his blog post <a
-							href="http://tech.damianhelme.com/twitter-bootstrap-navbar-dropdowns-and-lifts">
-							Twitter Bootstrap Navbar Dropdowns and Lift's Menu.builder</a> for
-						more information.
-					</p>
 
-					<span class="label">Part of your Lift SiteMap</span> with the <b>LocGroup</b>
-					that will be transformed into Bootstrap Navbar
-					<pre class="prettyprint linenums lang-scala">
-   :
- Menu("Test") / "test" >> LocGroup("test") >> PlaceHolder submenus (
-   Menu("Test 2") / "test2",
-   Menu("Test 3") / "test3"
- ),
- ⋮      
-						</pre>
-
-					<span class="label">Your Lift Template</span>
-					<pre class="prettyprint linenums lang-html">
-&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-   ⋮
-  &lt;body"&gt;
-  
-   &lt;div class="navbar"&gt;
-     &lt;div class="navbar-inner"&gt;
-       &lt;div class="container"&gt;  
-             ⋮  
-       &lt;!--The navbar snippet invocation--&gt; 
-       &lt;span data-lift="FoBo.BootstrapNav.menuToTBNav?eager_eval=true"&gt; 
-         &lt;span data-lift="Menu.builder?top:class=nav pull-right;li_item:class=active;linkToSelf=true;expandAll=true;group=test"&gt;&lt;/span&gt;
-       &lt;/span&gt;     
-             ⋮ 
-       &lt;/div&gt;
-     &lt;/div&gt;
-   &lt;/div&gt;
-     ⋮  
-  &lt;/body&gt;        
-&lt;/html&gt;    
-						</pre>
-
-					<div class="alert alert-info">
-						In this demo you will find the rellevant code in the <i>SiteMap</i>
-						section of <i>Lift Boot</i> and the snippet invoctation in the
-						_embededTopbar-FoBo02.html template.
-					</div>
 
 					<p>
 						At this writing the available snippet helpers are few but expect

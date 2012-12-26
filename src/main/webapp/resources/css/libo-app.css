@@ -1,0 +1,485 @@
+body {
+	padding-top:40px;
+	background-color: #8d8d8d;
+    font-family: "Helvetica Neue","HelveticaNeue",Helvetica,Arial,"Lucida Grande",sans-serif;
+}
+
+
+
+/*bootstrap overrides*/
+.container-fluid {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+/*===========Navigation ===============*/
+
+.navbar-fixed-top {
+    margin-bottom: 0px;
+}
+
+#spyhome,#spyabout,#spysetup,#spyfooter,#gstarted,#starterproj,#modulesetup,#customization,#fobo-snippets {
+	position:relative;top:-40px;
+}
+
+.navbar .brand {
+    color: #fff;
+    font-family: Orbitron,Helvetica,Verdana,sans-serif;
+    font-weight: bold;
+    text-shadow: 2px 4px 5px #555555;
+    display: block;
+    float: left;
+    font-size: 20px;
+    line-height: 1;
+    margin-left: 10px;
+    padding: 12px 20px 8px;
+}
+
+/*===================Sections - header*/  
+
+.header {
+	min-height:120px;
+	color: #ffffff;
+	text-shadow: 0 1px 2px rgba(0,0,0,.5);
+	background:url('../../resources/images/bg.jpg') no-repeat top center #a6e5ec;
+	-webkit-box-shadow: inset 0 10px 60px rgba(0,0,0,.5);
+	-moz-box-shadow: inset 0 10px 60px rgba(0,0,0,.5);
+}
+
+.header .fhbrand {
+    color: #FFFFFF;
+    display: block;
+    float: right;
+    font-size: 22px;
+    font-weight: 200;
+    line-height: 1;
+/*     margin-left: -20px; */
+/*     padding: 8px 20px 12px; */
+    padding:20px 10px 0px 12px;
+}
+
+.header h1 a:hover,.header .fhbrand:hover {
+    background-color:#333;
+    background-color:rgba(255, 255, 255, 0.05);
+    color:#ffffff;
+    text-decoration:none;
+    }
+.header h1{ position:relative; }
+.header h1 a,.header .fhbrand {
+    display:block;
+    padding:28px 20px 5px 2px;
+    margin-left:-10px;
+    font-weight:200;
+    line-height:1;
+    }
+.header h1.fhcapital           { font-size: 300%; text-transform: uppercase; letter-spacing: -3px; font-weight: bold; color: #111; text-shadow: 2px 4px 5px #555;font-family: Orbitron,Helvetica,Verdana,sans-serif; }
+.header h1.fhcapital span      { font-size: 68%; text-transform: lowercase; letter-spacing: -1px;}
+.header h1.fhcapital span.smal { font-size: 46%; text-transform: lowercase; letter-spacing: -1px;}
+.header h1.fhcapital span.smaler { font-size: 32%; text-transform: lowercase; letter-spacing: -1px;}
+.header h6.fhbrand-sub {
+/*     float:left; */
+    display:block;
+    padding-left:5px;
+    font-size: 65%;
+    margin-top:-16px;
+    color: #fff;/*#BFBFBF;*/
+    text-shadow: 1px 1px 3px rgba(180, 180, 180, 0.5);
+    }
+
+/*===================Sections - ingress==================================================*/
+
+.ingress-section {
+	min-height:400px;
+    padding-left:5px;
+    padding-right:5px;
+	padding-bottom:10px;
+	padding-top:10px;    
+    background-color:#b0b0b0;
+	background-repeat:repeat-x;
+	background-image:-khtml-gradient(linear, left top, left bottom, from(#eeeeee), to(#b0b0b0));
+	background-image:-moz-linear-gradient(top, #eeeeee, #b0b0b0);
+	background-image:-ms-linear-gradient(top, #eeeeee, #b0b0b0);
+	background-image:-webkit-gradient(linear, left top, left bottom, color-stop(0%, #eeeeee), color-stop(100%, #b0b0b0));
+	background-image:-webkit-linear-gradient(top, #eeeeee, #b0b0b0);
+	background-image:-o-linear-gradient(top, #eeeeee, #b0b0b0);
+	background-image:linear-gradient(top, #eeeeee, #b0b0b0);
+	-webkit-background-size:100% 80px;
+	-moz-background-size:100% 80px;
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#eeeeee', endColorstr='#b0b0b0', GradientType=0);
+	border-top: 1px solid #add8dd;
+}
+
+
+  .ingress-section h4 {
+	text-shadow:0 1px 0 rgba(255,255,255,.7);
+}
+
+  .ingress-section h2 {
+    color: rgba(0,0,0,0.6);
+	text-shadow:0 1px 0 rgba(255,255,255,.7);
+    margin-bottom: 0px;
+    margin-top:15px;
+}
+
+  .ingress-section h2.capital { 
+	font-family: Orbitron,Helvetica,Verdana,sans-serif; 
+	font-size: 225%; 
+	font-weight: bold;
+	text-transform: uppercase; 
+	letter-spacing: 1px; 
+	}
+  .ingress-section h2.capital span { font-size: 70%; text-transform: lowercase; letter-spacing: 1px;}
+  .ingress-section h2.capital span.smal { font-size: 45%; text-transform: lowercase; letter-spacing: 1px;}
+
+
+/*===================Sections - demo==================================================*/
+
+.demo-section {
+	background: none repeat scroll 0 0 #EEE; 
+	min-height:60px;
+    padding-left:5px;
+    padding-right:2px;
+	padding-bottom:10px;
+	padding-top:10px;    
+	clear: both;
+}
+
+  .demo-section h4 {
+	text-shadow:0 1px 0 rgba(255,255,255,.7);
+}
+
+  .demo-section h2 {
+    color: rgba(0,0,0,0.6);
+	text-shadow:0 1px 0 rgba(255,255,255,.7);
+    margin-bottom: 0px;
+    margin-top:15px;
+}
+
+  .demo-section h2.capital { 
+	font-family: Orbitron,Helvetica,Verdana,sans-serif; 
+	font-size: 225%; 
+	font-weight: bold;
+	text-transform: uppercase; 
+	letter-spacing: 1px; 
+	}
+  .demo-section h2.capital span { font-size: 70%; text-transform: lowercase; letter-spacing: 1px;}
+  .demo-section h2.capital span.smal { font-size: 45%; text-transform: lowercase; letter-spacing: 1px;}
+  
+ 
+/*Sidebar affix stuff*/
+/* prevent column from collapsing when affixing */
+.span3 {
+  min-height: 1px;
+}
+
+.bs-docs-sidenav {
+  width: 218px;
+  margin-top: 30px;
+  padding: 0;
+  margin-right: 10px;
+  background-color: #fff;
+  margin-left: 0;
+  -webkit-border-radius: 6px;
+     -moz-border-radius: 6px;
+          border-radius: 6px;
+  -webkit-box-shadow: 0 1px 4px rgba(0,0,0,.065);
+     -moz-box-shadow: 0 1px 4px rgba(0,0,0,.065);
+          box-shadow: 0 1px 4px rgba(0,0,0,.065);
+}
+.bs-docs-sidenav > li > a {
+  display: block;
+  *width: 190px;
+  margin: 0 0 -1px;
+  font-size: 14px;
+  padding: 8px 14px;
+  border: 1px solid #e5e5e5;
+}
+.bs-docs-sidenav > li:first-child > a {
+  -webkit-border-radius: 6px 6px 0 0;
+     -moz-border-radius: 6px 6px 0 0;
+          border-radius: 6px 6px 0 0;
+}
+.bs-docs-sidenav > li:last-child > a {
+  -webkit-border-radius: 0 0 6px 6px;
+     -moz-border-radius: 0 0 6px 6px;
+          border-radius: 0 0 6px 6px;
+}
+.bs-docs-sidenav > .active > a {
+  border-color: #08c;
+  position: relative;
+  z-index: 2;
+}
+/* Chevrons */
+.bs-docs-sidenav .icon-chevron-right {
+  float: right;
+  margin-top: 2px;
+  margin-right: -6px;
+  opacity: .25;
+}
+.bs-docs-sidenav > li > a:hover {
+  background-color: #f5f5f5;
+}
+.bs-docs-sidenav a:hover .icon-chevron-right {
+  opacity: .5;
+}
+.bs-docs-sidenav .active .icon-chevron-right {
+  background-image: url(../img/glyphicons-halflings-white.png);
+  opacity: .75;
+}
+.bs-docs-sidenav.affix {
+  top: 20px;
+}
+.bs-docs-sidenav.affix-bottom {
+  position: absolute;
+  top: auto;
+  bottom: 400px;
+}
+/*Sidebar affix stuff - end*/
+
+/*===================Sections - footer==================================================*/   
+
+  .footer {
+    min-height:200px;
+    padding-left:5px;
+	padding-top: 15px;
+	clear: both;		
+    background: #8d8d8d; 	 	 		
+	border-top: solid 1px #676767;
+	color: rgba(255, 255, 255, 0.7);
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.5);		
+}	
+
+  .footer ul {
+    float: left;
+    margin: 0;
+    padding: 0px 2% 10px 0;
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+    width: auto; /*22%;*/
+    list-style: none;
+}
+
+  .footer a {text-decoration: none;color: rgba(255, 255, 255, 0.7);font-size: 12px;}
+  .footer a:hover {text-decoration: underline;}
+
+  .footer ul:last-child {
+    padding-right: 0;
+}
+
+  .footer ul li  {
+    text-decoration: none;
+	color: rgba(255, 255, 255, 0.7);
+    font-size: 12px;
+}
+
+  .footer ul li a:hover {
+    text-decoration: underline;
+}
+
+  .footer ul li h5 {
+	color: rgba(255, 255, 255, 0.9);
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.5);
+    margin-bottom: 5px;
+    padding-bottom: 5px;
+	line-height: 10px;
+	border-bottom:1px solid #676767;
+	-webkit-box-shadow:0 1px 0 rgba(255, 255, 255, 0.5);
+	-moz-box-shadow:0 1px 0 rgba(255, 255, 255, 0.5);
+	box-shadow:0 1px 0 rgba(255, 255, 255, 0.5);	}
+
+  .footer ul li h5 a {font-size: 14px;opacity: 1;}
+
+  .footer .copyright {
+    font-size: 12px;
+	border-top:1px solid #808080;
+    clear: both;
+    padding: 10px 0 20px;
+}
+
+/*============ General ==============================*/
+
+hr {
+	padding-top: 0px;
+	padding-bottom: 0px;
+    border: 0;
+    height: 1px;
+    background: #333;
+    background: -webkit-gradient(linear, left top, right top, color-stop(0%,hsla(0,0%,0%,0)), color-stop(50%,hsla(0,0%,0%,.75)), color-stop(100%,hsla(0,0%,0%,0)));
+    background: -webkit-linear-gradient(left, hsla(0,0%,0%,0) 0%, hsla(0,0%,0%,.75) 50%, hsla(0,0%,0%,0) 100%);
+    background:    -moz-linear-gradient(left, hsla(0,0%,0%,0) 0%, hsla(0,0%,0%,.75) 50%, hsla(0,0%,0%,0) 100%);
+    background:     -ms-linear-gradient(left, hsla(0,0%,0%,0) 0%, hsla(0,0%,0%,.75) 50%, hsla(0,0%,0%,0) 100%);
+    background:      -o-linear-gradient(left, hsla(0,0%,0%,0) 0%, hsla(0,0%,0%,.75) 50%, hsla(0,0%,0%,0) 100%);
+    background:         linear-gradient(left, hsla(0,0%,0%,0) 0%, hsla(0,0%,0%,.75) 50%, hsla(0,0%,0%,0) 100%);
+}
+
+/*============ Responsive ===========================*/
+/* Desktop large
+------------------------- */
+@media (min-width: 1200px) {
+  .bs-docs-container {
+    max-width: 970px;
+  }
+  .bs-docs-sidenav {
+    width: 258px;
+  }
+}
+
+/* Desktop
+------------------------- */
+@media (max-width: 980px) {
+  /* Unfloat brand */
+  body > .navbar-fixed-top .brand {
+    float: left;
+    margin-left: 0;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  /* Inline-block quick links for more spacing */
+  .quick-links li {
+    display: inline-block;
+    margin: 5px;
+  }
+
+  /* When affixed, space properly */
+  .bs-docs-sidenav {
+    top: 0;
+    margin-top: 30px;
+    margin-right: 0;
+  }
+}
+
+/* Tablet to desktop
+------------------------- */
+@media (min-width: 768px) and (max-width: 980px) {
+  /* Remove any padding from the body */
+  body {
+    padding-top: 0;
+  }
+ 
+
+
+  /* Adjust sidenav width */
+  .bs-docs-sidenav {
+    width: 166px;
+  }
+  .bs-docs-sidenav.affix {
+    top: 0px;
+  }
+}
+
+/* Tablet
+------------------------- */
+@media (max-width: 768px) {
+  /* Remove any padding from the body */
+  body {
+    /*padding-top: 0;*/
+    padding: 0;
+    /*background:yellow;*/
+  }
+  
+ .navbar-fixed-top, .navbar-fixed-bottom {
+    margin-left: 0px;
+    margin-right: 0px;
+} 
+
+  /* Sidenav */
+  .bs-docs-sidenav {
+    width: auto;
+  }
+  .bs-docs-sidenav.affix {
+    position: relative;
+    width: auto;
+  }
+  
+  .bs-docs-sidenav.affix {
+    top: 0;
+  }
+  
+        .header .fhbrand {float:left;margin-left:10px;}
+		.header h1.fhcapital { 
+ 		font-size: 250%;  
+		line-height: 1.2; 
+		}
+		.header h6.fhbrand-sub { 
+		font-size: 55%;  
+		line-height: 1.2; 
+		margin-top:-16px;
+		}
+		  
+}
+
+/* Landscape phones
+------------------------- */
+@media (max-width: 480px) {
+  /* Remove padding above jumbotron */
+  body {
+    padding-top: 0;
+  }
+
+  /* Change up some type stuff */
+  h2 small {
+    display: block;
+  }
+
+  /* Downsize the jumbotrons */
+  .jumbotron h1 {
+    font-size: 60px;
+  }
+  .jumbotron p,
+  .jumbotron .btn {
+    font-size: 20px;
+  }
+  .jumbotron .btn {
+    display: block;
+    margin: 0 auto;
+  }
+
+  /* center align subhead text like the masthead */
+  .subhead h1,
+  .subhead p {
+    text-align: center;
+  }
+
+  /* Marketing on home */
+  .marketing h1 {
+    font-size: 40px;
+  }
+
+  /* center example sites */
+  .example-sites {
+    margin-left: 0;
+  }
+  .example-sites > li {
+    float: none;
+    display: block;
+    max-width: 280px;
+    margin: 0 auto 18px;
+    text-align: center;
+  }
+  .example-sites .thumbnail > img {
+    max-width: 270px;
+  }
+
+  /* Do our best to make tables work in narrow viewports */
+  table code {
+    white-space: normal;
+    word-wrap: break-word;
+    word-break: break-all;
+  }
+
+  /* Modal example */
+  .modal-example .modal {
+    position: relative;
+    top: auto;
+    right: auto;
+    bottom: auto;
+    left: auto;
+  }
+
+  /* Unfloat the back to top in footer to prevent odd text wrapping */
+  .footer .pull-right {
+    float: none;
+  }
+}

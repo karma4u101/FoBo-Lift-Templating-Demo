@@ -313,6 +313,24 @@ hr {
     background:         linear-gradient(left, hsla(0,0%,0%,0) 0%, hsla(0,0%,0%,.75) 50%, hsla(0,0%,0%,0) 100%);
 }
 
+#poweredby .alt {
+	color: #666666;
+	
+	font-family: "Warnock Pro", "Goudy Old Style", "Palatino",
+		"Book Antiqua", Georgia, serif;
+	font-style: italic;
+	font-weight: normal;
+}
+#poweredby h4 {
+	text-align:center;
+	font-size: 1.2em;
+	line-height: 1.25;
+	margin-bottom: 0.05em; /*1.25em;*/
+}
+#poweredby hr {
+	margin-bottom:0px;
+}
+
 /*============ Responsive ===========================*/
 /* Desktop large
 ------------------------- */

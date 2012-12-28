@@ -11,7 +11,12 @@ body {
     padding-left: 0px;
     padding-right: 0px;
 }
-
+/*bootstrap overrides*/
+.page-header {
+    border-bottom: 1px solid #ccc;
+    margin: 20px 15px 15px 5px;
+    padding-bottom: 9px;
+}
 /*===========Navigation ===============*/
 
 .navbar-fixed-top {
@@ -35,6 +40,10 @@ body {
     padding: 12px 20px 8px;
 }
 
+#mdemo1 .navbar .brand {
+    margin-left: 0px;
+    padding: 12px 0px 8px;
+}
 /*===================Sections - header*/  
 
 .header {

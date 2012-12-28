@@ -15,50 +15,64 @@
 			     
 				<div class="row-fluid">
 					<div class="span12">
-					
-						<h2 class="capital">
-							<img id="mobile-popover" data-content="Use your favorite barcode reader to quick and easy load this page in your mobile." title="View in Mobile!" rel="popover" style="max-height:40px;width:auto;" src="/resources/images/mobile_device_128x128.png" />A<span>bout</span> T<span>his</span> D<span>emo and the</span> F<span>o</span>B<span>o module</span>
-						</h2>
-						<div style="display:block;float:right;vertical-align:text-top;padding-top:0px;">
-						<i style="float:right;margin-left:-25px;margin-top:-1px;" class="icon-question-sign"></i>
-						<a id="bcode-popover" data-content="Use your favorite barcode reader to quick and easy load this page in your media-device." title="View in Media-device!" rel="popover" href="#">
-						<img src="/resources/images/fobo_demo_bcode.png"/></a>
+					    <div class="page-header">
+						  <h1 class="capital">
+				           <img id="mobile-popover" style="max-height:40px;width:auto;" src="/resources/images/mobile_device_128x128.png" />							
+                            F<span>o</span>B<span>o</span> <small>&lt;<span>...data-lift=</span>"F<span>ront-</span>E<span>nd </span>T<span>ool</span>k<span>it </span>M<span>odule</span>"/&gt; 
+						  </h1>
 						</div>
-				
-						<script data-lift="FoBo.Bootstrap.popover?id=#bcode-popover&options=placement:'left',trigger:'hover'"></script>						
-						<script data-lift="FoBo.Bootstrap.popoverPreventDefault?on=#bcode-popover"></script>
-
-						<p>						
-						This pages demonstrates a optional <a id="lift-tt" title="The most powerful, most secure web framework available today. It simply rocks!" href="http://liftweb.net/">Lift</a>, 
-						 generic front-end toolkit <a
-							href="http://www.assembla.com/spaces/liftweb/wiki/Modules">module</a>
+	
+						<div style="display:block;float:right;vertical-align:text-top;padding-top:0px;">
+						  <a id="bcode-popover" data-content="Use your favorite barcode reader to quick and easy load this page in your media-device." title="View in Media-device!" rel="popover" href="#">
+<!-- 	                        <i style="float:right;margin-left:-25px;margin-top:-1px;" class="icon-question-sign"></i> -->
+						    <img src="/resources/images/fobo_demo_bcode.png" style="padding-right:10px;"/>
+						  </a>	
+						</div>
+						
+						<p>					
+						This pages demonstrates a optional 
+						<a id="lift-tt" title="The most powerful, most secure web framework available today. It simply rocks!" href="http://liftweb.net/">Lift</a>, 
+						 generic front-end toolkit <a href="http://www.assembla.com/spaces/liftweb/wiki/Modules">module</a>
 						FoBo that <strong>quick and easy</strong> will integrate some of the industry leading 
 						web-centric open source front-end toolkits (like twitter bootstrap and more) into your Lift application, 
-						giving you the <strong>flexibility and choice</strong> of setting up and use the toolkit:s of your liking. 
+						giving you the <strong>flexibility and choice</strong> of setting up and use the toolkit:s of your liking.
+						</p>
+						
+						<p> 
 						FoBo provides <strong>smoth toolkit upgrades</strong> by minimizing the point of change with uniform template declarations. 
 						Added to this is a growing number of <span data-lift="Menu.item?name=FoBoAPI;lift:Loc.i;a:class=addclassshowofdummy">
 							<span data-lift="Loc?locid=FoBoAPI">FoBoAPI</span>
 						</span> functions that will gives you even more ease of usage, power and control.   
-						For some examples and setup information <a href="#spysetup">see below</a>.</p>
+						For some examples and setup information <a href="#spysetup">see below</a>.
+						</p>
+												
 						<script data-lift="FoBo.Bootstrap.tooltip?id=#lift-tt"></script>  
+						<script data-lift="FoBo.Bootstrap.popover?id=#bcode-popover&options=trigger:'hover'"></script>						
+						<script data-lift="FoBo.Bootstrap.popoverPreventDefault?on=#bcode-popover"></script>						
+						
 						<p>
-						Except from reading the <a href="#spysetup"><span data-lift="Loc?locid=setup.link.text">Setup</span></a> section below
+						Except from reading the <span data-lift="Menu.item?name=LiBo;lift:Loc.i;"><span data-lift="Loc.i">BootstrapSetupUsage</span></span> 
+						specific page  or the more general <a href="#spysetup"><span data-lift="Loc?locid=setup.link.text">Setup</span></a> section below
 						and the <span data-lift="Menu.item?name=FoBoAPI;lift:Loc.i;"><span data-lift="Loc?locid=FoBoAPI">FoBoAPI</span></span>
-						the most up to date way to explore and learn how to use the FoBo module would be to fork and/or study this demo code on 
-						<a href="https://github.com/karma4u101/FoBo">Github</a>. There is also a cleaner FoBo Bootstrap only
-						basic Lift Template (for quick start of a lift project with bootstrap using the FoBo module) available <a href="https://github.com/karma4u101/Templating-With-Twitter-Bootstrap">here</a>.  
+						the most up to date way to explore and learn how to use the FoBo module would be to fork and/or study the 
+						<a href="https://github.com/karma4u101/Templating-With-Twitter-Bootstrap">Templating With Twitter Bootstrap</a> basic Lift starter template project that includes FoBo for it's Bootstrap support. 
+						You can also study <a href="https://github.com/karma4u101/FoBo">this demo</a> code on Github.  
+						<p> 
 						<p>
 						For more information about the FoBo module take a look at the 
 						<span data-lift="Menu.item?name=FoBoAPI;lift:Loc.i;a:class=addclassshowofdummy">
 							<span data-lift="Loc?locid=FoBoAPI">FoBoAPI</span>
 						</span>
 						and the readme on 
-						<a href="https://github.com/karma4u101/FoBo">Github</a>.</p>
+						<a href="https://github.com/karma4u101/FoBo">Github</a>.
+						</p>
 						 
 						<p>Also check out the integrated toolkit documentation for a comprehensive 
-						list of the, in this demo included, toolkits features.</p>
-						<hr />
+						list of the, in this demo included, toolkits features.
+						</p>
 						
+						<hr />
+				
 						
 					</div>
 				</div>
@@ -171,7 +185,7 @@
                          <p>
 							<span
 								data-lift="Menu.item?name=LiBo;lift:Loc.i;a:class=btn btn-primary btn-large">
-								<span data-lift="Loc.i">LiBo</span>
+								<span data-lift="Loc.i">BootstrapSetupUsage</span>
 							</span>	
 						</p>
 											
@@ -289,8 +303,10 @@
 						
 					</div>
 				</div>	
-
+           
 			</div>
+
+			
 			<div class="span3">
 			    
 				<div class="row-fluid">
@@ -391,16 +407,13 @@
 					</div>
 				</div>				
 
-
-
-
 			</div>
             <!-- span3 end -->
-
+			</section>
 
 		</div>
 
-	</section>
+	
 
 
 </body>

@@ -24,10 +24,12 @@
 							Starter Project</a></li>
 					<li><a href="#modulesetup"><i class="icon-chevron-right"></i>
 							Module Setup</a></li>
+					<li><a href="#moduleupgrade"><i class="icon-chevron-right"></i>
+							Module Upgrade</a></li>							
 					<li><a href="#customization"><i class="icon-chevron-right"></i>
 							Bootstrap Customization</a></li>
 					<li><a href="#fobo-snippets"><i class="icon-chevron-right"></i>
-							FoBo-Snippets</a></li>
+							FoBo.Bootstrap Snippets</a></li>
 
 					<!--           <li><a href="#scrollspy"><i class="icon-chevron-right"></i> Scrollspy</a></li> -->
 					<!--           <li><a href="#tabs"><i class="icon-chevron-right"></i> Tab</a></li> -->
@@ -217,6 +219,26 @@ import net.liftmodules.FoBo
 
                 <hr/>
 
+				<a id="moduleupgrade"></a>
+				<section>
+					<h2 class="capital">
+					   M<span>odule</span> U<span>pgrad</span> 
+					</h2>
+					<p>
+					In most cases the only things you need to change in your project to upgrade to a newer toolkit version 
+					is the FoBo modules version number in build.sbt    
+				    <code>"net.liftmodules" %% "fobo" % (liftVersion+"-X.Y.Z-SNAPSHOT") withJavadoc() withSources()</code>
+					and the init param line <code>FoBo.InitParam.ToolKit=FoBo.BootstrapXYZ</code> in your projects Boot.scala file. 
+					</p>
+					<p>
+					If there are some breaking changes in the toolkit you may need to downgrade to your previous toolkit version and
+					take messure to fix the problem, for that you just have to change back the init param line in Boot.scala. 
+					FoBo will always have a resonable number of toolkit versions avwailable in it's module bundle. 
+					</p>
+				</section>
+
+                <hr/>
+                
 				<a id="customization"></a>
 				<section>
 					<h2 class="capital">
@@ -237,7 +259,7 @@ import net.liftmodules.FoBo
 				<a id="fobo-snippets"></a>
 				<section>
 					<h2 class="capital">
-						F<span>o</span>B<span>o</span> S<span>nippets</span>
+						F<span>o</span>B<span>o.</span>B<span>ootstrap</span> S<span>nippets</span>
 					</h2>
 
 					<p>

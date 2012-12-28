@@ -23,7 +23,7 @@ body {
     margin-bottom: 0px;
 }
 
-#spyhome,#spyabout,#spysetup,#spyfooter,#gstarted,#starterproj,#modulesetup,#customization,#fobo-snippets {
+#spyhome,#spyabout,#spysetup,#spyfooter,#gstarted,#starterproj,#modulesetup,#moduleupgrade,#customization,#fobo-snippets {
 	position:relative;top:-40px;
 }
 

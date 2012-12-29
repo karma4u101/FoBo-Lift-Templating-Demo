@@ -19,6 +19,16 @@ Improvements, contributions and suggestions are welcome!
 
 best regards Peter Petersson 
 
+Update log
+----------
+
+**Latest Module Version:** 
+- **2012-12-29** -- 2.2.0-SNAPSHOT
+
+**Latest Updates:**
+- **2012-12-29** -- 2.2.0-SNAPSHOT updated build to dep. on FoBo v0.7.7 and using FoBo.JQuery182
+
+
 Quick Start
 -----------
 Prerequisites for running this Lift example is that you have Git and Java installed and configured on the target computer.

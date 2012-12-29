@@ -30,7 +30,7 @@ class Boot extends Loggable {
   def boot {
 
    //If using defaults FoBo init params can be omitted
-    FoBo.InitParam.JQuery=FoBo.JQuery172  
+    FoBo.InitParam.JQuery=FoBo.JQuery182  
     FoBo.InitParam.ToolKit=FoBo.Bootstrap222
     FoBo.InitParam.ToolKit=FoBo.Foundation215
     FoBo.InitParam.ToolKit=FoBo.PrettifyJun2011

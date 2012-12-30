@@ -27,7 +27,7 @@
 					<li><a href="#moduleupgrade"><i class="icon-chevron-right"></i>
 							Module Upgrade</a></li>							
 					<li><a href="#customization"><i class="icon-chevron-right"></i>
-							Bootstrap Customization</a></li>
+							Bootstrap Customization</a></li>		
 					<li><a href="#fobo-snippets"><i class="icon-chevron-right"></i>
 							FoBo.Bootstrap Snippets</a></li>
 
@@ -178,8 +178,8 @@ import net.liftmodules.FoBo
   class Boot extends Loggable {
     def boot {
            ⋮
-      FoBo.InitParam.JQuery=FoBo.JQuery172  
-      FoBo.InitParam.ToolKit=FoBo.Bootstrap220 
+      FoBo.InitParam.JQuery=FoBo.JQuery182  
+      FoBo.InitParam.ToolKit=FoBo.Bootstrap222 
       FoBo.init()
            ⋮     
 					</pre>
@@ -244,6 +244,15 @@ import net.liftmodules.FoBo
 					<h2 class="capital">
 						B<span>ootstrap</span> C<span>ustomization</span>
 					</h2>
+					<h4>Font Awesome</h4>
+					<p>
+					   For Bootstrap v2.2.2+ you can replace the bootstrap provided icon set with <a 
+					   href="http://fortawesome.github.com/Font-Awesome/">Font Awesome</a>  
+					   this is done by using the init parram <code>FoBo.InitParam.ToolKit=FoBo.FontAwesomeXYZ</code> 
+					   and replacing the original <code>bootstrap.css</code> with <code>bootstrap-no-icons.css</code>. 
+					   This page is using Font Awesome icon set.
+					</p>
+					<h4>FoBo-Less</h4>
 					<p>
 						For common use it is mostly sufficient to use the pre-compiled artifact
 						but by using FoBo and the sub project <a
@@ -618,8 +627,12 @@ import net.liftmodules.FoBo
 	<div class="row-fluid">
 	  <div class="span12">
 	  <hr/>
-	   <h4  class="alt">The FoBo Demo is Powered by <a target="_blank" href="http://www.liftweb.net"><i>Lift</i></a> 
+	   <h4  class="alt">The <a target="_blank" href="https://github.com/karma4u101/FoBo"><i>FoBo</i></a> 
+	   <a target="_blank" href="https://github.com/karma4u101/FoBo-Lift-Template"><i>Demo</i></a> is Powered by <a target="_blank" href="http://www.liftweb.net"><i>Lift</i></a> 
 	    using the <a target="_blank" href="https://github.com/karma4u101/FoBo"><i>FoBo Module</i></a>
+	    <br>
+	    with <a target="_blank" href="http://twitter.github.com/bootstrap/"><i>Twitter Bootstrap</i></a> and 
+	    <a target="_blank" href="http://fortawesome.github.com/Font-Awesome"><i>Font Awesome</i></a>
 	    <br>
 		Design by <a target="_blank" href="http://www.media4u101.se">Peter Petersson</a>
 	    </h4>

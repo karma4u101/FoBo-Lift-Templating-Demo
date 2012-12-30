@@ -18,7 +18,7 @@ import _root_.net.liftweb.http.auth.{ HttpBasicAuthentication, AuthRole, userRol
 import code.model._
 import code.snippet._
 
-import net.liftmodules.FoBo
+import net.liftmodules.{FoBo,FoBoFontAwesome}
 
 object localeOverride extends SessionVar[Box[Locale]](Empty)
 
@@ -38,6 +38,9 @@ class Boot extends Loggable {
     FoBo.InitParam.ToolKit=FoBo.DataTables190
     FoBo.InitParam.ToolKit=FoBo.Knockout210
     FoBo.init()  
+    FoBoFontAwesome.InitParam.ToolKit=FoBoFontAwesome.FontAwesome200
+    FoBoFontAwesome.init()
+    
 
     // where to search snippet
     LiftRules.addToPackages("code")

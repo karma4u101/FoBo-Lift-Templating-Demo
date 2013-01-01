@@ -58,6 +58,8 @@
 							data-lift="Menu.item?name=Bootstrap-2.2.2;lift:Loc.i;"><span
 							data-lift="Loc.i">Bootstrap-2.2.2</span></span> documentation.
 					</p>
+				
+					
 				</section>
 
                 <hr/>
@@ -245,13 +247,59 @@ import net.liftmodules.FoBo
 						B<span>ootstrap</span> C<span>ustomization</span>
 					</h2>
 					<h4>Font Awesome</h4>
+					
 					<p>
-					   For Bootstrap v2.2.2+ you can replace the bootstrap provided icon set with <a 
+					   With FoBo included Bootstrap v2.2.2+ you can optionally replace the bootstrap provided icon set with <a 
 					   href="http://fortawesome.github.com/Font-Awesome/">Font Awesome</a>  
 					   this is done by using the init parram <code>FoBo.InitParam.ToolKit=FoBo.FontAwesomeXYZ</code> 
 					   and replacing the original <code>bootstrap.css</code> with <code>bootstrap-no-icons.css</code>. 
-					   This page is using Font Awesome icon set.
+					   This page is using Font Awesome icon set. 
 					</p>
+					<div class="alert alert-info">
+					 The icon set is backward compatible with bootstrap but can be used as-is even if you are not using bootstrap. 
+					 </div>							
+					<div  class="label">Font Awesome - Boot.scala Setup</div>
+<pre class="prettyprint linenums lang-scala">⋮
+FoBo.InitParam.ToolKit=FoBo.FontAwesomeXYZ
+FoBo.init()
+⋮</pre>					 						
+					<div  class="label">Font Awesome - Template Setup</div>
+<pre class="prettyprint linenums lang-html">&lt;!-- replacing the bootstrap.css with a no icons variant as we are using font-awesome for icons --&gt; 
+&lt;link data-lift="head" rel="stylesheet" type='text/css' href="/classpath/fobo/bootstrap-no-icons.css"/&gt;
+&lt;link data-lift="head" rel="stylesheet" href="/classpath/fobo/font-awesome.css"&gt;</pre>
+				
+
+
+	<div  class="label" style="margin-bottom:5px;">Font Awesome Example - Rendering login icons</div>			
+    <form>
+    <div class="input-prepend">
+    <span class="add-on"><i class="icon-envelope"></i></span>
+    <input class="span2" type="text" placeholder="Email address">
+    </div>
+    <div class="input-prepend">
+    <span class="add-on"><i class="icon-key"></i></span>
+    <input class="span2" type="password" placeholder="Password">
+    </div>
+    </form>
+    
+	<div  class="label">Font Awesome Example - The code</div>	
+	<pre class="prettyprint linenums lang-html">			
+&lt;form&gt;
+  &lt;div class="input-prepend"&gt;
+    &lt;span class="add-on"&gt;&lt;i class="icon-envelope"&gt;&lt;/i&gt;&lt;/span&gt;
+    &lt;input class="span2" type="text" placeholder="Email address"&gt;
+  &lt;/div&gt;
+  &lt;div class="input-prepend"&gt;
+    &lt;span class="add-on"&gt;&lt;i class="icon-key"&gt;&lt;/i&gt;&lt;/span&gt;
+    &lt;input class="span2" type="password" placeholder="Password"&gt;
+  &lt;/div&gt;
+&lt;/form&gt;   
+    </pre>
+   	<p>This is just one smal example, the FoBo Github button (in the upper right on this page) is using <code>font-size: 24px;</code> 
+   	to slightly scale up the icon with a Font Awesome Social icon, the social icons is one set of extra icons available in Font Awesome, 
+   	in fact all icons on this page is replaced by Font Awesome icons but as it is fully backwards compatible with Twitter Bootstrap 2.0 
+   	it blends in nicely.
+    </p>					
 					<h4>FoBo-Less</h4>
 					<p>
 						For common use it is mostly sufficient to use the pre-compiled artifact
@@ -286,10 +334,8 @@ import net.liftmodules.FoBo
 						combine this with the use of the FoBo.TBLocInfo object and you can do pretty much anything you are used to
 						only a lot easier and with a lot less code.</p>
 						<span class="label">Navbar Usage</span>
-						<pre class="prettyprint lang-html">					
- &lt;span data-lift="FoBo.TBNavbar.builder?group=[LocGroup-Name]"&gt;&lt;/span&gt;
- &lt;span data-lift="FoBo.TBNavbar.builderPullRight?group=[LocGroup-Name]"&gt;&lt;/span&gt;					     
-					    </pre>
+<pre class="prettyprint linenums lang-html">&lt;span data-lift="FoBo.TBNavbar.builder?group=[LocGroup-Name]"&gt;&lt;/span&gt;
+&lt;span data-lift="FoBo.TBNavbar.builderPullRight?group=[LocGroup-Name]"&gt;&lt;/span&gt;</pre>
 					    
 					    <p>The above shows you how to transform SiteMap items to nav items in a NavBar. 
 					    You can specify one or more <strong>nav</strong> builder's, i.e groups of items, on a NavBar where each
@@ -383,9 +429,7 @@ import net.liftmodules.FoBo
 						<p>The FoBo.Navlist snippet gives you a simple way to build a Bootstrap navlist from Lift SiteMap item's, 
 						</p>
 						<span class="label">Navlist Usage</span>
-						<pre class="prettyprint lang-html">					
- &lt;span data-lift="FoBo.TBNavlist.builder?group=[LocGroup-Name]"&gt;&lt;/span&gt;					     
-					    </pre>
+<pre class="prettyprint linenums lang-html">&lt;span data-lift="FoBo.TBNavlist.builder?group=[LocGroup-Name]"&gt;&lt;/span&gt;</pre>
 					    
 					    <p>The above shows you how to transform SiteMap items to list items in a Navlist. </p>
 					    

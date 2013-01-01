@@ -23,9 +23,11 @@ Update log
 ----------
 
 **Latest Module Version:** 
+- **2013-01-01** -- 2.3.0-SNAPSHOT
 - **2012-12-29** -- 2.2.0-SNAPSHOT
 
 **Latest Updates:**
+- **2013-01-01** -- 2.3.0-SNAPSHOT FoBo v0.7.8 with Font Awesome enabled.
 - **2012-12-29** -- 2.2.0-SNAPSHOT updated build to dep. on FoBo v0.7.7 and using FoBo.JQuery182
 
 

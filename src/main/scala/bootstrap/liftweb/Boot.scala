@@ -37,9 +37,10 @@ class Boot extends Loggable {
     FoBo.InitParam.ToolKit=FoBo.JQueryMobile110
     FoBo.InitParam.ToolKit=FoBo.DataTables190
     FoBo.InitParam.ToolKit=FoBo.Knockout210
+    FoBo.InitParam.ToolKit=FoBo.FontAwesome200
     FoBo.init()  
-    FoBoFontAwesome.InitParam.ToolKit=FoBoFontAwesome.FontAwesome200
-    FoBoFontAwesome.init()
+    
+    
     
 
     // where to search snippet

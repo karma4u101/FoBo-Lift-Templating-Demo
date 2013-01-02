@@ -33,7 +33,7 @@ libraryDependencies ++= {
     "net.liftweb"     %% "lift-squeryl-record" % liftVersion % "compile" withSources(),
     "net.liftweb"     %% "lift-wizard"         % liftVersion % "compile",
     "net.liftweb"     %% "lift-testkit"        % liftVersion % "compile",
-    "net.liftmodules" %% "fobo"                % (liftVersion+"-0.7.8-SNAPSHOT") withJavadoc() withSources() 
+    "net.liftmodules" %% "fobo"                % (liftVersion+"-0.7.9-SNAPSHOT") withJavadoc() withSources() 
     )
 }
 

@@ -3,9 +3,9 @@ organization := "se.media4u101"
 
 name := "FoBo-Lift-Template"
 
-version := "2.3.0-SNAPSHOT"
+version := "2.4.0-SNAPSHOT"
 
-scalaVersion := "2.9.2"
+scalaVersion := "2.10.0"
 
 seq(com.github.siasia.WebPlugin.webSettings :_*)
 
@@ -33,22 +33,41 @@ libraryDependencies ++= {
     "net.liftweb"     %% "lift-squeryl-record" % liftVersion % "compile" withSources(),
     "net.liftweb"     %% "lift-wizard"         % liftVersion % "compile",
     "net.liftweb"     %% "lift-testkit"        % liftVersion % "compile",
-    "net.liftmodules" %% "fobo"                % (liftVersion+"-0.7.9-SNAPSHOT") withJavadoc() withSources() 
+    "net.liftmodules" %% "fobo-font-awesome"   % (liftVersion+"-0.0.4-SNAPSHOT"),
+    "net.liftmodules" %% "fobo-twitter-bootstrap"   % (liftVersion+"-0.0.1-SNAPSHOT"),
+    "net.liftmodules" %% "fobo"                % (liftVersion+"-0.7.11-SNAPSHOT") withJavadoc() withSources() 
     )
 }
 
 // Customize any further dependencies as desired
-libraryDependencies ++= Seq(
-  "org.scala-tools.testing" %% "specs"         % "1.6.9"           % "test",
-  //"org.specs2"              %% "specs2"        % "1.6.1"           % "test",
-  "junit"                    % "junit"         % "4.8"             % "test->default", // For JUnit 4 testing
-  "org.eclipse.jetty"        % "jetty-webapp"  % "8.0.3.v20111011" % "container",
-  "org.eclipse.jetty"        % "jetty-plus"    % "8.0.3.v20111011" % "container", 
-  "javax.servlet"            % "servlet-api"   % "2.5"             % "provided->default",
-  "org.slf4j"                % "slf4j-log4j12" % "1.6.1"           % "compile->default", // Logging
-  "commons-lang"             % "commons-lang"  % "2.0"             % "compile->default",
-  "com.jolbox"               % "bonecp"        % "0.7.1.RELEASE"   % "compile->default",
-  "com.h2database"           % "h2"            % "1.3.167"  
-)
+libraryDependencies <++= scalaVersion { sv =>
+  "ch.qos.logback" % "logback-classic" % "1.0.0" % "provided" ::
+  "log4j" % "log4j" % "1.2.16" % "provided" ::
+  "org.eclipse.jetty"        % "jetty-webapp"  % "8.0.3.v20111011" % "container" ::
+  "org.eclipse.jetty"        % "jetty-plus"    % "8.0.3.v20111011" % "container" :: 
+  "javax.servlet"            % "servlet-api"   % "2.5"             % "provided->default" ::
+  "commons-lang"             % "commons-lang"  % "2.0"             % "compile->default" ::
+  "com.jolbox"               % "bonecp"        % "0.7.1.RELEASE"   % "compile->default" ::
+  "com.h2database"           % "h2"            % "1.3.167" ::  
+  (sv match {
+      case "2.10.0" | "2.9.2" | "2.9.1" | "2.9.1-1" => "org.specs2" %% "specs2" % "1.12.3" % "test"
+      case _ => "org.specs2" %% "specs2" % "1.12.3" % "test"
+      }) ::
+   (sv match {
+      case "2.10.0" | "2.9.2" => "org.scalacheck" %% "scalacheck" % "1.10.0" % "test"
+      case _ => "org.scalacheck" %% "scalacheck" % "1.10.0" % "test"
+      }) ::
+  Nil
+}
+
+//libraryDependencies ++= Seq(
+//  "org.eclipse.jetty"        % "jetty-webapp"  % "8.0.3.v20111011" % "container",
+//  "org.eclipse.jetty"        % "jetty-plus"    % "8.0.3.v20111011" % "container", 
+//  "javax.servlet"            % "servlet-api"   % "2.5"             % "provided->default",
+//  "org.slf4j"                % "slf4j-log4j12" % "1.6.1"           % "compile->default", // Logging
+//  "commons-lang"             % "commons-lang"  % "2.0"             % "compile->default",
+//  "com.jolbox"               % "bonecp"        % "0.7.1.RELEASE"   % "compile->default",
+//  "com.h2database"           % "h2"            % "1.3.167"  
+//)
 
 

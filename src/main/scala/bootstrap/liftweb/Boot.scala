@@ -18,7 +18,7 @@ import _root_.net.liftweb.http.auth.{ HttpBasicAuthentication, AuthRole, userRol
 import code.model._
 import code.snippet._
 
-import net.liftmodules.{FoBo,FoBoFontAwesome}
+import net.liftmodules.{FoBo,FoBoFA,FoBoTB}
 
 object localeOverride extends SessionVar[Box[Locale]](Empty)
 
@@ -29,17 +29,18 @@ object localeOverride extends SessionVar[Box[Locale]](Empty)
 class Boot extends Loggable {
   def boot {
 
-   //If using defaults FoBo init params can be omitted
+    //FoBo init params 
     FoBo.InitParam.JQuery=FoBo.JQuery182  
-    FoBo.InitParam.ToolKit=FoBo.Bootstrap222
     FoBo.InitParam.ToolKit=FoBo.Foundation215
     FoBo.InitParam.ToolKit=FoBo.PrettifyJun2011
     FoBo.InitParam.ToolKit=FoBo.JQueryMobile110
     FoBo.InitParam.ToolKit=FoBo.DataTables190
     FoBo.InitParam.ToolKit=FoBo.Knockout210
-    FoBo.InitParam.ToolKit=FoBo.FontAwesome200
+    FoBo.InitParam.ToolKit=FoBo.Bootstrap222
+    //FoBoTB.InitParam.ToolKit=FoBoTB.Bootstrap222    
+    FoBo.InitParam.ToolKit=FoBo.FontAwesome200TB222
+    //FoBoFA.InitParam.ToolKit=FoBoFA.FontAwesome200TB222
     FoBo.init()  
-    
     
     
 
@@ -134,6 +135,7 @@ object Paths {
   
   val index            = Menu.i("Home") / "index"
   val liboIndex        = Menu.i("LiBo") / "libo"
+                         
   val libospyhome      = Menu(Loc("LiboSpyHome"  , Link(List("libospyhome")  , true, "#spyhome")  , S.loc("LiboSpyHome" , Text("Home"))      , LocGroup("liboSpyTop")))
   val libospyabout     = Menu(Loc("LiboSpyAbout" , Link(List("libospyabout") , true, "#spyabout") , S.loc("LiboSpyAbout", Text("About"))     , LocGroup("liboSpyTop")))
   val libospysetup     = Menu(Loc("LiboSpySetup" , Link(List("libospysetup") , true, "#spysetup") , S.loc("LiboSpySetup", Text("Setup"))     , LocGroup("liboSpyTop")))

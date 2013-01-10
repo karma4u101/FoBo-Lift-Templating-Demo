@@ -102,7 +102,7 @@
  ⋮
 // Lift  
 libraryDependencies ++= {
-  val liftVersion = "2.5-M3" // Put the current/latest lift version here
+  val liftVersion = "2.5-M4" // Put the current/latest lift version here
   Seq(
     "net.liftweb"     %% "lift-webkit" % liftVersion % "compile->default" withSources(),
          ⋮
@@ -251,9 +251,9 @@ import net.liftmodules.FoBo
 					<p>
 					   With FoBo included Bootstrap v2.2.2+ you can optionally replace the bootstrap provided icon set with <a 
 					   href="http://fortawesome.github.com/Font-Awesome/">Font Awesome</a>  
-					   this is done by using the init parram <code>FoBo.InitParam.ToolKit=FoBo.FontAwesomeXYZ</code> 
-					   and replacing the original <code>bootstrap.css</code> with <code>bootstrap-no-icons.css</code>. 
-					   This page is using Font Awesome icon set. 
+					   this is done by using the init parram <code>FoBo.InitParam.ToolKit=FoBo.FontAwesomeXYZ</code> or 
+					   <code>FoBo.InitParam.ToolKit=FoBo.FontAwesomeXYZTBXYZ</code> the later will give font-awesome  
+					   a hint that your are using it with Twitter Bootstrap version XYZ.
 					</p>
 
 					<div class="alert alert-info">
@@ -261,15 +261,23 @@ import net.liftmodules.FoBo
 					 </div>							
 					<div  class="label">Font Awesome - Boot.scala Setup</div>
 <pre class="prettyprint linenums lang-scala">⋮
-FoBo.InitParam.ToolKit=FoBo.FontAwesome200
+FoBo.InitParam.ToolKit=FoBo.Bootstrap222
+FoBo.InitParam.ToolKit=FoBo.FontAwesome200TB222 
 FoBo.init()
 ⋮</pre>					 						
 					<div  class="label">Font Awesome - Template Setup</div>
 <pre class="prettyprint linenums lang-html">&lt;!-- replacing the bootstrap.css with a no icons variant as we are using font-awesome for icons --&gt; 
-&lt;link data-lift="head" rel="stylesheet" type='text/css' href="/classpath/fobo/bootstrap-no-icons.css"/&gt;
-&lt;link data-lift="head" rel="stylesheet" href="/classpath/fobo/font-awesome.css"&gt;</pre>
+&lt;link rel="stylesheet" type='text/css' href="/classpath/fobo/bootstrap.css"/&gt;
+&lt;link rel="stylesheet" href="/classpath/fobo/font-awesome.css"&gt;</pre>
 				
-
+					<div class="alert alert-info">
+					 If you are using FoBo v0.7.10-SNAPSHOT with FoBo.Bootstrap222 and FoBo.FontAwesome200 
+					 you need to explicitly specify that you are using a font-awesome modified bootstrap css in 
+					 your template as <code>bootstrap-no-icons.css</code>.
+					 In newer version of FoBo with for example the FoBo.FontAwesome200TB222 (font-awesome for twitter bootstrap v2.2.2) 
+					 declaration FoBo will automatically identify that you are using font-awesome and serve the correct bootsrap css 
+					 without a explicit "-no-icons" specification in the css file name. 
+					 </div>	
 
 
 	<div  class="label" style="margin-bottom:5px;">Font Awesome Example - Rendering login icons</div>			
@@ -490,7 +498,21 @@ FoBo.init()
 						If you wish to take a closer look, <a href="https://github.com/karma4u101/FoBo-Lift-Template/blob/master/src/main/scala/bootstrap/liftweb/Boot.scala">here</a> is the Boot.scala file on Github.	
 						</p>				    
 					</section>
-
+                   <br/>
+                   <section>
+                   <h4>FoBo SiteMap builder with a MetaMegaProtoUser AddUserMenusXXXX method</h4>
+                   <p>If you are using <code>net.liftweb.record.MetaMegaProtoUser</code> and any of the 
+                   <code>AddUserMenusXXXX</code> methods and are struggeling with how to set it up with a Fobo menu builder 
+                   <strong>for example to use it with user authentication</strong> that renders the links dependant on if the user are 
+                   authenticated or not the following tips may be of help.</p>
+                   <div class="alert alert-info">
+                    <strong>Tips:</strong> Set the menu <code>LocGroup</code> in your <code>MetaMegaProtoUser</code> object by overriding the 
+                    <code>globalUserLocParams</code> method. 
+                   </div>
+                   <p>For more information see <a href="https://github.com/karma4u101/FoBo/issues/22#issuecomment-11932972" target="blank">FoBo sitemap with User.AddUserMenusAfter (authentication) ... how to?</a></p>
+                   
+                 
+                   </section>
 
                     <br/>					
                     <section>

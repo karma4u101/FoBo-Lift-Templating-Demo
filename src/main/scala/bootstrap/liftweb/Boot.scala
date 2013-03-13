@@ -18,7 +18,7 @@ import _root_.net.liftweb.http.auth.{ HttpBasicAuthentication, AuthRole, userRol
 import code.model._
 import code.snippet._
 
-import net.liftmodules.{FoBo,FoBoFA,FoBoTB}
+import net.liftmodules.{FoBo/*,FoBoFA,FoBoTB*/}
 
 object localeOverride extends SessionVar[Box[Locale]](Empty)
 
@@ -36,9 +36,10 @@ class Boot extends Loggable {
     FoBo.InitParam.ToolKit=FoBo.JQueryMobile110
     FoBo.InitParam.ToolKit=FoBo.DataTables190
     FoBo.InitParam.ToolKit=FoBo.Knockout210
-    FoBo.InitParam.ToolKit=FoBo.Bootstrap222
+    FoBo.InitParam.ToolKit=FoBo.Bootstrap230
     //FoBoTB.InitParam.ToolKit=FoBoTB.Bootstrap222    
-    FoBo.InitParam.ToolKit=FoBo.FontAwesome200TB222
+    //FoBo.InitParam.ToolKit=FoBo.FontAwesome200TB222
+    FoBo.InitParam.ToolKit=FoBo.FontAwesome300
     //FoBoFA.InitParam.ToolKit=FoBoFA.FontAwesome200TB222
     FoBo.init()  
     

@@ -251,9 +251,7 @@ import net.liftmodules.FoBo
 					<p>
 					   With FoBo included Bootstrap v2.2.2+ you can optionally replace the bootstrap provided icon set with <a 
 					   href="http://fortawesome.github.com/Font-Awesome/">Font Awesome</a>  
-					   this is done by using the init parram <code>FoBo.InitParam.ToolKit=FoBo.FontAwesomeXYZ</code> or 
-					   <code>FoBo.InitParam.ToolKit=FoBo.FontAwesomeXYZTBXYZ</code> the later will give font-awesome  
-					   a hint that your are using it with Twitter Bootstrap version XYZ.
+					   this is done by using the init parram <code>FoBo.InitParam.ToolKit=FoBo.FontAwesomeXYZ</code>.
 					</p>
 
 					<div class="alert alert-info">
@@ -262,33 +260,34 @@ import net.liftmodules.FoBo
 					<div  class="label">Font Awesome - Boot.scala Setup</div>
 <pre class="prettyprint linenums lang-scala">⋮
 FoBo.InitParam.ToolKit=FoBo.Bootstrap222
-FoBo.InitParam.ToolKit=FoBo.FontAwesome200TB222 
+FoBo.InitParam.ToolKit=FoBo.FontAwesome300 
 FoBo.init()
 ⋮</pre>					 						
 					<div  class="label">Font Awesome - Template Setup</div>
-<pre class="prettyprint linenums lang-html">&lt;!-- replacing the bootstrap.css with a no icons variant as we are using font-awesome for icons --&gt; 
-&lt;link rel="stylesheet" type='text/css' href="/classpath/fobo/bootstrap.css"/&gt;
+<pre class="prettyprint linenums lang-html">&lt;link rel="stylesheet" type='text/css' href="/classpath/fobo/bootstrap.css"/&gt;
+ :
 &lt;link rel="stylesheet" href="/classpath/fobo/font-awesome.css"&gt;</pre>
 				
-					<div class="alert alert-info">
-					 If you are using FoBo v0.7.10-SNAPSHOT with FoBo.Bootstrap222 and FoBo.FontAwesome200 
-					 you need to explicitly specify that you are using a font-awesome modified bootstrap css in 
-					 your template as <code>bootstrap-no-icons.css</code>.
-					 In newer version of FoBo with for example the FoBo.FontAwesome200TB222 (font-awesome for twitter bootstrap v2.2.2) 
-					 declaration FoBo will automatically identify that you are using font-awesome and serve the correct bootsrap css 
-					 without a explicit "-no-icons" specification in the css file name. 
-					 </div>	
+<!-- 					<div class="alert alert-info"> -->
+<!-- 					 If you are using FoBo v0.7.10-SNAPSHOT with FoBo.Bootstrap222 and FoBo.FontAwesome200  -->
+<!-- 					 you need to explicitly specify that you are using a font-awesome modified bootstrap css in  -->
+<!-- 					 your template as <code>bootstrap-no-icons.css</code>. -->
+<!-- 					 In newer version of FoBo with for example the FoBo.FontAwesome200TB222 (font-awesome for twitter bootstrap v2.2.2)  -->
+<!-- 					 declaration FoBo will automatically identify that you are using font-awesome and serve the correct bootsrap css  -->
+<!-- 					 without a explicit "-no-icons" specification in the css file name.  -->
+<!-- 					 </div>	 -->
 
 
-	<div  class="label" style="margin-bottom:5px;">Font Awesome Example - Rendering login icons</div>			
+	<div  class="label" style="margin-bottom:5px;">Font Awesome Example - Rendering login icons</div>	
+	 		
     <form>
     <div class="input-prepend">
     <span class="add-on"><i class="icon-envelope"></i></span>
-    <input class="span2" type="text" placeholder="Email address">
+    <input class="span9" type="text" placeholder="Email address">
     </div>
     <div class="input-prepend">
     <span class="add-on"><i class="icon-key"></i></span>
-    <input class="span2" type="password" placeholder="Password">
+    <input class="span9" type="password" placeholder="Password">
     </div>
     </form>
 

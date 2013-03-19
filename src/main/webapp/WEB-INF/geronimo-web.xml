@@ -13,6 +13,7 @@
         <dependencies>
         
         </dependencies>
+        <import-package> !org.apache.commons.codec*</import-package>
     </environment>
 
    <context-root>/fobo-lift-template-demo</context-root>

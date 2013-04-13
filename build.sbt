@@ -2,7 +2,7 @@ organization := "se.media4u101"
 
 name := "FoBo-Lift-Template"
 
-version := "2.5.0-SNAPSHOT"
+version := "2.6.0-SNAPSHOT"
 
 crossScalaVersions := Seq("2.10.0", "2.9.2", "2.9.1-1", "2.9.1")
 
@@ -34,7 +34,7 @@ libraryDependencies ++= {
     "net.liftweb"     %% "lift-squeryl-record"                % liftVersion      % "compile" withSources(),
     //"net.liftweb"     %% "lift-wizard"                        % liftVersion      % "compile",
     "net.liftweb"     %% "lift-testkit"                       % liftVersion      % "compile",
-    "net.liftmodules" %% "fobo_3.0"                           % "0.9.5-SNAPSHOT" % "compile" withJavadoc() withSources()         
+    "net.liftmodules" %% "fobo_2.5"                           % "0.9.7-SNAPSHOT" % "compile" withJavadoc() withSources()         
     )
 }
 //"net.liftmodules" %% "fobo"                             % (liftVersion+"-0.9.3-SNAPSHOT") withJavadoc() withSources() 

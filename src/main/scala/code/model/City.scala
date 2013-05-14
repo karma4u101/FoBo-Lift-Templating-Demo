@@ -44,21 +44,21 @@ object City extends City with MetaRecord[City] with Loggable {
   
   def findCity(cityName: String): Box[City] = {
     logger.debug("model.City object findCity city(string)="+id)
-    val c = getAllList.find(_.cityName==cityName)
+    val c = getAllList.find(_.cityName.equals(cityName))
     logger.debug("model.City object findCity found ="+c.toString())
     c
   }
   
   def findRegion(region: String): Box[City] = {
     logger.debug("model.City object findRegion region(string)="+id)
-    val c = getAllList.find(_.region==region)
+    val c = getAllList.find(_.region.equals(region))
     logger.debug("model.City object findRegion found ="+c.toString())
     c
   }  
   
   def findCountry(country: String): Box[City] = {
     logger.debug("model.City object findCountry country(string)="+id)
-    val c = getAllList.find(_.country==country)
+    val c = getAllList.find(_.country.equals(country))
     logger.debug("model.City object findCountry found ="+c.toString())
     c
   }    

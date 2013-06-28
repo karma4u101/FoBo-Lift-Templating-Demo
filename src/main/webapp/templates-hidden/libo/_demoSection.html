@@ -102,11 +102,11 @@
  ⋮
 // Lift  
 libraryDependencies ++= {
-  val liftVersion = "2.5-M4" // Put the current/latest lift version here
+  val liftVersion = "2.5" // Put the current/latest lift version here
   Seq(
-    "net.liftweb"     %% "lift-webkit" % liftVersion % "compile->default" withSources(),
+    "net.liftweb"     %% "lift-webkit" % liftVersion % "compile" withSources(),
          ⋮
-    "net.liftmodules" %% "fobo"        % (liftVersion+"-X.Y.Z-SNAPSHOT") withJavadoc() withSources() 
+    "net.liftmodules" %% "fobo_2.5"    % "1.0"       % "compile"
     )
 }                            
 
@@ -118,11 +118,9 @@ libraryDependencies ++= Seq(
 						</pre>
 
 					<div class="alert alert-info">
-						If you are using <strong>Maven</strong> instead of <a
-							href="http://www.scala-sbt.org/">SBT</a> the FoBo artifacts is at
-						the
-						<code>oss.sonatype.org</code>
-						repository.
+					    For more information on the dependency setup for both <strong>Maven</strong> and SBT 
+					    see the <a href="https://github.com/karma4u101/FoBo#dependency-settings">Dependency settings</a>
+					    section in <a href="https://github.com/karma4u101/FoBo">FoBo</a> project readme.  
 					</div>
 
 					<dl>
@@ -134,8 +132,8 @@ libraryDependencies ++= Seq(
 						<dt>The library dependency section:</dt>
 						<dd>
 							Declare the FoBo lift module line
-							<code style="font-size:10px;">"net.liftmodules" %% "fobo" %
-								(liftVersion+"-X.Y.Z-SNAPSHOT") withJavadoc() withSources()</code>
+							<code style="font-size:10px;">"net.liftmodules" %% "fobo_[minor.major Lift version]" %
+								[FoBo module version]" % "compile"</code>
 							with the version string starting with the lift version number
 							used for your project and appending the module version on the
 							form "-X.Y.Z"

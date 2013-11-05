@@ -30,20 +30,19 @@ class Boot extends Loggable {
   def boot {
 
     //FoBo init params 
-    FoBo.InitParam.JQuery=FoBo.JQuery182  
+    FoBo.InitParam.JQuery=FoBo.JQuery191 //1102
     FoBo.InitParam.ToolKit=FoBo.Foundation215
     FoBo.InitParam.ToolKit=FoBo.PrettifyJun2011
     FoBo.InitParam.ToolKit=FoBo.JQueryMobile110
     FoBo.InitParam.ToolKit=FoBo.DataTables190
     FoBo.InitParam.ToolKit=FoBo.Knockout210
-    FoBo.InitParam.ToolKit=FoBo.Bootstrap231
-    FoBo.InitParam.ToolKit=FoBo.FontAwesome300
+    FoBo.InitParam.ToolKit=FoBo.Bootstrap232
+    FoBo.InitParam.ToolKit=FoBo.FontAwesome321
     FoBo.InitParam.ToolKit=FoBo.AngularJS106      //The core files 
     FoBo.InitParam.ToolKit=FoBo.AJSUIBootstrap020 //Angular UI Bootstrap
     FoBo.InitParam.ToolKit=FoBo.AJSNGGrid204      //Angular NG-Grid    
     FoBo.init()  
     
-
     // where to search snippet
     LiftRules.addToPackages("code")
 
@@ -148,10 +147,11 @@ object Paths {
   val bootstrap222Doc  = Menu(Loc("Bootstrap-2.2.2", Link(List("bootstrap-2.2.2"), true, "/bootstrap-2.2.2/index")                , S.loc("Bootstrap-2.2.2", Text("Bootstrap-2.2.2")), LocGroup("nldemo1")   ))
   val jqueryMobileDoc  = Menu(Loc("JQuery-mobile"  , Link(List("jquery-mobile")  , true, "/jquery-mobile/1.1.0/demos/index")      , "JQuery-mobile"))
   val datatablesDoc    = Menu(Loc("DataTables"     , Link(List("datatables")     , true, "/datatables/1.9.0/index")               , "DataTables"))
-  val foboApiDoc       = Menu(Loc("FoBoAPI"        , Link(List("foboapi")        , true, "/foboapi/#net.liftmodules.FoBo.package"), S.loc("FoBoAPI"  , Text("FoBo API")), LocGroup("liboTop2","mdemo2","nldemo1") ))
-  
+  val foboApiDoc       = Menu(Loc("FoBoAPI"        , Link(List("foboapi")        , true, "/foboapi/index.html#net.liftmodules.FoBo.package"), S.loc("FoBoAPI"  , Text("FoBo API")), LocGroup("liboTop2","mdemo2","nldemo1") ))
+  //index.html#net.liftmodules.FoBo.package
   val nlHelp           = Menu.i("NLHelp") / "helpindex"
-
+  
+  val starterTemplates = Menu(Loc("lift_advanced_bs3", ExtLink("http://www.media4u101.se/lift-advanced-bs3/"), S.loc("lift_advanced_bs3", Text("Lift TB3 templates")) ,LocGroup("liboTop2")  ) )
   
   def sitemap = SiteMap(
       navHeader1 >> LocGroup("nldemo1") >> FoBo.TBLocInfo.NavHeader,
@@ -168,6 +168,7 @@ object Paths {
           bootstrap220Doc ,
           bootstrap222Doc ,
           divider1  >> FoBo.TBLocInfo.Divider,
+          starterTemplates,
           foboApiDoc 
       ),
       foundationDoc,

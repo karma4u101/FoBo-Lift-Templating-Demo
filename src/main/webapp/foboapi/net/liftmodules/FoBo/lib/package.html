@@ -2,24 +2,39 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 <html>
         <head>
-          <title>net.liftmodules.FoBo.lib</title>
+          <title>lib - net.liftmodules.FoBo.lib</title>
+          <meta name="description" content="lib - net.liftmodules.FoBo.lib" />
+          <meta name="keywords" content="lib net.liftmodules.FoBo.lib" />
           <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
           
-      <link type="text/css" media="screen" rel="stylesheet" href="../../../../lib/template.css" />
-      <script type="text/javascript" src="../../../../lib/jquery.js"></script>
+      <link href="../../../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
+      <link href="../../../../lib/diagrams.css" media="screen" type="text/css" rel="stylesheet" id="diagrams-css" />
+      <script type="text/javascript" src="../../../../lib/jquery.js" id="jquery-js"></script>
       <script type="text/javascript" src="../../../../lib/jquery-ui.js"></script>
       <script type="text/javascript" src="../../../../lib/template.js"></script>
       <script type="text/javascript" src="../../../../lib/tools.tooltip.js"></script>
+      
+      <script type="text/javascript">
+         if(top === self) {
+            var url = '../../../../index.html';
+            var hash = 'net.liftmodules.FoBo.lib.package';
+            var anchor = window.location.hash;
+            var anchor_opt = '';
+            if (anchor.length >= 1)
+              anchor_opt = '@' + anchor.substring(1);
+            window.location.href = url + '#' + hash + anchor_opt;
+         }
+   	  </script>
     
         </head>
-        <body onload="sh_highlightDocument('../lib/', '.min.js');" class="value">
+        <body class="value">
       <div id="definition">
         <img src="../../../../lib/package_big.png" />
-        <p id="owner"><a name="net" class="extype" href="../../../package.html">net</a>.<a name="net.liftmodules" class="extype" href="../../package.html">liftmodules</a>.<a name="net.liftmodules.FoBo" class="extype" href="../package.html">FoBo</a></p>
+        <p id="owner"><a href="../../../package.html" class="extype" name="net">net</a>.<a href="../../package.html" class="extype" name="net.liftmodules">liftmodules</a>.<a href="../package.html" class="extype" name="net.liftmodules.FoBo">FoBo</a></p>
         <h1>lib</h1>
       </div>
 
-      <h4 class="signature" id="signature">
+      <h4 id="signature" class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">package</span>
@@ -29,11 +44,11 @@
       </span>
       </h4>
       
-      <div class="fullcommenttop" id="comment"></div>
-    
+          <div id="comment" class="fullcommenttop"></div>
+        
 
       <div id="mbrsel">
-        <div id="textfilter"><span class="pre"></span><span class="input"><input accesskey="/" type="text" /></span><span class="post"></span></div>
+        <div id="textfilter"><span class="pre"></span><span class="input"><input id="mbrsel-input" type="text" accesskey="/" /></span><span class="post"></span></div>
         
         
         <div id="visbl">
@@ -46,9 +61,10 @@
         <div id="allMembers">
         
 
-        <div class="types members" id="types">
+        <div id="types" class="types members">
               <h3>Type Members</h3>
-              <ol><li visbl="pub" name="net.liftmodules.FoBo.lib.BootstrapSH" data-isabs="false">
+              <ol><li name="net.liftmodules.FoBo.lib.BootstrapSH" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="BootstrapSHextendsScriptHelper"></a>
       <a id="BootstrapSH:BootstrapSH"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -56,12 +72,13 @@
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <a href="BootstrapSH.html"><span class="name">BootstrapSH</span></a><span class="result"> extends ScriptHelper</span>
+        <a href="BootstrapSH.html"><span class="name">BootstrapSH</span></a><span class="result"> extends <a href="ScriptHelper.html" class="extype" name="net.liftmodules.FoBo.lib.ScriptHelper">ScriptHelper</a></span>
       </span>
       </h4>
       <p class="comment cmt">Bootstrap script helper is a helper class that implements some commonly
 used bootstrap component init/usage script functions.</p>
-    </li><li visbl="pub" name="net.liftmodules.FoBo.lib.DataTablesSH" data-isabs="false">
+    </li><li name="net.liftmodules.FoBo.lib.DataTablesSH" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="DataTablesSHextendsLoggable"></a>
       <a id="DataTablesSH:DataTablesSH"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -69,12 +86,13 @@ used bootstrap component init/usage script functions.</p>
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <a href="DataTablesSH.html"><span class="name">DataTablesSH</span></a><span class="result"> extends Loggable</span>
+        <a href="DataTablesSH.html"><span class="name">DataTablesSH</span></a><span class="result"> extends <span class="extype" name="net.liftweb.common.Loggable">Loggable</span></span>
       </span>
       </h4>
       <p class="comment cmt">DataTables script helper is a helper class that implements some commonly used DataTables
 script functions.</p>
-    </li><li visbl="pub" name="net.liftmodules.FoBo.lib.ScriptHelper" data-isabs="false">
+    </li><li name="net.liftmodules.FoBo.lib.ScriptHelper" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="ScriptHelperextendsObject"></a>
       <a id="ScriptHelper:ScriptHelper"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -82,7 +100,7 @@ script functions.</p>
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <a href="ScriptHelper.html"><span class="name">ScriptHelper</span></a><span class="result"> extends AnyRef</span>
+        <a href="ScriptHelper.html"><span class="name">ScriptHelper</span></a><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
       </span>
       </h4>
       <p class="comment cmt">This script helper is a helper class that implements some commonly used script functions.</p>
@@ -91,9 +109,10 @@ script functions.</p>
 
         
 
-        <div class="values members" id="values">
+        <div id="values" class="values members">
               <h3>Value Members</h3>
-              <ol><li visbl="pub" name="net.liftmodules.FoBo.lib.BuildInfo" data-isabs="false">
+              <ol><li name="net.liftmodules.FoBo.lib.BuildInfo" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="BuildInfo"></a>
       <a id="BuildInfo:BuildInfo"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -101,7 +120,7 @@ script functions.</p>
         <span class="kind">object</span>
       </span>
       <span class="symbol">
-        <a href="BuildInfo$.html"><span class="name">BuildInfo</span></a><span class="result"> extends AnyRef</span>
+        <a href="BuildInfo$.html"><span class="name">BuildInfo</span></a><span class="result"> extends <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4>
       
@@ -109,10 +128,20 @@ script functions.</p>
             </div>
 
         
+
+        
         </div>
 
         <div id="inheritedMembers">
         
+        
+        </div>
+
+        <div id="groupedMembers">
+        <div class="group" name="Ungrouped">
+              <h3>Ungrouped</h3>
+              
+            </div>
         </div>
 
       </div>

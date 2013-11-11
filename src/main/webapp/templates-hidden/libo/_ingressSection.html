@@ -28,22 +28,34 @@
 						<p>                    	
                     	The <a id="fobo-tt" title="A generic front-end toolkit module for Lift" href="https://github.com/karma4u101/FoBo">FoBo</a> module gives your 
                     	<a id="lift-tt" title="The most powerful, most secure web framework available today. It simply rocks!" href="http://liftweb.net/">Lift</a> project seamless front-end toolkit integration. 
-                    	This page focus on the FoBo/Lift Twitter-Bootstrap integration, including general bootstrap usage and information on 
+                    	This page focus on the FoBo/Lift Bootstrap v2.x/v3.x and includes general bootstrap usage and information on 
                     	how to use some of <span data-lift="Menu.item?name=FoBoAPI;lift:Loc.i;a:class=addclassshowofdummy">
-							FoBo's API functions</span>. 
+							FoBo's API functions</span>.   
 						<script data-lift="FoBo.Bootstrap.tooltip?id=#fobo-tt&options=placement:'right'"></script> 	
 					    <script data-lift="FoBo.Bootstrap.tooltip?id=#lift-tt"></script>  
+                        </p>
+                        <p>
+                        FoBo v1.1 adds support for Bootstrap v3.x and there is now also a <a href="https://github.com/lift/lift_26_sbt/">
+                        Lift v2.6 Template Applications - On Github</a> that uses FoBo for it's Bootstrap v3.x and FoBo's 
+                        <a href="foboapi/index.html#net.liftmodules.FoBoBs.mapper.BootstrapMegaMetaProtoUser">BootstrapMegaMetaProtUser</a> for ProtoUser views. 
+                        See <span data-lift="Menu.item?name=FoBoAPI;lift:Loc.i;a:class=addclassshowofdummy">FoBo's API</span> and the  
+                        <a href="http://www.media4u101.se/lift-advanced-bs3/">live Demo</a> for more information.  
                         </p>
                         <p>
                         For general information about the FoBo module see the FoBo <span data-lift="Menu.item?name=Home;lift:Loc.i;">Home</span>.
                         </p>
                         <p>	
 						Although the benefits of using the FoBo module is several without even using the FoBo Bootstrap API 
-						hooks, the sections below will take you through the FoBo module setup to enable Twitter Bootstrap in your Lift project 
-						and how you can make use of the API functions to for instance utilize Lifts SiteMap to populate bootstrap 
-						menus and more.  
+						hooks, the sections below will take you through the FoBo module setup to enable Bootstrap in your Lift project 
+						and give you some clues on how you can make use of the API functions, to for instance, utilize Lifts SiteMap to populate bootstrap 
+						menus and more.     
 						</p>
-						
+						<p>
+						Although this page uses Bootstrap v2.x most of the information like setup, upgrade, customization
+						applies to FoBo's Bootstrap v3.x support. FoBo's Bootstrap v3.x support extends the Snippet support with new features, 
+						see the API documentation and the <a href="http://www.media4u101.se/lift-advanced-bs3/">Lift v2.6 Template Applications - Bootstrap v3.x Demo</a> 
+						for more information.
+						</p>
 						
 					</div>
 				</div>	
@@ -95,10 +107,16 @@
 					
 						<h2 class="capital">
 							<i class="icon-bookmark" style="vertical-align:center;"></i>&nbsp;S<span>ocial</span>
-						</h2>
-                       
-                       <div class="g-plusone" data-size="medium"></div>					   							
-					   <br/>						
+						</h2>				                       
+	
+								
+						<iframe
+							class="github-btn" src="http://ghbtns.com/github-btn.html?user=karma4u101&repo=fobo&type=watch&count=true&size=large"
+							allowtransparency="true" frameborder="0" scrolling="0"
+							width="180px" height="30px">
+						</iframe>
+						<br/>								
+											   					
 						<a href="https://twitter.com/karma4u101"
 							class="twitter-follow-button" data-show-count="false"
 							data-size="large">Follow @karma4u101</a>
@@ -131,23 +149,19 @@
  								}
  							}(document, "script", "twitter-wjs");
  						</script> 
-						<br/>
+					    <br/>				
 						<iframe
 							class="github-btn" src="http://ghbtns.com/github-btn.html?user=karma4u101&type=follow&count=false&size=smal"
 							allowtransparency="true" frameborder="0" scrolling="0"
-							width="180px" height="30px">
+							width="180px" height="20px">
 					    </iframe>	
-					    <br/>				
-						<iframe
-							class="github-btn" src="http://ghbtns.com/github-btn.html?user=karma4u101&repo=fobo&type=watch&count=true&size=smal"
-							allowtransparency="true" frameborder="0" scrolling="0"
-							width="180px" height="30px">
-						</iframe>
 						<br/>	
 						<iframe class="github-btn" src="http://ghbtns.com/github-btn.html?user=karma4u101&repo=fobo&type=fork"
                             allowtransparency="true" frameborder="0" scrolling="0" width="53px" height="20px">
                        </iframe>
-				
+                       <br/>
+				       <div class="g-plusone" data-size="medium"></div>					   							
+					   <br/>
 					</div>
 				</div>				
 					

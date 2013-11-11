@@ -145,6 +145,7 @@ object Paths {
   val bootstrap210Doc  = Menu(Loc("Bootstrap-2.1.0", Link(List("bootstrap-2.1.0"), true, "/bootstrap-2.1.0/index")                , S.loc("Bootstrap-2.1.0", Text("Bootstrap-2.1.0"))   ))
   val bootstrap220Doc  = Menu(Loc("Bootstrap-2.2.0", Link(List("bootstrap-2.2.0"), true, "/bootstrap-2.2.0/index")                , S.loc("Bootstrap-2.2.0", Text("Bootstrap-2.2.0")), LocGroup("nldemo1")  ))
   val bootstrap222Doc  = Menu(Loc("Bootstrap-2.2.2", Link(List("bootstrap-2.2.2"), true, "/bootstrap-2.2.2/index")                , S.loc("Bootstrap-2.2.2", Text("Bootstrap-2.2.2")), LocGroup("nldemo1")   ))
+  val bootstrap301Doc  = Menu(Loc("Bootstrap-3.0.1", ExtLink("http://www.media4u101.se/lift-advanced-bs3/bootstrap301/")          , S.loc("Bootstrap-3.0.1", Text("Bootstrap-3.0.1")), LocGroup("nldemo1")   ))
   val jqueryMobileDoc  = Menu(Loc("JQuery-mobile"  , Link(List("jquery-mobile")  , true, "/jquery-mobile/1.1.0/demos/index")      , "JQuery-mobile"))
   val datatablesDoc    = Menu(Loc("DataTables"     , Link(List("datatables")     , true, "/datatables/1.9.0/index")               , "DataTables"))
   val foboApiDoc       = Menu(Loc("FoBoAPI"        , Link(List("foboapi")        , true, "/foboapi/index.html#net.liftmodules.FoBo.package"), S.loc("FoBoAPI"  , Text("FoBo API")), LocGroup("liboTop2","mdemo2","nldemo1") ))
@@ -167,6 +168,7 @@ object Paths {
           bootstrap210Doc ,
           bootstrap220Doc ,
           bootstrap222Doc ,
+          bootstrap301Doc ,
           divider1  >> FoBo.TBLocInfo.Divider,
           starterTemplates,
           foboApiDoc 

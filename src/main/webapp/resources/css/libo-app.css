@@ -23,7 +23,7 @@ body {
     margin-bottom: 0px;
 }
 
-#spyhome,#spyabout,#spysetup,#spyfooter,#gstarted,#starterproj,#modulesetup,#moduleupgrade,#customization,#fobo-snippets {
+#spyhome,#spyabout,#spysetup,#spyfooter,#gstarted,#starterproj,#modulesetup,#moduleupgrade,#customization,#foboprotousr,#fobosnippets {
 	position:relative;top:-40px;
 }
 
@@ -245,6 +245,67 @@ body {
 }
 /*Sidebar affix stuff - end*/
 
+
+
+/*Demo NavLiList stuff*/
+.navlilist-demo {
+  width: 218px;
+  padding: 0;
+  margin-right: 10px;
+  margin-bottom: 20px;
+  background-color: #fff;
+  margin-left: 0;
+  -webkit-border-radius: 6px;
+     -moz-border-radius: 6px;
+          border-radius: 6px;
+  -webkit-box-shadow: 0 1px 4px rgba(0,0,0,.065);
+     -moz-box-shadow: 0 1px 4px rgba(0,0,0,.065);
+          box-shadow: 0 1px 4px rgba(0,0,0,.065);
+}
+.navlilist-demo > li > a {
+  display: block;
+  *width: 190px;
+  margin: 0 0 -1px;
+  font-size: 14px;
+  padding: 8px 14px;
+  border: 1px solid #e5e5e5;
+}
+.navlilist-demo > li:first-child > a {
+  -webkit-border-radius: 6px 6px 0 0;
+     -moz-border-radius: 6px 6px 0 0;
+          border-radius: 6px 6px 0 0;
+}
+.navlilist-demo > li:last-child > a {
+  -webkit-border-radius: 0 0 6px 6px;
+     -moz-border-radius: 0 0 6px 6px;
+          border-radius: 0 0 6px 6px;
+}
+.navlilist-demo > .active > a {
+  border-color: #08c;
+  position: relative;
+  z-index: 2;
+}
+/* Chevrons */
+.navlilist-demo .icon-chevron-right {
+  float: right;
+  margin-top: 2px;
+  margin-right: -6px;
+  opacity: .25;
+}
+.navlilist-demo > li > a:hover {
+  background-color: #f5f5f5;
+}
+.navlilist-demo a:hover .icon-chevron-right {
+  opacity: .5;
+}
+.navlilist-demo .active .icon-chevron-right {
+  background-image: url(../img/glyphicons-halflings-white.png);
+  opacity: .75;
+}
+
+/*Demo NavLiList stuff - end*/
+
+
 /*===================Sections - footer==================================================*/   
 
   .footer {
@@ -389,7 +450,7 @@ hr {
 
   /* Adjust sidenav width */
   .bs-docs-sidenav {
-    width: 166px;
+    width: 170px; /*166px;*/
   }
   .bs-docs-sidenav.affix {
     top: 0px;

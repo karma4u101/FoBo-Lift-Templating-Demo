@@ -17,6 +17,7 @@
 
 		<div class="row-fluid">
 			<div class="span3">
+			<!--  
 				<ul class="row-fluid nav nav-list bs-docs-sidenav" data-spy="affix">
 	                <li><a href="#gstarted"><i class="icon-chevron-right"></i>
 							Getting started</a></li>				
@@ -28,11 +29,14 @@
 							Module Upgrade</a></li>							
 					<li><a href="#customization"><i class="icon-chevron-right"></i>
 							Bootstrap Customization</a></li>		
-					<li><a href="#fobo-snippets"><i class="icon-chevron-right"></i>
-							FoBo.Bootstrap Snippets</a></li>
+					<li><a href="#fobosnippets"><i class="icon-chevron-right"></i>
+							FoBo.Bootstrap Snippets</a></li>	
+				</ul>
+				-->
+				<ul class="row-fluid nav nav-list bs-docs-sidenav" data-spy="affix">
+				<span data-lift="FoBo.TBNavLiList.builder?group=liboAffix"></span>	
 				</ul>
 			</div>
-
 			<div class="span9">
                 
 				<a id="gstarted"></a>
@@ -320,7 +324,19 @@ FoBo.init()
 
                 <hr/>
 
-				<a id="fobo-snippets"></a>
+                <a id="foboprotousr"></a>
+                <section>
+                <h2 class="capital">F<span>o</span>B<span>o's</span> B<span>ootstrap</span>M<span>eta</span>M<span>ega</span>P<span>roto</span>U<span>ser</span> <small>(since v1.1)</small></h2>
+                <p>In FoBo v1.1 with Bootstrap v3.x, FoBo comes with a MetaMegaProtoUser trait <strong>BootstrapMegaMetaProtoUser</strong> that you can extend your mapper User object 
+                with to get Bootstrap v3.x ProtoUser form views. For a example see the code.module.User object in the lift_advanced_bs project at 
+                <a href="https://github.com/lift/lift_26_sbt/">Lift v2.6 Template Applications - On Github</a> and the 
+                <a href="http://www.media4u101.se/lift-advanced-bs3/">live Demo</a> for viewing the result.</p>
+                                               
+                </section>   
+                   
+                <hr/>
+
+				<a id="fobosnippets"></a>
 				<section>
 					<h2 class="capital">
 						F<span>o</span>B<span>o.</span>B<span>ootstrap</span> S<span>nippets</span>
@@ -330,14 +346,53 @@ FoBo.init()
 						The FoBo module comes with some convinience functions (snippets, optional to use) 
 						that will, among other things, help you, build menues, create popups and tooltips and more. 
 						For more information see the <a href="foboapi/#net.liftmodules.FoBo.snippet.FoBo.package">snippet package section</a> 
-						in the <span data-lift="Menu.item?name=FoBoAPI;lift:Loc.i;"><span data-lift="Loc.i">FoBoAPI</span></span>	. 
+						in the <span data-lift="Menu.item?name=FoBoAPI;lift:Loc.i;"><span data-lift="Loc.i">FoBoAPI</span></span>							. 
 					</p>
 					
+                   <div class="alert alert-warning">
+                      The <strong>snippet names used below</strong> is the names used in FoBo's Bootstrap v2.x serie support, for names used and snippets available in 
+                      FoBo's Bootstrap v3.x serie see the <span data-lift="Menu.item?name=FoBoAPI;lift:Loc.i;a:class=addclassshowofdummy">FoBo API</span>  
+                   </div> 					
+					
+                    <br/>
+                    <section>
+                      <h4>The FoBo.TBNavLiList Snippet <small>(since v1.2)</small></h4>
+                      <p>If you are on a desktop computer (wide screen device) the Affix menu to the left uses this snippet to build it's list of ancors.</p>
+                      
+                      <span class="label">TBNavLiList Usage</span>
+<pre class="prettyprint linenums lang-html">&lt;span data-lift="FoBo.TBNavLiList.builder?group=[LocGroup-Name]"&gt;&lt;/span&gt;</pre>
+
+                      <p>The above shows you how to transform SiteMap items to list items in a NavLiList.</p>
+                      					    
+					  <span class="label">TBNavLiList Example - The rendering</span>
+					  <ul class="nav nav-list navlilist-demo" style="max-width: 220px;">
+				        <span data-lift="FoBo.TBNavLiList.builder?group=liboAffix"></span>	
+				      </ul> 
+				                           
+                      <p>The following is a example usage of the TBNavLiList (as seen above)</p>
+                      
+					  <span class="label">TBNavLiList Example - The template code</span>			       			
+					  <pre class="prettyprint linenums lang-html">					
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    ⋮
+  &lt;body"&gt;
+     ⋮
+&lt;ul class="nav nav-list navlist-demo" style="max-width: 220px;"&gt;
+  &lt;span data-lift="FoBo.TBNavLiList.builder?group=liboAffix">&lt;/span&gt;
+&lt;/ul&gt;			
+       ⋮ 
+  &lt;/body&gt;        
+&lt;/html&gt; 					 
+					  </pre>                      
+                      
+                    </section>
+                    
                     <br/>
                     
 					<section>
-						<h4>The FoBo.Navbar Snippet</h4>
-						<p>The FoBo.Navbar snippet gives you a simple way to build your Bootstrap nav from Lift SiteMap item's, 
+						<h4>The FoBo.TBNavbar Snippet <small>(since v1.0)</small></h4>
+						<p>The FoBo.TBNavbar snippet gives you a simple way to build your Bootstrap nav from Lift SiteMap item's, 
 						combine this with the use of the FoBo.TBLocInfo object and you can do pretty much anything you are used to
 						only a lot easier and with a lot less code.</p>
 						<span class="label">Navbar Usage</span>
@@ -349,7 +404,7 @@ FoBo.init()
 					    group is specified by it's Lift LocGroup belonging. Items in a builder group can be pulled to the right 
 					    in the NavBar by using the pull right builder.</p>
 					    
-					    <span  class="label">Navbar Example - The rendering</span>
+					    <span  class="label">TBNavbar Example - The rendering</span>
 						<div id="mdemo1" class="dropdown clearfix" style="padding-right: 30px;">
 							<div class="navbar">
 								<div class="navbar-inner">
@@ -379,7 +434,7 @@ FoBo.init()
                         </p>
 						
 					    			
-					    <span class="label">Navbar Example - The template code</span>			       			
+					    <span class="label">TBNavbar Example - The template code</span>			       			
 						<pre class="prettyprint linenums lang-html">					
 &lt;!DOCTYPE html&gt;
 &lt;html&gt;
@@ -406,7 +461,7 @@ FoBo.init()
 &lt;/html&gt; 					 
 					    </pre>
 					    
-					<span class="label">Navbar Example - The SiteMap</span> Showing the <b>LocGroup's</b> that will be transformed into Bootstrap Navbar items for this example.
+					<span class="label">TBNavbar Example - The SiteMap</span> Showing the <b>LocGroup's</b> that will be transformed into Bootstrap Navbar items for this example.
 					<pre class="prettyprint linenums lang-scala">   
    ⋮
   def sitemap = SiteMap(
@@ -432,15 +487,15 @@ FoBo.init()
 					<br/>
 
 					<section>
-						<h4>The FoBo.Navlist Snippet</h4>
-						<p>The FoBo.Navlist snippet gives you a simple way to build a Bootstrap navlist from Lift SiteMap item's, 
+						<h4>The FoBo.TBNavlist Snippet <small>(since v1.0)</small></h4>
+						<p>The FoBo.TBNavlist snippet gives you a simple way to build a Bootstrap navlist from Lift SiteMap item's, 
 						</p>
-						<span class="label">Navlist Usage</span>
+						<span class="label">TBNavlist Usage</span>
 <pre class="prettyprint linenums lang-html">&lt;span data-lift="FoBo.TBNavlist.builder?group=[LocGroup-Name]"&gt;&lt;/span&gt;</pre>
 					    
 					    <p>The above shows you how to transform SiteMap items to list items in a Navlist. </p>
 					    
-					    <span class="label">Navlist Example - The rendering</span>
+					    <span class="label">TBNavlist Example - The rendering</span>
 					    <div class="well" style="max-width: 220px; padding: 8px 0;">
 					       <span data-lift="FoBo.TBNavlist.builder?group=nldemo1"></span>
 					    </div>				
@@ -453,7 +508,7 @@ FoBo.init()
                         </p>
 						
 					    			
-					    <span class="label">Navlist Example - The template code</span>			       			
+					    <span class="label">TBNavlist Example - The template code</span>			       			
 						<pre class="prettyprint linenums lang-html">					
 &lt;!DOCTYPE html&gt;
 &lt;html&gt;
@@ -468,7 +523,7 @@ FoBo.init()
 &lt;/html&gt; 					 
 					    </pre>
 					    
-					<span class="label">Navlist Example - The SiteMap</span> Showing the <b>LocGroup nldemo1</b> that will be transformed into Bootstrap Navlist items for this example.
+					<span class="label">TBNavlist Example - The SiteMap</span> Showing the <b>LocGroup nldemo1</b> that will be transformed into Bootstrap Navlist items for this example.
 					<pre class="prettyprint linenums lang-scala">
  
    ⋮
@@ -495,6 +550,7 @@ FoBo.init()
 						</p>				    
 					</section>
                    <br/>
+                                      
                    <section>
                    <h4>FoBo SiteMap builder with a MetaMegaProtoUser AddUserMenusXXXX method</h4>
                    <p>If you are using <code>net.liftweb.record.MetaMegaProtoUser</code> and any of the 
@@ -506,13 +562,11 @@ FoBo.init()
                     <code>globalUserLocParams</code> method. 
                    </div>
                    <p>For more information see <a href="https://github.com/karma4u101/FoBo/issues/22#issuecomment-11932972" target="blank">FoBo sitemap with User.AddUserMenusAfter (authentication) ... how to?</a></p>
-                   
-                 
                    </section>
 
                     <br/>					
                     <section>
-					<h4>The FoBo.Bootstrap Snippet</h4>
+					<h4>The FoBo.Bootstrap Snippet <small>(since v1.0)</small></h4>
 
 					<span class="label">Activate dropdown</span>
 					<pre class="prettyprint linenums lang-html">

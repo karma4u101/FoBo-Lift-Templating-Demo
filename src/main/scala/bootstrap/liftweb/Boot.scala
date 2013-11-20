@@ -38,7 +38,7 @@ class Boot extends Loggable {
     FoBo.InitParam.ToolKit=FoBo.Knockout210
     FoBo.InitParam.ToolKit=FoBo.Bootstrap232
     FoBo.InitParam.ToolKit=FoBo.FontAwesome321
-    FoBo.InitParam.ToolKit=FoBo.AngularJS106      //The core files 
+    FoBo.InitParam.ToolKit=FoBo.AngularJS121      //The core files 
     FoBo.InitParam.ToolKit=FoBo.AJSUIBootstrap020 //Angular UI Bootstrap
     FoBo.InitParam.ToolKit=FoBo.AJSNGGrid204      //Angular NG-Grid    
     FoBo.init()  
@@ -134,7 +134,15 @@ object Paths {
   
   val index            = Menu.i("Home") / "index"
   val liboIndex        = Menu.i("LiBo") / "libo"
-                         
+  
+  val libogstarted     = Menu(Loc("LiBoGStarted"  , Link(List("libogstarted")  , true, "#gstarted")  , S.loc("LiBoGStarted" , Text("Getting started"))      , LocGroup("liboAffix")))
+  val libostarterproj  = Menu(Loc("LiBoStarterproj"  , Link(List("starterproj")  , true, "#starterproj")  , S.loc("LiBoStarterproj" , Text("Starter Project")) , LocGroup("liboAffix")))  
+  val libomodulesetup  = Menu(Loc("LiboModuleSetup"  , Link(List("modulesetup")  , true, "#modulesetup")  , S.loc("LiboModuleSetup" , Text("Module Setup")) , LocGroup("liboAffix")))  
+  val libomoduleupgr   = Menu(Loc("LiboModuleUpgrade"  , Link(List("moduleupgrade")  , true, "#moduleupgrade")  , S.loc("LiboModuleUpgrade" , Text("Module Upgrade")) , LocGroup("liboAffix")))  
+  val libocustom       = Menu(Loc("LiboCustomization"  , Link(List("customization")  , true, "#customization")  , S.loc("LiboCustomization" , Text("Bootstrap Customization")) , LocGroup("liboAffix")))  
+  val libofobosnip     = Menu(Loc("LiboFoBoSnippets"  , Link(List("fobosnippets")  , true, "#fobosnippets")  , S.loc("LiboFoBoSnippets" , Text("FoBo.Bootstrap Snippets")) , LocGroup("liboAffix")))  
+  val libofoboprotousr = Menu(Loc("LiboFoBoProtoUsr"  , Link(List("foboprotousr")  , true, "#foboprotousr")  , S.loc("LiboFoBoProtoUsr" , Text("BootstrapMegaMetaProtoUser")) , LocGroup("liboAffix")))  
+  
   val libospyhome      = Menu(Loc("LiboSpyHome"  , Link(List("libospyhome")  , true, "#spyhome")  , S.loc("LiboSpyHome" , Text("Home"))      , LocGroup("liboSpyTop")))
   val libospyabout     = Menu(Loc("LiboSpyAbout" , Link(List("libospyabout") , true, "#spyabout") , S.loc("LiboSpyAbout", Text("About"))     , LocGroup("liboSpyTop")))
   val libospysetup     = Menu(Loc("LiboSpySetup" , Link(List("libospysetup") , true, "#spysetup") , S.loc("LiboSpySetup", Text("Setup"))     , LocGroup("liboSpyTop")))
@@ -177,6 +185,13 @@ object Paths {
       jqueryMobileDoc,
       datatablesDoc,
       divider3 >> LocGroup("nldemo1") >> FoBo.TBLocInfo.Divider,
-      nlHelp >> LocGroup("nldemo1")
+      nlHelp >> LocGroup("nldemo1"),
+      libogstarted ,
+      libostarterproj,
+      libomodulesetup,
+      libomoduleupgr,
+      libocustom,
+      libofoboprotousr,
+      libofobosnip
       )
 }

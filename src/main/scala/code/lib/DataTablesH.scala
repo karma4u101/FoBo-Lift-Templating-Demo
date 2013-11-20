@@ -109,7 +109,7 @@ class DataTablesH extends Loggable {
 
   private def rengineData = {
     val ccList:List[REngine]  = REngine.getAllList()
-    ccList.map(c => aaDT(List(c.id.toString(),c.engine.is,c.browser.is,c.platform.is,c.version.is,c.grade.is)))
+    ccList.map(c => aaDT(List(c.id.toString(),c.engine.get,c.browser.get,c.platform.get,c.version.get,c.grade.get)))
   }
                     
 //  private val aoColumns = {

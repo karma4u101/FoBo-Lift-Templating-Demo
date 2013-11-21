@@ -1,0 +1,806 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html>
+        <head>
+          <title>TBNavbar - net.liftmodules.FoBoTB.snippet.FoBo.TBNavbar</title>
+          <meta name="description" content="TBNavbar - net.liftmodules.FoBoTB.snippet.FoBo.TBNavbar" />
+          <meta name="keywords" content="TBNavbar net.liftmodules.FoBoTB.snippet.FoBo.TBNavbar" />
+          <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+          
+      <link href="../../../../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
+      <link href="../../../../../lib/diagrams.css" media="screen" type="text/css" rel="stylesheet" id="diagrams-css" />
+      <script type="text/javascript" src="../../../../../lib/jquery.js" id="jquery-js"></script>
+      <script type="text/javascript" src="../../../../../lib/jquery-ui.js"></script>
+      <script type="text/javascript" src="../../../../../lib/template.js"></script>
+      <script type="text/javascript" src="../../../../../lib/tools.tooltip.js"></script>
+      
+      <script type="text/javascript">
+         if(top === self) {
+            var url = '../../../../../index.html';
+            var hash = 'net.liftmodules.FoBoTB.snippet.FoBo.TBNavbar';
+            var anchor = window.location.hash;
+            var anchor_opt = '';
+            if (anchor.length >= 1)
+              anchor_opt = '@' + anchor.substring(1);
+            window.location.href = url + '#' + hash + anchor_opt;
+         }
+   	  </script>
+    
+        </head>
+        <body class="type">
+      <div id="definition">
+        <a href="TBNavbar$.html" title="Go to companion"><img src="../../../../../lib/trait_to_object_big.png" /></a>
+        <p id="owner"><a href="../../../../package.html" class="extype" name="net">net</a>.<a href="../../../package.html" class="extype" name="net.liftmodules">liftmodules</a>.<a href="../../package.html" class="extype" name="net.liftmodules.FoBoTB">FoBoTB</a>.<a href="../package.html" class="extype" name="net.liftmodules.FoBoTB.snippet">snippet</a>.<a href="package.html" class="extype" name="net.liftmodules.FoBoTB.snippet.FoBo">FoBo</a></p>
+        <h1><a href="TBNavbar$.html" title="Go to companion">TBNavbar</a></h1>
+      </div>
+
+      <h4 id="signature" class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <span class="name">TBNavbar</span><span class="result"> extends <span class="extype" name="net.liftweb.sitemap.FlexMenuBuilder">FlexMenuBuilder</span> with <span class="extype" name="net.liftweb.http.DispatchSnippet">DispatchSnippet</span></span>
+      </span>
+      </h4>
+      
+          <div id="comment" class="fullcommenttop"><div class="comment cmt"><h4>TBNavbar Snippet Bootstrap v2.x</h4><p>This snippet object transforms lift SiteMap menu items associated with specified loc
+group name's into Twitter Bootsrap Nav menu items including dropdown menu items from SiteMap submenu's.</p><p>See also the TBLocInfo object in <a href="../../../FoBo/package.html" class="extype" name="net.liftmodules.FoBo">net.liftmodules.FoBo</a> for various, simple to use, SiteMap manipulation functions (menu dividers, labels...).</p><p><b>Snippet Usage:</b></p><pre>&lt;span data-lift=<span class="lit">"FoBo.TBNavbar.builder?group=[LocGroup name]"</span>&gt;&lt;/span&gt;</pre><p>and/or</p><pre>&lt;span data-lift=<span class="lit">"FoBo.TBNavbar.builderPullRight?group=[LocGroup name]"</span>&gt;&lt;/span&gt;</pre><p><b>Snippet Params:</b></p><ul><li><b>Param</b> <i>group</i> - The LocGroup name</li></ul><p><b>Result:</b> The above will result in</p><pre>&lt;u l <span class="kw">class</span>=<span class="lit">"nav"</span>&gt;...lift SiteMap items associated <span class="kw">with</span> the locGroup name...&lt;/u l&gt;
+&lt;u l <span class="kw">class</span>=<span class="lit">"nav pull-right"</span>&gt;...lift SiteMap items associated <span class="kw">with</span> the locGroup name...&lt;/u l&gt;</pre><p>This will be expand into twitter bootstrap nav list's built from the named
+Lift menu locGroup content where the second list will be pull to the right.</p><p><b>Example - Fluid Navbar fixed to top</b> Invoke with something like this</p><pre>&lt;d i v <span class="kw">class</span>=<span class="lit">"navbar navbar-fixed-top"</span>&gt;
+  &lt;d i v <span class="kw">class</span>=<span class="lit">"navbar-inner"</span>&gt;
+   &lt;d i v <span class="kw">class</span>=<span class="lit">"container-fluid"</span>&gt;
+     &lt;a <span class="kw">class</span>=<span class="lit">"btn btn-navbar"</span> data-toggle=<span class="lit">"collapse"</span> data-target=<span class="lit">".nav-collapse"</span>&gt;
+        &lt;span <span class="kw">class</span>=<span class="lit">"icon-bar"</span>&gt;&lt;/span&gt;
+        &lt;span <span class="kw">class</span>=<span class="lit">"icon-bar"</span>&gt;&lt;/span&gt;
+        &lt;span <span class="kw">class</span>=<span class="lit">"icon-bar"</span>&gt;&lt;/span&gt;
+     &lt;/a&gt; &lt;a <span class="kw">class</span>=<span class="lit">"brand"</span> href=<span class="lit">"..."</span>&gt;Project&lt;/a&gt;
+     &lt;d i v <span class="kw">class</span>=<span class="lit">"nav-collapse"</span>&gt;
+        &lt;span data-lift=<span class="lit">"FoBo.TBNavbar.builder?group=top"</span>&gt;&lt;/span&gt;
+        &lt;span data-lift=<span class="lit">"FoBo.TBNavbar.builderPullRight?group=top2"</span>&gt;&lt;/span&gt;
+     &lt;/d i v&gt;
+   &lt;/d i v&gt;
+  &lt;/d i v&gt;
+&lt;/d i v&gt;</pre><p><b>Result:</b> This will create a fluid bootstrap navbar fixed to top with menu entries associated with the
+two LocGroup's 'top' and 'top2' where the second one is pulled to the right.</p></div><dl class="attributes block"> <dt>Since</dt><dd><p>v1.0
+</p></dd></dl><div class="toggleContainer block">
+          <span class="toggle">Linear Supertypes</span>
+          <div class="superTypes hiddenContent"><span class="extype" name="net.liftweb.http.DispatchSnippet">DispatchSnippet</span>, <span class="extype" name="net.liftweb.sitemap.FlexMenuBuilder">FlexMenuBuilder</span>, <span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
+        </div><div class="toggleContainer block">
+          <span class="toggle">Known Subclasses</span>
+          <div class="subClasses hiddenContent"><a href="TBNavbar$.html" class="extype" name="net.liftmodules.FoBoTB.snippet.FoBo.TBNavbar">TBNavbar</a></div>
+        </div></div>
+        
+
+      <div id="mbrsel">
+        <div id="textfilter"><span class="pre"></span><span class="input"><input id="mbrsel-input" type="text" accesskey="/" /></span><span class="post"></span></div>
+        <div id="order">
+              <span class="filtertype">Ordering</span>
+              <ol>
+                
+                <li class="alpha in"><span>Alphabetic</span></li>
+                <li class="inherit out"><span>By inheritance</span></li>
+              </ol>
+            </div>
+        <div id="ancestors">
+                <span class="filtertype">Inherited<br />
+                </span>
+                <ol id="linearization">
+                  <li class="in" name="net.liftmodules.FoBoTB.snippet.FoBo.TBNavbar"><span>TBNavbar</span></li><li class="in" name="net.liftweb.http.DispatchSnippet"><span>DispatchSnippet</span></li><li class="in" name="net.liftweb.sitemap.FlexMenuBuilder"><span>FlexMenuBuilder</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
+                </ol>
+              </div><div id="ancestors">
+            <span class="filtertype"></span>
+            <ol>
+              <li class="hideall out"><span>Hide All</span></li>
+              <li class="showall in"><span>Show all</span></li>
+            </ol>
+            <a href="http://docs.scala-lang.org/overviews/scaladoc/usage.html#members" target="_blank">Learn more about member selection</a>
+          </div>
+        <div id="visbl">
+            <span class="filtertype">Visibility</span>
+            <ol><li class="public in"><span>Public</span></li><li class="all out"><span>All</span></li></ol>
+          </div>
+      </div>
+
+      <div id="template">
+        <div id="allMembers">
+        
+
+        <div id="types" class="types members">
+              <h3>Type Members</h3>
+              <ol><li name="net.liftweb.http.DispatchSnippet.DispatchIt" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="DispatchIt=PartialFunction[String,scala.xml.NodeSeq=&gt;scala.xml.NodeSeq]"></a>
+      <a id="DispatchIt:DispatchIt"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">type</span>
+      </span>
+      <span class="symbol">
+        <span class="name">DispatchIt</span><span class="result"> = <span class="extype" name="scala.PartialFunction">PartialFunction</span>[<span class="extype" name="scala.Predef.String">String</span>, (<span class="extype" name="scala.xml.NodeSeq">NodeSeq</span>) ⇒ <span class="extype" name="scala.xml.NodeSeq">NodeSeq</span>]</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>DispatchSnippet</dd></dl></div>
+    </li><li name="net.liftweb.sitemap.FlexMenuBuilder.StructBuildItem" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="StructBuildItem=AnyRef{defbuildItem(kids:List[net.liftweb.sitemap.MenuItem],current:Boolean,path:Boolean):net.liftweb.common.Box[net.liftweb.sitemap.MenuItem]}"></a>
+      <a id="StructBuildItem:StructBuildItem"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">type</span>
+      </span>
+      <span class="symbol">
+        <span class="name">StructBuildItem</span><span class="result"> = <span class="extype" name="scala.AnyRef">AnyRef</span> { def buildItem(kids: List[net.liftweb.sitemap.MenuItem],current: Boolean,path: Boolean): net.liftweb.common.Box[net.liftweb.sitemap.MenuItem] }</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>FlexMenuBuilder</dd></dl></div>
+    </li></ol>
+            </div>
+
+        
+
+        <div id="values" class="values members">
+              <h3>Value Members</h3>
+              <ol><li name="scala.AnyRef#!=" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="!=(x$1:AnyRef):Boolean"></a>
+      <a id="!=(AnyRef):Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $bang$eq" class="name">!=</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.AnyRef">AnyRef</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="scala.Any#!=" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="!=(x$1:Any):Boolean"></a>
+      <a id="!=(Any):Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $bang$eq" class="name">!=</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li name="scala.AnyRef###" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="##():Int"></a>
+      <a id="##():Int"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $hash$hash" class="name">##</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="scala.AnyRef#==" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="==(x$1:AnyRef):Boolean"></a>
+      <a id="==(AnyRef):Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $eq$eq" class="name">==</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.AnyRef">AnyRef</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="scala.Any#==" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="==(x$1:Any):Boolean"></a>
+      <a id="==(Any):Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $eq$eq" class="name">==</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li name="scala.Any#asInstanceOf" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="asInstanceOf[T0]:T0"></a>
+      <a id="asInstanceOf[T0]:T0"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">asInstanceOf</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="result">: <span class="extype" name="scala.Any.asInstanceOf.T0">T0</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li name="net.liftmodules.FoBoTB.snippet.FoBo.TBNavbar#buildInnerTag" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="buildInnerTag(contents:scala.xml.NodeSeq,path:Boolean,current:Boolean):scala.xml.Elem"></a>
+      <a id="buildInnerTag(NodeSeq,Boolean,Boolean):Elem"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">buildInnerTag</span><span class="params">(<span name="contents">contents: <span class="extype" name="scala.xml.NodeSeq">NodeSeq</span></span>, <span name="path">path: <span class="extype" name="scala.Boolean">Boolean</span></span>, <span name="current">current: <span class="extype" name="scala.Boolean">Boolean</span></span>)</span><span class="result">: <span class="extype" name="scala.xml.Elem">Elem</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="net.liftmodules.FoBoTB.snippet.FoBo.TBNavbar">TBNavbar</a> → FlexMenuBuilder</dd></dl></div>
+    </li><li name="net.liftmodules.FoBoTB.snippet.FoBo.TBNavbar#buildItemMenu" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="buildItemMenu[A](loc:net.liftweb.sitemap.Loc[A],currLoc:net.liftweb.common.Box[net.liftweb.sitemap.Loc[_]],expandAll:Boolean):List[net.liftweb.sitemap.MenuItem]"></a>
+      <a id="buildItemMenu[A](Loc[A],Box[Loc[_]],Boolean):List[MenuItem]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">buildItemMenu</span><span class="tparams">[<span name="A">A</span>]</span><span class="params">(<span name="loc">loc: <span class="extype" name="net.liftweb.sitemap.Loc">Loc</span>[<span class="extype" name="net.liftmodules.FoBoTB.snippet.FoBo.TBNavbar.buildItemMenu.A">A</span>]</span>, <span name="currLoc">currLoc: <span class="extype" name="net.liftweb.common.Box">Box</span>[<span class="extype" name="net.liftweb.sitemap.Loc">Loc</span>[_]]</span>, <span name="expandAll">expandAll: <span class="extype" name="scala.Boolean">Boolean</span></span>)</span><span class="result">: <span class="extype" name="scala.List">List</span>[<span class="extype" name="net.liftweb.sitemap.MenuItem">MenuItem</span>]</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="net.liftmodules.FoBoTB.snippet.FoBo.TBNavbar">TBNavbar</a> → FlexMenuBuilder</dd></dl></div>
+    </li><li name="net.liftmodules.FoBoTB.snippet.FoBo.TBNavbar#buildTBDivider" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="buildTBDivider(contents:scala.xml.NodeSeq,path:Boolean,current:Boolean):scala.xml.Elem"></a>
+      <a id="buildTBDivider(NodeSeq,Boolean,Boolean):Elem"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">buildTBDivider</span><span class="params">(<span name="contents">contents: <span class="extype" name="scala.xml.NodeSeq">NodeSeq</span></span>, <span name="path">path: <span class="extype" name="scala.Boolean">Boolean</span></span>, <span name="current">current: <span class="extype" name="scala.Boolean">Boolean</span></span>)</span><span class="result">: <span class="extype" name="scala.xml.Elem">Elem</span></span>
+      </span>
+      </h4>
+      
+    </li><li name="net.liftmodules.FoBoTB.snippet.FoBo.TBNavbar#buildTBInnerTag" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="buildTBInnerTag(contents:scala.xml.NodeSeq,path:Boolean,current:Boolean):scala.xml.Elem"></a>
+      <a id="buildTBInnerTag(NodeSeq,Boolean,Boolean):Elem"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">buildTBInnerTag</span><span class="params">(<span name="contents">contents: <span class="extype" name="scala.xml.NodeSeq">NodeSeq</span></span>, <span name="path">path: <span class="extype" name="scala.Boolean">Boolean</span></span>, <span name="current">current: <span class="extype" name="scala.Boolean">Boolean</span></span>)</span><span class="result">: <span class="extype" name="scala.xml.Elem">Elem</span></span>
+      </span>
+      </h4>
+      
+    </li><li name="net.liftmodules.FoBoTB.snippet.FoBo.TBNavbar#buildTBVerticalDivider" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="buildTBVerticalDivider(contents:scala.xml.NodeSeq,path:Boolean,current:Boolean):scala.xml.Elem"></a>
+      <a id="buildTBVerticalDivider(NodeSeq,Boolean,Boolean):Elem"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">buildTBVerticalDivider</span><span class="params">(<span name="contents">contents: <span class="extype" name="scala.xml.NodeSeq">NodeSeq</span></span>, <span name="path">path: <span class="extype" name="scala.Boolean">Boolean</span></span>, <span name="current">current: <span class="extype" name="scala.Boolean">Boolean</span></span>)</span><span class="result">: <span class="extype" name="scala.xml.Elem">Elem</span></span>
+      </span>
+      </h4>
+      
+    </li><li name="scala.AnyRef#clone" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="clone():Object"></a>
+      <a id="clone():AnyRef"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">clone</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<span class="extype" name="java.lang">java.lang</span>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li name="net.liftmodules.FoBoTB.snippet.FoBo.TBNavbar#dispatch" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="dispatch:TBNavbar.this.DispatchIt"></a>
+      <a id="dispatch:DispatchIt"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">dispatch</span><span class="result">: <a href="#DispatchIt=PartialFunction[String,scala.xml.NodeSeq=&gt;scala.xml.NodeSeq]" class="extmbr" name="net.liftmodules.FoBoTB.snippet.FoBo.TBNavbar.DispatchIt">DispatchIt</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="net.liftmodules.FoBoTB.snippet.FoBo.TBNavbar">TBNavbar</a> → DispatchSnippet</dd></dl></div>
+    </li><li name="net.liftmodules.FoBoTB.snippet.FoBo.TBNavbar#emptyGroup" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="emptyGroup:scala.xml.NodeSeq"></a>
+      <a id="emptyGroup:NodeSeq"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">emptyGroup</span><span class="result">: <span class="extype" name="scala.xml.NodeSeq">NodeSeq</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="net.liftmodules.FoBoTB.snippet.FoBo.TBNavbar">TBNavbar</a> → FlexMenuBuilder</dd></dl></div>
+    </li><li name="net.liftmodules.FoBoTB.snippet.FoBo.TBNavbar#emptyMenu" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="emptyMenu:scala.xml.NodeSeq"></a>
+      <a id="emptyMenu:NodeSeq"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">emptyMenu</span><span class="result">: <span class="extype" name="scala.xml.NodeSeq">NodeSeq</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="net.liftmodules.FoBoTB.snippet.FoBo.TBNavbar">TBNavbar</a> → FlexMenuBuilder</dd></dl></div>
+    </li><li name="net.liftmodules.FoBoTB.snippet.FoBo.TBNavbar#emptyPlaceholder" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="emptyPlaceholder:scala.xml.NodeSeq"></a>
+      <a id="emptyPlaceholder:NodeSeq"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">emptyPlaceholder</span><span class="result">: <span class="extype" name="scala.xml.NodeSeq">NodeSeq</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="net.liftmodules.FoBoTB.snippet.FoBo.TBNavbar">TBNavbar</a> → FlexMenuBuilder</dd></dl></div>
+    </li><li name="scala.AnyRef#eq" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="eq(x$1:AnyRef):Boolean"></a>
+      <a id="eq(AnyRef):Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">eq</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.AnyRef">AnyRef</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="scala.AnyRef#equals" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="equals(x$1:Any):Boolean"></a>
+      <a id="equals(Any):Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">equals</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="net.liftmodules.FoBoTB.snippet.FoBo.TBNavbar#expandAll" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="expandAll:Boolean"></a>
+      <a id="expandAll:Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">expandAll</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="net.liftmodules.FoBoTB.snippet.FoBo.TBNavbar">TBNavbar</a> → FlexMenuBuilder</dd></dl></div>
+    </li><li name="net.liftweb.sitemap.FlexMenuBuilder#expandAny" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="expandAny:Boolean"></a>
+      <a id="expandAny:Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">expandAny</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd>FlexMenuBuilder</dd></dl></div>
+    </li><li name="scala.AnyRef#finalize" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="finalize():Unit"></a>
+      <a id="finalize():Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">finalize</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<span class="extype" name="java.lang">java.lang</span>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.AnyRef#getClass" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="getClass():Class[_]"></a>
+      <a id="getClass():Class[_]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getClass</span><span class="params">()</span><span class="result">: <span class="extype" name="java.lang.Class">Class</span>[_]</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="scala.AnyRef#hashCode" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="hashCode():Int"></a>
+      <a id="hashCode():Int"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">hashCode</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="scala.Any#isInstanceOf" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="isInstanceOf[T0]:Boolean"></a>
+      <a id="isInstanceOf[T0]:Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">isInstanceOf</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li name="net.liftmodules.FoBoTB.snippet.FoBo.TBNavbar#linkToSelf" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="linkToSelf:Boolean"></a>
+      <a id="linkToSelf:Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">linkToSelf</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="net.liftmodules.FoBoTB.snippet.FoBo.TBNavbar">TBNavbar</a> → FlexMenuBuilder</dd></dl></div>
+    </li><li name="scala.AnyRef#ne" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ne(x$1:AnyRef):Boolean"></a>
+      <a id="ne(AnyRef):Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">ne</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.AnyRef">AnyRef</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="scala.AnyRef#notify" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="notify():Unit"></a>
+      <a id="notify():Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">notify</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="scala.AnyRef#notifyAll" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="notifyAll():Unit"></a>
+      <a id="notifyAll():Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">notifyAll</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="net.liftmodules.FoBoTB.snippet.FoBo.TBNavbar#overridenDispatch" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="overridenDispatch:TBNavbar.this.DispatchIt"></a>
+      <a id="overridenDispatch:DispatchIt"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">overridenDispatch</span><span class="result">: <a href="#DispatchIt=PartialFunction[String,scala.xml.NodeSeq=&gt;scala.xml.NodeSeq]" class="extmbr" name="net.liftmodules.FoBoTB.snippet.FoBo.TBNavbar.DispatchIt">DispatchIt</a></span>
+      </span>
+      </h4>
+      
+    </li><li name="net.liftweb.sitemap.FlexMenuBuilder#render" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="render:scala.xml.NodeSeq"></a>
+      <a id="render:NodeSeq"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">render</span><span class="result">: <span class="extype" name="scala.xml.NodeSeq">NodeSeq</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>FlexMenuBuilder</dd></dl></div>
+    </li><li name="net.liftmodules.FoBoTB.snippet.FoBo.TBNavbar#renderItem" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="renderItem(item:net.liftweb.sitemap.MenuItem,renderInner:Seq[net.liftweb.sitemap.MenuItem]=&gt;scala.xml.NodeSeq):scala.xml.Elem"></a>
+      <a id="renderItem(MenuItem,(Seq[MenuItem])⇒NodeSeq):Elem"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">renderItem</span><span class="params">(<span name="item">item: <span class="extype" name="net.liftweb.sitemap.MenuItem">MenuItem</span></span>, <span name="renderInner">renderInner: (<span class="extype" name="scala.Seq">Seq</span>[<span class="extype" name="net.liftweb.sitemap.MenuItem">MenuItem</span>]) ⇒ <span class="extype" name="scala.xml.NodeSeq">NodeSeq</span></span>)</span><span class="result">: <span class="extype" name="scala.xml.Elem">Elem</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="net.liftmodules.FoBoTB.snippet.FoBo.TBNavbar">TBNavbar</a> → FlexMenuBuilder</dd></dl></div>
+    </li><li name="net.liftmodules.FoBoTB.snippet.FoBo.TBNavbar#renderItemInPath" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="renderItemInPath(item:net.liftweb.sitemap.MenuItem,renderInner:Seq[net.liftweb.sitemap.MenuItem]=&gt;scala.xml.NodeSeq):scala.xml.Elem"></a>
+      <a id="renderItemInPath(MenuItem,(Seq[MenuItem])⇒NodeSeq):Elem"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">renderItemInPath</span><span class="params">(<span name="item">item: <span class="extype" name="net.liftweb.sitemap.MenuItem">MenuItem</span></span>, <span name="renderInner">renderInner: (<span class="extype" name="scala.Seq">Seq</span>[<span class="extype" name="net.liftweb.sitemap.MenuItem">MenuItem</span>]) ⇒ <span class="extype" name="scala.xml.NodeSeq">NodeSeq</span></span>)</span><span class="result">: <span class="extype" name="scala.xml.Elem">Elem</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="net.liftmodules.FoBoTB.snippet.FoBo.TBNavbar">TBNavbar</a> → FlexMenuBuilder</dd></dl></div>
+    </li><li name="net.liftmodules.FoBoTB.snippet.FoBo.TBNavbar#renderLink" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="renderLink(uri:scala.xml.NodeSeq,text:scala.xml.NodeSeq,path:Boolean,current:Boolean):scala.xml.NodeSeq"></a>
+      <a id="renderLink(NodeSeq,NodeSeq,Boolean,Boolean):NodeSeq"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">renderLink</span><span class="params">(<span name="uri">uri: <span class="extype" name="scala.xml.NodeSeq">NodeSeq</span></span>, <span name="text">text: <span class="extype" name="scala.xml.NodeSeq">NodeSeq</span></span>, <span name="path">path: <span class="extype" name="scala.Boolean">Boolean</span></span>, <span name="current">current: <span class="extype" name="scala.Boolean">Boolean</span></span>)</span><span class="result">: <span class="extype" name="scala.xml.NodeSeq">NodeSeq</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="net.liftmodules.FoBoTB.snippet.FoBo.TBNavbar">TBNavbar</a> → FlexMenuBuilder</dd></dl></div>
+    </li><li name="net.liftmodules.FoBoTB.snippet.FoBo.TBNavbar#renderOuterTag" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="renderOuterTag(inner:scala.xml.NodeSeq,top:Boolean):scala.xml.NodeSeq"></a>
+      <a id="renderOuterTag(NodeSeq,Boolean):NodeSeq"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">renderOuterTag</span><span class="params">(<span name="inner">inner: <span class="extype" name="scala.xml.NodeSeq">NodeSeq</span></span>, <span name="top">top: <span class="extype" name="scala.Boolean">Boolean</span></span>)</span><span class="result">: <span class="extype" name="scala.xml.NodeSeq">NodeSeq</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="net.liftmodules.FoBoTB.snippet.FoBo.TBNavbar">TBNavbar</a> → FlexMenuBuilder</dd></dl></div>
+    </li><li name="net.liftmodules.FoBoTB.snippet.FoBo.TBNavbar#renderPlaceholder" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="renderPlaceholder(item:net.liftweb.sitemap.MenuItem,renderInner:Seq[net.liftweb.sitemap.MenuItem]=&gt;scala.xml.NodeSeq):scala.xml.Elem"></a>
+      <a id="renderPlaceholder(MenuItem,(Seq[MenuItem])⇒NodeSeq):Elem"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">renderPlaceholder</span><span class="params">(<span name="item">item: <span class="extype" name="net.liftweb.sitemap.MenuItem">MenuItem</span></span>, <span name="renderInner">renderInner: (<span class="extype" name="scala.Seq">Seq</span>[<span class="extype" name="net.liftweb.sitemap.MenuItem">MenuItem</span>]) ⇒ <span class="extype" name="scala.xml.NodeSeq">NodeSeq</span></span>)</span><span class="result">: <span class="extype" name="scala.xml.Elem">Elem</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="net.liftmodules.FoBoTB.snippet.FoBo.TBNavbar">TBNavbar</a> → FlexMenuBuilder</dd></dl></div>
+    </li><li name="net.liftmodules.FoBoTB.snippet.FoBo.TBNavbar#renderSelf" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="renderSelf(item:net.liftweb.sitemap.MenuItem):scala.xml.NodeSeq"></a>
+      <a id="renderSelf(MenuItem):NodeSeq"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">renderSelf</span><span class="params">(<span name="item">item: <span class="extype" name="net.liftweb.sitemap.MenuItem">MenuItem</span></span>)</span><span class="result">: <span class="extype" name="scala.xml.NodeSeq">NodeSeq</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="net.liftmodules.FoBoTB.snippet.FoBo.TBNavbar">TBNavbar</a> → FlexMenuBuilder</dd></dl></div>
+    </li><li name="net.liftmodules.FoBoTB.snippet.FoBo.TBNavbar#renderSelfLinked" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="renderSelfLinked(item:net.liftweb.sitemap.MenuItem,renderInner:Seq[net.liftweb.sitemap.MenuItem]=&gt;scala.xml.NodeSeq):scala.xml.Elem"></a>
+      <a id="renderSelfLinked(MenuItem,(Seq[MenuItem])⇒NodeSeq):Elem"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">renderSelfLinked</span><span class="params">(<span name="item">item: <span class="extype" name="net.liftweb.sitemap.MenuItem">MenuItem</span></span>, <span name="renderInner">renderInner: (<span class="extype" name="scala.Seq">Seq</span>[<span class="extype" name="net.liftweb.sitemap.MenuItem">MenuItem</span>]) ⇒ <span class="extype" name="scala.xml.NodeSeq">NodeSeq</span></span>)</span><span class="result">: <span class="extype" name="scala.xml.Elem">Elem</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="net.liftmodules.FoBoTB.snippet.FoBo.TBNavbar">TBNavbar</a> → FlexMenuBuilder</dd></dl></div>
+    </li><li name="net.liftmodules.FoBoTB.snippet.FoBo.TBNavbar#renderSelfNotLinked" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="renderSelfNotLinked(item:net.liftweb.sitemap.MenuItem,renderInner:Seq[net.liftweb.sitemap.MenuItem]=&gt;scala.xml.NodeSeq):scala.xml.Elem"></a>
+      <a id="renderSelfNotLinked(MenuItem,(Seq[MenuItem])⇒NodeSeq):Elem"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">renderSelfNotLinked</span><span class="params">(<span name="item">item: <span class="extype" name="net.liftweb.sitemap.MenuItem">MenuItem</span></span>, <span name="renderInner">renderInner: (<span class="extype" name="scala.Seq">Seq</span>[<span class="extype" name="net.liftweb.sitemap.MenuItem">MenuItem</span>]) ⇒ <span class="extype" name="scala.xml.NodeSeq">NodeSeq</span></span>)</span><span class="result">: <span class="extype" name="scala.xml.Elem">Elem</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="net.liftmodules.FoBoTB.snippet.FoBo.TBNavbar">TBNavbar</a> → FlexMenuBuilder</dd></dl></div>
+    </li><li name="net.liftweb.sitemap.FlexMenuBuilder#renderWhat" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="renderWhat(expandAll:Boolean):Seq[net.liftweb.sitemap.MenuItem]"></a>
+      <a id="renderWhat(Boolean):Seq[MenuItem]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">renderWhat</span><span class="params">(<span name="expandAll">expandAll: <span class="extype" name="scala.Boolean">Boolean</span></span>)</span><span class="result">: <span class="extype" name="scala.Seq">Seq</span>[<span class="extype" name="net.liftweb.sitemap.MenuItem">MenuItem</span>]</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd>FlexMenuBuilder</dd></dl></div>
+    </li><li name="scala.AnyRef#synchronized" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="synchronized[T0](x$1:=&gt;T0):T0"></a>
+      <a id="synchronized[T0](⇒T0):T0"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">synchronized</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="params">(<span name="arg0">arg0: ⇒ <span class="extype" name="java.lang.AnyRef.synchronized.T0">T0</span></span>)</span><span class="result">: <span class="extype" name="java.lang.AnyRef.synchronized.T0">T0</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="net.liftweb.sitemap.FlexMenuBuilder#toRender" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="toRender:Seq[net.liftweb.sitemap.MenuItem]"></a>
+      <a id="toRender:Seq[MenuItem]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">toRender</span><span class="result">: <span class="extype" name="scala.Seq">Seq</span>[<span class="extype" name="net.liftweb.sitemap.MenuItem">MenuItem</span>]</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>FlexMenuBuilder</dd></dl></div>
+    </li><li name="scala.AnyRef#toString" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="toString():String"></a>
+      <a id="toString():String"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">toString</span><span class="params">()</span><span class="result">: <span class="extype" name="java.lang.String">String</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="net.liftmodules.FoBoTB.snippet.FoBo.TBNavbar#updateForCurrent" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="updateForCurrent(nodes:scala.xml.Elem,current:Boolean):scala.xml.Elem"></a>
+      <a id="updateForCurrent(Elem,Boolean):Elem"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">updateForCurrent</span><span class="params">(<span name="nodes">nodes: <span class="extype" name="scala.xml.Elem">Elem</span></span>, <span name="current">current: <span class="extype" name="scala.Boolean">Boolean</span></span>)</span><span class="result">: <span class="extype" name="scala.xml.Elem">Elem</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="net.liftmodules.FoBoTB.snippet.FoBo.TBNavbar">TBNavbar</a> → FlexMenuBuilder</dd></dl></div>
+    </li><li name="net.liftmodules.FoBoTB.snippet.FoBo.TBNavbar#updateForPath" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="updateForPath(nodes:scala.xml.Elem,path:Boolean):scala.xml.Elem"></a>
+      <a id="updateForPath(Elem,Boolean):Elem"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">updateForPath</span><span class="params">(<span name="nodes">nodes: <span class="extype" name="scala.xml.Elem">Elem</span></span>, <span name="path">path: <span class="extype" name="scala.Boolean">Boolean</span></span>)</span><span class="result">: <span class="extype" name="scala.xml.Elem">Elem</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="net.liftmodules.FoBoTB.snippet.FoBo.TBNavbar">TBNavbar</a> → FlexMenuBuilder</dd></dl></div>
+    </li><li name="scala.AnyRef#wait" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="wait():Unit"></a>
+      <a id="wait():Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">wait</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.AnyRef#wait" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="wait(x$1:Long,x$2:Int):Unit"></a>
+      <a id="wait(Long,Int):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">wait</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Long">Long</span></span>, <span name="arg1">arg1: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.AnyRef#wait" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="wait(x$1:Long):Unit"></a>
+      <a id="wait(Long):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">wait</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Long">Long</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li></ol>
+            </div>
+
+        
+
+        
+        </div>
+
+        <div id="inheritedMembers">
+        <div class="parent" name="net.liftweb.http.DispatchSnippet">
+              <h3>Inherited from <span class="extype" name="net.liftweb.http.DispatchSnippet">DispatchSnippet</span></h3>
+            </div><div class="parent" name="net.liftweb.sitemap.FlexMenuBuilder">
+              <h3>Inherited from <span class="extype" name="net.liftweb.sitemap.FlexMenuBuilder">FlexMenuBuilder</span></h3>
+            </div><div class="parent" name="scala.AnyRef">
+              <h3>Inherited from <span class="extype" name="scala.AnyRef">AnyRef</span></h3>
+            </div><div class="parent" name="scala.Any">
+              <h3>Inherited from <span class="extype" name="scala.Any">Any</span></h3>
+            </div>
+        
+        </div>
+
+        <div id="groupedMembers">
+        <div class="group" name="Ungrouped">
+              <h3>Ungrouped</h3>
+              
+            </div>
+        </div>
+
+      </div>
+
+      <div id="tooltip"></div>
+
+      <div id="footer">  </div>
+
+
+    </body>
+      </html>

@@ -19,19 +19,17 @@
 						<h2 class="capital">
 							S<span>etup and</span> U<span>sage</span> 
 						</h2>
-						<p>There are pre-built artifacts of FoBo available (for example see the build file for this project) 
-						but if you wish you can also build the module yourself, it's easy and straight forward so, 
-						if you have not done it already, go ahead, you will find all the information you need to prepare 
-						the module for usage on <a href="https://github.com/karma4u101/FoBo">Github FoBo module</a>, 
-						then come back here for integration and usage. 
+						<p>There are pre-built artifacts of FoBo available, see FoBo readme  
+						<a href="https://github.com/karma4u101/FoBo/tree/develop#update-log">update log section</a> 
+						for latest stable and SNAPSHOT versions. Also for more information on how to set things up there is also a 
+						<a href="https://github.com/karma4u101/FoBo/tree/develop#integration-into-your-project-">integration section</a> 
+						to show you how to integrate the module into your project.
 						</p>
 						
-						<p>To initiate the FoBo module, chose the Toolkit option(s) you 
+						<p>To initiate the FoBo module, chose the Toolkit(s) option(s) you 
 						prefer and then call FoBo.init() from your lift projects Boot.</p> 
 						
-						<p>Using FoBo in your own project you should set up the init param for the toolkit module you need or 
-						if you are using the module defaults just call FoBo.init(). This demo uses the following 
-						<strong>unusually heavy</strong> module setup in lift Boot.<br/> 
+						<p>This demo uses the following <strong>unusually heavy</strong> FoBo module(s) setup in lift Boot.<br/> 
 						</p>
 						<div class="alert alert-info" style="width:80%">
 						For bootstrap only setup and demo see
@@ -53,12 +51,18 @@
                             class Boot extends Loggable {
                               def boot {
 
-                                FoBo.InitParam.JQuery=FoBo.JQuery182  
-                                FoBo.InitParam.ToolKit=FoBo.Bootstrap222 
+                                FoBo.InitParam.JQuery=FoBo.JQuery191 
+                                FoBo.InitParam.ToolKit=FoBo.Foundation215
                                 FoBo.InitParam.ToolKit=FoBo.PrettifyJun2011
                                 FoBo.InitParam.ToolKit=FoBo.JQueryMobile110
                                 FoBo.InitParam.ToolKit=FoBo.DataTables190
-                                FoBo.InitParam.ToolKit=FoBo.Knockout200
+                                FoBo.InitParam.ToolKit=FoBo.Knockout210
+                                FoBo.InitParam.ToolKit=FoBo.Bootstrap232
+                                FoBo.InitParam.ToolKit=FoBo.FontAwesome321
+                                FoBo.InitParam.ToolKit=FoBo.AngularJS121      
+                                FoBo.InitParam.ToolKit=FoBo.AJSUIBootstrap020 
+                                FoBo.InitParam.ToolKit=FoBo.AJSNGGrid204        
+                                FoBo.InitParam.ToolKit=FoBo.Pace0415                                
                                 FoBo.init()
                                   :      
 						</pre>
@@ -91,15 +95,25 @@
 						toolkit upgrade. For more information see the <a href="https://github.com/karma4u101/FoBo">FoBo modules Github</a>.
 						</p>
 						
+<!--						
 						<h2 class="capital">
 							F<span>o</span>B<span>o</span> S<span>nippets</span> 
 						</h2>
 						
+						<div class="alert alert-info" style="width:80%">
+						The bootstrap demo will show you several more useful snippets see --
+							<span
+								data-lift="Menu.item?name=LiBo;lift:Loc.i;a ">
+								<span data-lift="Loc.i">FoBoAndBootstrap</span>
+							</span>							
+						</div>	
+												
 						<p>The FoBo module comes with some convinience functions (snippets, optional to use) that will generate some commonly used 
 						toolkit helper scripts for you. For instansce doing it the Lift - FoBo way <b>you can simply do this</b> using a FoBo:s snippet 
 						containing some bootstrap convinience functions: </p>
 						
 						<h6>The FoBo.Bootstrap Snippet</h6>
+											
 						
 						<span class="label">Activate dropdown</span>
 						<pre class="prettyprint linenums lang-html">
@@ -251,6 +265,8 @@
 						<a href="/foboapi/#net.liftmodules.FoBo.snippet.FoBo.ScriptHelper">FoBo.ScriptHelper page</a> and 
 						click on the <b>registerLoadEventFactory</b> function name for details. 
 						</p>	
+-->						
+						
 						<hr />
 					</div>
 				</div>			

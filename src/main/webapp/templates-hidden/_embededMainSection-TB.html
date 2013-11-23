@@ -29,15 +29,18 @@
 						</div>
 						
 						<p>					
-						This pages demonstrates FoBo, an optional generic front-end toolkit <a href="http://www.assembla.com/spaces/liftweb/wiki/Modules">module</a> for 
+						This pages demonstrates FoBo, an generic front-end toolkit <a href="http://www.assembla.com/spaces/liftweb/wiki/Modules">module</a> for 
 						<a id="lift-tt" title="The most powerful, most secure web framework available today. It simply rocks!" href="http://liftweb.net/">Lift</a>, 
-						that will <strong>quickly and easily</strong> integrate some of the industry leading 
-						web-centric open source front-end toolkits (like Twitter Bootstrap and more) into your Lift application, 
-						giving you the <strong>flexibility and choice</strong> of setting up and use the toolkits of your liking.
+						that, <strong>quickly and easily</strong>, will integrate some of the industry leading 
+						web-centric open source front-end toolkits (like Twitter Bootstrap, angularJS and more) into your Lift application, 
+						giving you the <strong>flexibility and choice</strong> of setting up and use the toolkits of your liking without cluttering your applications 
+						source base.
 						</p>
 						
 						<p> 
-						FoBo provides <strong>smooth toolkit upgrades</strong> by minimizing the point of change with uniform template declarations. 
+						FoBo provides <strong>smooth toolkit upgrades</strong> and easy fallback/downgrade by simultaneously supporting several versions of the
+						included toolkits and by minimizing the point of change with uniform template declarations. A toolkit upgrade/downgrade can be as easy as 
+						changing the toolkit initiation code line in Lift boot. 
 						Added to this is a growing number of <span data-lift="Menu.item?name=FoBoAPI;lift:Loc.i;a:class=addclassshowofdummy">
 							<span data-lift="Loc?locid=FoBoAPI">FoBoAPI</span>
 						</span> functions that give you even more ease of usage, power and control.   
@@ -80,10 +83,11 @@
 
 						<h2 class="capital">
 						<img id="mobile-popover" data-content="Use your favorite barcode reader to quick and easy load this page in your mobile." title="View in Mobile!" rel="popover" style="max-height:40px;width:auto;" src="/resources/images/mobile_device_128x128.png" />
-						M<span>obile</span> S<span>calability with</span> F<span>o</span>B<span class="smal">o</span>	 
+<!-- 					    M<span>obile</span> S<span>calability with</span> F<span>o</span>B<span>o</span>	  -->
+						R<span>esponsive</span> D<span>esign</span> <span>with</span> F<span>o</span>B<span>o</span>	 
 						</h2>  
 						<p>FoBo comes with setup options for several front end toolkits including ZURB/Foundation, Twitter Bootstrap
-						and JQuery Mobile. ZURB/Foundation and Twitter Bootstrap are both great reactive and media scalable toolkits. 
+						and JQuery Mobile. ZURB/Foundation and Twitter Bootstrap are both great responsive and media scalable toolkits. 
 						The JQuery Mobile toolkit is an awesome Touch-Optimized Web Framework for Smartphones & Tablets. </p>
                           												
 						<script data-lift="FoBo.Bootstrap.popover?id=#mobile-popover&options=trigger:'hover'"></script>	
@@ -193,7 +197,7 @@
 						<a href="/libo#customization">Bootstrap Customization</a> section on this demo’s 
 						<a href="/libo">Bootstrap</a> dedicated page.</p>
                          
-						<a href="http://fortawesome.github.com/Font-Awesome/" target="blank" class="btn btn-primary btn-large">Font Awesome</a>
+<!-- 						<a href="http://fortawesome.github.com/Font-Awesome/" target="blank" class="btn btn-primary btn-large">Font Awesome</a> -->
 											
 						<hr />
 						
@@ -219,7 +223,7 @@
 		                    <dd><i class="icon-screenshot" style="vertical-align: midle;"></i> <strong> <a href="http://angular-ui.github.io/ng-grid/" target="blank">ng-grid</a> -</strong> Angular Data Grid written in AngularJS and jQuery by the AngularUI Team.</dd>
 						</dl>
 						                 
-						<a href="http://angularjs.org/" target="blank" class="btn btn-primary btn-large">AngularJS</a>
+<!-- 						<a href="http://angularjs.org/" target="blank" class="btn btn-primary btn-large">AngularJS</a> -->
 											
 						<hr />
 						
@@ -242,7 +246,7 @@
 							<dd><i class="icon-star-empty"></i> <strong>Templating -</strong> Quickly generate sophisticated, nested UIs as a function of your model data.</dd>
 							</dl>
 							</p> 
-						    <a href="http://knockoutjs.com/examples/helloWorld.html" target="blank" class="btn btn-primary btn-large">Knockout JS Demo</a>
+<!-- 						    <a href="http://knockoutjs.com/examples/helloWorld.html" target="blank" class="btn btn-primary btn-large">Knockout JS Demo</a> -->
 						<hr />
 						
 					</div>
@@ -254,7 +258,7 @@
 						<h2 class="capital">
 							JQ<span>uery</span>  
 						</h2>
-						<p>jQuery is a fast, small, and feature-rich JavaScript library. 
+						<p><a href="http://jquery.com/">JQuery</a> is a fast, small, and feature-rich JavaScript library. 
 						It makes things like HTML document traversal and manipulation, event handling, animation, 
 						and Ajax much simpler with an easy-to-use API that works across a multitude of browsers. 
 						With a combination of versatility and extensibility, jQuery has changed the way that millions 
@@ -262,7 +266,7 @@
 						 
 						<p>For user convenience FoBo wraps the <a href="https://github.com/karma4u101/lift-jquery-module">Lift juery module</a> and embeds it into the FoBo namespace.</p>
 						
-						<a href="http://jquery.com/" target="blank" class="btn btn-primary btn-large">JQuery</a>				
+<!-- 						<a href="http://jquery.com/" target="blank" class="btn btn-primary btn-large">JQuery</a>				 -->
 						<hr />
 					</div>
 				</div>							
@@ -275,9 +279,7 @@
 						</h2>
 						<p>The <a href="http://foundation.zurb.com/">ZURB/Foundation</a>
 						toolkit is a great reactive and mobile scalable toolkit.
-						For a demonstration take a look at the included <span
-							data-lift="Menu.item?name=Foundation;lift:Loc.i;a:class=addclassshowofdummy">
-							<span data-lift="Loc?locid=Foundation">Foundation demo</span></span>.
+						For a demonstration take a look at the included Foundation demo.
 						</p> 
 						<p>
                                <span data-lift="Menu.item?name=Foundation;lift:Loc.i;a:class=btn btn-primary btn-large">
@@ -319,7 +321,21 @@
 						<hr />
 						
 					</div>
-				</div>						
+				</div>	
+				
+				<div class="row-fluid">
+					<div class="span12">
+
+						<h2 class="capital">
+						    P<span>ace</span> 
+						</h2>
+						    <p><a href="http://github.hubspot.com/pace/docs/welcome/">Pace</a> Automatic page load progress bar, 
+						    you get a beautiful progress indicator for your page load and ajax navigation.
+						    You can see it in action when loading these pages using one of it's simplest css stylings.</p>
+						<hr />
+						
+					</div>
+				</div>										
 				
 				<div class="row-fluid">
 					<div class="span12">

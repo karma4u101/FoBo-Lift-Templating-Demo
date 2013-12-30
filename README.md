@@ -1,6 +1,14 @@
 Lift - Basic FoBo Module Demo
 -----------------------------
 
+---
+
+> **This project has been moved!** 
+> This project is now a subproject in [FoBo-Demo](https://github.com/karma4u101/FoBo-Demo) 
+> **To learn more about FoBo** please visite and clone [FoBo-Demo](https://github.com/karma4u101/FoBo-Demo)
+
+---
+
 This is a Lift FoBo module demo that demonstrates the use of the FoBo Lift module. 
 See the [FoBo - Lift Front-End Toolkit Module](https://github.com/karma4u101/FoBo).
 

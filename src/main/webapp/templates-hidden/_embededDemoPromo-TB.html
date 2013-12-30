@@ -59,7 +59,7 @@
                                 FoBo.InitParam.ToolKit=FoBo.Knockout210
                                 FoBo.InitParam.ToolKit=FoBo.Bootstrap232
                                 FoBo.InitParam.ToolKit=FoBo.FontAwesome321
-                                FoBo.InitParam.ToolKit=FoBo.AngularJS121      
+                                FoBo.InitParam.ToolKit=FoBo.AngularJS122      
                                 FoBo.InitParam.ToolKit=FoBo.AJSUIBootstrap020 
                                 FoBo.InitParam.ToolKit=FoBo.AJSNGGrid204        
                                 FoBo.InitParam.ToolKit=FoBo.Pace0415                                
@@ -73,7 +73,7 @@
                         &lt;html&gt;
                           &lt;head&gt;
                              :
-                             &lt;!--Main css for the Bootstrap220 module option--&gt;
+                             &lt;!--Main css for the Bootstrap2xx module option, bootstrap-responsive is not used in v3.x--&gt;
                              &lt;link href="/classpath/fobo/bootstrap.css" type="text/css" rel="stylesheet"&gt;
                              &lt;link href="/classpath/fobo/bootstrap-responsive.css" type="text/css" rel="stylesheet"&gt;
                              &lt;!--app specific tweeks and overrides external to module goes here--&gt;
@@ -91,8 +91,9 @@
                           &lt;/body&gt;        
                         &lt;/html&gt;    
 						</pre>
-						<p>Note the uniform setup without any version references in the html templates, making way for a smooth(er) 
-						toolkit upgrade. For more information see the <a href="https://github.com/karma4u101/FoBo">FoBo modules Github</a>.
+						<p>Note the uniform setup without any version references in the html templates or any appended 
+						-min.css/-min.js as FoBo takes care of that for you, 
+						making way for a smooth(er) toolkit upgrade. For more information see the <a href="https://github.com/karma4u101/FoBo">FoBo modules Github</a>.
 						</p>
 						
 <!--						

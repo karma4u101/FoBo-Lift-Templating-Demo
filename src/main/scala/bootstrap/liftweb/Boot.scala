@@ -38,7 +38,7 @@ class Boot extends Loggable {
     FoBo.InitParam.ToolKit=FoBo.Knockout210
     FoBo.InitParam.ToolKit=FoBo.Bootstrap232
     FoBo.InitParam.ToolKit=FoBo.FontAwesome321
-    FoBo.InitParam.ToolKit=FoBo.AngularJS121      //The core files 
+    FoBo.InitParam.ToolKit=FoBo.AngularJS122      //The core files 
     FoBo.InitParam.ToolKit=FoBo.AJSUIBootstrap020 //Angular UI Bootstrap
     FoBo.InitParam.ToolKit=FoBo.AJSNGGrid204      //Angular NG-Grid    
     FoBo.InitParam.ToolKit=FoBo.Pace0415
@@ -133,6 +133,9 @@ object Paths {
   val content1DD       = Menu.i("Content1DD") / "ddlabel1"
   val content11DD      = Menu.i("Content11DD") / "ddlabel11"  
   
+    val content2DD       = Menu.i("Content2DD") / "ddlabel2"
+  //val content11DD      = Menu.i("Content11DD") / "ddlabel11"  
+  
   val index            = Menu.i("Home") / "index"
   val liboIndex        = Menu.i("LiBo") / "libo"
   
@@ -151,17 +154,21 @@ object Paths {
     
   val foundationDoc    = Menu(Loc("Foundation"     , Link(List("foundation")     , true, "/foundation/index")                     , "Foundation"))
   val bootstrap204Doc  = Menu(Loc("Bootstrap"      , Link(List("bootstrap")      , true, "/bootstrap/index")                      , "Bootstrap"))
-  val bootstrap210Doc  = Menu(Loc("Bootstrap-2.1.0", Link(List("bootstrap-2.1.0"), true, "/bootstrap-2.1.0/index")                , S.loc("Bootstrap-2.1.0", Text("Bootstrap-2.1.0"))   ))
-  val bootstrap220Doc  = Menu(Loc("Bootstrap-2.2.0", Link(List("bootstrap-2.2.0"), true, "/bootstrap-2.2.0/index")                , S.loc("Bootstrap-2.2.0", Text("Bootstrap-2.2.0")), LocGroup("nldemo1")  ))
+//  val bootstrap210Doc  = Menu(Loc("Bootstrap-2.1.0", Link(List("bootstrap-2.1.0"), true, "/bootstrap-2.1.0/index")                , S.loc("Bootstrap-2.1.0", Text("Bootstrap-2.1.0"))   ))
+//  val bootstrap220Doc  = Menu(Loc("Bootstrap-2.2.0", Link(List("bootstrap-2.2.0"), true, "/bootstrap-2.2.0/index")                , S.loc("Bootstrap-2.2.0", Text("Bootstrap-2.2.0")), LocGroup("nldemo1")  ))
   val bootstrap222Doc  = Menu(Loc("Bootstrap-2.2.2", Link(List("bootstrap-2.2.2"), true, "/bootstrap-2.2.2/index")                , S.loc("Bootstrap-2.2.2", Text("Bootstrap-2.2.2")), LocGroup("nldemo1")   ))
-  val bootstrap301Doc  = Menu(Loc("Bootstrap-3.0.1", ExtLink("http://www.media4u101.se/lift-advanced-bs3/bootstrap301/")          , S.loc("Bootstrap-3.0.1", Text("Bootstrap-3.0.1")), LocGroup("nldemo1")   ))
+  val bootstrap301Doc  = Menu(Loc("Bootstrap-3.0.1", ExtLink("http://www.media4u101.se/lift-advanced-bs3/bootstrap301/")          , S.loc("Bootstrap-3.0.1", Text("Bootstrap-3.0.1")), LocGroup("nldemo1"),FoBo.TBLocInfo.LinkTargetBlank))
   val jqueryMobileDoc  = Menu(Loc("JQuery-mobile"  , Link(List("jquery-mobile")  , true, "/jquery-mobile/1.1.0/demos/index")      , "JQuery-mobile"))
   val datatablesDoc    = Menu(Loc("DataTables"     , Link(List("datatables")     , true, "/datatables/1.9.0/index")               , "DataTables"))
-  val foboApiDoc       = Menu(Loc("FoBoAPI"        , Link(List("foboapi")        , true, "/foboapi/index.html#net.liftmodules.FoBo.package"), S.loc("FoBoAPI"  , Text("FoBo API")), LocGroup("liboTop2","mdemo2","nldemo1") ))
+  val foboApiDoc       = Menu(Loc("FoBoAPI"        , Link(List("foboapi")        , true, "/foboapi/index.html#net.liftmodules.FoBo.package"), S.loc("FoBoAPI"  , Text("FoBo API")), LocGroup("liboTop2","mdemo2","nldemo1"),FoBo.TBLocInfo.LinkTargetBlank ))
   //index.html#net.liftmodules.FoBo.package
   val nlHelp           = Menu.i("NLHelp") / "helpindex"
   
-  val starterTemplates = Menu(Loc("lift_advanced_bs3", ExtLink("http://www.media4u101.se/lift-advanced-bs3/"), S.loc("lift_advanced_bs3", Text("Lift TB3 templates")) ,LocGroup("liboTop2")  ) )
+  val angularDemo = Menu(Loc("fobo-angular-sandbox", ExtLink("http://www.media4u101.se/fobo-angular-sandbox/"), S.loc("fobo-angular-sandbox", Text("AngularJS demo")) ,FoBo.TBLocInfo.LinkTargetBlank  ) )
+  
+  val starterTemplateDemo = Menu(Loc("lift_advanced_bs3", ExtLink("http://www.media4u101.se/lift-advanced-bs3/"), S.loc("lift_advanced_bs3", Text("Lift TB3 templates")) ,FoBo.TBLocInfo.LinkTargetBlank  ) )
+  //https://github.com/lift/lift_26_sbt/
+  val starterTemplateGitHub = Menu(Loc("lift_advanced_bs3", ExtLink("http://www.media4u101.se/lift-advanced-bs3/"), S.loc("lift_advanced_bs3", Text("Lift TB3 templates")) ,FoBo.TBLocInfo.LinkTargetBlank  ) )
   
   def sitemap = SiteMap(
       navHeader1 >> LocGroup("nldemo1") >> FoBo.TBLocInfo.NavHeader,
@@ -173,15 +180,19 @@ object Paths {
       libospyabout,
       libospysetup,
       libospyfooter,
-      content1DD >> LocGroup("liboTop1","mdemo1") >> PlaceHolder submenus ( 
-          bootstrap210Doc ,
-          bootstrap220Doc ,
+      content1DD >> LocGroup("liboDD1","mdemo1") >> PlaceHolder submenus ( 
+/*          bootstrap210Doc ,
+          bootstrap220Doc , */
           bootstrap222Doc ,
           bootstrap301Doc ,
           divider1  >> FoBo.TBLocInfo.Divider,
-          starterTemplates,
+//         starterTemplates,
           foboApiDoc 
       ),
+      content2DD >> LocGroup("liboDD2") >> PlaceHolder submenus ( 
+              starterTemplateDemo,
+              angularDemo
+      ), 
       foundationDoc,
       jqueryMobileDoc,
       datatablesDoc,
